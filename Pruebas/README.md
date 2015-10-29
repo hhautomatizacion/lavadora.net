@@ -13,3 +13,6 @@
 * Capturas de comunicacion
 
 * Modelos de componentes que se hayan probado
+
+![192rpm](/Pruebas/192rpm.png)
+![30rpm](/Pruebas/30rpm.png)
