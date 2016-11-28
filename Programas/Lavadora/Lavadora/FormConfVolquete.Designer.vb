@@ -19,6 +19,7 @@ Partial Class FormConfVolquete
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConfVolquete))
         Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry
         Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry
         Me.Button1 = New System.Windows.Forms.Button
@@ -32,7 +33,7 @@ Partial Class FormConfVolquete
         Me.HhNumericEntry1.DireccionEscritura = Nothing
         Me.HhNumericEntry1.DireccionLectura = Nothing
         Me.HhNumericEntry1.Etiqueta = "Dwelltime volquete"
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Papyrus", 18.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry1.Link = Nothing
         Me.HhNumericEntry1.Location = New System.Drawing.Point(229, 66)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
@@ -54,7 +55,7 @@ Partial Class FormConfVolquete
         Me.HhNumericEntry2.DireccionEscritura = Nothing
         Me.HhNumericEntry2.DireccionLectura = Nothing
         Me.HhNumericEntry2.Etiqueta = "Max tiempo volquete"
-        Me.HhNumericEntry2.Font = New System.Drawing.Font("Papyrus", 18.0!)
+        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry2.Link = Nothing
         Me.HhNumericEntry2.Location = New System.Drawing.Point(229, 129)
         Me.HhNumericEntry2.Name = "HhNumericEntry2"
@@ -70,11 +71,11 @@ Partial Class FormConfVolquete
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(658, 463)
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(688, 473)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 100)
+        Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Ok"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'FormConfVolquete

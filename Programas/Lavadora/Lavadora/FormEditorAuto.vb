@@ -74,7 +74,6 @@ Public Class FormEditorAuto
 
     Private Sub FormEditorAuto_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        'System.Threading.Thread.Sleep(100)
 
         HhGridDisplay1.Link = mMasterk
         HhGridDisplay1.DireccionLectura = "DW3000"
@@ -97,18 +96,15 @@ Public Class FormEditorAuto
         HhMomentaryButton1.DireccionEscritura = "MX0027"
 
         HhMomentaryButton2.Link = mMasterk
-        HhMomentaryButton2.Text = "Insertar"
         HhMomentaryButton2.DireccionEscritura = "MX0031"
 
         HhMomentaryButton3.Link = mMasterk
-        HhMomentaryButton3.Text = "Borrar"
         HhMomentaryButton3.DireccionEscritura = "MX0029"
 
         HhMomentaryButton4.Link = mMasterk
         HhMomentaryButton4.DireccionEscritura = "MX0076"
 
         HhMomentaryButton5.Link = mMasterk
-        HhMomentaryButton5.Text = "Nueva"
         HhMomentaryButton5.DireccionEscritura = "MX0028"
 
     End Sub
@@ -173,21 +169,67 @@ Public Class FormEditorAuto
         HhGridDisplay1.AutoActualizar = True
     End Sub
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        'mejorar esto, si no se sobreescribe el archivo no debe cerrarse el cuadro de dialogo de archivo
+
+        Dim bArchivoExiste As Boolean
+
+        'Dim cPasos As New Collection
         Dim bf As New System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+
+
         HhDialogoArchivos1.Unidad = Environment.CurrentDirectory
         HhDialogoArchivos1.Extension = "*.REC"
         HhDialogoArchivos1.Longitud = 20
         HhDialogoArchivos1.ShowDialog()
 
-        Try
-            Dim fs As New System.IO.FileStream(HhDialogoArchivos1.NombreCompleto, IO.FileMode.OpenOrCreate)
-            bf.Serialize(fs, HhGridDisplay1.Receta)
-            fs.Close()
-        Catch
 
-        End Try
+        If Len(HhDialogoArchivos1.NombreCompleto) Then
+            Try
+                bArchivoExiste = False
+                If My.Computer.FileSystem.FileExists(HhDialogoArchivos1.NombreCompleto) Then
+                    bArchivoExiste = True
+                End If
+            Catch ex As Exception
+                Exit Sub
+            End Try
 
+            'If bArchivoExiste Then
+            'Dim fs As New System.IO.FileStream(HhDialogoArchivos1.NombreCompleto, IO.FileMode.Open)
+            'Try
+            'cPasos = bf.Deserialize(fs)
+            'Catch ex As Exception
+            'Finally
+            'HhGridDisplay1.Receta = cPasos
+            'End Try
+            'fs.Close()
+            'End If
+            'End If
+            If bArchivoExiste Then
 
+                Using m As New hhMsgBox.hhMsgBox
+                    m.Mensaje = "Sobreescribir archivo existente?"
+                    'hhmsgbox1.Link = mMasterk
+                    m.Tamanio = 50
+                    m.TextoOk = "Si"
+                    m.TextoCancel = "No"
+                    'hhmsgbox1.DireccionOk = "MX0C"
+                    'hhmsgbox1.DireccionCancel = "MX0B"
+                    m.ShowDialog()
+                    If m.Resultado = Windows.Forms.DialogResult.OK Then
+                    Else
+                        Exit Sub
+                    End If
+                End Using
+            End If
+            Try
+                Dim fs As New System.IO.FileStream(HhDialogoArchivos1.NombreCompleto, IO.FileMode.OpenOrCreate)
+                bf.Serialize(fs, HhGridDisplay1.Receta)
+                fs.Close()
+            Catch
+
+            End Try
+
+        End If
     End Sub
 
 
@@ -225,7 +267,7 @@ Public Class FormEditorAuto
             fForm.HhNumericEntry1.DireccionLectura = "DW0126"
             fForm.HhNumericEntry1.ValorMinimo = 0
             '--cambiar
-            fForm.HhNumericEntry1.ValorMaximo = 1600
+            fForm.HhNumericEntry1.ValorMaximo = 2000
             fForm.HhNumericEntry1.AutoActualizar = True
 
 
@@ -317,7 +359,7 @@ Public Class FormEditorAuto
             fForm.HhNumericEntry2.Etiqueta = "Gradiente"
             fForm.HhNumericEntry2.Tooltip = "Gradiente de temp.|(°C/min)"
             fForm.HhNumericEntry2.ValorMinimo = 0
-            fForm.HhNumericEntry2.ValorMaximo = 20
+            fForm.HhNumericEntry2.ValorMaximo = 100
             fForm.HhNumericEntry2.AutoActualizar = True
 
             fForm.HhToggleButton2.Link = mMasterk
@@ -350,7 +392,7 @@ Public Class FormEditorAuto
             fForm.HhNumericEntry1.Tooltip = "Velocidad|(rpm)"
             fForm.HhNumericEntry1.ValorMinimo = 0
             'cambiar
-            fForm.HhNumericEntry1.ValorMaximo = 1500
+            fForm.HhNumericEntry1.ValorMaximo = 2000
             fForm.HhNumericEntry1.AutoActualizar = True
 
 
@@ -473,4 +515,7 @@ Public Class FormEditorAuto
   
    
     
+    Private Sub HhMomentaryButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton1.CheckedChanged
+
+    End Sub
 End Class

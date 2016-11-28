@@ -58,8 +58,7 @@ Partial Class FormEditorAuto
         Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormEditorAuto))
         Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -69,19 +68,11 @@ Partial Class FormEditorAuto
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Button3 = New System.Windows.Forms.Button
-        Me.Button4 = New System.Windows.Forms.Button
-        Me.Button5 = New System.Windows.Forms.Button
-        Me.Button6 = New System.Windows.Forms.Button
-        Me.Button7 = New System.Windows.Forms.Button
-        Me.Button8 = New System.Windows.Forms.Button
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.HhDialogoArchivos1 = New DialogoArchivos.hhDialogoArchivos
-        Me.Button9 = New System.Windows.Forms.Button
-        Me.Button10 = New System.Windows.Forms.Button
         Me.DataGridViewTextBoxColumn35 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn36 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -109,31 +100,23 @@ Partial Class FormEditorAuto
         Me.HhGridDisplay1 = New hhGridDisplay.hhGridDisplay
         Me.DataGridViewTextBoxColumn37 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn38 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton
         Me.HhMomentaryButton5 = New hhMomentaryButton.hhMomentaryButton
+        Me.Button10 = New System.Windows.Forms.Button
+        Me.Button9 = New System.Windows.Forms.Button
+        Me.Button8 = New System.Windows.Forms.Button
         Me.HhMomentaryButton4 = New hhMomentaryButton.hhMomentaryButton
+        Me.Button7 = New System.Windows.Forms.Button
+        Me.Button6 = New System.Windows.Forms.Button
+        Me.Button4 = New System.Windows.Forms.Button
+        Me.Button5 = New System.Windows.Forms.Button
+        Me.Button3 = New System.Windows.Forms.Button
         Me.HhMomentaryButton3 = New hhMomentaryButton.hhMomentaryButton
         Me.HhMomentaryButton2 = New hhMomentaryButton.hhMomentaryButton
-        Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.Button2 = New System.Windows.Forms.Button
         CType(Me.HhGridDisplay1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(658, 431)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 100)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Salida"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(12, 12)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(130, 100)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Llenado"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'HhNumericEntry1
         '
@@ -143,9 +126,9 @@ Partial Class FormEditorAuto
         Me.HhNumericEntry1.DireccionEscritura = Nothing
         Me.HhNumericEntry1.DireccionLectura = Nothing
         Me.HhNumericEntry1.Etiqueta = Nothing
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Gill Sans MT Condensed", 24.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry1.Link = Nothing
-        Me.HhNumericEntry1.Location = New System.Drawing.Point(625, 12)
+        Me.HhNumericEntry1.Location = New System.Drawing.Point(630, 12)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
         Me.HhNumericEntry1.Size = New System.Drawing.Size(155, 43)
         Me.HhNumericEntry1.TabIndex = 3
@@ -237,60 +220,6 @@ Partial Class FormEditorAuto
         Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.DataGridViewTextBoxColumn2.Width = 284
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(146, 12)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(130, 100)
-        Me.Button3.TabIndex = 7
-        Me.Button3.Text = "Desague"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(289, 330)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(130, 100)
-        Me.Button4.TabIndex = 12
-        Me.Button4.Text = "Salva"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(12, 118)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(130, 100)
-        Me.Button5.TabIndex = 14
-        Me.Button5.Text = "Rotacion"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(146, 118)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(130, 100)
-        Me.Button6.TabIndex = 16
-        Me.Button6.Text = "Mantto"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(12, 224)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(130, 100)
-        Me.Button7.TabIndex = 18
-        Me.Button7.Text = "Temperatura"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(146, 224)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(130, 100)
-        Me.Button8.TabIndex = 20
-        Me.Button8.Text = "Centrifuga"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
         'DataGridViewTextBoxColumn5
         '
         Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
@@ -339,24 +268,6 @@ Partial Class FormEditorAuto
         Me.HhDialogoArchivos1.Folder = "H&H"
         Me.HhDialogoArchivos1.Longitud = 0
         Me.HhDialogoArchivos1.Unidad = "C:"
-        '
-        'Button9
-        '
-        Me.Button9.Location = New System.Drawing.Point(12, 330)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(130, 100)
-        Me.Button9.TabIndex = 23
-        Me.Button9.Text = "Aditivos"
-        Me.Button9.UseVisualStyleBackColor = True
-        '
-        'Button10
-        '
-        Me.Button10.Location = New System.Drawing.Point(148, 330)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(130, 100)
-        Me.Button10.TabIndex = 24
-        Me.Button10.Text = "Muestreo"
-        Me.Button10.UseVisualStyleBackColor = True
         '
         'DataGridViewTextBoxColumn35
         '
@@ -617,9 +528,9 @@ Partial Class FormEditorAuto
         Me.HhGridDisplay1.DireccionLectura = Nothing
         Me.HhGridDisplay1.DireccionPaso = Nothing
         Me.HhGridDisplay1.EscribirPaso = False
-        Me.HhGridDisplay1.Font = New System.Drawing.Font("Gill Sans MT Condensed", 24.0!)
+        Me.HhGridDisplay1.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhGridDisplay1.Link = Nothing
-        Me.HhGridDisplay1.Location = New System.Drawing.Point(425, 58)
+        Me.HhGridDisplay1.Location = New System.Drawing.Point(429, 58)
         Me.HhGridDisplay1.LongitudPaso = 0
         Me.HhGridDisplay1.LongitudTexto = 0
         Me.HhGridDisplay1.MostrarSeleccion = False
@@ -628,11 +539,11 @@ Partial Class FormEditorAuto
         Me.HhGridDisplay1.ReadOnly = True
         Me.HhGridDisplay1.Receta = Nothing
         Me.HhGridDisplay1.RowHeadersVisible = False
-        DataGridViewCellStyle39.Font = New System.Drawing.Font("Gill Sans MT Condensed", 24.0!)
+        DataGridViewCellStyle39.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhGridDisplay1.RowsDefaultCellStyle = DataGridViewCellStyle39
         Me.HhGridDisplay1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.HhGridDisplay1.ShowCellToolTips = False
-        Me.HhGridDisplay1.Size = New System.Drawing.Size(355, 367)
+        Me.HhGridDisplay1.Size = New System.Drawing.Size(355, 396)
         Me.HhGridDisplay1.TabIndex = 5
         '
         'DataGridViewTextBoxColumn37
@@ -657,6 +568,22 @@ Partial Class FormEditorAuto
         Me.DataGridViewTextBoxColumn38.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.DataGridViewTextBoxColumn38.Width = 291
         '
+        'HhMomentaryButton1
+        '
+        Me.HhMomentaryButton1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.HhMomentaryButton1.AutoActualizar = False
+        Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhMomentaryButton1.DireccionEscritura = Nothing
+        Me.HhMomentaryButton1.DireccionLectura = Nothing
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton1.Link = Nothing
+        Me.HhMomentaryButton1.Location = New System.Drawing.Point(147, 436)
+        Me.HhMomentaryButton1.Name = "HhMomentaryButton1"
+        Me.HhMomentaryButton1.Size = New System.Drawing.Size(100, 90)
+        Me.HhMomentaryButton1.TabIndex = 2
+        Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton1.UseVisualStyleBackColor = True
+        '
         'HhMomentaryButton5
         '
         Me.HhMomentaryButton5.Appearance = System.Windows.Forms.Appearance.Button
@@ -664,14 +591,42 @@ Partial Class FormEditorAuto
         Me.HhMomentaryButton5.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton5.DireccionEscritura = Nothing
         Me.HhMomentaryButton5.DireccionLectura = Nothing
-        Me.HhMomentaryButton5.Font = New System.Drawing.Font("Gill Sans MT Condensed", 24.0!)
+        Me.HhMomentaryButton5.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton5.Image = CType(resources.GetObject("HhMomentaryButton5.Image"), System.Drawing.Image)
         Me.HhMomentaryButton5.Link = Nothing
-        Me.HhMomentaryButton5.Location = New System.Drawing.Point(289, 224)
+        Me.HhMomentaryButton5.Location = New System.Drawing.Point(323, 250)
         Me.HhMomentaryButton5.Name = "HhMomentaryButton5"
-        Me.HhMomentaryButton5.Size = New System.Drawing.Size(130, 100)
+        Me.HhMomentaryButton5.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton5.TabIndex = 26
-        Me.HhMomentaryButton5.Text = "Nueva"
+        Me.HhMomentaryButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.HhMomentaryButton5.UseVisualStyleBackColor = True
+        '
+        'Button10
+        '
+        Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
+        Me.Button10.Location = New System.Drawing.Point(147, 330)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(100, 90)
+        Me.Button10.TabIndex = 24
+        Me.Button10.UseVisualStyleBackColor = True
+        '
+        'Button9
+        '
+        Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
+        Me.Button9.Location = New System.Drawing.Point(11, 330)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(100, 90)
+        Me.Button9.TabIndex = 23
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'Button8
+        '
+        Me.Button8.Image = CType(resources.GetObject("Button8.Image"), System.Drawing.Image)
+        Me.Button8.Location = New System.Drawing.Point(145, 224)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(100, 90)
+        Me.Button8.TabIndex = 20
+        Me.Button8.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton4
         '
@@ -680,14 +635,60 @@ Partial Class FormEditorAuto
         Me.HhMomentaryButton4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton4.DireccionEscritura = Nothing
         Me.HhMomentaryButton4.DireccionLectura = Nothing
-        Me.HhMomentaryButton4.Font = New System.Drawing.Font("Gill Sans MT Condensed", 24.0!)
+        Me.HhMomentaryButton4.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton4.Image = CType(resources.GetObject("HhMomentaryButton4.Image"), System.Drawing.Image)
         Me.HhMomentaryButton4.Link = Nothing
-        Me.HhMomentaryButton4.Location = New System.Drawing.Point(522, 431)
+        Me.HhMomentaryButton4.Location = New System.Drawing.Point(582, 473)
         Me.HhMomentaryButton4.Name = "HhMomentaryButton4"
-        Me.HhMomentaryButton4.Size = New System.Drawing.Size(130, 100)
+        Me.HhMomentaryButton4.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton4.TabIndex = 21
-        Me.HhMomentaryButton4.Text = "Envia"
+        Me.HhMomentaryButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.HhMomentaryButton4.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
+        Me.Button7.Location = New System.Drawing.Point(11, 224)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(100, 90)
+        Me.Button7.TabIndex = 18
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
+        Me.Button6.Location = New System.Drawing.Point(145, 118)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(100, 90)
+        Me.Button6.TabIndex = 16
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
+        Me.Button4.Location = New System.Drawing.Point(429, 473)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(100, 90)
+        Me.Button4.TabIndex = 12
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
+        Me.Button5.Location = New System.Drawing.Point(11, 118)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(100, 90)
+        Me.Button5.TabIndex = 14
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(145, 12)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(100, 90)
+        Me.Button3.TabIndex = 7
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton3
         '
@@ -696,13 +697,14 @@ Partial Class FormEditorAuto
         Me.HhMomentaryButton3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton3.DireccionEscritura = Nothing
         Me.HhMomentaryButton3.DireccionLectura = Nothing
-        Me.HhMomentaryButton3.Font = New System.Drawing.Font("Gill Sans MT Condensed", 24.0!)
+        Me.HhMomentaryButton3.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton3.Image = CType(resources.GetObject("HhMomentaryButton3.Image"), System.Drawing.Image)
         Me.HhMomentaryButton3.Link = Nothing
-        Me.HhMomentaryButton3.Location = New System.Drawing.Point(289, 118)
+        Me.HhMomentaryButton3.Location = New System.Drawing.Point(323, 154)
         Me.HhMomentaryButton3.Name = "HhMomentaryButton3"
-        Me.HhMomentaryButton3.Size = New System.Drawing.Size(130, 100)
+        Me.HhMomentaryButton3.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton3.TabIndex = 10
-        Me.HhMomentaryButton3.Text = "Borrar"
+        Me.HhMomentaryButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.HhMomentaryButton3.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton2
@@ -712,30 +714,33 @@ Partial Class FormEditorAuto
         Me.HhMomentaryButton2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton2.DireccionEscritura = Nothing
         Me.HhMomentaryButton2.DireccionLectura = Nothing
-        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Gill Sans MT Condensed", 24.0!)
+        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton2.Image = CType(resources.GetObject("HhMomentaryButton2.Image"), System.Drawing.Image)
         Me.HhMomentaryButton2.Link = Nothing
-        Me.HhMomentaryButton2.Location = New System.Drawing.Point(289, 12)
+        Me.HhMomentaryButton2.Location = New System.Drawing.Point(323, 58)
         Me.HhMomentaryButton2.Name = "HhMomentaryButton2"
-        Me.HhMomentaryButton2.Size = New System.Drawing.Size(130, 100)
+        Me.HhMomentaryButton2.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton2.TabIndex = 8
-        Me.HhMomentaryButton2.Text = "Insertar"
+        Me.HhMomentaryButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.HhMomentaryButton2.UseVisualStyleBackColor = True
         '
-        'HhMomentaryButton1
+        'Button1
         '
-        Me.HhMomentaryButton1.Appearance = System.Windows.Forms.Appearance.Button
-        Me.HhMomentaryButton1.AutoActualizar = False
-        Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.HhMomentaryButton1.DireccionEscritura = Nothing
-        Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Gill Sans MT Condensed", 24.0!)
-        Me.HhMomentaryButton1.Link = Nothing
-        Me.HhMomentaryButton1.Location = New System.Drawing.Point(148, 436)
-        Me.HhMomentaryButton1.Name = "HhMomentaryButton1"
-        Me.HhMomentaryButton1.Size = New System.Drawing.Size(130, 100)
-        Me.HhMomentaryButton1.TabIndex = 2
-        Me.HhMomentaryButton1.Text = "Fin"
-        Me.HhMomentaryButton1.UseVisualStyleBackColor = True
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(688, 473)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(100, 90)
+        Me.Button1.TabIndex = 0
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.Location = New System.Drawing.Point(11, 12)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(100, 90)
+        Me.Button2.TabIndex = 1
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'FormEditorAuto
         '

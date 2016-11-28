@@ -19,6 +19,7 @@ Partial Class FormRotacionAuto
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormRotacionAuto))
         Me.Button1 = New System.Windows.Forms.Button
         Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton
         Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry
@@ -28,24 +29,28 @@ Partial Class FormRotacionAuto
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(283, 318)
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(313, 328)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 100)
+        Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Anula"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton1
         '
+        Me.HhMomentaryButton1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.HhMomentaryButton1.AutoActualizar = False
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Courier New", 20.0!)
+        Me.HhMomentaryButton1.DireccionLectura = Nothing
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
-        Me.HhMomentaryButton1.Location = New System.Drawing.Point(147, 318)
+        Me.HhMomentaryButton1.Location = New System.Drawing.Point(207, 328)
         Me.HhMomentaryButton1.Name = "HhMomentaryButton1"
-        Me.HhMomentaryButton1.Size = New System.Drawing.Size(130, 100)
+        Me.HhMomentaryButton1.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton1.TabIndex = 1
-        Me.HhMomentaryButton1.Text = "Ok"
+        Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.HhMomentaryButton1.UseVisualStyleBackColor = True
         '
         'HhNumericEntry1
@@ -56,7 +61,7 @@ Partial Class FormRotacionAuto
         Me.HhNumericEntry1.DireccionEscritura = Nothing
         Me.HhNumericEntry1.DireccionLectura = Nothing
         Me.HhNumericEntry1.Etiqueta = Nothing
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Courier New", 20.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry1.Link = Nothing
         Me.HhNumericEntry1.Location = New System.Drawing.Point(237, 108)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
@@ -78,7 +83,7 @@ Partial Class FormRotacionAuto
         Me.HhNumericEntry2.DireccionEscritura = Nothing
         Me.HhNumericEntry2.DireccionLectura = Nothing
         Me.HhNumericEntry2.Etiqueta = Nothing
-        Me.HhNumericEntry2.Font = New System.Drawing.Font("Courier New", 20.0!)
+        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry2.Link = Nothing
         Me.HhNumericEntry2.Location = New System.Drawing.Point(237, 60)
         Me.HhNumericEntry2.Name = "HhNumericEntry2"
@@ -100,7 +105,7 @@ Partial Class FormRotacionAuto
         Me.HhNumericEntry3.DireccionEscritura = Nothing
         Me.HhNumericEntry3.DireccionLectura = Nothing
         Me.HhNumericEntry3.Etiqueta = Nothing
-        Me.HhNumericEntry3.Font = New System.Drawing.Font("Courier New", 20.0!)
+        Me.HhNumericEntry3.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry3.Link = Nothing
         Me.HhNumericEntry3.Location = New System.Drawing.Point(237, 11)
         Me.HhNumericEntry3.Name = "HhNumericEntry3"

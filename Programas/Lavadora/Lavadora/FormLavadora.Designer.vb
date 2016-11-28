@@ -20,6 +20,7 @@ Partial Class FormLavadora
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormLavadora))
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.HhMsgBox1 = New hhMsgBox.hhMsgBox
@@ -40,12 +41,13 @@ Partial Class FormLavadora
         Me.Label5 = New System.Windows.Forms.Label
         Me.HhCharacterDisplay3 = New hhCharacterDisplay.hhCharacterDisplay
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
+        Me.Button5 = New System.Windows.Forms.Button
         Me.Button7 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.Button4 = New System.Windows.Forms.Button
-        Me.Button3 = New System.Windows.Forms.Button
-        Me.Button1 = New System.Windows.Forms.Button
         Me.Button6 = New System.Windows.Forms.Button
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton
+        Me.HhMomentaryButton2 = New hhMomentaryButton.hhMomentaryButton
+        Me.Button3 = New System.Windows.Forms.Button
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -78,6 +80,9 @@ Partial Class FormLavadora
         '
         Me.HhMsgBox1.DireccionCancel = Nothing
         Me.HhMsgBox1.DireccionOk = Nothing
+        Me.HhMsgBox1.Imagen = Nothing
+        Me.HhMsgBox1.ImagenCancel = Nothing
+        Me.HhMsgBox1.ImagenOk = Nothing
         Me.HhMsgBox1.Link = Nothing
         Me.HhMsgBox1.Mensaje = Nothing
         Me.HhMsgBox1.Tamanio = 0
@@ -176,8 +181,7 @@ Partial Class FormLavadora
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.TableLayoutPanel1)
         Me.SplitContainer1.Size = New System.Drawing.Size(800, 575)
-        Me.SplitContainer1.SplitterDistance = 464
-        Me.SplitContainer1.SplitterWidth = 10
+        Me.SplitContainer1.SplitterDistance = 527
         Me.SplitContainer1.TabIndex = 14
         Me.SplitContainer1.TabStop = False
         '
@@ -196,7 +200,7 @@ Partial Class FormLavadora
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(464, 575)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(527, 575)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'SplitContainer2
@@ -212,8 +216,8 @@ Partial Class FormLavadora
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.HhCharacterDisplay2)
-        Me.SplitContainer2.Size = New System.Drawing.Size(458, 51)
-        Me.SplitContainer2.SplitterDistance = 235
+        Me.SplitContainer2.Size = New System.Drawing.Size(521, 51)
+        Me.SplitContainer2.SplitterDistance = 267
         Me.SplitContainer2.TabIndex = 4
         Me.SplitContainer2.TabStop = False
         '
@@ -222,7 +226,7 @@ Partial Class FormLavadora
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label4.Location = New System.Drawing.Point(0, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(235, 51)
+        Me.Label4.Size = New System.Drawing.Size(267, 51)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Version PC:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -234,12 +238,12 @@ Partial Class FormLavadora
         Me.HhCharacterDisplay2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhCharacterDisplay2.DireccionLectura = Nothing
         Me.HhCharacterDisplay2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhCharacterDisplay2.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhCharacterDisplay2.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhCharacterDisplay2.Link = Nothing
         Me.HhCharacterDisplay2.Location = New System.Drawing.Point(0, 0)
         Me.HhCharacterDisplay2.Longitud = 0
         Me.HhCharacterDisplay2.Name = "HhCharacterDisplay2"
-        Me.HhCharacterDisplay2.Size = New System.Drawing.Size(219, 51)
+        Me.HhCharacterDisplay2.Size = New System.Drawing.Size(250, 51)
         Me.HhCharacterDisplay2.TabIndex = 5
         Me.HhCharacterDisplay2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -256,8 +260,8 @@ Partial Class FormLavadora
         'SplitContainer3.Panel2
         '
         Me.SplitContainer3.Panel2.Controls.Add(Me.HhCharacterDisplay1)
-        Me.SplitContainer3.Size = New System.Drawing.Size(458, 51)
-        Me.SplitContainer3.SplitterDistance = 235
+        Me.SplitContainer3.Size = New System.Drawing.Size(521, 51)
+        Me.SplitContainer3.SplitterDistance = 267
         Me.SplitContainer3.TabIndex = 5
         Me.SplitContainer3.TabStop = False
         '
@@ -266,7 +270,7 @@ Partial Class FormLavadora
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label3.Location = New System.Drawing.Point(0, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(235, 51)
+        Me.Label3.Size = New System.Drawing.Size(267, 51)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Maquina:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -278,12 +282,12 @@ Partial Class FormLavadora
         Me.HhCharacterDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhCharacterDisplay1.DireccionLectura = Nothing
         Me.HhCharacterDisplay1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhCharacterDisplay1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhCharacterDisplay1.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhCharacterDisplay1.Link = Nothing
         Me.HhCharacterDisplay1.Location = New System.Drawing.Point(0, 0)
         Me.HhCharacterDisplay1.Longitud = 0
         Me.HhCharacterDisplay1.Name = "HhCharacterDisplay1"
-        Me.HhCharacterDisplay1.Size = New System.Drawing.Size(219, 51)
+        Me.HhCharacterDisplay1.Size = New System.Drawing.Size(250, 51)
         Me.HhCharacterDisplay1.TabIndex = 7
         Me.HhCharacterDisplay1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -300,8 +304,8 @@ Partial Class FormLavadora
         'SplitContainer4.Panel2
         '
         Me.SplitContainer4.Panel2.Controls.Add(Me.HhCharacterDisplay3)
-        Me.SplitContainer4.Size = New System.Drawing.Size(458, 53)
-        Me.SplitContainer4.SplitterDistance = 235
+        Me.SplitContainer4.Size = New System.Drawing.Size(521, 53)
+        Me.SplitContainer4.SplitterDistance = 267
         Me.SplitContainer4.TabIndex = 6
         Me.SplitContainer4.TabStop = False
         '
@@ -310,7 +314,7 @@ Partial Class FormLavadora
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label5.Location = New System.Drawing.Point(0, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(235, 53)
+        Me.Label5.Size = New System.Drawing.Size(267, 53)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "Version PLC:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -322,12 +326,12 @@ Partial Class FormLavadora
         Me.HhCharacterDisplay3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhCharacterDisplay3.DireccionLectura = Nothing
         Me.HhCharacterDisplay3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhCharacterDisplay3.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhCharacterDisplay3.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhCharacterDisplay3.Link = Nothing
         Me.HhCharacterDisplay3.Location = New System.Drawing.Point(0, 0)
         Me.HhCharacterDisplay3.Longitud = 0
         Me.HhCharacterDisplay3.Name = "HhCharacterDisplay3"
-        Me.HhCharacterDisplay3.Size = New System.Drawing.Size(219, 53)
+        Me.HhCharacterDisplay3.Size = New System.Drawing.Size(250, 53)
         Me.HhCharacterDisplay3.TabIndex = 6
         Me.HhCharacterDisplay3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -336,84 +340,110 @@ Partial Class FormLavadora
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Button5, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Button7, 0, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button2, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Button6, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button4, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button3, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Button1, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.HhMomentaryButton1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.HhMomentaryButton2, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Button3, 1, 2)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(0, 0, 20, 0)
         Me.TableLayoutPanel1.RowCount = 4
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(326, 575)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(269, 575)
         Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'Button5
+        '
+        Me.Button5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
+        Me.Button5.Location = New System.Drawing.Point(17, 169)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(100, 90)
+        Me.Button5.TabIndex = 5
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'Button7
         '
-        Me.Button7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button7.Location = New System.Drawing.Point(3, 432)
+        Me.Button7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
+        Me.Button7.Location = New System.Drawing.Point(17, 457)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(147, 140)
+        Me.Button7.Size = New System.Drawing.Size(100, 90)
         Me.Button7.TabIndex = 11
-        Me.Button7.Text = "Test"
         Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button2.Location = New System.Drawing.Point(3, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(147, 137)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Manual"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button4.Location = New System.Drawing.Point(156, 3)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(147, 137)
-        Me.Button4.TabIndex = 13
-        Me.Button4.Text = "Automatico"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button3.Location = New System.Drawing.Point(156, 289)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(147, 137)
-        Me.Button3.TabIndex = 14
-        Me.Button3.Text = "Configura"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.Location = New System.Drawing.Point(156, 432)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(147, 140)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Salida"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Button6
         '
-        Me.Button6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button6.Location = New System.Drawing.Point(3, 289)
+        Me.Button6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
+        Me.Button6.Location = New System.Drawing.Point(17, 312)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(147, 137)
+        Me.Button6.Size = New System.Drawing.Size(100, 90)
         Me.Button6.TabIndex = 12
-        Me.Button6.Text = "Mandos"
         Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(151, 457)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(100, 90)
+        Me.Button1.TabIndex = 15
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'HhMomentaryButton1
+        '
+        Me.HhMomentaryButton1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.HhMomentaryButton1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.HhMomentaryButton1.AutoActualizar = False
+        Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhMomentaryButton1.DireccionEscritura = Nothing
+        Me.HhMomentaryButton1.DireccionLectura = Nothing
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
+        Me.HhMomentaryButton1.Link = Nothing
+        Me.HhMomentaryButton1.Location = New System.Drawing.Point(17, 26)
+        Me.HhMomentaryButton1.Name = "HhMomentaryButton1"
+        Me.HhMomentaryButton1.Size = New System.Drawing.Size(100, 90)
+        Me.HhMomentaryButton1.TabIndex = 16
+        Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton1.UseVisualStyleBackColor = True
+        '
+        'HhMomentaryButton2
+        '
+        Me.HhMomentaryButton2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.HhMomentaryButton2.Appearance = System.Windows.Forms.Appearance.Button
+        Me.HhMomentaryButton2.AutoActualizar = False
+        Me.HhMomentaryButton2.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhMomentaryButton2.DireccionEscritura = Nothing
+        Me.HhMomentaryButton2.DireccionLectura = Nothing
+        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton2.Image = CType(resources.GetObject("HhMomentaryButton2.Image"), System.Drawing.Image)
+        Me.HhMomentaryButton2.Link = Nothing
+        Me.HhMomentaryButton2.Location = New System.Drawing.Point(151, 26)
+        Me.HhMomentaryButton2.Name = "HhMomentaryButton2"
+        Me.HhMomentaryButton2.Size = New System.Drawing.Size(100, 90)
+        Me.HhMomentaryButton2.TabIndex = 17
+        Me.HhMomentaryButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(151, 312)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(100, 90)
+        Me.Button3.TabIndex = 14
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'FormLavadora
         '
@@ -461,8 +491,6 @@ Partial Class FormLavadora
     Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
@@ -476,5 +504,8 @@ Partial Class FormLavadora
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents HhCharacterDisplay3 As hhCharacterDisplay.hhCharacterDisplay
     Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents HhMomentaryButton1 As hhMomentaryButton.hhMomentaryButton
+    Friend WithEvents HhMomentaryButton2 As hhMomentaryButton.hhMomentaryButton
 
 End Class

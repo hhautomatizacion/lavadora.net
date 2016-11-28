@@ -14,5 +14,10 @@
 
 * Modelos de componentes que se hayan probado
 
-![192rpm](/Pruebas/192rpm.png)
-![30rpm](/Pruebas/30rpm.png)
+---
+![192rpm.png](/Pruebas/192rpm.png)
+---
+![30rpm.png](/Pruebas/30rpm.png)
+---
+![volqueteo 4.tif](/Pruebas/volqueteo 4.tif)
+---

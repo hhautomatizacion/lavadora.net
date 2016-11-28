@@ -19,6 +19,7 @@ Partial Class FormCambiaPaso
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormCambiaPaso))
         Me.Button2 = New System.Windows.Forms.Button
         Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton
         Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry
@@ -28,24 +29,28 @@ Partial Class FormCambiaPaso
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(658, 83)
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.Location = New System.Drawing.Point(688, 98)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(130, 100)
+        Me.Button2.Size = New System.Drawing.Size(100, 90)
         Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton1
         '
+        Me.HhMomentaryButton1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.HhMomentaryButton1.AutoActualizar = False
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Courier New", 20.0!)
+        Me.HhMomentaryButton1.DireccionLectura = Nothing
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
-        Me.HhMomentaryButton1.Location = New System.Drawing.Point(12, 80)
+        Me.HhMomentaryButton1.Location = New System.Drawing.Point(582, 98)
         Me.HhMomentaryButton1.Name = "HhMomentaryButton1"
-        Me.HhMomentaryButton1.Size = New System.Drawing.Size(130, 100)
+        Me.HhMomentaryButton1.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton1.TabIndex = 5
-        Me.HhMomentaryButton1.Text = "Ok"
+        Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.HhMomentaryButton1.UseVisualStyleBackColor = True
         '
         'HhNumericEntry1
@@ -56,9 +61,9 @@ Partial Class FormCambiaPaso
         Me.HhNumericEntry1.DireccionEscritura = Nothing
         Me.HhNumericEntry1.DireccionLectura = Nothing
         Me.HhNumericEntry1.Etiqueta = Nothing
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Courier New", 20.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry1.Link = Nothing
-        Me.HhNumericEntry1.Location = New System.Drawing.Point(395, 22)
+        Me.HhNumericEntry1.Location = New System.Drawing.Point(219, 52)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
         Me.HhNumericEntry1.Size = New System.Drawing.Size(180, 40)
         Me.HhNumericEntry1.TabIndex = 0
@@ -72,28 +77,36 @@ Partial Class FormCambiaPaso
         '
         'HhMomentaryButton2
         '
+        Me.HhMomentaryButton2.Appearance = System.Windows.Forms.Appearance.Button
+        Me.HhMomentaryButton2.AutoActualizar = False
         Me.HhMomentaryButton2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton2.DireccionEscritura = Nothing
-        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Courier New", 20.0!)
+        Me.HhMomentaryButton2.DireccionLectura = Nothing
+        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton2.Image = CType(resources.GetObject("HhMomentaryButton2.Image"), System.Drawing.Image)
         Me.HhMomentaryButton2.Link = Nothing
-        Me.HhMomentaryButton2.Location = New System.Drawing.Point(244, 83)
+        Me.HhMomentaryButton2.Location = New System.Drawing.Point(206, 98)
         Me.HhMomentaryButton2.Name = "HhMomentaryButton2"
-        Me.HhMomentaryButton2.Size = New System.Drawing.Size(130, 100)
+        Me.HhMomentaryButton2.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton2.TabIndex = 7
-        Me.HhMomentaryButton2.Text = "Anterior"
+        Me.HhMomentaryButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.HhMomentaryButton2.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton3
         '
+        Me.HhMomentaryButton3.Appearance = System.Windows.Forms.Appearance.Button
+        Me.HhMomentaryButton3.AutoActualizar = False
         Me.HhMomentaryButton3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton3.DireccionEscritura = Nothing
-        Me.HhMomentaryButton3.Font = New System.Drawing.Font("Courier New", 20.0!)
+        Me.HhMomentaryButton3.DireccionLectura = Nothing
+        Me.HhMomentaryButton3.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton3.Image = CType(resources.GetObject("HhMomentaryButton3.Image"), System.Drawing.Image)
         Me.HhMomentaryButton3.Link = Nothing
-        Me.HhMomentaryButton3.Location = New System.Drawing.Point(380, 83)
+        Me.HhMomentaryButton3.Location = New System.Drawing.Point(312, 98)
         Me.HhMomentaryButton3.Name = "HhMomentaryButton3"
-        Me.HhMomentaryButton3.Size = New System.Drawing.Size(130, 100)
+        Me.HhMomentaryButton3.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton3.TabIndex = 8
-        Me.HhMomentaryButton3.Text = "Siguiente"
+        Me.HhMomentaryButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.HhMomentaryButton3.UseVisualStyleBackColor = True
         '
         'FormCambiaPaso

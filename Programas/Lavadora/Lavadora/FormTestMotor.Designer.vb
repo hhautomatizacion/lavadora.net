@@ -19,6 +19,7 @@ Partial Class FormTestMotor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormTestMotor))
         Me.Button1 = New System.Windows.Forms.Button
         Me.HhToggleButton1 = New hhToggleButton.hhToggleButton
         Me.HhToggleButton2 = New hhToggleButton.hhToggleButton
@@ -28,11 +29,11 @@ Partial Class FormTestMotor
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(620, 463)
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(688, 473)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(168, 100)
+        Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 63
-        Me.Button1.Text = "Salir"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'HhToggleButton1
@@ -43,7 +44,7 @@ Partial Class FormTestMotor
         Me.HhToggleButton1.DireccionEscritura = Nothing
         Me.HhToggleButton1.DireccionLectura = Nothing
         Me.HhToggleButton1.Etiqueta = "Izquierda"
-        Me.HhToggleButton1.Font = New System.Drawing.Font("Papyrus", 14.0!)
+        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhToggleButton1.Link = Nothing
         Me.HhToggleButton1.Location = New System.Drawing.Point(244, 31)
         Me.HhToggleButton1.Name = "HhToggleButton1"
@@ -60,7 +61,7 @@ Partial Class FormTestMotor
         Me.HhToggleButton2.DireccionEscritura = Nothing
         Me.HhToggleButton2.DireccionLectura = Nothing
         Me.HhToggleButton2.Etiqueta = "Derecha"
-        Me.HhToggleButton2.Font = New System.Drawing.Font("Papyrus", 14.0!)
+        Me.HhToggleButton2.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhToggleButton2.Link = Nothing
         Me.HhToggleButton2.Location = New System.Drawing.Point(244, 82)
         Me.HhToggleButton2.Name = "HhToggleButton2"
@@ -77,7 +78,7 @@ Partial Class FormTestMotor
         Me.HhNumericEntry1.DireccionEscritura = Nothing
         Me.HhNumericEntry1.DireccionLectura = Nothing
         Me.HhNumericEntry1.Etiqueta = "Frecuencia"
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Papyrus", 14.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry1.Link = Nothing
         Me.HhNumericEntry1.Location = New System.Drawing.Point(244, 133)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
@@ -99,7 +100,7 @@ Partial Class FormTestMotor
         Me.HhNumericDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay1.DireccionLectura = Nothing
         Me.HhNumericDisplay1.Etiqueta = "RPM"
-        Me.HhNumericDisplay1.Font = New System.Drawing.Font("Papyrus", 14.0!)
+        Me.HhNumericDisplay1.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericDisplay1.Link = Nothing
         Me.HhNumericDisplay1.Location = New System.Drawing.Point(640, 31)
         Me.HhNumericDisplay1.Name = "HhNumericDisplay1"

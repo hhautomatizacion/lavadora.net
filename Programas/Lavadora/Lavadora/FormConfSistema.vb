@@ -3,7 +3,12 @@ Public Class FormConfSistema
    
 
     Private Sub FormConfSistema_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        HhToggleButton1.Etiqueta = "Auto-iniciar"
+        If My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True).GetValue(Application.ProductName, "") = "" Then
+            HhToggleButton1.Checked = False
+        Else
+            HhToggleButton1.Checked = True
+        End If
 
         For Each sPuertoSerie As String In My.Computer.Ports.SerialPortNames
             HhComboEntry1.Items.Add(sPuertoSerie)
@@ -13,9 +18,7 @@ Public Class FormConfSistema
 
 
         Using fonts As New System.Drawing.Text.InstalledFontCollection
-
             For Each f As FontFamily In fonts.Families
-
                 HhComboEntry2.Items.Add(f.Name)
             Next
         End Using
@@ -29,9 +32,6 @@ Public Class FormConfSistema
 
         HhComboEntry3.LongitudTexto = 2
         HhComboEntry3.Text = GetSetting("hhControls", "Font", "Size", "14")
-
-
-
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -91,16 +91,14 @@ Public Class FormConfSistema
 
         End Try
     End Sub
-
     Private Sub HhComboEntry1_Resize(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhComboEntry1.Resize
         HhComboEntry2.Top = HhComboEntry1.Top + HhComboEntry1.Height + 10
     End Sub
-
-    Private Sub HhComboEntry1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhComboEntry1.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub HhComboEntry2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhComboEntry2.SelectedIndexChanged
-
+    Private Sub HhToggleButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhToggleButton1.Click
+        If HhToggleButton1.Checked Then
+            My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True).SetValue(Application.ProductName, Application.ExecutablePath)
+        Else
+            My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True).DeleteValue(Application.ProductName)
+        End If
     End Sub
 End Class

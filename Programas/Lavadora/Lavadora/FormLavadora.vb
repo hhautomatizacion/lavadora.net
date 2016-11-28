@@ -2,7 +2,6 @@ Public Class FormLavadora
 
     Dim WithEvents wPagina As hhWordRegister.hhWordRegister
 
-
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         cParametros = New Collection
         wPagina = New hhWordRegister.hhWordRegister
@@ -72,6 +71,20 @@ Public Class FormLavadora
         HhCharacterDisplay3.Longitud = 6
         HhCharacterDisplay3.AutoActualizar = False
 
+
+        'dejar de utilizar mx1000
+        HhMomentaryButton1.Link = mMasterk
+        HhMomentaryButton1.DireccionEscritura = "MX1000"
+        HhMomentaryButton1.DireccionLectura = "MX07"
+        HhMomentaryButton1.AutoActualizar = True
+
+
+        'dejar de utilizar mx1000
+        HhMomentaryButton2.Link = mMasterk
+        HhMomentaryButton2.DireccionEscritura = "MX1000"
+        HhMomentaryButton2.DireccionLectura = "MX0100"
+        HhMomentaryButton2.AutoActualizar = True
+
         Label1.BorderStyle = BorderStyle.Fixed3D
 
 
@@ -96,21 +109,6 @@ Public Class FormLavadora
 
 
 
-        'mMasterk.EstablecerEntero("DW0029", 0)    ' dir comunicacion
-        'mMasterk.EstablecerEntero("DW0028", 1)    ' dir comunicacion
-
-        'mMasterk.EstablecerEntero("DW0024", 100)    'acel rotacion
-
-
-        'mMasterk.EstablecerCadena("DW0110", "CENT")
-        'mMasterk.EstablecerCadena("DW0120", "ROTA")
-        'mMasterk.EstablecerCadena("DW0130", "LLEN")
-        'mMasterk.EstablecerCadena("DW0140", "DESC")
-        'mMasterk.EstablecerCadena("DW0150", "ADIT")
-        'mMasterk.EstablecerCadena("DW0160", "MUES")
-        'mMasterk.EstablecerCadena("DW0170", "FIN ")
-        'mMasterk.EstablecerCadena("DW0180", "TEMP")
-        'mMasterk.EstablecerCadena("DW0190", "MANT")
 
 
     End Sub
@@ -134,7 +132,7 @@ Public Class FormLavadora
             Catch ex As Exception
 
             End Try
-            If bPermitirSalir Then
+            If bDepuracion Then
 
             Else
                 System.Diagnostics.Process.Start("shutdown", "-s -t 10")
@@ -146,33 +144,9 @@ Public Class FormLavadora
 
     End Sub
 
-
-
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
- 
-        Using f As New FormManual
-            CambiarLetra(f)
-            f.ShowDialog()
-end using
-    End Sub
-
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         Using f As New FormConfigura
             CambiarLetra(f)
-            f.ShowDialog()
-        End Using
-    End Sub
-
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        Using f As New FormAutomatico
-            CambiarLetra(f)
-            f.ShowDialog()
-        End Using
-    End Sub
-
-
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-        Using f As New FormMandos
             f.ShowDialog()
         End Using
     End Sub
@@ -182,11 +156,14 @@ end using
         Select Case wPagina.Valor
             Case 1
                 Using h As New hhMsgBox.hhMsgBox
-                    h.Mensaje = "La maquina tiene agua. Abrir la puerta de todas formas?"
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.TextoOk = "Abrir"
-                    h.TextoCancel = "Tirar"
+                    h.Mensaje = "La maquina tiene agua. Abrir la puerta de todas formas?"
+                    h.Imagen = My.Resources.stepa
+                    h.TextoOk = ""
+                    h.ImagenOk = My.Resources.step13
+                    h.TextoCancel = ""
+                    h.ImagenCancel = My.Resources.step9
                     h.DireccionOk = "MX0048"
                     h.DireccionCancel = "MX004A"
                     h.ShowDialog()
@@ -199,13 +176,16 @@ end using
                 wPagina.Valor = 0
             Case 3
                 Using h As New hhMsgBox.hhMsgBox
-                    h.Mensaje = "La maquina no esta en horizontal. Poner en horizontal?"
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.TextoOk = "Horiz"
-                    h.TextoCancel = "Continua"
+                    h.Mensaje = "La maquina no esta en horizontal. Poner en horizontal?"
+                    h.Imagen = My.Resources.level
+                    h.TextoOk = ""
                     h.DireccionOk = "MX0035"
+                    h.ImagenOk = My.Resources.level
+                    h.TextoCancel = ""
                     h.DireccionCancel = "MX0102"
+                    h.ImagenCancel = My.Resources.control_play_blue
                     h.ShowDialog()
                 End Using
                 wPagina.Valor = 0
@@ -214,8 +194,11 @@ end using
                     h.Mensaje = "Proceder con descarga?"
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.TextoOk = "Descarga"
-                    h.TextoCancel = "Horizontal"
+                    h.Imagen = My.Resources.rock
+                    h.TextoOk = ""
+                    h.ImagenOk = My.Resources.step13
+                    h.TextoCancel = ""
+                    h.ImagenCancel = My.Resources.level
                     h.DireccionOk = "MX002D"
                     h.DireccionCancel = "MX0032"
                     h.ShowDialog()
@@ -223,11 +206,14 @@ end using
                 wPagina.Valor = 0
             Case 5
                 Using h As New hhMsgBox.hhMsgBox
-                    h.Mensaje = "La puerta esta abierta. Cerrar la puerta?"
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.TextoOk = "Cerrar"
-                    h.TextoCancel = "Continua"
+                    h.Mensaje = "La puerta esta abierta. Cerrar la puerta?"
+                    h.Imagen = My.Resources._error
+                    h.TextoOk = ""
+                    h.ImagenOk = My.Resources.step15
+                    h.TextoCancel = ""
+                    h.ImagenCancel = My.Resources.control_play_blue
                     h.DireccionOk = "MX0003"
                     h.DireccionCancel = "MX0103"
                     h.ShowDialog()
@@ -283,11 +269,14 @@ end using
                 wPagina.Valor = 0
             Case 10
                 Using h As New hhMsgBox.hhMsgBox
-                    h.Mensaje = "Proceder con paso aditivos?"
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.TextoOk = "Si"
-                    h.TextoCancel = "No"
+                    h.Mensaje = "Proceder con paso aditivos?"
+                    h.Imagen = My.Resources.step12
+                    h.TextoOk = ""
+                    h.ImagenOk = My.Resources.step12
+                    h.TextoCancel = ""
+                    h.ImagenCancel = My.Resources.control_end_blue
                     h.DireccionOk = "MX0115"
                     h.DireccionCancel = "MX0116"
                     h.ShowDialog()
@@ -295,11 +284,14 @@ end using
                 wPagina.Valor = 0
             Case 11
                 Using h As New hhMsgBox.hhMsgBox
-                    h.Mensaje = "La maquina no esta Inicializada. Presione el boton START."
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.TextoOk = "Ok"
-                    h.TextoCancel = "Salir"
+                    h.Mensaje = "La maquina no esta Inicializada. Presione el boton START."
+                    h.Imagen = My.Resources.switch
+                    h.TextoOk = ""
+                    h.ImagenOk = My.Resources.tick
+                    h.TextoCancel = ""
+                    h.ImagenCancel = My.Resources.cross
                     h.DireccionOk = "MX0B"
                     h.DireccionCancel = "MX0C"
                     h.ShowDialog()
@@ -308,11 +300,14 @@ end using
             Case 12
                 wPagina.Valor = 0
                 Using h As New hhMsgBox.hhMsgBox
-                    h.Mensaje = "Proceder con paso muestreo?"
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.TextoOk = "Si"
-                    h.TextoCancel = "No"
+                    h.Mensaje = "Proceder con paso muestreo?"
+                    h.Imagen = My.Resources.step10
+                    h.TextoOk = ""
+                    h.ImagenOk = My.Resources.tick
+                    h.TextoCancel = ""
+                    h.ImagenCancel = My.Resources.control_fastforward_blue
                     h.DireccionOk = "MX0125"
                     h.DireccionCancel = "MX0129"
                     h.ShowDialog()
@@ -351,8 +346,8 @@ end using
                     h.DireccionCancel = "MX89"
                     h.ShowDialog()
                 End Using
-
             Case 15
+                'Posiblemente se borre, paso "funcion"
                 Using h As New hhMsgBox.hhMsgBox
                     h.Mensaje = "Cerrar puerta?"
                     h.Link = mMasterk
@@ -366,11 +361,14 @@ end using
                 wPagina.Valor = 0
             Case 16
                 Using h As New hhMsgBox.hhMsgBox
-                    h.Mensaje = "Maximo tiempo activada la bomba hidraulica."
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.TextoOk = "Ok"
-                    h.TextoCancel = "Cancelar"
+                    h.Mensaje = "Maximo tiempo activada la bomba hidraulica."
+                    h.Imagen = My.Resources._error
+                    h.TextoOk = ""
+                    h.ImagenOk = My.Resources.tick
+                    h.TextoCancel = ""
+                    h.ImagenCancel = My.Resources.cross
                     h.DireccionOk = "MX002B"
                     h.DireccionCancel = "MX002B"
                     h.ShowDialog()
@@ -381,8 +379,11 @@ end using
                     h.Mensaje = "Maximo tiempo activada cerrar puerta."
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.TextoOk = "Ok"
-                    h.TextoCancel = "Cancelar"
+                    h.Imagen = My.Resources._error
+                    h.TextoOk = ""
+                    h.ImagenOk = My.Resources.tick
+                    h.TextoCancel = ""
+                    h.ImagenCancel = My.Resources.cross
                     h.DireccionOk = "MX002B"
                     h.DireccionCancel = "MX002B"
                     h.ShowDialog()
@@ -393,8 +394,11 @@ end using
                     h.Mensaje = "Maximo tiempo activada abrir puerta."
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.TextoOk = "Ok"
-                    h.TextoCancel = "Cancelar"
+                    h.Imagen = My.Resources._error
+                    h.TextoOk = ""
+                    h.ImagenOk = My.Resources.tick
+                    h.TextoCancel = ""
+                    h.ImagenCancel = My.Resources.cross
                     h.DireccionOk = "MX002B"
                     h.DireccionCancel = "MX002B"
                     h.ShowDialog()
@@ -406,8 +410,11 @@ end using
                     h.Mensaje = "Termico de motor disparado."
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.TextoOk = "Ok"
-                    h.TextoCancel = "Cancelar"
+                    h.Imagen = My.Resources.lightning
+                    h.TextoOk = ""
+                    h.ImagenOk = My.Resources.tick
+                    h.TextoCancel = ""
+                    h.ImagenCancel = My.Resources.cross
                     h.DireccionOk = "MX002B"
                     h.DireccionCancel = "MX002B"
                     h.ShowDialog()
@@ -415,11 +422,14 @@ end using
                 wPagina.Valor = 0
             Case 20
                 Using h As New hhMsgBox.hhMsgBox
-                    h.Mensaje = "Alarma de inversor."
+                    h.Mensaje = "Alarma de variador."
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.TextoOk = "Ok"
-                    h.TextoCancel = "Cancelar"
+                    h.Imagen = My.Resources.exclamation
+                    h.TextoOk = ""
+                    h.ImagenOk = My.Resources.tick
+                    h.TextoCancel = ""
+                    h.ImagenCancel = My.Resources.cross
                     h.DireccionOk = "MX002B"
                     h.DireccionCancel = "MX002B"
                     h.ShowDialog()
@@ -443,9 +453,12 @@ end using
                     h.Mensaje = "Maximo tiempo activada la bomba de quimicos."
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.TextoOk = "Ok"
-                    h.TextoCancel = "Cancelar"
-                    h.DireccionOk = "MX004D"
+                    h.Imagen = My.Resources.filter
+                    h.TextoOk = ""
+                    h.ImagenOk = My.Resources.tick
+                    h.TextoCancel = ""
+                    h.ImagenCancel = My.Resources.cross
+                    h.DireccionOk = "MX002B"
                     h.DireccionCancel = "MX002B"
                     h.ShowDialog()
                 End Using
@@ -455,8 +468,11 @@ end using
                     h.Mensaje = "La maquina no esta Inicializada. Presione el boton START."
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.TextoOk = "Ok"
-                    h.TextoCancel = "Salir"
+                    h.Imagen = My.Resources.switch
+                    h.TextoOk = ""
+                    h.ImagenOk = My.Resources.tick
+                    h.TextoCancel = ""
+                    h.ImagenCancel = My.Resources.cross
                     h.DireccionOk = "MX2B"
                     h.DireccionCancel = "MX0C"
                     h.ShowDialog()
@@ -507,6 +523,43 @@ end using
         End Using
     End Sub
 
- 
-    
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        Using f As New FormMandos
+            f.ShowDialog()
+        End Using
+    End Sub
+
+    Private Sub HhMomentaryButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton1.Click
+        Using f As New FormManual
+            CambiarLetra(f)
+            If mMasterk.ObtenerBoolean("MX0100") Then
+                HhMsgBox1.Mensaje = "La maquina esta trabajando. Parar la maquina?"
+                HhMsgBox1.Link = mMasterk
+                HhMsgBox1.Tamanio = 50
+                HhMsgBox1.Imagen = My.Resources.traffic_lights_green
+                HhMsgBox1.TextoOk = ""
+                HhMsgBox1.ImagenOk = My.Resources.control_stop_blue
+                HhMsgBox1.TextoCancel = ""
+                HhMsgBox1.ImagenCancel = My.Resources.cross
+                HhMsgBox1.DireccionOk = "MX0C"
+                HhMsgBox1.DireccionCancel = "MX0B"
+                HhMsgBox1.ShowDialog()
+                If HhMsgBox1.Resultado = Windows.Forms.DialogResult.OK Then
+                    f.ShowDialog()
+                End If
+            Else
+                f.ShowDialog()
+            End If
+
+
+        End Using
+    End Sub
+
+    Private Sub HhMomentaryButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton2.Click
+
+        Using f As New FormAutomatico
+            CambiarLetra(f)
+            f.ShowDialog()
+        End Using
+    End Sub
 End Class

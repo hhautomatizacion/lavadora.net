@@ -12,11 +12,14 @@
     <AssemblyName>Lavadora</AssemblyName>
     <MyType>WindowsForms</MyType>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <ManifestCertificateThumbprint>46A8916E4E6C40CBB1345148CC296FF36160C272</ManifestCertificateThumbprint>
-    <ManifestKeyFile>Lavadora_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestCertificateThumbprint>E5213C0438F317624D8924197ADE18305584FE41</ManifestCertificateThumbprint>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
     <SignManifests>true</SignManifests>
-    <PublishUrl>c:\temp\Lavadora\</PublishUrl>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -26,7 +29,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <UpdateUrl>\\128.128.5.51\Lavadora\</UpdateUrl>
+    <UpdateUrl>https://raw.githubusercontent.com/hhautomatizacion/lavadora.net/master/Programas/Lavadora/Lavadora/Publish/</UpdateUrl>
     <ProductName>Lavadora</ProductName>
     <PublisherName>hhAutomatizacion</PublisherName>
     <WebPage>publish.htm</WebPage>
@@ -54,71 +57,67 @@
   <ItemGroup>
     <Reference Include="hhAnimacion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\hhAnimacion\hhAnimacion\bin\Debug\hhAnimacion.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\hhAnimacion\hhAnimacion\bin\Debug\hhAnimacion.dll</HintPath>
     </Reference>
     <Reference Include="hhBooleanLabel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\hhBooleanLabel\hhBooleanLabel\bin\Debug\hhBooleanLabel.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\hhBooleanLabel\hhBooleanLabel\bin\Debug\hhBooleanLabel.dll</HintPath>
     </Reference>
     <Reference Include="hhCharacterDisplay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\hhCharacterDisplay\hhCharacterDisplay\bin\Debug\hhCharacterDisplay.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\hhCharacterDisplay\hhCharacterDisplay\bin\Debug\hhCharacterDisplay.dll</HintPath>
     </Reference>
     <Reference Include="hhComboEntry, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\hhComboEntry\hhComboEntry\bin\Debug\hhComboEntry.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\hhComboEntry\hhComboEntry\bin\Debug\hhComboEntry.dll</HintPath>
     </Reference>
     <Reference Include="hhDialogoArchivos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\hhDialogoArchivos\hhDialogoArchivos\bin\Debug\hhDialogoArchivos.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\hhDialogoArchivos\hhDialogoArchivos\bin\Debug\hhDialogoArchivos.dll</HintPath>
     </Reference>
     <Reference Include="hhGridDisplay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\hhGridDisplay\hhGridDisplay\bin\Debug\hhGridDisplay.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\hhGridDisplay\hhGridDisplay\bin\Debug\hhGridDisplay.dll</HintPath>
     </Reference>
     <Reference Include="hhInputBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\hhInputBox\hhInputBox\bin\Debug\hhInputBox.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\hhInputBox\hhInputBox\bin\Debug\hhInputBox.dll</HintPath>
     </Reference>
     <Reference Include="hhMomentaryButton, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\hhMomentaryButton\hhMomentaryButton\bin\Debug\hhMomentaryButton.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\hhMomentaryButton\hhMomentaryButton\bin\Debug\hhMomentaryButton.dll</HintPath>
     </Reference>
     <Reference Include="hhMsgBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\hhMsgBox\hhMsgBox\bin\Debug\hhMsgBox.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\hhMsgBox\hhMsgBox\bin\Debug\hhMsgBox.dll</HintPath>
     </Reference>
     <Reference Include="hhNumericDisplay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\hhNumericDisplay\hhNumericDisplay\bin\Debug\hhNumericDisplay.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\hhNumericDisplay\hhNumericDisplay\bin\Debug\hhNumericDisplay.dll</HintPath>
     </Reference>
     <Reference Include="hhNumericEntry, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\hhNumericEntry\hhNumericEntry\bin\Debug\hhNumericEntry.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\hhNumericEntry\hhNumericEntry\bin\Debug\hhNumericEntry.dll</HintPath>
     </Reference>
     <Reference Include="hhProgressBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\hhProgressBox\hhProgressBox\bin\Debug\hhProgressBox.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\hhProgressBox\hhProgressBox\bin\Debug\hhProgressBox.dll</HintPath>
     </Reference>
     <Reference Include="hhTimeCounterDisplay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\hhTimeCounterDisplay\hhTimeCounterDisplay\bin\Debug\hhTimeCounterDisplay.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\hhTimeCounterDisplay\hhTimeCounterDisplay\bin\Debug\hhTimeCounterDisplay.dll</HintPath>
     </Reference>
     <Reference Include="hhToggleButton, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\hhToggleButton\hhToggleButton\bin\Debug\hhToggleButton.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\hhToggleButton\hhToggleButton\bin\Debug\hhToggleButton.dll</HintPath>
     </Reference>
     <Reference Include="hhWordRegister, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\hhWordRegister\hhWordRegister\bin\Debug\hhWordRegister.dll</HintPath>
-    </Reference>
-    <Reference Include="LavadoraLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\LavadoraLib\LavadoraLib\bin\Debug\LavadoraLib.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\hhWordRegister\hhWordRegister\bin\Debug\hhWordRegister.dll</HintPath>
     </Reference>
     <Reference Include="masterklib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\masterklib\masterklib\bin\Debug\masterklib.dll</HintPath>
+      <HintPath>..\..\..\..\..\masterklib\trunk\Programas\masterklib\masterklib\bin\Debug\masterklib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -414,6 +413,75 @@
       <ProductName>.NET Framework 2.0</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\laptop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\stepa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\step9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\step13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\level.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\control_play_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\rock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\step15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\step12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\control_end_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\step10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\control_fastforward_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\traffic_lights_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\lightning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\traffic_lights_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\control_stop_blue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

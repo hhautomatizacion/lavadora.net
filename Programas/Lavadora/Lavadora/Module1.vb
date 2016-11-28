@@ -7,7 +7,7 @@ Module Module1
     Public sNombrePuerto As String
     Public sTerminal As String
     Public sVersion As String
-    Public bPermitirSalir As Boolean
+    Public bDepuracion As Boolean
     Public WithEvents mMasterk As MasterKlib.MasterK
     Public Function ChangeComputerName(ByVal sNewComputerName As String) As Boolean
         Return CBool(SetComputerName(sNewComputerName))
@@ -32,9 +32,20 @@ Module Module1
         BitMask = 2 ^ (MyBit)
         MyByte = MyByte Xor BitMask
     End Sub
+    Sub depurar(ByVal s As Object, ByVal e As System.EventArgs)
+        Debug.Print("Nombre..............: " & s.name)
+        Debug.Print("DireccionEscritura..: " & s.direccionescritura)
+        Debug.Print("DireccionLectura....: " & s.direccionlectura)
+
+    End Sub
     Sub CambiarLetra(ByVal f As Object)
         Dim c As Control
         For Each c In f.Controls
+            If bDepuracion Then
+                If c.GetType Is GetType(hhMomentaryButton.hhMomentaryButton) Then
+                    AddHandler c.MouseHover, AddressOf Module1.depurar
+                End If
+            End If
             If c.GetType Is GetType(Button) Then
                 c.Cursor = Cursors.Cross
                 c.Font = New Font(sNombreFuente, iTamanioFuente)
@@ -63,7 +74,7 @@ Module Module1
     End Sub
     Function Version() As String
         Dim sVer As String
-        'If (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed) Then
+
         Try
             With System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion
                 sVer = .Major & "." & .Minor & "." & .Build
@@ -71,9 +82,7 @@ Module Module1
         Catch
             sVer = "Desconocido"
         End Try
-        'Else
-        'sVer = "Desconocido"
-        'End If
+  
         Return sVer
     End Function
     Sub CargarOpciones()
@@ -81,7 +90,7 @@ Module Module1
         sNombrePuerto = GetSetting("Lavadora", "Principal", "Puerto", "COM1")
         sNombreFuente = GetSetting("hhcontrols", "font", "name", "Verdana")
         iTamanioFuente = Val(GetSetting("hhcontrols", "font", "size", "14"))
-        bPermitirSalir = -Val(GetSetting("Lavadora", "Principal", "PermitirSalir", "0"))
+        bDepuracion = -Val(GetSetting("Lavadora", "Principal", "Depuracion", "0"))
         sVersion = GetSetting("Lavadora", "Principal", "Version", "")
         If sVersion <> Version() Then
             sVersion = Version()

@@ -19,6 +19,7 @@ Partial Class FormConfQuimicos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConfQuimicos))
         Me.Button1 = New System.Windows.Forms.Button
         Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry
         Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry
@@ -26,11 +27,11 @@ Partial Class FormConfQuimicos
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(658, 463)
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(688, 473)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 100)
+        Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "OK"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'HhNumericEntry1
@@ -41,7 +42,7 @@ Partial Class FormConfQuimicos
         Me.HhNumericEntry1.DireccionEscritura = Nothing
         Me.HhNumericEntry1.DireccionLectura = Nothing
         Me.HhNumericEntry1.Etiqueta = "Intro aditivos"
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Trebuchet MS", 14.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry1.Link = Nothing
         Me.HhNumericEntry1.Location = New System.Drawing.Point(258, 66)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
@@ -63,7 +64,7 @@ Partial Class FormConfQuimicos
         Me.HhNumericEntry2.DireccionEscritura = Nothing
         Me.HhNumericEntry2.DireccionLectura = Nothing
         Me.HhNumericEntry2.Etiqueta = "Enjuague aditivos"
-        Me.HhNumericEntry2.Font = New System.Drawing.Font("Trebuchet MS", 14.0!)
+        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry2.Link = Nothing
         Me.HhNumericEntry2.Location = New System.Drawing.Point(258, 112)
         Me.HhNumericEntry2.Name = "HhNumericEntry2"

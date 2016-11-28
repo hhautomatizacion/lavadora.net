@@ -19,6 +19,7 @@ Partial Class FormConfCuentalitros
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConfCuentalitros))
         Me.Button1 = New System.Windows.Forms.Button
         Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry
         Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry
@@ -31,11 +32,11 @@ Partial Class FormConfCuentalitros
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(658, 463)
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(688, 473)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 100)
+        Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 3
-        Me.Button1.Text = "OK"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'HhNumericEntry1
@@ -46,7 +47,7 @@ Partial Class FormConfCuentalitros
         Me.HhNumericEntry1.DireccionEscritura = Nothing
         Me.HhNumericEntry1.DireccionLectura = Nothing
         Me.HhNumericEntry1.Etiqueta = "Offset de llenado"
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Papyrus", 18.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry1.Link = Nothing
         Me.HhNumericEntry1.Location = New System.Drawing.Point(247, 328)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
@@ -68,7 +69,7 @@ Partial Class FormConfCuentalitros
         Me.HhNumericEntry2.DireccionEscritura = Nothing
         Me.HhNumericEntry2.DireccionLectura = Nothing
         Me.HhNumericEntry2.Etiqueta = "Divisor"
-        Me.HhNumericEntry2.Font = New System.Drawing.Font("Papyrus", 18.0!)
+        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry2.Link = Nothing
         Me.HhNumericEntry2.Location = New System.Drawing.Point(247, 190)
         Me.HhNumericEntry2.Name = "HhNumericEntry2"
@@ -90,7 +91,7 @@ Partial Class FormConfCuentalitros
         Me.HhNumericEntry3.DireccionEscritura = Nothing
         Me.HhNumericEntry3.DireccionLectura = Nothing
         Me.HhNumericEntry3.Etiqueta = "Multiplo"
-        Me.HhNumericEntry3.Font = New System.Drawing.Font("Papyrus", 18.0!)
+        Me.HhNumericEntry3.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry3.Link = Nothing
         Me.HhNumericEntry3.Location = New System.Drawing.Point(247, 236)
         Me.HhNumericEntry3.Name = "HhNumericEntry3"
@@ -112,7 +113,7 @@ Partial Class FormConfCuentalitros
         Me.HhNumericDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay1.DireccionLectura = Nothing
         Me.HhNumericDisplay1.Etiqueta = "Litros"
-        Me.HhNumericDisplay1.Font = New System.Drawing.Font("Papyrus", 18.0!)
+        Me.HhNumericDisplay1.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericDisplay1.Link = Nothing
         Me.HhNumericDisplay1.Location = New System.Drawing.Point(247, 63)
         Me.HhNumericDisplay1.Name = "HhNumericDisplay1"
@@ -133,7 +134,7 @@ Partial Class FormConfCuentalitros
         Me.HhNumericDisplay2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay2.DireccionLectura = Nothing
         Me.HhNumericDisplay2.Etiqueta = "Pulsos"
-        Me.HhNumericDisplay2.Font = New System.Drawing.Font("Papyrus", 18.0!)
+        Me.HhNumericDisplay2.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericDisplay2.Link = Nothing
         Me.HhNumericDisplay2.Location = New System.Drawing.Point(247, 114)
         Me.HhNumericDisplay2.Name = "HhNumericDisplay2"
@@ -154,7 +155,7 @@ Partial Class FormConfCuentalitros
         Me.HhNumericEntry4.DireccionEscritura = Nothing
         Me.HhNumericEntry4.DireccionLectura = Nothing
         Me.HhNumericEntry4.Etiqueta = "Sopleteo sondas"
-        Me.HhNumericEntry4.Font = New System.Drawing.Font("Papyrus", 18.0!)
+        Me.HhNumericEntry4.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry4.Link = Nothing
         Me.HhNumericEntry4.Location = New System.Drawing.Point(247, 450)
         Me.HhNumericEntry4.Name = "HhNumericEntry4"
@@ -176,7 +177,7 @@ Partial Class FormConfCuentalitros
         Me.HhNumericEntry5.DireccionEscritura = Nothing
         Me.HhNumericEntry5.DireccionLectura = Nothing
         Me.HhNumericEntry5.Etiqueta = "Nivel min. calent."
-        Me.HhNumericEntry5.Font = New System.Drawing.Font("Papyrus", 18.0!)
+        Me.HhNumericEntry5.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry5.Link = Nothing
         Me.HhNumericEntry5.Location = New System.Drawing.Point(247, 374)
         Me.HhNumericEntry5.Name = "HhNumericEntry5"

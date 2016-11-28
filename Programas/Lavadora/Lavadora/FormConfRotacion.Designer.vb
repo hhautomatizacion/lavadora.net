@@ -19,6 +19,7 @@ Partial Class FormConfRotacion
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConfRotacion))
         Me.Button1 = New System.Windows.Forms.Button
         Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry
         Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry
@@ -31,11 +32,11 @@ Partial Class FormConfRotacion
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(658, 463)
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(688, 473)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 100)
+        Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "OK"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'HhNumericEntry1
@@ -46,7 +47,7 @@ Partial Class FormConfRotacion
         Me.HhNumericEntry1.DireccionEscritura = Nothing
         Me.HhNumericEntry1.DireccionLectura = Nothing
         Me.HhNumericEntry1.Etiqueta = "RPM a 60Hz"
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry1.Link = Nothing
         Me.HhNumericEntry1.Location = New System.Drawing.Point(281, 85)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
@@ -68,7 +69,7 @@ Partial Class FormConfRotacion
         Me.HhNumericEntry2.DireccionEscritura = Nothing
         Me.HhNumericEntry2.DireccionLectura = Nothing
         Me.HhNumericEntry2.Etiqueta = "Frec. maxima"
-        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry2.Link = Nothing
         Me.HhNumericEntry2.Location = New System.Drawing.Point(281, 131)
         Me.HhNumericEntry2.Name = "HhNumericEntry2"
@@ -90,7 +91,7 @@ Partial Class FormConfRotacion
         Me.HhNumericEntry3.DireccionEscritura = Nothing
         Me.HhNumericEntry3.DireccionLectura = Nothing
         Me.HhNumericEntry3.Etiqueta = "Vel. descarga"
-        Me.HhNumericEntry3.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry3.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry3.Link = Nothing
         Me.HhNumericEntry3.Location = New System.Drawing.Point(281, 192)
         Me.HhNumericEntry3.Name = "HhNumericEntry3"
@@ -112,7 +113,7 @@ Partial Class FormConfRotacion
         Me.HhNumericEntry4.DireccionEscritura = Nothing
         Me.HhNumericEntry4.DireccionLectura = Nothing
         Me.HhNumericEntry4.Etiqueta = "Tiempo descarga"
-        Me.HhNumericEntry4.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry4.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry4.Link = Nothing
         Me.HhNumericEntry4.Location = New System.Drawing.Point(281, 238)
         Me.HhNumericEntry4.Name = "HhNumericEntry4"
@@ -134,7 +135,7 @@ Partial Class FormConfRotacion
         Me.HhNumericEntry5.DireccionEscritura = Nothing
         Me.HhNumericEntry5.DireccionLectura = Nothing
         Me.HhNumericEntry5.Etiqueta = "Reg. frec. variador"
-        Me.HhNumericEntry5.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry5.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry5.Link = Nothing
         Me.HhNumericEntry5.Location = New System.Drawing.Point(281, 39)
         Me.HhNumericEntry5.Name = "HhNumericEntry5"
@@ -156,7 +157,7 @@ Partial Class FormConfRotacion
         Me.HhNumericEntry6.DireccionEscritura = Nothing
         Me.HhNumericEntry6.DireccionLectura = Nothing
         Me.HhNumericEntry6.Etiqueta = "Vel. despedrado"
-        Me.HhNumericEntry6.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry6.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry6.Link = Nothing
         Me.HhNumericEntry6.Location = New System.Drawing.Point(281, 299)
         Me.HhNumericEntry6.Name = "HhNumericEntry6"
@@ -178,7 +179,7 @@ Partial Class FormConfRotacion
         Me.HhNumericEntry7.DireccionEscritura = Nothing
         Me.HhNumericEntry7.DireccionLectura = Nothing
         Me.HhNumericEntry7.Etiqueta = "Acel. rotacion"
-        Me.HhNumericEntry7.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry7.Font = New System.Drawing.Font("Verdana", 20.0!)
         Me.HhNumericEntry7.Link = Nothing
         Me.HhNumericEntry7.Location = New System.Drawing.Point(281, 360)
         Me.HhNumericEntry7.Name = "HhNumericEntry7"

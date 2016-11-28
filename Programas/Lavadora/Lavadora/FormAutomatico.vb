@@ -13,7 +13,7 @@ Public Class FormAutomatico
     End Sub
 
     Private Sub FormAutomatico_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        Debug.Print("hola")
 
         mMasterk.EstablecerBoolean("MX0001", True)
 
@@ -88,13 +88,11 @@ Public Class FormAutomatico
 
         HhMomentaryButton1.Link = mMasterk
         HhMomentaryButton1.DireccionEscritura = "MX0B"
-        'prueba
         HhMomentaryButton1.DireccionLectura = "MX0100"
         HhMomentaryButton1.AutoActualizar = True
 
 
         HhMomentaryButton2.Link = mMasterk
-        HhMomentaryButton2.Text = "Stop"
         HhMomentaryButton2.DireccionEscritura = "MX0243"
         HhMomentaryButton2.DireccionLectura = "MX0241"
         HhMomentaryButton2.AutoActualizar = True
@@ -191,8 +189,10 @@ Public Class FormAutomatico
                 HhMsgBox1.Mensaje = "La maquina esta trabajando. Parar la maquina?"
                 HhMsgBox1.Link = mMasterk
                 HhMsgBox1.Tamanio = 50
-                HhMsgBox1.TextoOk = "Parar"
-                HhMsgBox1.TextoCancel = "Cancel"
+                HhMsgBox1.TextoOk = "Si"
+                HhMsgBox1.TextoCancel = "Cancelar"
+                'HhMsgBox1.ImagenOk = My.Resources.media_stop
+                'HhMsgBox1.ImagenCancel = My.Resources.multiply
                 HhMsgBox1.DireccionOk = "MX0C"
                 HhMsgBox1.DireccionCancel = "MX0B"
                 HhMsgBox1.ShowDialog()
@@ -222,8 +222,8 @@ Public Class FormAutomatico
         HhNumericDisplay2.ValorMaximo = iValue
         HhNumericDisplay2.ValorMinimo = iValue
         If iValue = 0 Then
-            HhNumericDisplay1.ValorMaximo = 100
-            HhNumericDisplay1.ValorMinimo = 0
+            HhNumericDisplay1.ValorMaximo = 44
+            HhNumericDisplay1.ValorMinimo = 5
         Else
             HhNumericDisplay1.ValorMaximo = iValue + 2
             HhNumericDisplay1.ValorMinimo = iValue - 2
@@ -255,4 +255,19 @@ Public Class FormAutomatico
 
 
 
+    Private Sub HhMomentaryButton2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton2.CheckedChanged
+
+    End Sub
+
+    Private Sub HhMomentaryButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton1.CheckedChanged
+
+    End Sub
+
+    Private Sub HhNumericDisplay2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhNumericDisplay2.Click
+
+    End Sub
+
+    Private Sub HhTimeCounterDisplay2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhTimeCounterDisplay2.Click
+
+    End Sub
 End Class

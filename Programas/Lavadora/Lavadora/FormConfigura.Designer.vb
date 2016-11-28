@@ -19,24 +19,16 @@ Partial Class FormConfigura
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConfigura))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
         Me.Button3 = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
         Me.Button4 = New System.Windows.Forms.Button
         Me.Button5 = New System.Windows.Forms.Button
         Me.Button6 = New System.Windows.Forms.Button
+        Me.Button1 = New System.Windows.Forms.Button
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(658, 463)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 100)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "OK"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel1
         '
@@ -59,52 +51,62 @@ Partial Class FormConfigura
         '
         'Button3
         '
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button3.Location = New System.Drawing.Point(160, 3)
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(186, 22)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(152, 128)
+        Me.Button3.Size = New System.Drawing.Size(100, 90)
         Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Rotacion"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button2.Location = New System.Drawing.Point(3, 3)
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.Location = New System.Drawing.Point(28, 22)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(151, 128)
+        Me.Button2.Size = New System.Drawing.Size(100, 90)
         Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Sistema"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button4.Location = New System.Drawing.Point(3, 137)
+        Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
+        Me.Button4.Location = New System.Drawing.Point(28, 156)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(151, 128)
+        Me.Button4.Size = New System.Drawing.Size(100, 90)
         Me.Button4.TabIndex = 4
-        Me.Button4.Text = "Cuentalitros"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
         '
-        Me.Button5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button5.Location = New System.Drawing.Point(160, 137)
+        Me.Button5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
+        Me.Button5.Location = New System.Drawing.Point(186, 156)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(152, 128)
+        Me.Button5.Size = New System.Drawing.Size(100, 90)
         Me.Button5.TabIndex = 5
-        Me.Button5.Text = "Quimicos"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(3, 271)
+        Me.Button6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
+        Me.Button6.Location = New System.Drawing.Point(28, 290)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(151, 129)
+        Me.Button6.Size = New System.Drawing.Size(100, 90)
         Me.Button6.TabIndex = 6
-        Me.Button6.Text = "Volquete"
         Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(688, 473)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(100, 90)
+        Me.Button1.TabIndex = 1
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'FormConfigura
         '
