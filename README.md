@@ -59,49 +59,29 @@
 		* Modelos de componentes que se hayan probado
 
 ---
-![00000006.jpg](/Fotos/00000006.jpg)
+![00000188.jpg](/Fotos/00000188.jpg)
 ---
-![00000014.jpg](/Fotos/00000014.jpg)
+![00000460.jpg](/Fotos/00000460.jpg)
 ---
-![00000018.jpg](/Fotos/00000018.jpg)
+![00002029.jpg](/Fotos/00002029.jpg)
 ---
-![00000025.jpg](/Fotos/00000025.jpg)
+![00002525.jpg](/Fotos/00002525.jpg)
 ---
-![00000032.jpg](/Fotos/00000032.jpg)
+![00002531.jpg](/Fotos/00002531.jpg)
 ---
-![00000034.jpg](/Fotos/00000034.jpg)
+![00002535.jpg](/Fotos/00002535.jpg)
 ---
-![00000041.jpg](/Fotos/00000041.jpg)
+![00002539.jpg](/Fotos/00002539.jpg)
 ---
-![00000052.jpg](/Fotos/00000052.jpg)
+![00002543.jpg](/Fotos/00002543.jpg)
 ---
-![00000064.jpg](/Fotos/00000064.jpg)
+![00002551.jpg](/Fotos/00002551.jpg)
 ---
-![00000073.jpg](/Fotos/00000073.jpg)
+![00002560.jpg](/Fotos/00002560.jpg)
 ---
-![00000082.jpg](/Fotos/00000082.jpg)
+![00002561.jpg](/Fotos/00002561.jpg)
 ---
-![00000083.jpg](/Fotos/00000083.jpg)
----
-![00000112.jpg](/Fotos/00000112.jpg)
----
-![00000282.jpg](/Fotos/00000282.jpg)
----
-![00000284.jpg](/Fotos/00000284.jpg)
----
-![00000287.jpg](/Fotos/00000287.jpg)
----
-![00000308.jpg](/Fotos/00000308.jpg)
----
-![00000309.jpg](/Fotos/00000309.jpg)
----
-![00000310.jpg](/Fotos/00000310.jpg)
----
-![00000311.jpg](/Fotos/00000311.jpg)
----
-![00000312.jpg](/Fotos/00000312.jpg)
----
-![00000313.jpg](/Fotos/00000313.jpg)
+![00002588.jpg](/Fotos/00002588.jpg)
 ---
 ![2014-03-02 08.20.04.jpg](/Fotos/2014-03-02 08.20.04.jpg)
 ---
@@ -114,10 +94,6 @@
 ![2014-03-02 08.20.47.jpg](/Fotos/2014-03-02 08.20.47.jpg)
 ---
 ![2014-03-02 08.20.51.jpg](/Fotos/2014-03-02 08.20.51.jpg)
----
-![DSC03444.JPG](/Fotos/DSC03444.JPG)
----
-![DSC03445.JPG](/Fotos/DSC03445.JPG)
 ---
 ![DSC03446.JPG](/Fotos/DSC03446.JPG)
 ---
@@ -180,6 +156,8 @@
 ![level.png](/Programas/Lavadora/Lavadora/Iconos/level.png)
 ---
 ![lightning.png](/Programas/Lavadora/Lavadora/Iconos/lightning.png)
+---
+![logo.jpg](/Programas/Lavadora/Lavadora/Iconos/logo.jpg)
 ---
 ![rock.png](/Programas/Lavadora/Lavadora/Iconos/rock.png)
 ---

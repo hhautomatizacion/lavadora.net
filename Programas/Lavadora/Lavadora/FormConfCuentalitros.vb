@@ -68,4 +68,8 @@ Public Class FormConfCuentalitros
         Me.Close()
 
     End Sub
+
+    Private Sub HhNumericEntry2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhNumericEntry2.TextChanged
+
+    End Sub
 End Class

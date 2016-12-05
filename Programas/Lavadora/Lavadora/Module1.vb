@@ -8,6 +8,7 @@ Module Module1
     Public sTerminal As String
     Public sVersion As String
     Public bDepuracion As Boolean
+    Public bPermitirSalir As Boolean
     Public WithEvents mMasterk As MasterKlib.MasterK
     Public Function ChangeComputerName(ByVal sNewComputerName As String) As Boolean
         Return CBool(SetComputerName(sNewComputerName))
@@ -76,13 +77,14 @@ Module Module1
         Dim sVer As String
 
         Try
-            With System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion
-                sVer = .Major & "." & .Minor & "." & .Build
-            End With
+            sVer = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString
         Catch
-            sVer = "Desconocido"
+            Try
+                sVer = Application.ProductVersion
+            Catch ex As Exception
+                sVer = "Desconocido"
+            End Try
         End Try
-  
         Return sVer
     End Function
     Sub CargarOpciones()
@@ -91,21 +93,24 @@ Module Module1
         sNombreFuente = GetSetting("hhcontrols", "font", "name", "Verdana")
         iTamanioFuente = Val(GetSetting("hhcontrols", "font", "size", "14"))
         bDepuracion = -Val(GetSetting("Lavadora", "Principal", "Depuracion", "0"))
+        bPermitirSalir = -Val(GetSetting("Lavadora", "Principal", "PermitirSalir", "0"))
         sVersion = GetSetting("Lavadora", "Principal", "Version", "")
         If sVersion <> Version() Then
             sVersion = Version()
             GuardarOpciones()
         End If
-
     End Sub
     Sub GuardarOpciones()
         SaveSetting("Lavadora", "Principal", "Puerto", sNombrePuerto)
         SaveSetting("Lavadora", "Principal", "Version", sVersion)
         SaveSetting("hhcontrols", "font", "name", sNombreFuente)
         SaveSetting("hhcontrols", "font", "size", iTamanioFuente.ToString)
+        SaveSetting("Lavadora", "Principal", "Depuracion", -bDepuracion)
+        SaveSetting("Lavadora", "Principal", "PermitirSalir", -bPermitirSalir)
     End Sub
     Sub UnAttach(ByVal f As Form)
         Dim c As Object
+
         For Each c In f.Controls
             Try
                 Application.DoEvents()
@@ -141,9 +146,7 @@ Module Module1
         FormLavadora.HhAnimacion2.Animar()
     End Sub
     Private Sub mMasterk_Timeout(ByVal sender As Object, ByVal e As MasterKlib.MyEventArgs) Handles mMasterk.Timeout
-
         FormLavadora.HhAnimacion2.BackColor = Color.Red
-
     End Sub
     Private Sub mMasterk_TX(ByVal sender As Object, ByVal e As MasterKlib.MyEventArgs) Handles mMasterk.TX
         FormLavadora.HhAnimacion1.Animar()

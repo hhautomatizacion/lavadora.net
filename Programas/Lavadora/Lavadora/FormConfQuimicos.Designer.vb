@@ -21,8 +21,8 @@ Partial Class FormConfQuimicos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConfQuimicos))
         Me.Button1 = New System.Windows.Forms.Button
-        Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry
         Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry
+        Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry
         Me.SuspendLayout()
         '
         'Button1
@@ -34,41 +34,21 @@ Partial Class FormConfQuimicos
         Me.Button1.TabIndex = 2
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'HhNumericEntry1
-        '
-        Me.HhNumericEntry1.AutoActualizar = False
-        Me.HhNumericEntry1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.HhNumericEntry1.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.HhNumericEntry1.DireccionEscritura = Nothing
-        Me.HhNumericEntry1.DireccionLectura = Nothing
-        Me.HhNumericEntry1.Etiqueta = "Intro aditivos"
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 20.0!)
-        Me.HhNumericEntry1.Link = Nothing
-        Me.HhNumericEntry1.Location = New System.Drawing.Point(258, 66)
-        Me.HhNumericEntry1.Name = "HhNumericEntry1"
-        Me.HhNumericEntry1.Size = New System.Drawing.Size(180, 40)
-        Me.HhNumericEntry1.TabIndex = 4
-        Me.HhNumericEntry1.Text = "0"
-        Me.HhNumericEntry1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.HhNumericEntry1.Tooltip = "Tiempo de|introduccion de|aditivos. (seg)"
-        Me.HhNumericEntry1.Unidades = "seg"
-        Me.HhNumericEntry1.Valor = 0
-        Me.HhNumericEntry1.ValorMaximo = 0
-        Me.HhNumericEntry1.ValorMinimo = 0
-        '
         'HhNumericEntry2
         '
         Me.HhNumericEntry2.AutoActualizar = False
         Me.HhNumericEntry2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HhNumericEntry2.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhNumericEntry2.Decimales = 0
         Me.HhNumericEntry2.DireccionEscritura = Nothing
         Me.HhNumericEntry2.DireccionLectura = Nothing
         Me.HhNumericEntry2.Etiqueta = "Enjuague aditivos"
-        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhNumericEntry2.Factor = 1.0!
+        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhNumericEntry2.Link = Nothing
-        Me.HhNumericEntry2.Location = New System.Drawing.Point(258, 112)
+        Me.HhNumericEntry2.Location = New System.Drawing.Point(220, 95)
         Me.HhNumericEntry2.Name = "HhNumericEntry2"
-        Me.HhNumericEntry2.Size = New System.Drawing.Size(180, 40)
+        Me.HhNumericEntry2.Size = New System.Drawing.Size(220, 40)
         Me.HhNumericEntry2.TabIndex = 6
         Me.HhNumericEntry2.Text = "0"
         Me.HhNumericEntry2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -77,6 +57,30 @@ Partial Class FormConfQuimicos
         Me.HhNumericEntry2.Valor = 0
         Me.HhNumericEntry2.ValorMaximo = 0
         Me.HhNumericEntry2.ValorMinimo = 0
+        '
+        'HhNumericEntry1
+        '
+        Me.HhNumericEntry1.AutoActualizar = False
+        Me.HhNumericEntry1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhNumericEntry1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhNumericEntry1.Decimales = 0
+        Me.HhNumericEntry1.DireccionEscritura = Nothing
+        Me.HhNumericEntry1.DireccionLectura = Nothing
+        Me.HhNumericEntry1.Etiqueta = "Intro aditivos"
+        Me.HhNumericEntry1.Factor = 1.0!
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry1.Link = Nothing
+        Me.HhNumericEntry1.Location = New System.Drawing.Point(220, 50)
+        Me.HhNumericEntry1.Name = "HhNumericEntry1"
+        Me.HhNumericEntry1.Size = New System.Drawing.Size(220, 40)
+        Me.HhNumericEntry1.TabIndex = 4
+        Me.HhNumericEntry1.Text = "0"
+        Me.HhNumericEntry1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.HhNumericEntry1.Tooltip = "Tiempo de|introduccion de|aditivos. (seg)"
+        Me.HhNumericEntry1.Unidades = "seg"
+        Me.HhNumericEntry1.Valor = 0
+        Me.HhNumericEntry1.ValorMaximo = 0
+        Me.HhNumericEntry1.ValorMinimo = 0
         '
         'FormConfQuimicos
         '

@@ -9,6 +9,10 @@ Public Class FormConfSistema
         Else
             HhToggleButton1.Checked = True
         End If
+        HhToggleButton2.Etiqueta = "PermiteSalir"
+        HhToggleButton2.Checked = bPermitirSalir
+        HhToggleButton3.Etiqueta = "Depuracion"
+        HhToggleButton3.Checked = bDepuracion
 
         For Each sPuertoSerie As String In My.Computer.Ports.SerialPortNames
             HhComboEntry1.Items.Add(sPuertoSerie)
@@ -100,5 +104,21 @@ Public Class FormConfSistema
         Else
             My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True).DeleteValue(Application.ProductName)
         End If
+    End Sub
+    Private Sub HhToggleButton3_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhToggleButton3.Click
+
+        bDepuracion = HhToggleButton3.Checked
+
+    End Sub
+    Private Sub HhToggleButton2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhToggleButton2.Click
+
+        bPermitirSalir = HhToggleButton2.Checked
+
+
+    End Sub
+
+   
+    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
+
     End Sub
 End Class

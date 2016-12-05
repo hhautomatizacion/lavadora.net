@@ -69,6 +69,8 @@
 ---
 ![lightning.png](/Programas/Lavadora/Lavadora/Iconos/lightning.png)
 ---
+![logo.jpg](/Programas/Lavadora/Lavadora/Iconos/logo.jpg)
+---
 ![rock.png](/Programas/Lavadora/Lavadora/Iconos/rock.png)
 ---
 ![setting_tools.png](/Programas/Lavadora/Lavadora/Iconos/setting_tools.png)

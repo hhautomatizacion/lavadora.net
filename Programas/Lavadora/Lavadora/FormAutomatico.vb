@@ -13,12 +13,7 @@ Public Class FormAutomatico
     End Sub
 
     Private Sub FormAutomatico_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Debug.Print("hola")
-
         mMasterk.EstablecerBoolean("MX0001", True)
-
-  
-
 
         HhNumericDisplay1.Link = mMasterk
         HhNumericDisplay1.DireccionLectura = "DW0030"
@@ -83,7 +78,7 @@ Public Class FormAutomatico
         HhTimeCounterDisplay4.Tooltip = "Duracion receta"
         HhTimeCounterDisplay4.AutoActualizar = False
 
- 
+
 
 
         HhMomentaryButton1.Link = mMasterk
@@ -185,20 +180,23 @@ Public Class FormAutomatico
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         Using fForm As New FormMandos
-            If mMasterk.ObtenerBoolean("MX100") Then
-                HhMsgBox1.Mensaje = "La maquina esta trabajando. Parar la maquina?"
-                HhMsgBox1.Link = mMasterk
-                HhMsgBox1.Tamanio = 50
-                HhMsgBox1.TextoOk = "Si"
-                HhMsgBox1.TextoCancel = "Cancelar"
-                'HhMsgBox1.ImagenOk = My.Resources.media_stop
-                'HhMsgBox1.ImagenCancel = My.Resources.multiply
-                HhMsgBox1.DireccionOk = "MX0C"
-                HhMsgBox1.DireccionCancel = "MX0B"
-                HhMsgBox1.ShowDialog()
-                If HhMsgBox1.Resultado = Windows.Forms.DialogResult.OK Then
-                    fForm.ShowDialog()
-                End If
+            If mMasterk.ObtenerBoolean("MX0100") Then
+                Using m As New hhMsgBox.hhMsgBox
+                    m.Mensaje = "La maquina esta trabajando. Parar la maquina?"
+                    m.Link = mMasterk
+                    m.Tamanio = 50
+                    m.Imagen = My.Resources.traffic_lights_green
+                    m.TextoOk = ""
+                    m.TextoCancel = ""
+                    m.ImagenOk = My.Resources.control_stop_blue
+                    m.ImagenCancel = My.Resources.cross
+                    m.DireccionOk = "MX0C"
+                    m.DireccionCancel = "MX0B"
+                    m.ShowDialog()
+                    If m.Resultado = Windows.Forms.DialogResult.OK Then
+                        fForm.ShowDialog()
+                    End If
+                End Using
             Else
                 fForm.ShowDialog()
             End If
@@ -268,6 +266,10 @@ Public Class FormAutomatico
     End Sub
 
     Private Sub HhTimeCounterDisplay2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhTimeCounterDisplay2.Click
+
+    End Sub
+
+    Private Sub HhMomentaryButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton1.Click
 
     End Sub
 End Class

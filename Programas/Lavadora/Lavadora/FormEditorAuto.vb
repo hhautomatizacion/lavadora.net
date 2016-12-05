@@ -173,7 +173,7 @@ Public Class FormEditorAuto
 
         Dim bArchivoExiste As Boolean
 
-        'Dim cPasos As New Collection
+
         Dim bf As New System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
 
 
@@ -193,19 +193,7 @@ Public Class FormEditorAuto
                 Exit Sub
             End Try
 
-            'If bArchivoExiste Then
-            'Dim fs As New System.IO.FileStream(HhDialogoArchivos1.NombreCompleto, IO.FileMode.Open)
-            'Try
-            'cPasos = bf.Deserialize(fs)
-            'Catch ex As Exception
-            'Finally
-            'HhGridDisplay1.Receta = cPasos
-            'End Try
-            'fs.Close()
-            'End If
-            'End If
             If bArchivoExiste Then
-
                 Using m As New hhMsgBox.hhMsgBox
                     m.Mensaje = "Sobreescribir archivo existente?"
                     'hhmsgbox1.Link = mMasterk
@@ -284,6 +272,8 @@ Public Class FormEditorAuto
     End Sub
 
     Private Sub HhMomentaryButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton1.Click
+        'boton fin
+
         HhGridDisplay1.AutoActualizar = False
         HhGridDisplay1.Inicializar()
         HhGridDisplay1.AutoActualizar = True
@@ -424,7 +414,7 @@ Public Class FormEditorAuto
         iValor = e.RowIndex
         If iValor >= 0 Then
             iValor = iValor + 1
-            mMasterk.EstablecerEntero("DW0050", iValor)
+            mMasterk.EstablecerEntero("DW50", iValor)
         End If
 
     End Sub
@@ -506,16 +496,9 @@ Public Class FormEditorAuto
     Private Sub HhMomentaryButton5_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HhMomentaryButton5.MouseUp
         Do
             Application.DoEvents()
-        Loop Until mMasterk.ObtenerBoolean("MX003A") = False
+        Loop Until mMasterk.ObtenerBoolean("MX3A") = False
         HhGridDisplay1.Inicializar()
         HhGridDisplay1.AutoActualizar = True
-
-    End Sub
-
-  
-   
-    
-    Private Sub HhMomentaryButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton1.CheckedChanged
 
     End Sub
 End Class

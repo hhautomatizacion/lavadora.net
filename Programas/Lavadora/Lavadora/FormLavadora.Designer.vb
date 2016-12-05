@@ -23,7 +23,6 @@ Partial Class FormLavadora
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormLavadora))
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.HhMsgBox1 = New hhMsgBox.hhMsgBox
         Me.HhAnimacion1 = New hhAnimacion.hhAnimacion
         Me.HhAnimacion2 = New hhAnimacion.hhAnimacion
         Me.Label1 = New System.Windows.Forms.Label
@@ -48,6 +47,7 @@ Partial Class FormLavadora
         Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton
         Me.HhMomentaryButton2 = New hhMomentaryButton.hhMomentaryButton
         Me.Button3 = New System.Windows.Forms.Button
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -62,6 +62,7 @@ Partial Class FormLavadora
         Me.SplitContainer4.Panel2.SuspendLayout()
         Me.SplitContainer4.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StatusStrip1
@@ -75,19 +76,6 @@ Partial Class FormLavadora
         '
         'Timer1
         '
-        '
-        'HhMsgBox1
-        '
-        Me.HhMsgBox1.DireccionCancel = Nothing
-        Me.HhMsgBox1.DireccionOk = Nothing
-        Me.HhMsgBox1.Imagen = Nothing
-        Me.HhMsgBox1.ImagenCancel = Nothing
-        Me.HhMsgBox1.ImagenOk = Nothing
-        Me.HhMsgBox1.Link = Nothing
-        Me.HhMsgBox1.Mensaje = Nothing
-        Me.HhMsgBox1.Tamanio = 0
-        Me.HhMsgBox1.TextoCancel = Nothing
-        Me.HhMsgBox1.TextoOk = Nothing
         '
         'HhAnimacion1
         '
@@ -192,6 +180,7 @@ Partial Class FormLavadora
         Me.TableLayoutPanel2.Controls.Add(Me.SplitContainer2, 0, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.SplitContainer3, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.SplitContainer4, 0, 3)
+        Me.TableLayoutPanel2.Controls.Add(Me.PictureBox1, 0, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -238,7 +227,7 @@ Partial Class FormLavadora
         Me.HhCharacterDisplay2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhCharacterDisplay2.DireccionLectura = Nothing
         Me.HhCharacterDisplay2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhCharacterDisplay2.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhCharacterDisplay2.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhCharacterDisplay2.Link = Nothing
         Me.HhCharacterDisplay2.Location = New System.Drawing.Point(0, 0)
         Me.HhCharacterDisplay2.Longitud = 0
@@ -282,7 +271,7 @@ Partial Class FormLavadora
         Me.HhCharacterDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhCharacterDisplay1.DireccionLectura = Nothing
         Me.HhCharacterDisplay1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhCharacterDisplay1.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhCharacterDisplay1.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhCharacterDisplay1.Link = Nothing
         Me.HhCharacterDisplay1.Location = New System.Drawing.Point(0, 0)
         Me.HhCharacterDisplay1.Longitud = 0
@@ -326,7 +315,7 @@ Partial Class FormLavadora
         Me.HhCharacterDisplay3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhCharacterDisplay3.DireccionLectura = Nothing
         Me.HhCharacterDisplay3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhCharacterDisplay3.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhCharacterDisplay3.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhCharacterDisplay3.Link = Nothing
         Me.HhCharacterDisplay3.Location = New System.Drawing.Point(0, 0)
         Me.HhCharacterDisplay3.Longitud = 0
@@ -407,7 +396,7 @@ Partial Class FormLavadora
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
         Me.HhMomentaryButton1.Location = New System.Drawing.Point(17, 26)
@@ -425,7 +414,7 @@ Partial Class FormLavadora
         Me.HhMomentaryButton2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton2.DireccionEscritura = Nothing
         Me.HhMomentaryButton2.DireccionLectura = Nothing
-        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhMomentaryButton2.Image = CType(resources.GetObject("HhMomentaryButton2.Image"), System.Drawing.Image)
         Me.HhMomentaryButton2.Link = Nothing
         Me.HhMomentaryButton2.Location = New System.Drawing.Point(151, 26)
@@ -444,6 +433,17 @@ Partial Class FormLavadora
         Me.Button3.Size = New System.Drawing.Size(100, 90)
         Me.Button3.TabIndex = 14
         Me.Button3.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.Image = Global.Lavadora.My.Resources.Resources.logo
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(521, 396)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
         '
         'FormLavadora
         '
@@ -476,6 +476,7 @@ Partial Class FormLavadora
         Me.SplitContainer4.Panel2.ResumeLayout(False)
         Me.SplitContainer4.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -483,7 +484,6 @@ Partial Class FormLavadora
     Friend WithEvents HhAnimacion1 As hhAnimacion.hhAnimacion
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
-    Friend WithEvents HhMsgBox1 As hhMsgBox.hhMsgBox
     Friend WithEvents HhAnimacion2 As hhAnimacion.hhAnimacion
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents HhBooleanLabel1 As hhBooleanLabel.hhBooleanLabel
@@ -507,5 +507,6 @@ Partial Class FormLavadora
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents HhMomentaryButton1 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents HhMomentaryButton2 As hhMomentaryButton.hhMomentaryButton
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 
 End Class

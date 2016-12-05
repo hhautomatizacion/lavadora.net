@@ -26,6 +26,8 @@ Partial Class FormConfSistema
         Me.HhComboEntry1 = New hhComboEntry.hhComboEntry
         Me.Label1 = New System.Windows.Forms.Label
         Me.HhToggleButton1 = New hhToggleButton.hhToggleButton
+        Me.HhToggleButton2 = New hhToggleButton.hhToggleButton
+        Me.HhToggleButton3 = New hhToggleButton.hhToggleButton
         Me.SuspendLayout()
         '
         'Button1
@@ -45,13 +47,13 @@ Partial Class FormConfSistema
         Me.HhComboEntry3.DireccionEscritura = Nothing
         Me.HhComboEntry3.DireccionLectura = Nothing
         Me.HhComboEntry3.Etiqueta = "Tamaño de letra"
-        Me.HhComboEntry3.Font = New System.Drawing.Font("Verdana", 16.0!)
+        Me.HhComboEntry3.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhComboEntry3.FormattingEnabled = True
         Me.HhComboEntry3.Link = Nothing
-        Me.HhComboEntry3.Location = New System.Drawing.Point(247, 207)
+        Me.HhComboEntry3.Location = New System.Drawing.Point(220, 365)
         Me.HhComboEntry3.LongitudTexto = 0
         Me.HhComboEntry3.Name = "HhComboEntry3"
-        Me.HhComboEntry3.Size = New System.Drawing.Size(180, 33)
+        Me.HhComboEntry3.Size = New System.Drawing.Size(220, 31)
         Me.HhComboEntry3.TabIndex = 9
         Me.HhComboEntry3.Texto = Nothing
         '
@@ -63,13 +65,13 @@ Partial Class FormConfSistema
         Me.HhComboEntry2.DireccionEscritura = Nothing
         Me.HhComboEntry2.DireccionLectura = Nothing
         Me.HhComboEntry2.Etiqueta = "Tipo de letra"
-        Me.HhComboEntry2.Font = New System.Drawing.Font("Verdana", 16.0!)
+        Me.HhComboEntry2.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhComboEntry2.FormattingEnabled = True
         Me.HhComboEntry2.Link = Nothing
-        Me.HhComboEntry2.Location = New System.Drawing.Point(247, 150)
+        Me.HhComboEntry2.Location = New System.Drawing.Point(220, 320)
         Me.HhComboEntry2.LongitudTexto = 0
         Me.HhComboEntry2.Name = "HhComboEntry2"
-        Me.HhComboEntry2.Size = New System.Drawing.Size(180, 33)
+        Me.HhComboEntry2.Size = New System.Drawing.Size(220, 31)
         Me.HhComboEntry2.TabIndex = 7
         Me.HhComboEntry2.Texto = Nothing
         '
@@ -81,13 +83,13 @@ Partial Class FormConfSistema
         Me.HhComboEntry1.DireccionEscritura = Nothing
         Me.HhComboEntry1.DireccionLectura = Nothing
         Me.HhComboEntry1.Etiqueta = "Puerto serie"
-        Me.HhComboEntry1.Font = New System.Drawing.Font("Verdana", 16.0!)
+        Me.HhComboEntry1.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhComboEntry1.FormattingEnabled = True
         Me.HhComboEntry1.Link = Nothing
-        Me.HhComboEntry1.Location = New System.Drawing.Point(247, 63)
+        Me.HhComboEntry1.Location = New System.Drawing.Point(220, 230)
         Me.HhComboEntry1.LongitudTexto = 0
         Me.HhComboEntry1.Name = "HhComboEntry1"
-        Me.HhComboEntry1.Size = New System.Drawing.Size(180, 33)
+        Me.HhComboEntry1.Size = New System.Drawing.Size(220, 31)
         Me.HhComboEntry1.TabIndex = 4
         Me.HhComboEntry1.Texto = Nothing
         '
@@ -95,9 +97,9 @@ Partial Class FormConfSistema
         '
         Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label1.Location = New System.Drawing.Point(46, 272)
+        Me.Label1.Location = New System.Drawing.Point(220, 410)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(381, 83)
+        Me.Label1.Size = New System.Drawing.Size(220, 90)
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "Label1"
         '
@@ -109,20 +111,56 @@ Partial Class FormConfSistema
         Me.HhToggleButton1.DireccionEscritura = Nothing
         Me.HhToggleButton1.DireccionLectura = Nothing
         Me.HhToggleButton1.Etiqueta = Nothing
-        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 16.0!)
+        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton1.Link = Nothing
-        Me.HhToggleButton1.Location = New System.Drawing.Point(247, 12)
+        Me.HhToggleButton1.Location = New System.Drawing.Point(220, 12)
         Me.HhToggleButton1.Name = "HhToggleButton1"
         Me.HhToggleButton1.Size = New System.Drawing.Size(45, 45)
         Me.HhToggleButton1.TabIndex = 22
         Me.HhToggleButton1.Tooltip = Nothing
         Me.HhToggleButton1.UseVisualStyleBackColor = True
         '
+        'HhToggleButton2
+        '
+        Me.HhToggleButton2.Appearance = System.Windows.Forms.Appearance.Button
+        Me.HhToggleButton2.AutoActualizar = False
+        Me.HhToggleButton2.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhToggleButton2.DireccionEscritura = Nothing
+        Me.HhToggleButton2.DireccionLectura = Nothing
+        Me.HhToggleButton2.Etiqueta = Nothing
+        Me.HhToggleButton2.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhToggleButton2.Link = Nothing
+        Me.HhToggleButton2.Location = New System.Drawing.Point(220, 63)
+        Me.HhToggleButton2.Name = "HhToggleButton2"
+        Me.HhToggleButton2.Size = New System.Drawing.Size(45, 45)
+        Me.HhToggleButton2.TabIndex = 28
+        Me.HhToggleButton2.Tooltip = Nothing
+        Me.HhToggleButton2.UseVisualStyleBackColor = True
+        '
+        'HhToggleButton3
+        '
+        Me.HhToggleButton3.Appearance = System.Windows.Forms.Appearance.Button
+        Me.HhToggleButton3.AutoActualizar = False
+        Me.HhToggleButton3.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhToggleButton3.DireccionEscritura = Nothing
+        Me.HhToggleButton3.DireccionLectura = Nothing
+        Me.HhToggleButton3.Etiqueta = Nothing
+        Me.HhToggleButton3.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhToggleButton3.Link = Nothing
+        Me.HhToggleButton3.Location = New System.Drawing.Point(220, 114)
+        Me.HhToggleButton3.Name = "HhToggleButton3"
+        Me.HhToggleButton3.Size = New System.Drawing.Size(45, 45)
+        Me.HhToggleButton3.TabIndex = 30
+        Me.HhToggleButton3.Tooltip = Nothing
+        Me.HhToggleButton3.UseVisualStyleBackColor = True
+        '
         'FormConfSistema
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 575)
+        Me.Controls.Add(Me.HhToggleButton3)
+        Me.Controls.Add(Me.HhToggleButton2)
         Me.Controls.Add(Me.HhToggleButton1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.HhComboEntry3)
@@ -143,4 +181,6 @@ Partial Class FormConfSistema
     Friend WithEvents HhComboEntry3 As hhComboEntry.hhComboEntry
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents HhToggleButton1 As hhToggleButton.hhToggleButton
+    Friend WithEvents HhToggleButton2 As hhToggleButton.hhToggleButton
+    Friend WithEvents HhToggleButton3 As hhToggleButton.hhToggleButton
 End Class

@@ -39,6 +39,7 @@ Public Class FormConfRotacion
         HhNumericEntry2.ValorMaximo = 225
         HhNumericEntry2.AutoActualizar = True
 
+
         HhNumericEntry3.Link = mMasterk
         HhNumericEntry3.DireccionLectura = "DW0804"
         HhNumericEntry3.DireccionEscritura = "DW0804"
@@ -48,6 +49,8 @@ Public Class FormConfRotacion
         HhNumericEntry3.ValorMinimo = 1
         HhNumericEntry3.ValorMaximo = 6000
         HhNumericEntry3.AutoActualizar = True
+        HhNumericEntry3.Factor = 0.01
+        HhNumericEntry3.Decimales = 2
 
         HhNumericEntry4.Link = mMasterk
         HhNumericEntry4.DireccionLectura = "DW0806"
@@ -68,6 +71,8 @@ Public Class FormConfRotacion
         HhNumericEntry6.ValorMinimo = 1
         HhNumericEntry6.ValorMaximo = 6000
         HhNumericEntry6.AutoActualizar = True
+        HhNumericEntry6.Factor = 0.01
+        HhNumericEntry6.Decimales = 2
 
 
         HhNumericEntry7.Link = mMasterk
@@ -79,6 +84,12 @@ Public Class FormConfRotacion
         HhNumericEntry7.ValorMinimo = 0
         HhNumericEntry7.ValorMaximo = 1000
         HhNumericEntry7.AutoActualizar = True
+        HhNumericEntry7.Factor = 0.01
+        HhNumericEntry7.Decimales = 2
+
+    End Sub
+
+    Private Sub HhNumericEntry3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhNumericEntry3.TextChanged
 
     End Sub
 End Class

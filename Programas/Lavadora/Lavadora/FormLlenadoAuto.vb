@@ -18,4 +18,12 @@ Public Class FormLlenadoAuto
         UnAttach(Me)
         Me.Close()
     End Sub
+
+    Private Sub HhToggleButton4_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhToggleButton4.CheckedChanged
+
+    End Sub
+
+    Private Sub HhNumericEntry1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhNumericEntry1.TextChanged
+
+    End Sub
 End Class

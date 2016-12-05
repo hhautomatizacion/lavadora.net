@@ -132,7 +132,7 @@ Public Class FormLavadora
             Catch ex As Exception
 
             End Try
-            If bDepuracion Then
+            If bPermitirSalir Then
 
             Else
                 System.Diagnostics.Process.Start("shutdown", "-s -t 10")
@@ -151,8 +151,7 @@ Public Class FormLavadora
         End Using
     End Sub
 
-    Private Sub CambioPagina(ByVal s As Object, ByVal e As System.EventArgs) Handles wPagina.Cambio
-       
+    Private Sub CambioPagina(ByVal s As Object, ByVal e As System.EventArgs) Handles wPagina.Cambio    
         Select Case wPagina.Valor
             Case 1
                 Using h As New hhMsgBox.hhMsgBox
@@ -312,7 +311,6 @@ Public Class FormLavadora
                     h.DireccionCancel = "MX0129"
                     h.ShowDialog()
                 End Using
-
             Case 13
                 wPagina.Valor = 0
                 Using h As New hhInputBox.hhInputBox
@@ -491,15 +489,7 @@ Public Class FormLavadora
                     hhProgressBox.AutoActualizar = True
                     hhProgressBox.ShowDialog()
                 End Using
-
         End Select
-
-
-        
-
-
-
-
     End Sub
 
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
@@ -533,20 +523,22 @@ Public Class FormLavadora
         Using f As New FormManual
             CambiarLetra(f)
             If mMasterk.ObtenerBoolean("MX0100") Then
-                HhMsgBox1.Mensaje = "La maquina esta trabajando. Parar la maquina?"
-                HhMsgBox1.Link = mMasterk
-                HhMsgBox1.Tamanio = 50
-                HhMsgBox1.Imagen = My.Resources.traffic_lights_green
-                HhMsgBox1.TextoOk = ""
-                HhMsgBox1.ImagenOk = My.Resources.control_stop_blue
-                HhMsgBox1.TextoCancel = ""
-                HhMsgBox1.ImagenCancel = My.Resources.cross
-                HhMsgBox1.DireccionOk = "MX0C"
-                HhMsgBox1.DireccionCancel = "MX0B"
-                HhMsgBox1.ShowDialog()
-                If HhMsgBox1.Resultado = Windows.Forms.DialogResult.OK Then
-                    f.ShowDialog()
-                End If
+                Using m As New hhMsgBox.hhMsgBox
+                    m.Mensaje = "La maquina esta trabajando. Parar la maquina?"
+                    m.Link = mMasterk
+                    m.Tamanio = 50
+                    m.Imagen = My.Resources.traffic_lights_green
+                    m.TextoOk = ""
+                    m.ImagenOk = My.Resources.control_stop_blue
+                    m.TextoCancel = ""
+                    m.ImagenCancel = My.Resources.cross
+                    m.DireccionOk = "MX0C"
+                    m.DireccionCancel = "MX0B"
+                    m.ShowDialog()
+                    If m.Resultado = Windows.Forms.DialogResult.OK Then
+                        f.ShowDialog()
+                    End If
+                End Using
             Else
                 f.ShowDialog()
             End If
@@ -562,4 +554,6 @@ Public Class FormLavadora
             f.ShowDialog()
         End Using
     End Sub
+
+
 End Class

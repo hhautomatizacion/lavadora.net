@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Lavadora")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Cualquier Lavado")> 
+<Assembly: AssemblyCompany("hhautomatizacion")> 
 <Assembly: AssemblyProduct("Lavadora")> 
-<Assembly: AssemblyCopyright("Copyright © Peques 2014")> 
+<Assembly: AssemblyCopyright("Automatizacion HyH 2014")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
