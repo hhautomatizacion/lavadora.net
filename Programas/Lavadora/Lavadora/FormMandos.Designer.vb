@@ -26,7 +26,7 @@ Partial Class FormMandos
         Me.HhMomentaryButton3 = New hhMomentaryButton.hhMomentaryButton
         Me.HhMomentaryButton2 = New hhMomentaryButton.hhMomentaryButton
         Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton
-        Me.Button1 = New System.Windows.Forms.Button
+        Me.Button1 = New hhMomentaryButton.hhMomentaryButton
         Me.HhMomentaryButton7 = New hhMomentaryButton.hhMomentaryButton
         Me.SuspendLayout()
         '
@@ -37,7 +37,8 @@ Partial Class FormMandos
         Me.HhMomentaryButton6.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton6.DireccionEscritura = Nothing
         Me.HhMomentaryButton6.DireccionLectura = Nothing
-        Me.HhMomentaryButton6.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton6.Etiqueta = Nothing
+        Me.HhMomentaryButton6.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.HhMomentaryButton6.Image = CType(resources.GetObject("HhMomentaryButton6.Image"), System.Drawing.Image)
         Me.HhMomentaryButton6.Link = Nothing
         Me.HhMomentaryButton6.Location = New System.Drawing.Point(9, 224)
@@ -54,7 +55,8 @@ Partial Class FormMandos
         Me.HhMomentaryButton5.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton5.DireccionEscritura = Nothing
         Me.HhMomentaryButton5.DireccionLectura = Nothing
-        Me.HhMomentaryButton5.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton5.Etiqueta = Nothing
+        Me.HhMomentaryButton5.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.HhMomentaryButton5.Image = CType(resources.GetObject("HhMomentaryButton5.Image"), System.Drawing.Image)
         Me.HhMomentaryButton5.Link = Nothing
         Me.HhMomentaryButton5.Location = New System.Drawing.Point(9, 118)
@@ -71,7 +73,8 @@ Partial Class FormMandos
         Me.HhMomentaryButton4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton4.DireccionEscritura = Nothing
         Me.HhMomentaryButton4.DireccionLectura = Nothing
-        Me.HhMomentaryButton4.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton4.Etiqueta = Nothing
+        Me.HhMomentaryButton4.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.HhMomentaryButton4.Image = CType(resources.GetObject("HhMomentaryButton4.Image"), System.Drawing.Image)
         Me.HhMomentaryButton4.Link = Nothing
         Me.HhMomentaryButton4.Location = New System.Drawing.Point(9, 12)
@@ -88,7 +91,8 @@ Partial Class FormMandos
         Me.HhMomentaryButton3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton3.DireccionEscritura = Nothing
         Me.HhMomentaryButton3.DireccionLectura = Nothing
-        Me.HhMomentaryButton3.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton3.Etiqueta = Nothing
+        Me.HhMomentaryButton3.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.HhMomentaryButton3.Image = CType(resources.GetObject("HhMomentaryButton3.Image"), System.Drawing.Image)
         Me.HhMomentaryButton3.Link = Nothing
         Me.HhMomentaryButton3.Location = New System.Drawing.Point(200, 224)
@@ -105,7 +109,8 @@ Partial Class FormMandos
         Me.HhMomentaryButton2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton2.DireccionEscritura = Nothing
         Me.HhMomentaryButton2.DireccionLectura = Nothing
-        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton2.Etiqueta = Nothing
+        Me.HhMomentaryButton2.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.HhMomentaryButton2.Image = CType(resources.GetObject("HhMomentaryButton2.Image"), System.Drawing.Image)
         Me.HhMomentaryButton2.Link = Nothing
         Me.HhMomentaryButton2.Location = New System.Drawing.Point(336, 12)
@@ -122,7 +127,8 @@ Partial Class FormMandos
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton1.Etiqueta = Nothing
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
         Me.HhMomentaryButton1.Location = New System.Drawing.Point(200, 12)
@@ -134,11 +140,20 @@ Partial Class FormMandos
         '
         'Button1
         '
+        Me.Button1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.Button1.AutoActualizar = False
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Button1.DireccionEscritura = Nothing
+        Me.Button1.DireccionLectura = Nothing
+        Me.Button1.Etiqueta = Nothing
+        Me.Button1.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(336, 224)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 6
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Button1.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton7
@@ -148,7 +163,8 @@ Partial Class FormMandos
         Me.HhMomentaryButton7.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton7.DireccionEscritura = Nothing
         Me.HhMomentaryButton7.DireccionLectura = Nothing
-        Me.HhMomentaryButton7.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhMomentaryButton7.Etiqueta = Nothing
+        Me.HhMomentaryButton7.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.HhMomentaryButton7.Image = CType(resources.GetObject("HhMomentaryButton7.Image"), System.Drawing.Image)
         Me.HhMomentaryButton7.Link = Nothing
         Me.HhMomentaryButton7.Location = New System.Drawing.Point(262, 118)
@@ -185,6 +201,6 @@ Partial Class FormMandos
     Friend WithEvents HhMomentaryButton4 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents HhMomentaryButton5 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents HhMomentaryButton6 As hhMomentaryButton.hhMomentaryButton
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents HhMomentaryButton7 As hhMomentaryButton.hhMomentaryButton
 End Class

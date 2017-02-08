@@ -24,7 +24,7 @@ Partial Class FormCalefaccionManual
         Me.HhToggleButton1 = New hhToggleButton.hhToggleButton
         Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry
         Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton
-        Me.Button1 = New System.Windows.Forms.Button
+        Me.Button1 = New hhMomentaryButton.hhMomentaryButton
         Me.HhToggleButton2 = New hhToggleButton.hhToggleButton
         Me.SuspendLayout()
         '
@@ -100,7 +100,8 @@ Partial Class FormCalefaccionManual
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhMomentaryButton1.Etiqueta = Nothing
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
         Me.HhMomentaryButton1.Location = New System.Drawing.Point(207, 328)
@@ -112,11 +113,20 @@ Partial Class FormCalefaccionManual
         '
         'Button1
         '
+        Me.Button1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.Button1.AutoActualizar = False
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Button1.DireccionEscritura = Nothing
+        Me.Button1.DireccionLectura = Nothing
+        Me.Button1.Etiqueta = Nothing
+        Me.Button1.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(313, 328)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 7
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Button1.UseVisualStyleBackColor = True
         '
         'HhToggleButton2
@@ -159,6 +169,6 @@ Partial Class FormCalefaccionManual
     Friend WithEvents HhToggleButton1 As hhToggleButton.hhToggleButton
     Friend WithEvents HhNumericEntry2 As hhNumericEntry.hhNumericEntry
     Friend WithEvents HhMomentaryButton1 As hhMomentaryButton.hhMomentaryButton
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents HhToggleButton2 As hhToggleButton.hhToggleButton
 End Class

@@ -87,6 +87,7 @@ Public Class FormConfRotacion
         HhNumericEntry7.Factor = 0.01
         HhNumericEntry7.Decimales = 2
 
+        Button1.Etiqueta = "Aceptar"
     End Sub
 
     Private Sub HhNumericEntry3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhNumericEntry3.TextChanged

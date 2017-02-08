@@ -39,15 +39,15 @@ Partial Class FormLavadora
         Me.SplitContainer4 = New System.Windows.Forms.SplitContainer
         Me.Label5 = New System.Windows.Forms.Label
         Me.HhCharacterDisplay3 = New hhCharacterDisplay.hhCharacterDisplay
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
-        Me.Button5 = New System.Windows.Forms.Button
-        Me.Button7 = New System.Windows.Forms.Button
-        Me.Button6 = New System.Windows.Forms.Button
-        Me.Button1 = New System.Windows.Forms.Button
+        Me.Button5 = New hhMomentaryButton.hhMomentaryButton
+        Me.Button7 = New hhMomentaryButton.hhMomentaryButton
+        Me.Button6 = New hhMomentaryButton.hhMomentaryButton
+        Me.Button1 = New hhMomentaryButton.hhMomentaryButton
         Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton
         Me.HhMomentaryButton2 = New hhMomentaryButton.hhMomentaryButton
-        Me.Button3 = New System.Windows.Forms.Button
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
+        Me.Button3 = New hhMomentaryButton.hhMomentaryButton
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -61,8 +61,8 @@ Partial Class FormLavadora
         Me.SplitContainer4.Panel1.SuspendLayout()
         Me.SplitContainer4.Panel2.SuspendLayout()
         Me.SplitContainer4.SuspendLayout()
-        Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'StatusStrip1
@@ -324,6 +324,17 @@ Partial Class FormLavadora
         Me.HhCharacterDisplay3.TabIndex = 6
         Me.HhCharacterDisplay3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.Image = Global.Lavadora.My.Resources.Resources.logo
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(521, 396)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
+        '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 2
@@ -351,41 +362,77 @@ Partial Class FormLavadora
         'Button5
         '
         Me.Button5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button5.Appearance = System.Windows.Forms.Appearance.Button
+        Me.Button5.AutoActualizar = False
+        Me.Button5.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Button5.DireccionEscritura = Nothing
+        Me.Button5.DireccionLectura = Nothing
+        Me.Button5.Etiqueta = Nothing
+        Me.Button5.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
+        Me.Button5.Link = Nothing
         Me.Button5.Location = New System.Drawing.Point(17, 169)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(100, 90)
         Me.Button5.TabIndex = 5
+        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button7
         '
         Me.Button7.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
+        Me.Button7.Appearance = System.Windows.Forms.Appearance.Button
+        Me.Button7.AutoActualizar = False
+        Me.Button7.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Button7.DireccionEscritura = Nothing
+        Me.Button7.DireccionLectura = Nothing
+        Me.Button7.Etiqueta = Nothing
+        Me.Button7.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button7.Image = Global.Lavadora.My.Resources.Resources.cog
+        Me.Button7.Link = Nothing
         Me.Button7.Location = New System.Drawing.Point(17, 457)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(100, 90)
         Me.Button7.TabIndex = 11
+        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Button7.UseVisualStyleBackColor = True
         '
         'Button6
         '
         Me.Button6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button6.Appearance = System.Windows.Forms.Appearance.Button
+        Me.Button6.AutoActualizar = False
+        Me.Button6.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Button6.DireccionEscritura = Nothing
+        Me.Button6.DireccionLectura = Nothing
+        Me.Button6.Etiqueta = Nothing
+        Me.Button6.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
+        Me.Button6.Link = Nothing
         Me.Button6.Location = New System.Drawing.Point(17, 312)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(100, 90)
         Me.Button6.TabIndex = 12
+        Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Button1
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.Button1.AutoActualizar = False
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Button1.DireccionEscritura = Nothing
+        Me.Button1.DireccionLectura = Nothing
+        Me.Button1.Etiqueta = Nothing
+        Me.Button1.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(151, 457)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 15
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Button1.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton1
@@ -396,7 +443,8 @@ Partial Class FormLavadora
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhMomentaryButton1.Etiqueta = Nothing
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
         Me.HhMomentaryButton1.Location = New System.Drawing.Point(17, 26)
@@ -414,7 +462,8 @@ Partial Class FormLavadora
         Me.HhMomentaryButton2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton2.DireccionEscritura = Nothing
         Me.HhMomentaryButton2.DireccionLectura = Nothing
-        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhMomentaryButton2.Etiqueta = Nothing
+        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.HhMomentaryButton2.Image = CType(resources.GetObject("HhMomentaryButton2.Image"), System.Drawing.Image)
         Me.HhMomentaryButton2.Link = Nothing
         Me.HhMomentaryButton2.Location = New System.Drawing.Point(151, 26)
@@ -427,23 +476,21 @@ Partial Class FormLavadora
         'Button3
         '
         Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Appearance = System.Windows.Forms.Appearance.Button
+        Me.Button3.AutoActualizar = False
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Button3.DireccionEscritura = Nothing
+        Me.Button3.DireccionLectura = Nothing
+        Me.Button3.Etiqueta = Nothing
+        Me.Button3.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button3.Image = Global.Lavadora.My.Resources.Resources.setting_tools
+        Me.Button3.Link = Nothing
         Me.Button3.Location = New System.Drawing.Point(151, 312)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(100, 90)
         Me.Button3.TabIndex = 14
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Image = Global.Lavadora.My.Resources.Resources.logo
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(521, 396)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox1.TabIndex = 7
-        Me.PictureBox1.TabStop = False
         '
         'FormLavadora
         '
@@ -475,8 +522,8 @@ Partial Class FormLavadora
         Me.SplitContainer4.Panel1.ResumeLayout(False)
         Me.SplitContainer4.Panel2.ResumeLayout(False)
         Me.SplitContainer4.ResumeLayout(False)
-        Me.TableLayoutPanel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -490,9 +537,9 @@ Partial Class FormLavadora
     Friend WithEvents HhBooleanLabel2 As hhBooleanLabel.hhBooleanLabel
     Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button7 As hhMomentaryButton.hhMomentaryButton
+    Friend WithEvents Button3 As hhMomentaryButton.hhMomentaryButton
+    Friend WithEvents Button1 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents SplitContainer2 As System.Windows.Forms.SplitContainer
     Friend WithEvents HhCharacterDisplay2 As hhCharacterDisplay.hhCharacterDisplay
@@ -503,8 +550,8 @@ Partial Class FormLavadora
     Friend WithEvents SplitContainer4 As System.Windows.Forms.SplitContainer
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents HhCharacterDisplay3 As hhCharacterDisplay.hhCharacterDisplay
-    Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Button6 As hhMomentaryButton.hhMomentaryButton
+    Friend WithEvents Button5 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents HhMomentaryButton1 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents HhMomentaryButton2 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox

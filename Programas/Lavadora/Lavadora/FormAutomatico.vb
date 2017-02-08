@@ -4,12 +4,10 @@ Public Class FormAutomatico
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         UnAttach(Me)
         Me.Close()
-
     End Sub
 
     Private Sub FormAutomatico_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         Me.Dispose()
-
     End Sub
 
     Private Sub FormAutomatico_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -41,8 +39,6 @@ Public Class FormAutomatico
         HhNumericDisplay4.Tooltip = "Litros programados"
         HhNumericDisplay4.AutoActualizar = True
 
-
-
         HhNumericDisplay5.Link = mMasterk
         HhNumericDisplay5.DireccionLectura = "DW0514"
         HhNumericDisplay5.Etiqueta = "RPM"
@@ -67,7 +63,6 @@ Public Class FormAutomatico
         HhTimeCounterDisplay2.Tooltip = "Duracion paso"
         HhTimeCounterDisplay2.AutoActualizar = True
 
-
         HhTimeCounterDisplay3.Link = mMasterk
         HhTimeCounterDisplay3.DireccionLectura = "DW0650"
         HhTimeCounterDisplay3.Etiqueta = "Tiempo rec."
@@ -78,25 +73,30 @@ Public Class FormAutomatico
         HhTimeCounterDisplay4.Tooltip = "Duracion receta"
         HhTimeCounterDisplay4.AutoActualizar = False
 
-
-
-
         HhMomentaryButton1.Link = mMasterk
         HhMomentaryButton1.DireccionEscritura = "MX0B"
         HhMomentaryButton1.DireccionLectura = "MX0100"
+        HhMomentaryButton1.Etiqueta = "Play"
         HhMomentaryButton1.AutoActualizar = True
-
 
         HhMomentaryButton2.Link = mMasterk
         HhMomentaryButton2.DireccionEscritura = "MX0243"
         HhMomentaryButton2.DireccionLectura = "MX0241"
+        HhMomentaryButton2.Etiqueta = "Pause"
         HhMomentaryButton2.AutoActualizar = True
 
         HhMomentaryButton3.Link = mMasterk
         HhMomentaryButton3.DireccionEscritura = "MX0C"
+        HhMomentaryButton3.Etiqueta = "Stop"
 
         HhMomentaryButton4.Link = mMasterk
         HhMomentaryButton4.DireccionEscritura = "MX0075"
+        HhMomentaryButton4.Etiqueta = "Editar"
+
+        Button1.Etiqueta = "Salir"
+        Button3.Etiqueta = "Salta paso"
+        Button4.Etiqueta = "Recetas"
+        Button5.Etiqueta = "Mandos"
 
         HhGridDisplay1.Link = mMasterk
         HhGridDisplay1.DireccionLectura = "DW2000"
@@ -106,44 +106,26 @@ Public Class FormAutomatico
         HhGridDisplay1.MostrarSeleccion = True
         HhGridDisplay1.Inicializar()
         HhGridDisplay1.AutoActualizar = True
-
     End Sub
-
-
-
-
-
-
-
     Private Sub HhNumericDisplay6_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhNumericDisplay6.TextChanged
         HhNumericDisplay6.ValorMaximo = Val(HhNumericDisplay6.Text)
         HhNumericDisplay6.ValorMinimo = Val(HhNumericDisplay6.Text)
         HhNumericDisplay5.ValorMaximo = Val(HhNumericDisplay6.Text) + 1
         HhNumericDisplay5.ValorMinimo = Val(HhNumericDisplay6.Text) - 1
     End Sub
-
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         Using f As New FormCambiaPaso
-            CambiarLetra(f)
             f.ShowDialog()
         End Using
     End Sub
-
-
-
-
     Private Sub HhGridDisplay1_Inicializado(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhGridDisplay1.Inicializado
         HhTimeCounterDisplay4.Valor = HhGridDisplay1.DuracionReceta
         HhTimeCounterDisplay3.ValorMaximo = HhTimeCounterDisplay4.Valor
     End Sub
-
     Private Sub HhTimeCounterDisplay2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhTimeCounterDisplay2.TextChanged
         HhTimeCounterDisplay1.ValorMaximo = HhTimeCounterDisplay2.Valor
         HhTimeCounterDisplay2.ValorMaximo = HhTimeCounterDisplay2.Valor
     End Sub
-
-
-
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         Dim bArchivoExiste As Boolean
         Dim cPasos As New Collection
@@ -173,11 +155,7 @@ Public Class FormAutomatico
                 fs.Close()
             End If
         End If
-
-
     End Sub
-
-
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         Using fForm As New FormMandos
             If mMasterk.ObtenerBoolean("MX0100") Then
@@ -234,42 +212,13 @@ Public Class FormAutomatico
         Do
             Application.DoEvents()
         Loop Until mMasterk.ObtenerBoolean("MX0123") = False
-
-        CambiarLetra(f)
         f.ShowDialog()
         HhGridDisplay1.AutoActualizar = False
         HhGridDisplay1.Inicializar()
         HhGridDisplay1.AutoActualizar = True
-
-    End Sub
-
-    Private Sub HhTimeCounterDisplay1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhTimeCounterDisplay1.TextChanged
-
     End Sub
 
     Private Sub HhTimeCounterDisplay4_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhTimeCounterDisplay4.TextChanged
         HhTimeCounterDisplay4.ValorMaximo = HhTimeCounterDisplay4.Valor
-    End Sub
-
-
-
-    Private Sub HhMomentaryButton2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton2.CheckedChanged
-
-    End Sub
-
-    Private Sub HhMomentaryButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton1.CheckedChanged
-
-    End Sub
-
-    Private Sub HhNumericDisplay2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhNumericDisplay2.Click
-
-    End Sub
-
-    Private Sub HhTimeCounterDisplay2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhTimeCounterDisplay2.Click
-
-    End Sub
-
-    Private Sub HhMomentaryButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton1.Click
-
     End Sub
 End Class

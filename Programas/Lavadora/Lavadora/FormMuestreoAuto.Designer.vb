@@ -20,7 +20,7 @@ Partial Class FormMuestreoAuto
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMuestreoAuto))
-        Me.Button1 = New System.Windows.Forms.Button
+        Me.Button1 = New hhMomentaryButton.hhMomentaryButton
         Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton
         Me.SuspendLayout()
         '
@@ -65,6 +65,6 @@ Partial Class FormMuestreoAuto
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents HhMomentaryButton1 As hhMomentaryButton.hhMomentaryButton
 End Class

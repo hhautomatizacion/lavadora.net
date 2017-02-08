@@ -16,8 +16,8 @@ Public Class FormCambiaPaso
         HhNumericEntry1.Link = mMasterk
         HhNumericEntry1.Etiqueta = "# Paso"
         HhNumericEntry1.Tooltip = "Paso al cual brincar"
-        HhNumericEntry1.DireccionEscritura = "DW050"
-        HhNumericEntry1.DireccionLectura = "DW050"
+        HhNumericEntry1.DireccionEscritura = "DW50"
+        HhNumericEntry1.DireccionLectura = "DW50"
         HhNumericEntry1.ValorMinimo = 1
         HhNumericEntry1.ValorMaximo = 99
         HhNumericEntry1.AutoActualizar = True
@@ -25,14 +25,17 @@ Public Class FormCambiaPaso
 
         HhMomentaryButton1.Link = mMasterk
         HhMomentaryButton1.DireccionEscritura = "MX240"
+        HhMomentaryButton1.Etiqueta = "Aceptar"
 
         HhMomentaryButton2.Link = mMasterk
         HhMomentaryButton2.DireccionEscritura = "MX244"
+        HhMomentaryButton2.Etiqueta = "Anterior"
 
         HhMomentaryButton3.Link = mMasterk
         HhMomentaryButton3.DireccionEscritura = "MX245"
+        HhMomentaryButton3.Etiqueta = "Siguiente"
 
-
+        Button2.Etiqueta = "Cancelar"
 
     End Sub
 

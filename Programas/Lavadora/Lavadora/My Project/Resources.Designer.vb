@@ -74,6 +74,13 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property cog() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cog", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property control_end_blue() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("control_end_blue", resourceCulture)
@@ -105,6 +112,13 @@ Namespace My.Resources
         Friend ReadOnly Property cross() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("cross", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property disk() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("disk", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -147,6 +161,13 @@ Namespace My.Resources
         Friend ReadOnly Property rock() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("rock", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property setting_tools() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("setting_tools", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

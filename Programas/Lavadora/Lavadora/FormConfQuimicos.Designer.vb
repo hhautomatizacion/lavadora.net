@@ -20,18 +20,27 @@ Partial Class FormConfQuimicos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConfQuimicos))
-        Me.Button1 = New System.Windows.Forms.Button
+        Me.Button1 = New hhMomentaryButton.hhMomentaryButton
         Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry
         Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry
         Me.SuspendLayout()
         '
         'Button1
         '
+        Me.Button1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.Button1.AutoActualizar = False
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Button1.DireccionEscritura = Nothing
+        Me.Button1.DireccionLectura = Nothing
+        Me.Button1.Etiqueta = Nothing
+        Me.Button1.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(688, 473)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 2
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Button1.UseVisualStyleBackColor = True
         '
         'HhNumericEntry2
@@ -98,7 +107,7 @@ Partial Class FormConfQuimicos
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents HhNumericEntry1 As hhNumericEntry.hhNumericEntry
     Friend WithEvents HhNumericEntry2 As hhNumericEntry.hhNumericEntry
 End Class

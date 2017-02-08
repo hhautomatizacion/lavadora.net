@@ -202,6 +202,9 @@ Public Class FormTest
         HhToggleButton30.AutoActualizar = True
         HhToggleButton31.AutoActualizar = True
 
+        Button1.Etiqueta = "Aceptar"
+
+        Button2.Etiqueta = "Pruebas motor"
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -211,7 +214,6 @@ Public Class FormTest
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Using f As New FormTestMotor
-            CambiarLetra(f)
             f.ShowDialog()
         End Using
 

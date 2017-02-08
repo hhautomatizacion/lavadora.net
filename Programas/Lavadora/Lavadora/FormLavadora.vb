@@ -6,7 +6,6 @@ Public Class FormLavadora
         cParametros = New Collection
         wPagina = New hhWordRegister.hhWordRegister
         CargarOpciones()
-        CambiarLetra(Me)
         AbrirPuerto()
 
 
@@ -76,6 +75,7 @@ Public Class FormLavadora
         HhMomentaryButton1.Link = mMasterk
         HhMomentaryButton1.DireccionEscritura = "MX1000"
         HhMomentaryButton1.DireccionLectura = "MX07"
+        HhMomentaryButton1.Etiqueta = "Manual"
         HhMomentaryButton1.AutoActualizar = True
 
 
@@ -83,7 +83,14 @@ Public Class FormLavadora
         HhMomentaryButton2.Link = mMasterk
         HhMomentaryButton2.DireccionEscritura = "MX1000"
         HhMomentaryButton2.DireccionLectura = "MX0100"
+        HhMomentaryButton2.Etiqueta = "Automatico"
         HhMomentaryButton2.AutoActualizar = True
+
+        Button5.Etiqueta = "Mandos"
+        Button6.Etiqueta = "Historial"
+        Button3.Etiqueta = "Configuracion"
+        Button7.Etiqueta = "Pruebas"
+        Button1.Etiqueta = "Salir"
 
         Label1.BorderStyle = BorderStyle.Fixed3D
 
@@ -102,6 +109,7 @@ Public Class FormLavadora
         StatusStrip1.Items(3).Width = 100
         Dim t As New ToolStripStatusLabel
         t.Spring = True
+
         StatusStrip1.Items.Add(t)
 
 
@@ -138,15 +146,11 @@ Public Class FormLavadora
                 System.Diagnostics.Process.Start("shutdown", "-s -t 10")
             End If
             Me.Close()
-
         End If
-
-
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         Using f As New FormConfigura
-            CambiarLetra(f)
             f.ShowDialog()
         End Using
     End Sub
@@ -508,7 +512,6 @@ Public Class FormLavadora
 
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
         Using f As New FormTest
-            CambiarLetra(f)
             f.ShowDialog()
         End Using
     End Sub
@@ -521,7 +524,7 @@ Public Class FormLavadora
 
     Private Sub HhMomentaryButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton1.Click
         Using f As New FormManual
-            CambiarLetra(f)
+
             If mMasterk.ObtenerBoolean("MX0100") Then
                 Using m As New hhMsgBox.hhMsgBox
                     m.Mensaje = "La maquina esta trabajando. Parar la maquina?"
@@ -550,7 +553,6 @@ Public Class FormLavadora
     Private Sub HhMomentaryButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton2.Click
 
         Using f As New FormAutomatico
-            CambiarLetra(f)
             f.ShowDialog()
         End Using
     End Sub

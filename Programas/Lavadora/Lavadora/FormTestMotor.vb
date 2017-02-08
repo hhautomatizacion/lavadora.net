@@ -28,5 +28,7 @@ Public Class FormTestMotor
         HhNumericDisplay1.DireccionLectura = "DW0514"
         HhNumericDisplay1.Tooltip = "Velocidad actual"
         HhNumericDisplay1.AutoActualizar = True
+
+        Button1.Etiqueta = "Salir"
     End Sub
 End Class

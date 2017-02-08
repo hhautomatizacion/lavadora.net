@@ -9,6 +9,7 @@ Public Class FormManual
         'dejar de utilizar direccion mx1000
         HhMomentaryButton3.DireccionEscritura = "MX1000"
         HhMomentaryButton3.DireccionLectura = "MX1801"
+        HhMomentaryButton3.Etiqueta = "Rotacion"
         HhMomentaryButton3.AutoActualizar = True
 
 
@@ -16,34 +17,38 @@ Public Class FormManual
         'dejar de utilizar direccion mx1000
         HhMomentaryButton2.DireccionEscritura = "MX1000"
         HhMomentaryButton2.DireccionLectura = "MX1803"
+        HhMomentaryButton2.Etiqueta = "Desague"
         HhMomentaryButton2.AutoActualizar = True
 
         HhMomentaryButton1.Link = mMasterk
         'dejar de utilizar direccion mx1000
         HhMomentaryButton1.DireccionEscritura = "MX1000"
         HhMomentaryButton1.DireccionLectura = "MX1800"
+        HhMomentaryButton1.Etiqueta = "Llenado"
         HhMomentaryButton1.AutoActualizar = True
 
         HhMomentaryButton4.Link = mMasterk
         'dejar de utilizar direccion mx1000
         HhMomentaryButton4.DireccionEscritura = "MX1000"
         HhMomentaryButton4.DireccionLectura = "MX1802"
+        HhMomentaryButton4.Etiqueta = "Mantenimiento"
         HhMomentaryButton4.AutoActualizar = True
 
         HhMomentaryButton5.Link = mMasterk
         'dejar de utilizar direccion mx1000
         HhMomentaryButton5.DireccionEscritura = "MX1000"
         HhMomentaryButton5.DireccionLectura = "MX1804"
+        HhMomentaryButton5.Etiqueta = "Temperatura"
         HhMomentaryButton5.AutoActualizar = True
 
         HhMomentaryButton6.Link = mMasterk
         'dejar de utilizar direccion mx1000
         HhMomentaryButton6.DireccionEscritura = "MX1000"
         HhMomentaryButton6.DireccionLectura = "MX1807"
+        HhMomentaryButton6.Etiqueta = "Aditivos"
         HhMomentaryButton6.AutoActualizar = True
 
-
-
+        HhMomentaryButton7.Etiqueta = "Centrifuga"
 
         HhNumericDisplay1.Link = mMasterk
         HhNumericDisplay1.DireccionLectura = "DW0030"
@@ -63,8 +68,6 @@ Public Class FormManual
         HhNumericDisplay3.DireccionLectura = "DW0508"
         HhNumericDisplay3.Etiqueta = "Litros"
         HhNumericDisplay3.Tooltip = "Litros actual"
-        'HhNumericDisplay3.ValorMaximo = 0
-        'HhNumericDisplay3.ValorMinimo = 0
         HhNumericDisplay3.AutoActualizar = True
 
         HhNumericDisplay4.Link = mMasterk
@@ -77,8 +80,6 @@ Public Class FormManual
         HhNumericDisplay5.DireccionLectura = "DW0514"
         HhNumericDisplay5.Etiqueta = "Velocidad"
         HhNumericDisplay5.Tooltip = "Velocidad actual"
-        'HhNumericDisplay5.ValorMaximo = 0
-        'HhNumericDisplay5.ValorMinimo = 0
         HhNumericDisplay5.AutoActualizar = True
 
         HhNumericDisplay6.Link = mMasterk
@@ -87,15 +88,11 @@ Public Class FormManual
         HhNumericDisplay6.Tooltip = "Velocidad set"
         HhNumericDisplay6.AutoActualizar = True
 
-
-
-
         HhTimeCounterDisplay1.Link = mMasterk
         HhTimeCounterDisplay1.DireccionLectura = "DW0660"
         HhTimeCounterDisplay1.Etiqueta = "Tiempo paso"
         HhTimeCounterDisplay1.Tooltip = "Tiempo paso"
         HhTimeCounterDisplay1.AutoActualizar = True
-
 
         HhTimeCounterDisplay2.Link = mMasterk
         HhTimeCounterDisplay2.DireccionLectura = "DW0658"
@@ -103,7 +100,9 @@ Public Class FormManual
         HhTimeCounterDisplay2.Tooltip = "Duracion paso"
         HhTimeCounterDisplay2.AutoActualizar = True
 
+        Button2.Etiqueta = "Mandos"
 
+        Button1.Etiqueta = "Salir"
 
     End Sub
 
@@ -111,6 +110,7 @@ Public Class FormManual
     Private Sub HhNumericDisplay6_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhNumericDisplay6.TextChanged
         HhNumericDisplay6.ValorMaximo = Val(HhNumericDisplay6.Text)
         HhNumericDisplay6.ValorMinimo = Val(HhNumericDisplay6.Text)
+
         HhNumericDisplay5.ValorMaximo = Val(HhNumericDisplay6.Text) + 2
         HhNumericDisplay5.ValorMinimo = Val(HhNumericDisplay6.Text) - 2
     End Sub
@@ -167,6 +167,10 @@ Public Class FormManual
             fForm.HhNumericEntry2.AutoActualizar = True
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX1700"
+            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+
+            fForm.Button1.Etiqueta = "Cancelar"
+
             fForm.ShowDialog()
         End Using
 
@@ -184,8 +188,6 @@ Public Class FormManual
 
     Private Sub HhMomentaryButton3_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhMomentaryButton3.Click
         Using fForm As New FormRotacionAuto
-            CambiarLetra(fForm)
-
             fForm.HhNumericEntry3.Link = mMasterk
             fForm.HhNumericEntry3.Unidades = "rev"
             fForm.HhNumericEntry3.Etiqueta = "Giros"
@@ -196,7 +198,6 @@ Public Class FormManual
             fForm.HhNumericEntry3.ValorMaximo = 1000
             fForm.HhNumericEntry3.AutoActualizar = True
 
-
             fForm.HhNumericEntry2.Link = mMasterk
             fForm.HhNumericEntry2.Unidades = "seg"
             fForm.HhNumericEntry2.Etiqueta = "Pausa"
@@ -206,7 +207,6 @@ Public Class FormManual
             fForm.HhNumericEntry2.ValorMinimo = 1
             fForm.HhNumericEntry2.ValorMaximo = 60
             fForm.HhNumericEntry2.AutoActualizar = True
-
 
             fForm.HhNumericEntry1.Link = mMasterk
             fForm.HhNumericEntry1.Unidades = "rpm"
@@ -219,9 +219,11 @@ Public Class FormManual
             fForm.HhNumericEntry1.ValorMaximo = 2000
             fForm.HhNumericEntry1.AutoActualizar = True
 
-
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX1701"
+            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+
+            fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -242,6 +244,7 @@ Public Class FormManual
             fForm.HhToggleButton1.DireccionLectura = "MX1716"
             fForm.HhToggleButton1.Etiqueta = "Con rotacion"
             fForm.HhToggleButton1.AutoActualizar = True
+
             fForm.HhNumericEntry2.Link = mMasterk
             fForm.HhNumericEntry2.DireccionEscritura = "DW0183"
             fForm.HhNumericEntry2.DireccionLectura = "DW0183"
@@ -250,22 +253,26 @@ Public Class FormManual
             fForm.HhNumericEntry2.ValorMinimo = 0
             fForm.HhNumericEntry2.ValorMaximo = 100
             fForm.HhNumericEntry2.AutoActualizar = True
+
             fForm.HhToggleButton2.Link = mMasterk
             fForm.HhToggleButton2.DireccionEscritura = "MX1719"
             fForm.HhToggleButton2.DireccionLectura = "MX1719"
             fForm.HhToggleButton2.Etiqueta = "Con gradiente"
             fForm.HhToggleButton2.AutoActualizar = True
+
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX1704"
+            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+
+            fForm.Button1.Etiqueta = "Cancelar"
+
             fForm.ShowDialog()
         End Using
     End Sub
 
     Private Sub HhMomentaryButton4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton4.Click
         Using fForm As New FormMantenimientoManual
-            CambiarLetra(fForm)
-
-            fForm.HhToggleButton1.Link = mMasterk
+         fForm.HhToggleButton1.Link = mMasterk
             fForm.HhToggleButton1.Etiqueta = "Temperatura constante"
             fForm.HhToggleButton1.DireccionLectura = "MX1714"
             fForm.HhToggleButton1.DireccionEscritura = "MX1714"
@@ -294,6 +301,9 @@ Public Class FormManual
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX1702"
+            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+
+            fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -307,8 +317,6 @@ Public Class FormManual
 
     Private Sub HhMomentaryButton6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton6.Click
         Using fForm As New FormAditivosAuto
-            CambiarLetra(fForm)
-
             fForm.HhNumericEntry1.Link = mMasterk
             fForm.HhNumericEntry1.DireccionEscritura = "DW0153"
             fForm.HhNumericEntry1.DireccionLectura = "DW0153"
@@ -337,6 +345,9 @@ Public Class FormManual
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX1707"
+            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+
+            fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -349,11 +360,13 @@ Public Class FormManual
             fForm.HhToggleButton1.DireccionLectura = "MX1715"
             fForm.HhToggleButton1.Etiqueta = "Desague 1"
             fForm.HhToggleButton1.AutoActualizar = True
+
             fForm.HhToggleButton2.Link = mMasterk
             fForm.HhToggleButton2.DireccionEscritura = "MX1717"
             fForm.HhToggleButton2.DireccionLectura = "MX1717"
             fForm.HhToggleButton2.Etiqueta = "Rotacion"
             fForm.HhToggleButton2.AutoActualizar = True
+
             fForm.HhNumericEntry1.Link = mMasterk
             fForm.HhNumericEntry1.DireccionEscritura = "DW0147"
             fForm.HhNumericEntry1.DireccionLectura = "DW0147"
@@ -362,8 +375,13 @@ Public Class FormManual
             fForm.HhNumericEntry1.ValorMinimo = 0
             fForm.HhNumericEntry1.ValorMaximo = 300
             fForm.HhNumericEntry1.AutoActualizar = True
+
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX1703"
+            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+
+            fForm.Button1.Etiqueta = "Cancelar"
+
             fForm.ShowDialog()
         End Using
 
@@ -373,8 +391,6 @@ Public Class FormManual
 
     Private Sub HhMomentaryButton7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton7.Click
         Using fForm As New FormCentrifugaAuto
-            CambiarLetra(fForm)
-
             fForm.HhNumericEntry1.Link = mMasterk
             fForm.HhNumericEntry1.DireccionEscritura = "DW0116"
             fForm.HhNumericEntry1.DireccionLectura = "DW0116"
@@ -398,6 +414,9 @@ Public Class FormManual
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX1708"
+            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+
+            fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -432,18 +451,12 @@ Public Class FormManual
     End Sub
 
 
-    Private Sub HhTimeCounterDisplay2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhTimeCounterDisplay2.Click
-
-    End Sub
-
     Private Sub HhTimeCounterDisplay2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhTimeCounterDisplay2.TextChanged
         HhTimeCounterDisplay1.ValorMaximo = HhTimeCounterDisplay2.Valor
         HhTimeCounterDisplay2.ValorMaximo = HhTimeCounterDisplay2.Valor
     End Sub
 
-    Private Sub HhTimeCounterDisplay1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhTimeCounterDisplay1.Click
 
-    End Sub
 
     Private Sub HhTimeCounterDisplay1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhTimeCounterDisplay1.TextChanged
         If HhTimeCounterDisplay2.Valor = 0 Then

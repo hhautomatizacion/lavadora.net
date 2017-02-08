@@ -4,6 +4,10 @@ Module Module1
     Public sPuerto As New System.IO.Ports.SerialPort
     Public sNombreFuente As String
     Public iTamanioFuente As Integer
+    Public sNombreFuenteBotones As String
+    Public iTamanioFuenteBotones As Integer
+    Public sNombreFuenteEtiquetas As String
+    Public iTamanioFuenteEtiquetas As Integer
     Public sNombrePuerto As String
     Public sTerminal As String
     Public sVersion As String
@@ -33,51 +37,12 @@ Module Module1
         BitMask = 2 ^ (MyBit)
         MyByte = MyByte Xor BitMask
     End Sub
-    Sub depurar(ByVal s As Object, ByVal e As System.EventArgs)
-        Debug.Print("Nombre..............: " & s.name)
-        Debug.Print("DireccionEscritura..: " & s.direccionescritura)
-        Debug.Print("DireccionLectura....: " & s.direccionlectura)
-
-    End Sub
-    Sub CambiarLetra(ByVal f As Object)
-        Dim c As Control
-        For Each c In f.Controls
-            If bDepuracion Then
-                If c.GetType Is GetType(hhMomentaryButton.hhMomentaryButton) Then
-                    AddHandler c.MouseHover, AddressOf Module1.depurar
-                End If
-            End If
-            If c.GetType Is GetType(Button) Then
-                c.Cursor = Cursors.Cross
-                c.Font = New Font(sNombreFuente, iTamanioFuente)
-            End If
-            If c.GetType Is GetType(TextBox) Then
-                c.Cursor = Cursors.Cross
-                c.Font = New Font(sNombreFuente, iTamanioFuente)
-            End If
-            If c.GetType Is GetType(TableLayoutPanel) Then
-                c.Cursor = Cursors.Cross
-                CambiarLetra(c)
-            End If
-            If c.GetType Is GetType(SplitterPanel) Then
-                c.Cursor = Cursors.Cross
-                CambiarLetra(c)
-            End If
-            If c.GetType Is GetType(SplitContainer) Then
-                c.Cursor = Cursors.Cross
-                CambiarLetra(c)
-            End If
-            If c.GetType Is GetType(GroupBox) Then
-                c.Cursor = Cursors.Cross
-                CambiarLetra(c)
-            End If
-        Next
-    End Sub
     Function Version() As String
         Dim sVer As String
 
         Try
-            sVer = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString
+
+            sVer = My.Application.Deployment.CurrentVersion.ToString
         Catch
             Try
                 sVer = Application.ProductVersion
@@ -90,8 +55,12 @@ Module Module1
     Sub CargarOpciones()
         sTerminal = System.Net.Dns.GetHostName
         sNombrePuerto = GetSetting("Lavadora", "Principal", "Puerto", "COM1")
-        sNombreFuente = GetSetting("hhcontrols", "font", "name", "Verdana")
-        iTamanioFuente = Val(GetSetting("hhcontrols", "font", "size", "14"))
+        sNombreFuente = GetSetting("hhControls", "Font", "Name", "Verdana")
+        iTamanioFuente = Val(GetSetting("hhControls", "Font", "Size", "14"))
+        sNombreFuenteBotones = GetSetting("hhControls", "Font", "ButtonFontName", "Verdana")
+        iTamanioFuenteBotones = Val(GetSetting("hhControls", "Font", "ButtonFontSize", "10"))
+        sNombreFuenteEtiquetas = GetSetting("hhControls", "Font", "LabelFontName", "Verdana")
+        iTamanioFuenteEtiquetas = Val(GetSetting("hhControls", "Font", "LabelFontSize", "10"))
         bDepuracion = -Val(GetSetting("Lavadora", "Principal", "Depuracion", "0"))
         bPermitirSalir = -Val(GetSetting("Lavadora", "Principal", "PermitirSalir", "0"))
         sVersion = GetSetting("Lavadora", "Principal", "Version", "")
@@ -103,8 +72,12 @@ Module Module1
     Sub GuardarOpciones()
         SaveSetting("Lavadora", "Principal", "Puerto", sNombrePuerto)
         SaveSetting("Lavadora", "Principal", "Version", sVersion)
-        SaveSetting("hhcontrols", "font", "name", sNombreFuente)
-        SaveSetting("hhcontrols", "font", "size", iTamanioFuente.ToString)
+        SaveSetting("hhControls", "Font", "Name", sNombreFuente)
+        SaveSetting("hhControls", "Font", "Size", iTamanioFuente.ToString)
+        SaveSetting("hhControls", "Font", "ButtonFontName", sNombreFuenteBotones)
+        SaveSetting("hhControls", "Font", "ButtonFontSize", iTamanioFuenteBotones.ToString)
+        SaveSetting("hhControls", "Font", "LabelFontName", sNombreFuenteEtiquetas)
+        SaveSetting("hhControls", "Font", "LabelFontSize", iTamanioFuenteEtiquetas.ToString)
         SaveSetting("Lavadora", "Principal", "Depuracion", -bDepuracion)
         SaveSetting("Lavadora", "Principal", "PermitirSalir", -bPermitirSalir)
     End Sub

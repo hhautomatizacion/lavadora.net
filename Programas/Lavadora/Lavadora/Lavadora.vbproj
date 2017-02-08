@@ -33,7 +33,7 @@
     <ProductName>Lavadora</ProductName>
     <PublisherName>hhAutomatizacion</PublisherName>
     <WebPage>publish.htm</WebPage>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -485,6 +485,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Iconos\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\setting_tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\disk.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

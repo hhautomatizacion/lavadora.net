@@ -7,8 +7,6 @@ Public Class FormEditorAuto
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Using fForm As New FormLlenadoAuto
-            CambiarLetra(fForm)
-
             fForm.HhToggleButton1.Link = mMasterk
             fForm.HhToggleButton1.DireccionLectura = "MX010"
             fForm.HhToggleButton1.DireccionEscritura = "MX010"
@@ -28,9 +26,9 @@ Public Class FormEditorAuto
             fForm.HhToggleButton3.AutoActualizar = True
 
             fForm.HhToggleButton4.Link = mMasterk
-            fForm.HhToggleButton4.DireccionLectura = "MX013"
-            fForm.HhToggleButton4.DireccionEscritura = "MX013"
-            fForm.HhToggleButton4.Etiqueta = "Calefaccion"
+            fForm.HhToggleButton4.DireccionLectura = "MX13"
+            fForm.HhToggleButton4.DireccionEscritura = "MX13"
+            fForm.HhToggleButton4.Etiqueta = "Temperatura"
             fForm.HhToggleButton4.AutoActualizar = True
 
             fForm.HhNumericEntry1.Link = mMasterk
@@ -55,6 +53,9 @@ Public Class FormEditorAuto
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX20"
+            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+
+            fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -94,25 +95,49 @@ Public Class FormEditorAuto
 
         HhMomentaryButton1.Link = mMasterk
         HhMomentaryButton1.DireccionEscritura = "MX0027"
+        HhMomentaryButton1.Etiqueta = "Fin"
 
         HhMomentaryButton2.Link = mMasterk
         HhMomentaryButton2.DireccionEscritura = "MX0031"
+        HhMomentaryButton2.Etiqueta = "Insertar"
 
         HhMomentaryButton3.Link = mMasterk
         HhMomentaryButton3.DireccionEscritura = "MX0029"
+        HhMomentaryButton3.Etiqueta = "Eliminar"
 
         HhMomentaryButton4.Link = mMasterk
         HhMomentaryButton4.DireccionEscritura = "MX0076"
+        HhMomentaryButton4.Etiqueta = "Envia"
 
         HhMomentaryButton5.Link = mMasterk
         HhMomentaryButton5.DireccionEscritura = "MX0028"
+        HhMomentaryButton5.Etiqueta = "Nueva"
+
+
+        Button2.Etiqueta = "Llenado"
+
+        Button3.Etiqueta = "Desague"
+
+        Button5.Etiqueta = "Rotacion"
+
+        Button6.Etiqueta = "Mantenimiento"
+
+        Button7.Etiqueta = "Temperatura"
+
+        Button8.Etiqueta = "Centrifuga"
+
+        Button9.Etiqueta = "Aditivos"
+
+        Button10.Etiqueta = "Muestreo"
+
+        Button4.Etiqueta = "Guardar"
+
+        Button1.Etiqueta = "Salir"
 
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         Using fForm As New FormDesagueAuto
-            CambiarLetra(fForm)
-
             fForm.HhToggleButton1.Link = mMasterk
             fForm.HhToggleButton1.DireccionEscritura = "MX15"
             fForm.HhToggleButton1.DireccionLectura = "MX15"
@@ -137,6 +162,9 @@ Public Class FormEditorAuto
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX23"
+            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+
+            fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -182,7 +210,6 @@ Public Class FormEditorAuto
         HhDialogoArchivos1.Longitud = 20
         HhDialogoArchivos1.ShowDialog()
 
-
         If Len(HhDialogoArchivos1.NombreCompleto) Then
             Try
                 bArchivoExiste = False
@@ -190,6 +217,7 @@ Public Class FormEditorAuto
                     bArchivoExiste = True
                 End If
             Catch ex As Exception
+
                 Exit Sub
             End Try
 
@@ -210,6 +238,7 @@ Public Class FormEditorAuto
                 End Using
             End If
             Try
+
                 Dim fs As New System.IO.FileStream(HhDialogoArchivos1.NombreCompleto, IO.FileMode.OpenOrCreate)
                 bf.Serialize(fs, HhGridDisplay1.Receta)
                 fs.Close()
@@ -223,8 +252,6 @@ Public Class FormEditorAuto
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         Using fForm As New FormRotacionAuto
-            CambiarLetra(fForm)
-
             fForm.HhNumericEntry3.Link = mMasterk
             fForm.HhNumericEntry3.Unidades = "rev"
             fForm.HhNumericEntry3.Etiqueta = "Giros"
@@ -235,7 +262,6 @@ Public Class FormEditorAuto
             fForm.HhNumericEntry3.ValorMaximo = 1000
             fForm.HhNumericEntry3.AutoActualizar = True
 
-
             fForm.HhNumericEntry2.Link = mMasterk
             fForm.HhNumericEntry2.Unidades = "seg"
             fForm.HhNumericEntry2.Etiqueta = "Pausa"
@@ -245,7 +271,6 @@ Public Class FormEditorAuto
             fForm.HhNumericEntry2.ValorMinimo = 1
             fForm.HhNumericEntry2.ValorMaximo = 60
             fForm.HhNumericEntry2.AutoActualizar = True
-
 
             fForm.HhNumericEntry1.Link = mMasterk
             fForm.HhNumericEntry1.Unidades = "rpm"
@@ -258,9 +283,11 @@ Public Class FormEditorAuto
             fForm.HhNumericEntry1.ValorMaximo = 2000
             fForm.HhNumericEntry1.AutoActualizar = True
 
-
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX21"
+            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+
+            fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -282,8 +309,6 @@ Public Class FormEditorAuto
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
         Using fForm As New FormMantenimientoManual
-            CambiarLetra(fForm)
-
             fForm.HhToggleButton1.Link = mMasterk
             fForm.HhToggleButton1.Etiqueta = "Temperatura constante"
             fForm.HhToggleButton1.DireccionLectura = "MX14"
@@ -313,6 +338,9 @@ Public Class FormEditorAuto
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX22"
+            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+
+            fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -324,8 +352,6 @@ Public Class FormEditorAuto
 
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
         Using fForm As New FormCalefaccionManual
-            CambiarLetra(fForm)
-
             fForm.HhNumericEntry1.Link = mMasterk
             fForm.HhNumericEntry1.DireccionEscritura = "DW0184"
             fForm.HhNumericEntry1.DireccionLectura = "DW0184"
@@ -360,6 +386,9 @@ Public Class FormEditorAuto
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX25"
+            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+
+            fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -372,8 +401,6 @@ Public Class FormEditorAuto
 
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
         Using fForm As New FormCentrifugaAuto
-            CambiarLetra(fForm)
-
             fForm.HhNumericEntry1.Link = mMasterk
             fForm.HhNumericEntry1.DireccionEscritura = "DW0116"
             fForm.HhNumericEntry1.DireccionLectura = "DW0116"
@@ -398,6 +425,9 @@ Public Class FormEditorAuto
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX74"
+            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+
+            fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -429,9 +459,7 @@ Public Class FormEditorAuto
 
     Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
         Using fForm As New FormAditivosAuto
-            CambiarLetra(fForm)
-
-            fForm.HhNumericEntry1.Link = mMasterk
+                  fForm.HhNumericEntry1.Link = mMasterk
             fForm.HhNumericEntry1.DireccionEscritura = "DW0153"
             fForm.HhNumericEntry1.DireccionLectura = "DW0153"
             fForm.HhNumericEntry1.Etiqueta = "Enjuagues"
@@ -459,6 +487,9 @@ Public Class FormEditorAuto
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX24"
+            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+
+            fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -471,10 +502,11 @@ Public Class FormEditorAuto
 
     Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
         Using fForm As New FormMuestreoAuto
-            CambiarLetra(fForm)
-
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX26"
+            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+
+            fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -501,4 +533,6 @@ Public Class FormEditorAuto
         HhGridDisplay1.AutoActualizar = True
 
     End Sub
+
+   
 End Class

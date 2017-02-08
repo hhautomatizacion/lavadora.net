@@ -16,6 +16,8 @@ Public Class FormConfVolquete
         HhNumericEntry2.ValorMaximo = 600
         HhNumericEntry2.Unidades = "seg"
         HhNumericEntry2.AutoActualizar = True
+
+        Button1.Etiqueta = "Aceptar"
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click

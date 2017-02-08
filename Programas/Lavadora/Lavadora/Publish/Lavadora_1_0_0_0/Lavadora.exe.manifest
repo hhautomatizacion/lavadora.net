@@ -94,7 +94,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Q8ZWrHckhihTE61vtXWc4QKjy+U=</dsig:DigestValue>
+        <dsig:DigestValue>caZ8HXWxYoBW1Pl1Uve3x8Ub3vk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -106,7 +106,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>cc7qNW3DA3vmH1A20n0LAJdZv2w=</dsig:DigestValue>
+        <dsig:DigestValue>sioCdvcXSoPGgMkObxdDowqVe20=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -130,7 +130,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>W8x3ug6SM/QkA2XgmJVkaGkSXIE=</dsig:DigestValue>
+        <dsig:DigestValue>PAiUt1cY8rB7DgGVGCBzpNrkpgk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -202,7 +202,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>YY3aW6eVqHr6G5yDdZBhKJkxmUo=</dsig:DigestValue>
+        <dsig:DigestValue>YY5y8Kt25DHoW6gVxj41sHt3/zY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -219,14 +219,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Lavadora.exe" size="430080">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Lavadora.exe" size="458752">
       <assemblyIdentity name="Lavadora" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/0yB2xZcZaRYl2/s74NMwUY2O+k=</dsig:DigestValue>
+        <dsig:DigestValue>cRA3tqrGLQc5m6ePa+IQ+Aa4bP0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -250,7 +250,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>nF/IdB8y3yEVIq7QJJ+EDm5wsKc=</dsig:DigestValue>
+        <dsig:DigestValue>VMgkURsrm6Z0+Z5wUu/zM9d0XUQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -275,4 +275,4 @@
       <dsig:DigestValue>geOHpgOTZdBuAShm4VSgIilwpEg=</dsig:DigestValue>
     </hash>
   </file>
-<publisherIdentity name="CN=XPS\Administrador" issuerKeyHash="4e8a812533d33d0c92ea68370e82c8b81ae58c79" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>86DhYUWfuEaLQblPL7m7BA62Zu4=</DigestValue></Reference></SignedInfo><SignatureValue>GzMZEEkeSehpPRHBRdZCjHK8rRbebBgq8NMTDzwI4ZiLLH4w+m5KACWMscyrTmfJYBswqq6VIapHtVQVGzgKyv8wS3sBsKqeAVJX1UyG97fMUW/b/k4GnCFFAoF1Do2BIw7STG247chSx889R7j+c6q0Lkw/ggKlrP95nZJavew=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>hq2AMLIZdEpFpvQFARJh2RVVzjgdK4neJ3jnOmerxo1PsUJw/NDfIHtt4U2mVagPoZDZQNfu0QhCesKMLvL6Wq7D2ZxQGsw1P2QlqeOA0MmPh0q9EBIdfuGQ/YB31DIEzWXuTumW3et8DWsYkH45yG87Lj0bTpqbdRNDpRqI2Ic=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="ee66b60e04bbb92f4fb9418b46b89f4561e1a0f3" Description="" Url=""><as:assemblyIdentity name="Lavadora.exe" version="1.0.0.0" publicKeyToken="03a84b62b97451e6" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=XPS\Administrador</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>673mpnLuqQv7wEaYokc1Zw0sJqQ=</DigestValue></Reference></SignedInfo><SignatureValue>N3QLjNABVj+uQM4xJYGHyoe10nUfM5uMPGt+CVAQzMMY59X1AebIiRoMtGr7lLwt4CNxHg+FpL9bNH8TE0Ml2WJMoVQRhQm6j2sCyORrTkpGdbHF3xzsXJEFTk5zkaIbcGtUxQUURZgQ9wfiFzZ/+O/dddHxC0+TeD3nhdfL9Zo=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>hq2AMLIZdEpFpvQFARJh2RVVzjgdK4neJ3jnOmerxo1PsUJw/NDfIHtt4U2mVagPoZDZQNfu0QhCesKMLvL6Wq7D2ZxQGsw1P2QlqeOA0MmPh0q9EBIdfuGQ/YB31DIEzWXuTumW3et8DWsYkH45yG87Lj0bTpqbdRNDpRqI2Ic=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAUKgAwIBAgIQLaJ623KG7bRIDDnVmHJS4jAJBgUrDgMCHQUAMC0xKzApBgNVBAMeIgBYAFAAUwBcAEEAZABtAGkAbgBpAHMAdAByAGEAZABvAHIwHhcNMTYwNDI1MjIwNDM2WhcNMTcwNDI2MDQwNDM2WjAtMSswKQYDVQQDHiIAWABQAFMAXABBAGQAbQBpAG4AaQBzAHQAcgBhAGQAbwByMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCGrYAwshl0SkWm9AUBEmHZFVXOOB0rid4neOc6Z6vGjU+xQnD80N8ge23hTaZVqA+hkNlA1+7RCEJ6wowu8vparsPZnFAazDU/ZCWp44DQyY+HSr0QEh1+4ZD9gHfUMgTNZe5O6Zbd63wNaxiQfjnIbzsuPRtOmpt1E0OlGojYhwIDAQABMAkGBSsOAwIdBQADgYEANiBd8aPekVA2pfbuZXsG1kT19UMJ79pojk+eHHzkbiwrG3qaKLF0PRnDDVRvMxGtnF0m5ntm4/FlZtBkhVmAakTJSaLp6cwwUwj/miSIdHO6gyqSareFoivOqkqCBsmdN7EY8ZjAWfWnNpCCQXX1GNH+5WSbf5MH+gHEghW3f40=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=XPS\Administrador" issuerKeyHash="4e8a812533d33d0c92ea68370e82c8b81ae58c79" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>zlLB1PzaApfrkdvGqoHf36Z+6n4=</DigestValue></Reference></SignedInfo><SignatureValue>Z0mGo8LsYUci5UhRtZ/wZU147XRYI62E4StmotV+NBl4ZzorOkES9ky8wNMb9XH4T12chP/jaKWL2GqdyOhlbuoWTvxqxHbvjyajUBdR/aq9SeR2iX0DIRNDEAITa3m4U0AehuSwwPbwde1V8Xo/I69hYstT13Vo3xyeaadO9lQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>hq2AMLIZdEpFpvQFARJh2RVVzjgdK4neJ3jnOmerxo1PsUJw/NDfIHtt4U2mVagPoZDZQNfu0QhCesKMLvL6Wq7D2ZxQGsw1P2QlqeOA0MmPh0q9EBIdfuGQ/YB31DIEzWXuTumW3et8DWsYkH45yG87Lj0bTpqbdRNDpRqI2Ic=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="7eea7ea6dfdf81aac6db91eb9702dafcd4c152ce" Description="" Url=""><as:assemblyIdentity name="Lavadora.exe" version="1.0.0.0" publicKeyToken="03a84b62b97451e6" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=XPS\Administrador</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>qH32Dujv+qCxN7jVT4u/X3ILYpo=</DigestValue></Reference></SignedInfo><SignatureValue>I3wTfDkyTPa+vDXucs/k2FqyPfVFUw1gGG/wK54qfySFaurW43vffaEZAajf0OUFtHHmNxepCCoKkhvzh3P4T/jejcnLgmgPwTPGrPiZSUONfw4oLwe6aBRRn2llESArXe5omV7cMKdXj9qf0sGt/24WZ7gnmU/yMAOddShNeS8=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>hq2AMLIZdEpFpvQFARJh2RVVzjgdK4neJ3jnOmerxo1PsUJw/NDfIHtt4U2mVagPoZDZQNfu0QhCesKMLvL6Wq7D2ZxQGsw1P2QlqeOA0MmPh0q9EBIdfuGQ/YB31DIEzWXuTumW3et8DWsYkH45yG87Lj0bTpqbdRNDpRqI2Ic=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAUKgAwIBAgIQLaJ623KG7bRIDDnVmHJS4jAJBgUrDgMCHQUAMC0xKzApBgNVBAMeIgBYAFAAUwBcAEEAZABtAGkAbgBpAHMAdAByAGEAZABvAHIwHhcNMTYwNDI1MjIwNDM2WhcNMTcwNDI2MDQwNDM2WjAtMSswKQYDVQQDHiIAWABQAFMAXABBAGQAbQBpAG4AaQBzAHQAcgBhAGQAbwByMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCGrYAwshl0SkWm9AUBEmHZFVXOOB0rid4neOc6Z6vGjU+xQnD80N8ge23hTaZVqA+hkNlA1+7RCEJ6wowu8vparsPZnFAazDU/ZCWp44DQyY+HSr0QEh1+4ZD9gHfUMgTNZe5O6Zbd63wNaxiQfjnIbzsuPRtOmpt1E0OlGojYhwIDAQABMAkGBSsOAwIdBQADgYEANiBd8aPekVA2pfbuZXsG1kT19UMJ79pojk+eHHzkbiwrG3qaKLF0PRnDDVRvMxGtnF0m5ntm4/FlZtBkhVmAakTJSaLp6cwwUwj/miSIdHO6gyqSareFoivOqkqCBsmdN7EY8ZjAWfWnNpCCQXX1GNH+5WSbf5MH+gHEghW3f40=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

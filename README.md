@@ -137,6 +137,8 @@
 ---
 ![delete_row.png](/Programas/Lavadora/Lavadora/Iconos/delete_row.png)
 ---
+![disk.png](/Programas/Lavadora/Lavadora/Iconos/disk.png)
+---
 ![error.png](/Programas/Lavadora/Lavadora/Iconos/error.png)
 ---
 ![exclamation.png](/Programas/Lavadora/Lavadora/Iconos/exclamation.png)
@@ -158,6 +160,14 @@
 ![lightning.png](/Programas/Lavadora/Lavadora/Iconos/lightning.png)
 ---
 ![logo.jpg](/Programas/Lavadora/Lavadora/Iconos/logo.jpg)
+---
+![page_white_copy.png](/Programas/Lavadora/Lavadora/Iconos/page_white_copy.png)
+---
+![page_white_delete.png](/Programas/Lavadora/Lavadora/Iconos/page_white_delete.png)
+---
+![page_white_go.png](/Programas/Lavadora/Lavadora/Iconos/page_white_go.png)
+---
+![page_white_stack.png](/Programas/Lavadora/Lavadora/Iconos/page_white_stack.png)
 ---
 ![rock.png](/Programas/Lavadora/Lavadora/Iconos/rock.png)
 ---

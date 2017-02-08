@@ -19,5 +19,7 @@ Public Class FormConfQuimicos
         HhNumericEntry2.ValorMinimo = 1
         HhNumericEntry2.ValorMaximo = 600
         HhNumericEntry2.AutoActualizar = True
+
+        Button1.Etiqueta = "Aceptar"
     End Sub
 End Class

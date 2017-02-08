@@ -26,21 +26,20 @@ Public Class FormConfCuentalitros
         HhNumericEntry1.AutoActualizar = True
 
         HhNumericEntry2.Link = mMasterk
-        HhNumericEntry2.DireccionLectura = "DW0702"
-        HhNumericEntry2.DireccionEscritura = "DW0702"
-        HhNumericEntry2.Tooltip = "Divisor para calculo de|entrada de agua"
+        HhNumericEntry2.DireccionLectura = "DW0704"
+        HhNumericEntry2.DireccionEscritura = "DW0704"
+        HhNumericEntry2.Tooltip = "Multiplo para calculo de|entrada de agua"
         HhNumericEntry2.ValorMinimo = 1
         HhNumericEntry2.ValorMaximo = 1000
         HhNumericEntry2.AutoActualizar = True
 
         HhNumericEntry3.Link = mMasterk
-        HhNumericEntry3.DireccionLectura = "DW0704"
-        HhNumericEntry3.DireccionEscritura = "DW0704"
-        HhNumericEntry3.Tooltip = "Multiplo para calculo de|entrada de agua"
+        HhNumericEntry3.DireccionLectura = "DW0702"
+        HhNumericEntry3.DireccionEscritura = "DW0702"
+        HhNumericEntry3.Tooltip = "Divisor para calculo de|entrada de agua"
         HhNumericEntry3.ValorMinimo = 1
         HhNumericEntry3.ValorMaximo = 1000
         HhNumericEntry3.AutoActualizar = True
-
 
         HhNumericEntry4.Link = mMasterk
         HhNumericEntry4.DireccionLectura = "DW0706"
@@ -51,7 +50,6 @@ Public Class FormConfCuentalitros
         HhNumericEntry4.ValorMaximo = 60
         HhNumericEntry4.AutoActualizar = True
 
-
         HhNumericEntry5.Link = mMasterk
         HhNumericEntry5.DireccionLectura = "DW0710"
         HhNumericEntry5.DireccionEscritura = "DW0710"
@@ -61,6 +59,7 @@ Public Class FormConfCuentalitros
         HhNumericEntry5.ValorMaximo = 10000
         HhNumericEntry5.AutoActualizar = True
 
+        Button1.Etiqueta = "Aceptar"
 
     End Sub
 

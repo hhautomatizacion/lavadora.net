@@ -51,8 +51,8 @@ Partial Class FormTest
         Me.HhToggleButton29 = New hhToggleButton.hhToggleButton
         Me.HhToggleButton30 = New hhToggleButton.hhToggleButton
         Me.HhToggleButton31 = New hhToggleButton.hhToggleButton
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
+        Me.Button1 = New hhMomentaryButton.hhMomentaryButton
+        Me.Button2 = New hhMomentaryButton.hhMomentaryButton
         Me.SuspendLayout()
         '
         'HhToggleButton1
@@ -63,7 +63,7 @@ Partial Class FormTest
         Me.HhToggleButton1.DireccionEscritura = Nothing
         Me.HhToggleButton1.DireccionLectura = Nothing
         Me.HhToggleButton1.Etiqueta = Nothing
-        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton1.Link = Nothing
         Me.HhToggleButton1.Location = New System.Drawing.Point(250, 5)
         Me.HhToggleButton1.Name = "HhToggleButton1"
@@ -80,7 +80,7 @@ Partial Class FormTest
         Me.HhToggleButton2.DireccionEscritura = Nothing
         Me.HhToggleButton2.DireccionLectura = Nothing
         Me.HhToggleButton2.Etiqueta = Nothing
-        Me.HhToggleButton2.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton2.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton2.Link = Nothing
         Me.HhToggleButton2.Location = New System.Drawing.Point(250, 38)
         Me.HhToggleButton2.Name = "HhToggleButton2"
@@ -97,7 +97,7 @@ Partial Class FormTest
         Me.HhToggleButton3.DireccionEscritura = Nothing
         Me.HhToggleButton3.DireccionLectura = Nothing
         Me.HhToggleButton3.Etiqueta = Nothing
-        Me.HhToggleButton3.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton3.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton3.Link = Nothing
         Me.HhToggleButton3.Location = New System.Drawing.Point(250, 71)
         Me.HhToggleButton3.Name = "HhToggleButton3"
@@ -114,7 +114,7 @@ Partial Class FormTest
         Me.HhToggleButton4.DireccionEscritura = Nothing
         Me.HhToggleButton4.DireccionLectura = Nothing
         Me.HhToggleButton4.Etiqueta = Nothing
-        Me.HhToggleButton4.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton4.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton4.Link = Nothing
         Me.HhToggleButton4.Location = New System.Drawing.Point(250, 104)
         Me.HhToggleButton4.Name = "HhToggleButton4"
@@ -131,7 +131,7 @@ Partial Class FormTest
         Me.HhToggleButton5.DireccionEscritura = Nothing
         Me.HhToggleButton5.DireccionLectura = Nothing
         Me.HhToggleButton5.Etiqueta = Nothing
-        Me.HhToggleButton5.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton5.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton5.Link = Nothing
         Me.HhToggleButton5.Location = New System.Drawing.Point(250, 137)
         Me.HhToggleButton5.Name = "HhToggleButton5"
@@ -148,7 +148,7 @@ Partial Class FormTest
         Me.HhToggleButton6.DireccionEscritura = Nothing
         Me.HhToggleButton6.DireccionLectura = Nothing
         Me.HhToggleButton6.Etiqueta = Nothing
-        Me.HhToggleButton6.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton6.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton6.Link = Nothing
         Me.HhToggleButton6.Location = New System.Drawing.Point(250, 170)
         Me.HhToggleButton6.Name = "HhToggleButton6"
@@ -165,7 +165,7 @@ Partial Class FormTest
         Me.HhToggleButton7.DireccionEscritura = Nothing
         Me.HhToggleButton7.DireccionLectura = Nothing
         Me.HhToggleButton7.Etiqueta = Nothing
-        Me.HhToggleButton7.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton7.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton7.Link = Nothing
         Me.HhToggleButton7.Location = New System.Drawing.Point(250, 203)
         Me.HhToggleButton7.Name = "HhToggleButton7"
@@ -182,7 +182,7 @@ Partial Class FormTest
         Me.HhToggleButton8.DireccionEscritura = Nothing
         Me.HhToggleButton8.DireccionLectura = Nothing
         Me.HhToggleButton8.Etiqueta = Nothing
-        Me.HhToggleButton8.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton8.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton8.Link = Nothing
         Me.HhToggleButton8.Location = New System.Drawing.Point(250, 236)
         Me.HhToggleButton8.Name = "HhToggleButton8"
@@ -199,7 +199,7 @@ Partial Class FormTest
         Me.HhToggleButton9.DireccionEscritura = Nothing
         Me.HhToggleButton9.DireccionLectura = Nothing
         Me.HhToggleButton9.Etiqueta = Nothing
-        Me.HhToggleButton9.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton9.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton9.Link = Nothing
         Me.HhToggleButton9.Location = New System.Drawing.Point(250, 269)
         Me.HhToggleButton9.Name = "HhToggleButton9"
@@ -216,7 +216,7 @@ Partial Class FormTest
         Me.HhToggleButton10.DireccionEscritura = Nothing
         Me.HhToggleButton10.DireccionLectura = Nothing
         Me.HhToggleButton10.Etiqueta = Nothing
-        Me.HhToggleButton10.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton10.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton10.Link = Nothing
         Me.HhToggleButton10.Location = New System.Drawing.Point(250, 302)
         Me.HhToggleButton10.Name = "HhToggleButton10"
@@ -233,7 +233,7 @@ Partial Class FormTest
         Me.HhToggleButton11.DireccionEscritura = Nothing
         Me.HhToggleButton11.DireccionLectura = Nothing
         Me.HhToggleButton11.Etiqueta = Nothing
-        Me.HhToggleButton11.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton11.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton11.Link = Nothing
         Me.HhToggleButton11.Location = New System.Drawing.Point(250, 335)
         Me.HhToggleButton11.Name = "HhToggleButton11"
@@ -250,7 +250,7 @@ Partial Class FormTest
         Me.HhToggleButton12.DireccionEscritura = Nothing
         Me.HhToggleButton12.DireccionLectura = Nothing
         Me.HhToggleButton12.Etiqueta = Nothing
-        Me.HhToggleButton12.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton12.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton12.Link = Nothing
         Me.HhToggleButton12.Location = New System.Drawing.Point(250, 368)
         Me.HhToggleButton12.Name = "HhToggleButton12"
@@ -267,7 +267,7 @@ Partial Class FormTest
         Me.HhToggleButton13.DireccionEscritura = Nothing
         Me.HhToggleButton13.DireccionLectura = Nothing
         Me.HhToggleButton13.Etiqueta = Nothing
-        Me.HhToggleButton13.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton13.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton13.Link = Nothing
         Me.HhToggleButton13.Location = New System.Drawing.Point(250, 401)
         Me.HhToggleButton13.Name = "HhToggleButton13"
@@ -284,7 +284,7 @@ Partial Class FormTest
         Me.HhToggleButton14.DireccionEscritura = Nothing
         Me.HhToggleButton14.DireccionLectura = Nothing
         Me.HhToggleButton14.Etiqueta = Nothing
-        Me.HhToggleButton14.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton14.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton14.Link = Nothing
         Me.HhToggleButton14.Location = New System.Drawing.Point(250, 434)
         Me.HhToggleButton14.Name = "HhToggleButton14"
@@ -301,7 +301,7 @@ Partial Class FormTest
         Me.HhToggleButton15.DireccionEscritura = Nothing
         Me.HhToggleButton15.DireccionLectura = Nothing
         Me.HhToggleButton15.Etiqueta = Nothing
-        Me.HhToggleButton15.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton15.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton15.Link = Nothing
         Me.HhToggleButton15.Location = New System.Drawing.Point(250, 467)
         Me.HhToggleButton15.Name = "HhToggleButton15"
@@ -318,7 +318,7 @@ Partial Class FormTest
         Me.HhToggleButton16.DireccionEscritura = Nothing
         Me.HhToggleButton16.DireccionLectura = Nothing
         Me.HhToggleButton16.Etiqueta = Nothing
-        Me.HhToggleButton16.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton16.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton16.Link = Nothing
         Me.HhToggleButton16.Location = New System.Drawing.Point(250, 500)
         Me.HhToggleButton16.Name = "HhToggleButton16"
@@ -335,7 +335,7 @@ Partial Class FormTest
         Me.HhToggleButton17.DireccionEscritura = Nothing
         Me.HhToggleButton17.DireccionLectura = Nothing
         Me.HhToggleButton17.Etiqueta = Nothing
-        Me.HhToggleButton17.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton17.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton17.Link = Nothing
         Me.HhToggleButton17.Location = New System.Drawing.Point(250, 533)
         Me.HhToggleButton17.Name = "HhToggleButton17"
@@ -352,7 +352,7 @@ Partial Class FormTest
         Me.HhToggleButton18.DireccionEscritura = Nothing
         Me.HhToggleButton18.DireccionLectura = Nothing
         Me.HhToggleButton18.Etiqueta = Nothing
-        Me.HhToggleButton18.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton18.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton18.Link = Nothing
         Me.HhToggleButton18.Location = New System.Drawing.Point(514, 5)
         Me.HhToggleButton18.Name = "HhToggleButton18"
@@ -369,7 +369,7 @@ Partial Class FormTest
         Me.HhToggleButton19.DireccionEscritura = Nothing
         Me.HhToggleButton19.DireccionLectura = Nothing
         Me.HhToggleButton19.Etiqueta = Nothing
-        Me.HhToggleButton19.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton19.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton19.Link = Nothing
         Me.HhToggleButton19.Location = New System.Drawing.Point(514, 38)
         Me.HhToggleButton19.Name = "HhToggleButton19"
@@ -386,7 +386,7 @@ Partial Class FormTest
         Me.HhToggleButton20.DireccionEscritura = Nothing
         Me.HhToggleButton20.DireccionLectura = Nothing
         Me.HhToggleButton20.Etiqueta = Nothing
-        Me.HhToggleButton20.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton20.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton20.Link = Nothing
         Me.HhToggleButton20.Location = New System.Drawing.Point(514, 71)
         Me.HhToggleButton20.Name = "HhToggleButton20"
@@ -403,7 +403,7 @@ Partial Class FormTest
         Me.HhToggleButton21.DireccionEscritura = Nothing
         Me.HhToggleButton21.DireccionLectura = Nothing
         Me.HhToggleButton21.Etiqueta = Nothing
-        Me.HhToggleButton21.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton21.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton21.Link = Nothing
         Me.HhToggleButton21.Location = New System.Drawing.Point(514, 104)
         Me.HhToggleButton21.Name = "HhToggleButton21"
@@ -420,7 +420,7 @@ Partial Class FormTest
         Me.HhToggleButton22.DireccionEscritura = Nothing
         Me.HhToggleButton22.DireccionLectura = Nothing
         Me.HhToggleButton22.Etiqueta = Nothing
-        Me.HhToggleButton22.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton22.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton22.Link = Nothing
         Me.HhToggleButton22.Location = New System.Drawing.Point(514, 137)
         Me.HhToggleButton22.Name = "HhToggleButton22"
@@ -437,7 +437,7 @@ Partial Class FormTest
         Me.HhToggleButton23.DireccionEscritura = Nothing
         Me.HhToggleButton23.DireccionLectura = Nothing
         Me.HhToggleButton23.Etiqueta = Nothing
-        Me.HhToggleButton23.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton23.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton23.Link = Nothing
         Me.HhToggleButton23.Location = New System.Drawing.Point(514, 170)
         Me.HhToggleButton23.Name = "HhToggleButton23"
@@ -454,7 +454,7 @@ Partial Class FormTest
         Me.HhToggleButton24.DireccionEscritura = Nothing
         Me.HhToggleButton24.DireccionLectura = Nothing
         Me.HhToggleButton24.Etiqueta = Nothing
-        Me.HhToggleButton24.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton24.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton24.Link = Nothing
         Me.HhToggleButton24.Location = New System.Drawing.Point(514, 203)
         Me.HhToggleButton24.Name = "HhToggleButton24"
@@ -471,7 +471,7 @@ Partial Class FormTest
         Me.HhToggleButton25.DireccionEscritura = Nothing
         Me.HhToggleButton25.DireccionLectura = Nothing
         Me.HhToggleButton25.Etiqueta = Nothing
-        Me.HhToggleButton25.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton25.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton25.Link = Nothing
         Me.HhToggleButton25.Location = New System.Drawing.Point(514, 236)
         Me.HhToggleButton25.Name = "HhToggleButton25"
@@ -488,7 +488,7 @@ Partial Class FormTest
         Me.HhToggleButton26.DireccionEscritura = Nothing
         Me.HhToggleButton26.DireccionLectura = Nothing
         Me.HhToggleButton26.Etiqueta = Nothing
-        Me.HhToggleButton26.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton26.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton26.Link = Nothing
         Me.HhToggleButton26.Location = New System.Drawing.Point(514, 269)
         Me.HhToggleButton26.Name = "HhToggleButton26"
@@ -505,7 +505,7 @@ Partial Class FormTest
         Me.HhToggleButton27.DireccionEscritura = Nothing
         Me.HhToggleButton27.DireccionLectura = Nothing
         Me.HhToggleButton27.Etiqueta = Nothing
-        Me.HhToggleButton27.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton27.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton27.Link = Nothing
         Me.HhToggleButton27.Location = New System.Drawing.Point(514, 302)
         Me.HhToggleButton27.Name = "HhToggleButton27"
@@ -522,7 +522,7 @@ Partial Class FormTest
         Me.HhToggleButton28.DireccionEscritura = Nothing
         Me.HhToggleButton28.DireccionLectura = Nothing
         Me.HhToggleButton28.Etiqueta = Nothing
-        Me.HhToggleButton28.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton28.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton28.Link = Nothing
         Me.HhToggleButton28.Location = New System.Drawing.Point(514, 335)
         Me.HhToggleButton28.Name = "HhToggleButton28"
@@ -539,7 +539,7 @@ Partial Class FormTest
         Me.HhToggleButton29.DireccionEscritura = Nothing
         Me.HhToggleButton29.DireccionLectura = Nothing
         Me.HhToggleButton29.Etiqueta = Nothing
-        Me.HhToggleButton29.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton29.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton29.Link = Nothing
         Me.HhToggleButton29.Location = New System.Drawing.Point(514, 368)
         Me.HhToggleButton29.Name = "HhToggleButton29"
@@ -556,7 +556,7 @@ Partial Class FormTest
         Me.HhToggleButton30.DireccionEscritura = Nothing
         Me.HhToggleButton30.DireccionLectura = Nothing
         Me.HhToggleButton30.Etiqueta = Nothing
-        Me.HhToggleButton30.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton30.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton30.Link = Nothing
         Me.HhToggleButton30.Location = New System.Drawing.Point(514, 401)
         Me.HhToggleButton30.Name = "HhToggleButton30"
@@ -573,7 +573,7 @@ Partial Class FormTest
         Me.HhToggleButton31.DireccionEscritura = Nothing
         Me.HhToggleButton31.DireccionLectura = Nothing
         Me.HhToggleButton31.Etiqueta = Nothing
-        Me.HhToggleButton31.Font = New System.Drawing.Font("Verdana", 20.0!)
+        Me.HhToggleButton31.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhToggleButton31.Link = Nothing
         Me.HhToggleButton31.Location = New System.Drawing.Point(514, 434)
         Me.HhToggleButton31.Name = "HhToggleButton31"
@@ -584,20 +584,38 @@ Partial Class FormTest
         '
         'Button1
         '
+        Me.Button1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.Button1.AutoActualizar = False
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Button1.DireccionEscritura = Nothing
+        Me.Button1.DireccionLectura = Nothing
+        Me.Button1.Etiqueta = Nothing
+        Me.Button1.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(688, 473)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 62
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
+        Me.Button2.Appearance = System.Windows.Forms.Appearance.Button
+        Me.Button2.AutoActualizar = False
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Button2.DireccionEscritura = Nothing
+        Me.Button2.DireccionLectura = Nothing
+        Me.Button2.Etiqueta = Nothing
+        Me.Button2.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.Link = Nothing
         Me.Button2.Location = New System.Drawing.Point(688, 12)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(100, 90)
         Me.Button2.TabIndex = 94
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Button2.UseVisualStyleBackColor = True
         '
         'FormTest
@@ -677,6 +695,6 @@ Partial Class FormTest
     Friend WithEvents HhToggleButton29 As hhToggleButton.hhToggleButton
     Friend WithEvents HhToggleButton30 As hhToggleButton.hhToggleButton
     Friend WithEvents HhToggleButton31 As hhToggleButton.hhToggleButton
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As hhMomentaryButton.hhMomentaryButton
+    Friend WithEvents Button2 As hhMomentaryButton.hhMomentaryButton
 End Class

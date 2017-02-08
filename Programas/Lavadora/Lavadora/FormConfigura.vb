@@ -5,9 +5,17 @@ Public Class FormConfigura
     End Sub
 
     Private Sub Form4_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Button2.Etiqueta = "Sistema"
 
+        Button3.Etiqueta = "Rotacion"
 
+        Button4.Etiqueta = "Llenado"
 
+        Button5.Etiqueta = "Aditivos"
+
+        Button6.Etiqueta = "Mandos"
+
+        Button1.Etiqueta = "Aceptar"
     End Sub
 
 
@@ -20,35 +28,30 @@ Public Class FormConfigura
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Using f As New FormConfSistema
-            CambiarLetra(f)
             f.ShowDialog()
         End Using
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         Using f As New FormConfRotacion
-            CambiarLetra(f)
             f.ShowDialog()
         End Using
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         Using f As New FormConfCuentalitros
-            CambiarLetra(f)
             f.ShowDialog()
         End Using
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         Using f As New FormConfQuimicos
-            CambiarLetra(f)
             f.ShowDialog()
         End Using
     End Sub
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
         Using f As New FormConfVolquete
-            CambiarLetra(f)
             f.ShowDialog()
         End Using
     End Sub
