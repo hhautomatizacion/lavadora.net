@@ -208,11 +208,13 @@ Public Class FormAutomatico
     End Sub
 
     Private Sub HhMomentaryButton4_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HhMomentaryButton4.MouseUp
-        Dim f As New FormEditorAuto
-        Do
-            Application.DoEvents()
-        Loop Until mMasterk.ObtenerBoolean("MX0123") = False
-        f.ShowDialog()
+        Using f As New FormEditorAuto
+            Do
+                Application.DoEvents()
+            Loop Until mMasterk.ObtenerBoolean("MX0123") = False
+            f.HhGridDisplay1.Receta = HhGridDisplay1.Receta
+            f.ShowDialog()
+        End Using
         HhGridDisplay1.AutoActualizar = False
         HhGridDisplay1.Inicializar()
         HhGridDisplay1.AutoActualizar = True
@@ -221,4 +223,6 @@ Public Class FormAutomatico
     Private Sub HhTimeCounterDisplay4_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhTimeCounterDisplay4.TextChanged
         HhTimeCounterDisplay4.ValorMaximo = HhTimeCounterDisplay4.Valor
     End Sub
+
+
 End Class

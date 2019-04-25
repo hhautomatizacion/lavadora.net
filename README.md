@@ -83,17 +83,17 @@
 ---
 ![00002588.jpg](/Fotos/00002588.jpg)
 ---
-![2014-03-02 08.20.04.jpg](/Fotos/2014-03-02 08.20.04.jpg)
+![2014-03-02 08.20.04.jpg](/Fotos/2014-03-02%2008.20.04.jpg)
 ---
-![2014-03-02 08.20.07.jpg](/Fotos/2014-03-02 08.20.07.jpg)
+![2014-03-02 08.20.07.jpg](/Fotos/2014-03-02%2008.20.07.jpg)
 ---
-![2014-03-02 08.20.22.jpg](/Fotos/2014-03-02 08.20.22.jpg)
+![2014-03-02 08.20.22.jpg](/Fotos/2014-03-02%2008.20.22.jpg)
 ---
-![2014-03-02 08.20.28.jpg](/Fotos/2014-03-02 08.20.28.jpg)
+![2014-03-02 08.20.28.jpg](/Fotos/2014-03-02%2008.20.28.jpg)
 ---
-![2014-03-02 08.20.47.jpg](/Fotos/2014-03-02 08.20.47.jpg)
+![2014-03-02 08.20.47.jpg](/Fotos/2014-03-02%2008.20.47.jpg)
 ---
-![2014-03-02 08.20.51.jpg](/Fotos/2014-03-02 08.20.51.jpg)
+![2014-03-02 08.20.51.jpg](/Fotos/2014-03-02%2008.20.51.jpg)
 ---
 ![DSC03446.JPG](/Fotos/DSC03446.JPG)
 ---
@@ -103,7 +103,7 @@
 ---
 ![DSC03449.JPG](/Fotos/DSC03449.JPG)
 ---
-![Captura de pantalla 2015-06-18 15.42.06.png](/Historial/Captura de pantalla 2015-06-18 15.42.06.png)
+![Captura de pantalla 2015-06-18 15.42.06.png](/Historial/Captura%20de%20pantalla%202015-06-18%2015.42.06.png)
 ---
 ![arrow_down.png](/Programas/Lavadora/Lavadora/Iconos/arrow_down.png)
 ---
@@ -235,9 +235,5 @@
 ---
 ![traffic_lights_red.png](/Programas/Lavadora/Lavadora/Iconos/traffic_lights_red.png)
 ---
-![192rpm.png](/Pruebas/192rpm.png)
----
-![30rpm.png](/Pruebas/30rpm.png)
----
-![volqueteo 4.tif](/Pruebas/volqueteo 4.tif)
+![volqueteo 4.tif](/Pruebas/volqueteo%204.tif)
 ---

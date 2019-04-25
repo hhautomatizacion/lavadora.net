@@ -1,3 +1,5 @@
+Imports System.ComponentModel
+
 Public Class FormLavadora
 
     Dim WithEvents wPagina As hhWordRegister.hhWordRegister
@@ -98,7 +100,7 @@ Public Class FormLavadora
         StatusStrip1.Items.Add(New ToolStripControlHost(HhAnimacion1))
 
         StatusStrip1.Items.Add(New ToolStripControlHost(HhAnimacion2))
-       
+
 
         StatusStrip1.Items.Add(New ToolStripControlHost(HhBooleanLabel1))
         StatusStrip1.Items(2).AutoSize = False
@@ -115,9 +117,11 @@ Public Class FormLavadora
 
         StatusStrip1.Items.Add(New ToolStripControlHost(Label1))
 
-
-
-
+        'HhCharacterEntry1.Link = mMasterk
+        'HhCharacterEntry1.LongitudTexto = 10
+        'HhCharacterEntry1.DireccionEscritura = "DW0251"
+        'HhCharacterEntry1.DireccionLectura = "DW0251"
+        'HhCharacterEntry1.AutoActualizar = True
 
     End Sub
 
@@ -143,7 +147,13 @@ Public Class FormLavadora
             If bPermitirSalir Then
 
             Else
-                System.Diagnostics.Process.Start("shutdown", "-s -t 10")
+                AdjustToken()
+
+                Dim retval As Int32
+                retval = ExitWindowsEx(1 + 4, Nothing)
+                If (retval = 0) Then
+                    System.Diagnostics.Process.Start("shutdown", "-s -t 10")
+                End If
             End If
             Me.Close()
         End If
@@ -155,7 +165,7 @@ Public Class FormLavadora
         End Using
     End Sub
 
-    Private Sub CambioPagina(ByVal s As Object, ByVal e As System.EventArgs) Handles wPagina.Cambio    
+    Private Sub CambioPagina(ByVal s As Object, ByVal e As System.EventArgs) Handles wPagina.Cambio
         Select Case wPagina.Valor
             Case 1
                 Using h As New hhMsgBox.hhMsgBox
@@ -163,11 +173,11 @@ Public Class FormLavadora
                     h.Tamanio = 50
                     h.Mensaje = "La maquina tiene agua. Abrir la puerta de todas formas?"
                     h.Imagen = My.Resources.stepa
-                    h.TextoOk = ""
+                    h.TextoOk = "Abrir"
                     h.ImagenOk = My.Resources.step13
-                    h.TextoCancel = ""
-                    h.ImagenCancel = My.Resources.step9
                     h.DireccionOk = "MX0048"
+                    h.TextoCancel = "Desague"
+                    h.ImagenCancel = My.Resources.step9
                     h.DireccionCancel = "MX004A"
                     h.ShowDialog()
                 End Using
@@ -183,10 +193,10 @@ Public Class FormLavadora
                     h.Tamanio = 50
                     h.Mensaje = "La maquina no esta en horizontal. Poner en horizontal?"
                     h.Imagen = My.Resources.level
-                    h.TextoOk = ""
+                    h.TextoOk = "Horizontal"
                     h.DireccionOk = "MX0035"
                     h.ImagenOk = My.Resources.level
-                    h.TextoCancel = ""
+                    h.TextoCancel = "Continuar"
                     h.DireccionCancel = "MX0102"
                     h.ImagenCancel = My.Resources.control_play_blue
                     h.ShowDialog()
@@ -198,11 +208,11 @@ Public Class FormLavadora
                     h.Link = mMasterk
                     h.Tamanio = 50
                     h.Imagen = My.Resources.rock
-                    h.TextoOk = ""
+                    h.TextoOk = "Abrir"
                     h.ImagenOk = My.Resources.step13
-                    h.TextoCancel = ""
-                    h.ImagenCancel = My.Resources.level
                     h.DireccionOk = "MX002D"
+                    h.TextoCancel = "Horizontal"
+                    h.ImagenCancel = My.Resources.level
                     h.DireccionCancel = "MX0032"
                     h.ShowDialog()
                 End Using
@@ -213,11 +223,11 @@ Public Class FormLavadora
                     h.Tamanio = 50
                     h.Mensaje = "La puerta esta abierta. Cerrar la puerta?"
                     h.Imagen = My.Resources._error
-                    h.TextoOk = ""
+                    h.TextoOk = "Cerrar"
                     h.ImagenOk = My.Resources.step15
-                    h.TextoCancel = ""
-                    h.ImagenCancel = My.Resources.control_play_blue
                     h.DireccionOk = "MX0003"
+                    h.TextoCancel = "Continuar"
+                    h.ImagenCancel = My.Resources.control_play_blue
                     h.DireccionCancel = "MX0103"
                     h.ShowDialog()
                 End Using
@@ -259,6 +269,7 @@ Public Class FormLavadora
                 End Using
                 wPagina.Valor = 0
             Case 9
+                'Posiblemente se borre, paso "funcion"
                 Using h As New hhMsgBox.hhMsgBox
                     h.Mensaje = "Proceder con funcion mandos?"
                     h.Link = mMasterk
@@ -276,12 +287,12 @@ Public Class FormLavadora
                     h.Tamanio = 50
                     h.Mensaje = "Proceder con paso aditivos?"
                     h.Imagen = My.Resources.step12
-                    h.TextoOk = ""
+                    h.TextoOk = "Aditivos"
                     h.ImagenOk = My.Resources.step12
-                    h.TextoCancel = ""
+                    h.DireccionCancel = "MX0116"
+                    h.TextoCancel = "Sigueinte"
                     h.ImagenCancel = My.Resources.control_end_blue
                     h.DireccionOk = "MX0115"
-                    h.DireccionCancel = "MX0116"
                     h.ShowDialog()
                 End Using
                 wPagina.Valor = 0
@@ -291,11 +302,11 @@ Public Class FormLavadora
                     h.Tamanio = 50
                     h.Mensaje = "La maquina no esta Inicializada. Presione el boton START."
                     h.Imagen = My.Resources.switch
-                    h.TextoOk = ""
+                    h.TextoOk = "Aceptar"
                     h.ImagenOk = My.Resources.tick
-                    h.TextoCancel = ""
-                    h.ImagenCancel = My.Resources.cross
                     h.DireccionOk = "MX0B"
+                    h.TextoCancel = "Cancelar"
+                    h.ImagenCancel = My.Resources.cross
                     h.DireccionCancel = "MX0C"
                     h.ShowDialog()
                 End Using
@@ -307,11 +318,11 @@ Public Class FormLavadora
                     h.Tamanio = 50
                     h.Mensaje = "Proceder con paso muestreo?"
                     h.Imagen = My.Resources.step10
-                    h.TextoOk = ""
+                    h.TextoOk = "Muestreo"
                     h.ImagenOk = My.Resources.tick
-                    h.TextoCancel = ""
-                    h.ImagenCancel = My.Resources.control_fastforward_blue
                     h.DireccionOk = "MX0125"
+                    h.TextoCancel = "Siguiente"
+                    h.ImagenCancel = My.Resources.control_fastforward_blue
                     h.DireccionCancel = "MX0129"
                     h.ShowDialog()
                 End Using
@@ -367,11 +378,11 @@ Public Class FormLavadora
                     h.Tamanio = 50
                     h.Mensaje = "Maximo tiempo activada la bomba hidraulica."
                     h.Imagen = My.Resources._error
-                    h.TextoOk = ""
+                    h.TextoOk = "Acptar"
                     h.ImagenOk = My.Resources.tick
-                    h.TextoCancel = ""
-                    h.ImagenCancel = My.Resources.cross
                     h.DireccionOk = "MX002B"
+                    h.TextoCancel = "Cancelar"
+                    h.ImagenCancel = My.Resources.cross
                     h.DireccionCancel = "MX002B"
                     h.ShowDialog()
                 End Using
@@ -382,11 +393,11 @@ Public Class FormLavadora
                     h.Link = mMasterk
                     h.Tamanio = 50
                     h.Imagen = My.Resources._error
-                    h.TextoOk = ""
+                    h.TextoOk = "Aceptar"
                     h.ImagenOk = My.Resources.tick
-                    h.TextoCancel = ""
+                    h.DireccionOk = "MX009F"
+                    h.TextoCancel = "Cancelar"
                     h.ImagenCancel = My.Resources.cross
-                    h.DireccionOk = "MX002B"
                     h.DireccionCancel = "MX002B"
                     h.ShowDialog()
                 End Using
@@ -397,11 +408,11 @@ Public Class FormLavadora
                     h.Link = mMasterk
                     h.Tamanio = 50
                     h.Imagen = My.Resources._error
-                    h.TextoOk = ""
+                    h.TextoOk = "Aceptar"
                     h.ImagenOk = My.Resources.tick
-                    h.TextoCancel = ""
+                    h.DireccionOk = "MX008F"
+                    h.TextoCancel = "Cancelar"
                     h.ImagenCancel = My.Resources.cross
-                    h.DireccionOk = "MX002B"
                     h.DireccionCancel = "MX002B"
                     h.ShowDialog()
                 End Using
@@ -413,11 +424,11 @@ Public Class FormLavadora
                     h.Link = mMasterk
                     h.Tamanio = 50
                     h.Imagen = My.Resources.lightning
-                    h.TextoOk = ""
+                    h.TextoOk = "Aceptar"
                     h.ImagenOk = My.Resources.tick
-                    h.TextoCancel = ""
-                    h.ImagenCancel = My.Resources.cross
                     h.DireccionOk = "MX002B"
+                    h.TextoCancel = "Cancelar"
+                    h.ImagenCancel = My.Resources.cross
                     h.DireccionCancel = "MX002B"
                     h.ShowDialog()
                 End Using
@@ -428,11 +439,11 @@ Public Class FormLavadora
                     h.Link = mMasterk
                     h.Tamanio = 50
                     h.Imagen = My.Resources.exclamation
-                    h.TextoOk = ""
+                    h.TextoOk = "Aceptar"
                     h.ImagenOk = My.Resources.tick
-                    h.TextoCancel = ""
-                    h.ImagenCancel = My.Resources.cross
                     h.DireccionOk = "MX002B"
+                    h.TextoCancel = "Cancelar"
+                    h.ImagenCancel = My.Resources.cross
                     h.DireccionCancel = "MX002B"
                     h.ShowDialog()
                 End Using
@@ -449,19 +460,18 @@ Public Class FormLavadora
                     hhProgressBox.AutoActualizar = True
                     hhProgressBox.ShowDialog()
                 End Using
-
             Case 22
                 Using h As New hhMsgBox.hhMsgBox
-                    h.Mensaje = "Maximo tiempo activada la bomba de quimicos."
+                    h.Mensaje = "Revisar si se ha realizado la succion de quimicos"
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.Imagen = My.Resources.filter
-                    h.TextoOk = ""
-                    h.ImagenOk = My.Resources.tick
-                    h.TextoCancel = ""
-                    h.ImagenCancel = My.Resources.cross
-                    h.DireccionOk = "MX002B"
-                    h.DireccionCancel = "MX002B"
+                    h.Imagen = My.Resources.step12
+                    h.TextoOk = "Esperar"
+                    h.DireccionOk = "MX9C"
+                    h.ImagenOk = My.Resources.step12
+                    h.TextoCancel = "Siguiente"
+                    h.DireccionCancel = "MX9D"
+                    h.ImagenCancel = My.Resources.control_end_blue
                     h.ShowDialog()
                 End Using
                 wPagina.Valor = 0
@@ -493,6 +503,37 @@ Public Class FormLavadora
                     hhProgressBox.AutoActualizar = True
                     hhProgressBox.ShowDialog()
                 End Using
+            Case 25
+                Using h As New hhMsgBox.hhMsgBox
+                    h.Mensaje = "Revisar si se ha ralizado el Desague."
+                    h.Link = mMasterk
+                    h.Tamanio = 50
+                    h.Imagen = My.Resources.step9
+                    h.TextoOk = "Siguiente"
+                    h.DireccionOk = "MX99"
+                    h.ImagenOk = My.Resources.control_end_blue
+                    h.TextoCancel = "Esperar"
+                    h.ImagenCancel = My.Resources.tick
+                    h.DireccionCancel = "MX98"
+                    h.ShowDialog()
+                End Using
+                wPagina.Valor = 0
+            Case 26
+                Using h As New hhMsgBox.hhMsgBox
+                    h.Mensaje = "No se detecta velocidad cero"
+                    h.Link = mMasterk
+                    h.Tamanio = 50
+                    h.Imagen = My.Resources.step4
+                    h.TextoOk = "Esperar"
+                    h.DireccionOk = "MX9B"
+                    h.ImagenOk = My.Resources.tick
+                    h.TextoCancel = "Continuar"
+                    h.DireccionCancel = "MX50"
+                    h.ImagenCancel = My.Resources.control_play_blue
+                    h.ShowDialog()
+                End Using
+                wPagina.Valor = 0
+
         End Select
     End Sub
 
@@ -507,7 +548,7 @@ Public Class FormLavadora
         If Len(HhCharacterDisplay3.Text) = 0 Then
             HhCharacterDisplay3.Actualizar()
         End If
-       
+
     End Sub
 
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click

@@ -20,13 +20,14 @@ Partial Class FormConfigura
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConfigura))
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
-        Me.Button3 = New hhMomentaryButton.hhMomentaryButton
-        Me.Button2 = New hhMomentaryButton.hhMomentaryButton
-        Me.Button4 = New hhMomentaryButton.hhMomentaryButton
-        Me.Button5 = New hhMomentaryButton.hhMomentaryButton
-        Me.Button6 = New hhMomentaryButton.hhMomentaryButton
-        Me.Button1 = New hhMomentaryButton.hhMomentaryButton
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton()
+        Me.Button3 = New hhMomentaryButton.hhMomentaryButton()
+        Me.Button2 = New hhMomentaryButton.hhMomentaryButton()
+        Me.Button4 = New hhMomentaryButton.hhMomentaryButton()
+        Me.Button5 = New hhMomentaryButton.hhMomentaryButton()
+        Me.Button6 = New hhMomentaryButton.hhMomentaryButton()
+        Me.Button1 = New hhMomentaryButton.hhMomentaryButton()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -35,6 +36,7 @@ Partial Class FormConfigura
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.HhMomentaryButton1, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Button3, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Button2, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Button4, 0, 1)
@@ -49,6 +51,26 @@ Partial Class FormConfigura
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(315, 403)
         Me.TableLayoutPanel1.TabIndex = 85
         '
+        'HhMomentaryButton1
+        '
+        Me.HhMomentaryButton1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.HhMomentaryButton1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.HhMomentaryButton1.AutoActualizar = False
+        Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhMomentaryButton1.DireccionEscritura = Nothing
+        Me.HhMomentaryButton1.DireccionLectura = Nothing
+        Me.HhMomentaryButton1.Etiqueta = "Mandos"
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
+        Me.HhMomentaryButton1.Link = Nothing
+        Me.HhMomentaryButton1.Location = New System.Drawing.Point(186, 290)
+        Me.HhMomentaryButton1.Name = "HhMomentaryButton1"
+        Me.HhMomentaryButton1.Size = New System.Drawing.Size(100, 90)
+        Me.HhMomentaryButton1.TabIndex = 7
+        Me.HhMomentaryButton1.Text = "Mandos"
+        Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HhMomentaryButton1.UseVisualStyleBackColor = True
+        '
         'Button3
         '
         Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -57,15 +79,16 @@ Partial Class FormConfigura
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button3.DireccionEscritura = Nothing
         Me.Button3.DireccionLectura = Nothing
-        Me.Button3.Etiqueta = Nothing
-        Me.Button3.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button3.Etiqueta = "Rotacion"
+        Me.Button3.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
         Me.Button3.Link = Nothing
         Me.Button3.Location = New System.Drawing.Point(186, 22)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(100, 90)
         Me.Button3.TabIndex = 3
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button3.Text = "Rotacion"
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
@@ -76,15 +99,16 @@ Partial Class FormConfigura
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button2.DireccionEscritura = Nothing
         Me.Button2.DireccionLectura = Nothing
-        Me.Button2.Etiqueta = Nothing
-        Me.Button2.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button2.Etiqueta = "Sistema"
+        Me.Button2.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.Link = Nothing
         Me.Button2.Location = New System.Drawing.Point(28, 22)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(100, 90)
         Me.Button2.TabIndex = 2
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button2.Text = "Sistema"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button4
@@ -95,15 +119,16 @@ Partial Class FormConfigura
         Me.Button4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button4.DireccionEscritura = Nothing
         Me.Button4.DireccionLectura = Nothing
-        Me.Button4.Etiqueta = Nothing
-        Me.Button4.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button4.Etiqueta = "Llenado"
+        Me.Button4.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
         Me.Button4.Link = Nothing
         Me.Button4.Location = New System.Drawing.Point(28, 156)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(100, 90)
         Me.Button4.TabIndex = 4
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button4.Text = "Llenado"
+        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
@@ -114,15 +139,16 @@ Partial Class FormConfigura
         Me.Button5.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button5.DireccionEscritura = Nothing
         Me.Button5.DireccionLectura = Nothing
-        Me.Button5.Etiqueta = Nothing
-        Me.Button5.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button5.Etiqueta = "Aditivos"
+        Me.Button5.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
         Me.Button5.Link = Nothing
         Me.Button5.Location = New System.Drawing.Point(186, 156)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(100, 90)
         Me.Button5.TabIndex = 5
-        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button5.Text = "Aditivos"
+        Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button6
@@ -133,15 +159,16 @@ Partial Class FormConfigura
         Me.Button6.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button6.DireccionEscritura = Nothing
         Me.Button6.DireccionLectura = Nothing
-        Me.Button6.Etiqueta = Nothing
-        Me.Button6.Font = New System.Drawing.Font("Purisa", 10.0!)
-        Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
+        Me.Button6.Etiqueta = "Centrifuga"
+        Me.Button6.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Button6.Image = Global.Lavadora.My.Resources.Resources.step11
         Me.Button6.Link = Nothing
         Me.Button6.Location = New System.Drawing.Point(28, 290)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(100, 90)
         Me.Button6.TabIndex = 6
-        Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button6.Text = "Centrifuga"
+        Me.Button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Button1
@@ -151,15 +178,16 @@ Partial Class FormConfigura
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Etiqueta = Nothing
-        Me.Button1.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button1.Etiqueta = "Aceptar"
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(688, 473)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 1
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button1.Text = "Aceptar"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button1.UseVisualStyleBackColor = True
         '
         'FormConfigura
@@ -185,4 +213,5 @@ Partial Class FormConfigura
     Friend WithEvents Button4 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents Button5 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents Button6 As hhMomentaryButton.hhMomentaryButton
+    Friend WithEvents HhMomentaryButton1 As hhMomentaryButton.hhMomentaryButton
 End Class

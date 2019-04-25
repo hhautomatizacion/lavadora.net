@@ -59,6 +59,10 @@ Public Class FormConfCuentalitros
         HhNumericEntry5.ValorMaximo = 10000
         HhNumericEntry5.AutoActualizar = True
 
+        HhNumericEntry6.Link = mMasterk
+        HhNumericEntry6.Tooltip = "Tiempo de espara|soda maquina vacia"
+        HhNumericEntry6.AutoActualizar = True
+
         Button1.Etiqueta = "Aceptar"
 
     End Sub
@@ -68,7 +72,4 @@ Public Class FormConfCuentalitros
 
     End Sub
 
-    Private Sub HhNumericEntry2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhNumericEntry2.TextChanged
-
-    End Sub
 End Class

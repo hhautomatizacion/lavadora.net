@@ -20,9 +20,10 @@ Partial Class FormConfQuimicos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConfQuimicos))
-        Me.Button1 = New hhMomentaryButton.hhMomentaryButton
-        Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry
-        Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry
+        Me.Button1 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry()
+        Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry()
+        Me.HhNumericEntry3 = New hhNumericEntry.hhNumericEntry()
         Me.SuspendLayout()
         '
         'Button1
@@ -33,7 +34,7 @@ Partial Class FormConfQuimicos
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
         Me.Button1.Etiqueta = Nothing
-        Me.Button1.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button1.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(688, 473)
@@ -53,7 +54,7 @@ Partial Class FormConfQuimicos
         Me.HhNumericEntry2.DireccionLectura = Nothing
         Me.HhNumericEntry2.Etiqueta = "Enjuague aditivos"
         Me.HhNumericEntry2.Factor = 1.0!
-        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry2.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhNumericEntry2.Link = Nothing
         Me.HhNumericEntry2.Location = New System.Drawing.Point(220, 95)
         Me.HhNumericEntry2.Name = "HhNumericEntry2"
@@ -77,7 +78,7 @@ Partial Class FormConfQuimicos
         Me.HhNumericEntry1.DireccionLectura = Nothing
         Me.HhNumericEntry1.Etiqueta = "Intro aditivos"
         Me.HhNumericEntry1.Factor = 1.0!
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhNumericEntry1.Link = Nothing
         Me.HhNumericEntry1.Location = New System.Drawing.Point(220, 50)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
@@ -91,11 +92,36 @@ Partial Class FormConfQuimicos
         Me.HhNumericEntry1.ValorMaximo = 0
         Me.HhNumericEntry1.ValorMinimo = 0
         '
+        'HhNumericEntry3
+        '
+        Me.HhNumericEntry3.AutoActualizar = False
+        Me.HhNumericEntry3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhNumericEntry3.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhNumericEntry3.Decimales = 0
+        Me.HhNumericEntry3.DireccionEscritura = Nothing
+        Me.HhNumericEntry3.DireccionLectura = Nothing
+        Me.HhNumericEntry3.Etiqueta = "Tiempo maximo"
+        Me.HhNumericEntry3.Factor = 1.0!
+        Me.HhNumericEntry3.Font = New System.Drawing.Font("Segoe Script", 16.0!)
+        Me.HhNumericEntry3.Link = Nothing
+        Me.HhNumericEntry3.Location = New System.Drawing.Point(220, 162)
+        Me.HhNumericEntry3.Name = "HhNumericEntry3"
+        Me.HhNumericEntry3.Size = New System.Drawing.Size(220, 40)
+        Me.HhNumericEntry3.TabIndex = 10
+        Me.HhNumericEntry3.Text = "0"
+        Me.HhNumericEntry3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.HhNumericEntry3.Tooltip = "Tiempo maximo|de cubeta de quimicos.|(seg)"
+        Me.HhNumericEntry3.Unidades = "seg"
+        Me.HhNumericEntry3.Valor = 0
+        Me.HhNumericEntry3.ValorMaximo = 0
+        Me.HhNumericEntry3.ValorMinimo = 0
+        '
         'FormConfQuimicos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 575)
+        Me.Controls.Add(Me.HhNumericEntry3)
         Me.Controls.Add(Me.HhNumericEntry2)
         Me.Controls.Add(Me.HhNumericEntry1)
         Me.Controls.Add(Me.Button1)
@@ -110,4 +136,5 @@ Partial Class FormConfQuimicos
     Friend WithEvents Button1 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents HhNumericEntry1 As hhNumericEntry.hhNumericEntry
     Friend WithEvents HhNumericEntry2 As hhNumericEntry.hhNumericEntry
+    Friend WithEvents HhNumericEntry3 As hhNumericEntry.hhNumericEntry
 End Class

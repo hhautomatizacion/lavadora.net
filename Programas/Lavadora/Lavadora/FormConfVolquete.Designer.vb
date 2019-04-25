@@ -20,9 +20,10 @@ Partial Class FormConfVolquete
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConfVolquete))
-        Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry
-        Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry
-        Me.Button1 = New hhMomentaryButton.hhMomentaryButton
+        Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry()
+        Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry()
+        Me.Button1 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhToggleButton21 = New hhToggleButton.hhToggleButton()
         Me.SuspendLayout()
         '
         'HhNumericEntry1
@@ -81,7 +82,7 @@ Partial Class FormConfVolquete
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
         Me.Button1.Etiqueta = Nothing
-        Me.Button1.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(688, 473)
@@ -91,11 +92,29 @@ Partial Class FormConfVolquete
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'HhToggleButton21
+        '
+        Me.HhToggleButton21.Appearance = System.Windows.Forms.Appearance.Button
+        Me.HhToggleButton21.AutoActualizar = False
+        Me.HhToggleButton21.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhToggleButton21.DireccionEscritura = Nothing
+        Me.HhToggleButton21.DireccionLectura = Nothing
+        Me.HhToggleButton21.Etiqueta = "Habilita volquete"
+        Me.HhToggleButton21.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhToggleButton21.Link = Nothing
+        Me.HhToggleButton21.Location = New System.Drawing.Point(220, 141)
+        Me.HhToggleButton21.Name = "HhToggleButton21"
+        Me.HhToggleButton21.Size = New System.Drawing.Size(64, 64)
+        Me.HhToggleButton21.TabIndex = 60
+        Me.HhToggleButton21.Tooltip = Nothing
+        Me.HhToggleButton21.UseVisualStyleBackColor = True
+        '
         'FormConfVolquete
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 575)
+        Me.Controls.Add(Me.HhToggleButton21)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.HhNumericEntry2)
         Me.Controls.Add(Me.HhNumericEntry1)
@@ -110,4 +129,5 @@ Partial Class FormConfVolquete
     Friend WithEvents HhNumericEntry1 As hhNumericEntry.hhNumericEntry
     Friend WithEvents HhNumericEntry2 As hhNumericEntry.hhNumericEntry
     Friend WithEvents Button1 As hhMomentaryButton.hhMomentaryButton
+    Friend WithEvents HhToggleButton21 As hhToggleButton.hhToggleButton
 End Class

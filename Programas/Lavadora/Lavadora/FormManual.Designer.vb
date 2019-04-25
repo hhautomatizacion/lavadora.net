@@ -20,34 +20,35 @@ Partial Class FormManual
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormManual))
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel
-        Me.HhNumericDisplay1 = New hhNumericDisplay.hhNumericDisplay
-        Me.HhNumericDisplay2 = New hhNumericDisplay.hhNumericDisplay
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel
-        Me.HhNumericDisplay3 = New hhNumericDisplay.hhNumericDisplay
-        Me.HhNumericDisplay4 = New hhNumericDisplay.hhNumericDisplay
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox
-        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel
-        Me.HhNumericDisplay5 = New hhNumericDisplay.hhNumericDisplay
-        Me.HhNumericDisplay6 = New hhNumericDisplay.hhNumericDisplay
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel
-        Me.HhTimeCounterDisplay1 = New hhTimeCounterDisplay.hhTimeCounterDisplay
-        Me.HhTimeCounterDisplay2 = New hhTimeCounterDisplay.hhTimeCounterDisplay
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
-        Me.HhMomentaryButton7 = New hhMomentaryButton.hhMomentaryButton
-        Me.HhMomentaryButton6 = New hhMomentaryButton.hhMomentaryButton
-        Me.HhMomentaryButton4 = New hhMomentaryButton.hhMomentaryButton
-        Me.HhMomentaryButton5 = New hhMomentaryButton.hhMomentaryButton
-        Me.HhMomentaryButton3 = New hhMomentaryButton.hhMomentaryButton
-        Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton
-        Me.HhMomentaryButton2 = New hhMomentaryButton.hhMomentaryButton
-        Me.Button1 = New hhMomentaryButton.hhMomentaryButton
-        Me.Button2 = New hhMomentaryButton.hhMomentaryButton
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.HhNumericDisplay1 = New hhNumericDisplay.hhNumericDisplay()
+        Me.HhNumericDisplay2 = New hhNumericDisplay.hhNumericDisplay()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
+        Me.HhNumericDisplay3 = New hhNumericDisplay.hhNumericDisplay()
+        Me.HhNumericDisplay4 = New hhNumericDisplay.hhNumericDisplay()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
+        Me.HhNumericDisplay5 = New hhNumericDisplay.hhNumericDisplay()
+        Me.HhNumericDisplay6 = New hhNumericDisplay.hhNumericDisplay()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.HhTimeCounterDisplay1 = New hhTimeCounterDisplay.hhTimeCounterDisplay()
+        Me.HhTimeCounterDisplay2 = New hhTimeCounterDisplay.hhTimeCounterDisplay()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.HhMomentaryButton7 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhMomentaryButton6 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhMomentaryButton4 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhMomentaryButton5 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhMomentaryButton3 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhMomentaryButton2 = New hhMomentaryButton.hhMomentaryButton()
+        Me.Button1 = New hhMomentaryButton.hhMomentaryButton()
+        Me.Button2 = New hhMomentaryButton.hhMomentaryButton()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -136,8 +137,8 @@ Partial Class FormManual
         Me.HhNumericDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay1.DireccionLectura = Nothing
         Me.HhNumericDisplay1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhNumericDisplay1.Etiqueta = Nothing
-        Me.HhNumericDisplay1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericDisplay1.Etiqueta = "Temperatura"
+        Me.HhNumericDisplay1.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhNumericDisplay1.Link = Nothing
         Me.HhNumericDisplay1.Location = New System.Drawing.Point(210, 0)
         Me.HhNumericDisplay1.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
@@ -160,8 +161,8 @@ Partial Class FormManual
         Me.HhNumericDisplay2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay2.DireccionLectura = Nothing
         Me.HhNumericDisplay2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhNumericDisplay2.Etiqueta = Nothing
-        Me.HhNumericDisplay2.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericDisplay2.Etiqueta = "Set"
+        Me.HhNumericDisplay2.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhNumericDisplay2.Link = Nothing
         Me.HhNumericDisplay2.Location = New System.Drawing.Point(210, 58)
         Me.HhNumericDisplay2.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
@@ -211,8 +212,8 @@ Partial Class FormManual
         Me.HhNumericDisplay3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay3.DireccionLectura = Nothing
         Me.HhNumericDisplay3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhNumericDisplay3.Etiqueta = Nothing
-        Me.HhNumericDisplay3.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericDisplay3.Etiqueta = "Litros"
+        Me.HhNumericDisplay3.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhNumericDisplay3.Link = Nothing
         Me.HhNumericDisplay3.Location = New System.Drawing.Point(210, 0)
         Me.HhNumericDisplay3.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
@@ -235,8 +236,8 @@ Partial Class FormManual
         Me.HhNumericDisplay4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay4.DireccionLectura = Nothing
         Me.HhNumericDisplay4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhNumericDisplay4.Etiqueta = Nothing
-        Me.HhNumericDisplay4.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericDisplay4.Etiqueta = "Set"
+        Me.HhNumericDisplay4.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhNumericDisplay4.Link = Nothing
         Me.HhNumericDisplay4.Location = New System.Drawing.Point(210, 58)
         Me.HhNumericDisplay4.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
@@ -286,8 +287,8 @@ Partial Class FormManual
         Me.HhNumericDisplay5.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay5.DireccionLectura = Nothing
         Me.HhNumericDisplay5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhNumericDisplay5.Etiqueta = Nothing
-        Me.HhNumericDisplay5.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericDisplay5.Etiqueta = "Velocidad"
+        Me.HhNumericDisplay5.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhNumericDisplay5.Link = Nothing
         Me.HhNumericDisplay5.Location = New System.Drawing.Point(210, 0)
         Me.HhNumericDisplay5.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
@@ -310,8 +311,8 @@ Partial Class FormManual
         Me.HhNumericDisplay6.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay6.DireccionLectura = Nothing
         Me.HhNumericDisplay6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhNumericDisplay6.Etiqueta = Nothing
-        Me.HhNumericDisplay6.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericDisplay6.Etiqueta = "Set"
+        Me.HhNumericDisplay6.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhNumericDisplay6.Link = Nothing
         Me.HhNumericDisplay6.Location = New System.Drawing.Point(210, 58)
         Me.HhNumericDisplay6.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
@@ -361,15 +362,15 @@ Partial Class FormManual
         Me.HhTimeCounterDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhTimeCounterDisplay1.DireccionLectura = Nothing
         Me.HhTimeCounterDisplay1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhTimeCounterDisplay1.Etiqueta = Nothing
-        Me.HhTimeCounterDisplay1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhTimeCounterDisplay1.Etiqueta = "Tiempo paso"
+        Me.HhTimeCounterDisplay1.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhTimeCounterDisplay1.Link = Nothing
         Me.HhTimeCounterDisplay1.Location = New System.Drawing.Point(210, 0)
         Me.HhTimeCounterDisplay1.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.HhTimeCounterDisplay1.Name = "HhTimeCounterDisplay1"
         Me.HhTimeCounterDisplay1.Size = New System.Drawing.Size(201, 55)
         Me.HhTimeCounterDisplay1.TabIndex = 0
-        Me.HhTimeCounterDisplay1.Text = "0'00"""
+        Me.HhTimeCounterDisplay1.Text = "0:00"
         Me.HhTimeCounterDisplay1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.HhTimeCounterDisplay1.Tooltip = Nothing
         Me.HhTimeCounterDisplay1.Valor = 0
@@ -384,15 +385,15 @@ Partial Class FormManual
         Me.HhTimeCounterDisplay2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhTimeCounterDisplay2.DireccionLectura = Nothing
         Me.HhTimeCounterDisplay2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhTimeCounterDisplay2.Etiqueta = Nothing
-        Me.HhTimeCounterDisplay2.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhTimeCounterDisplay2.Etiqueta = "Duracion paso"
+        Me.HhTimeCounterDisplay2.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhTimeCounterDisplay2.Link = Nothing
         Me.HhTimeCounterDisplay2.Location = New System.Drawing.Point(210, 58)
         Me.HhTimeCounterDisplay2.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.HhTimeCounterDisplay2.Name = "HhTimeCounterDisplay2"
         Me.HhTimeCounterDisplay2.Size = New System.Drawing.Size(201, 56)
         Me.HhTimeCounterDisplay2.TabIndex = 2
-        Me.HhTimeCounterDisplay2.Text = "0'00"""
+        Me.HhTimeCounterDisplay2.Text = "0:00"
         Me.HhTimeCounterDisplay2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.HhTimeCounterDisplay2.Tooltip = Nothing
         Me.HhTimeCounterDisplay2.Valor = 0
@@ -434,15 +435,16 @@ Partial Class FormManual
         Me.HhMomentaryButton7.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton7.DireccionEscritura = Nothing
         Me.HhMomentaryButton7.DireccionLectura = Nothing
-        Me.HhMomentaryButton7.Etiqueta = Nothing
-        Me.HhMomentaryButton7.Font = New System.Drawing.Font("GothicI", 8.0!)
+        Me.HhMomentaryButton7.Etiqueta = "Centrifuga"
+        Me.HhMomentaryButton7.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.HhMomentaryButton7.Image = CType(resources.GetObject("HhMomentaryButton7.Image"), System.Drawing.Image)
         Me.HhMomentaryButton7.Link = Nothing
         Me.HhMomentaryButton7.Location = New System.Drawing.Point(40, 357)
         Me.HhMomentaryButton7.Name = "HhMomentaryButton7"
         Me.HhMomentaryButton7.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton7.TabIndex = 16
-        Me.HhMomentaryButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton7.Text = "Centrifuga"
+        Me.HhMomentaryButton7.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton7.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton6
@@ -453,15 +455,16 @@ Partial Class FormManual
         Me.HhMomentaryButton6.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton6.DireccionEscritura = Nothing
         Me.HhMomentaryButton6.DireccionLectura = Nothing
-        Me.HhMomentaryButton6.Etiqueta = Nothing
-        Me.HhMomentaryButton6.Font = New System.Drawing.Font("GothicI", 8.0!)
+        Me.HhMomentaryButton6.Etiqueta = "Aditivos"
+        Me.HhMomentaryButton6.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.HhMomentaryButton6.Image = CType(resources.GetObject("HhMomentaryButton6.Image"), System.Drawing.Image)
         Me.HhMomentaryButton6.Link = Nothing
         Me.HhMomentaryButton6.Location = New System.Drawing.Point(220, 242)
         Me.HhMomentaryButton6.Name = "HhMomentaryButton6"
         Me.HhMomentaryButton6.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton6.TabIndex = 15
-        Me.HhMomentaryButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton6.Text = "Aditivos"
+        Me.HhMomentaryButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton6.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton4
@@ -472,15 +475,16 @@ Partial Class FormManual
         Me.HhMomentaryButton4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton4.DireccionEscritura = Nothing
         Me.HhMomentaryButton4.DireccionLectura = Nothing
-        Me.HhMomentaryButton4.Etiqueta = Nothing
-        Me.HhMomentaryButton4.Font = New System.Drawing.Font("GothicI", 8.0!)
+        Me.HhMomentaryButton4.Etiqueta = "Mantenimiento"
+        Me.HhMomentaryButton4.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.HhMomentaryButton4.Image = CType(resources.GetObject("HhMomentaryButton4.Image"), System.Drawing.Image)
         Me.HhMomentaryButton4.Link = Nothing
         Me.HhMomentaryButton4.Location = New System.Drawing.Point(220, 127)
         Me.HhMomentaryButton4.Name = "HhMomentaryButton4"
         Me.HhMomentaryButton4.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton4.TabIndex = 14
-        Me.HhMomentaryButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton4.Text = "Mantenimi..."
+        Me.HhMomentaryButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton4.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton5
@@ -491,15 +495,16 @@ Partial Class FormManual
         Me.HhMomentaryButton5.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton5.DireccionEscritura = Nothing
         Me.HhMomentaryButton5.DireccionLectura = Nothing
-        Me.HhMomentaryButton5.Etiqueta = Nothing
-        Me.HhMomentaryButton5.Font = New System.Drawing.Font("GothicI", 8.0!)
+        Me.HhMomentaryButton5.Etiqueta = "Temperatura"
+        Me.HhMomentaryButton5.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.HhMomentaryButton5.Image = CType(resources.GetObject("HhMomentaryButton5.Image"), System.Drawing.Image)
         Me.HhMomentaryButton5.Link = Nothing
         Me.HhMomentaryButton5.Location = New System.Drawing.Point(40, 242)
         Me.HhMomentaryButton5.Name = "HhMomentaryButton5"
         Me.HhMomentaryButton5.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton5.TabIndex = 13
-        Me.HhMomentaryButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton5.Text = "Temperatura"
+        Me.HhMomentaryButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton5.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton3
@@ -510,15 +515,16 @@ Partial Class FormManual
         Me.HhMomentaryButton3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton3.DireccionEscritura = Nothing
         Me.HhMomentaryButton3.DireccionLectura = Nothing
-        Me.HhMomentaryButton3.Etiqueta = Nothing
-        Me.HhMomentaryButton3.Font = New System.Drawing.Font("GothicI", 8.0!)
+        Me.HhMomentaryButton3.Etiqueta = "Rotacion"
+        Me.HhMomentaryButton3.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.HhMomentaryButton3.Image = CType(resources.GetObject("HhMomentaryButton3.Image"), System.Drawing.Image)
         Me.HhMomentaryButton3.Link = Nothing
         Me.HhMomentaryButton3.Location = New System.Drawing.Point(40, 127)
         Me.HhMomentaryButton3.Name = "HhMomentaryButton3"
         Me.HhMomentaryButton3.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton3.TabIndex = 12
-        Me.HhMomentaryButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton3.Text = "Rotacion"
+        Me.HhMomentaryButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton3.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton1
@@ -529,15 +535,16 @@ Partial Class FormManual
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Etiqueta = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("GothicI", 8.0!)
+        Me.HhMomentaryButton1.Etiqueta = "Llenado"
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
         Me.HhMomentaryButton1.Location = New System.Drawing.Point(40, 12)
         Me.HhMomentaryButton1.Name = "HhMomentaryButton1"
         Me.HhMomentaryButton1.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton1.TabIndex = 11
-        Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton1.Text = "Llenado"
+        Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton1.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton2
@@ -548,15 +555,16 @@ Partial Class FormManual
         Me.HhMomentaryButton2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton2.DireccionEscritura = Nothing
         Me.HhMomentaryButton2.DireccionLectura = Nothing
-        Me.HhMomentaryButton2.Etiqueta = Nothing
-        Me.HhMomentaryButton2.Font = New System.Drawing.Font("GothicI", 8.0!)
+        Me.HhMomentaryButton2.Etiqueta = "Desague"
+        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.HhMomentaryButton2.Image = CType(resources.GetObject("HhMomentaryButton2.Image"), System.Drawing.Image)
         Me.HhMomentaryButton2.Link = Nothing
         Me.HhMomentaryButton2.Location = New System.Drawing.Point(220, 12)
         Me.HhMomentaryButton2.Name = "HhMomentaryButton2"
         Me.HhMomentaryButton2.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton2.TabIndex = 10
-        Me.HhMomentaryButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton2.Text = "Desague"
+        Me.HhMomentaryButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton2.UseVisualStyleBackColor = True
         '
         'Button1
@@ -567,15 +575,16 @@ Partial Class FormManual
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Etiqueta = Nothing
-        Me.Button1.Font = New System.Drawing.Font("GothicI", 8.0!)
+        Me.Button1.Etiqueta = "Salir"
+        Me.Button1.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(220, 472)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 17
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button1.Text = "Salir"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -586,15 +595,16 @@ Partial Class FormManual
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button2.DireccionEscritura = Nothing
         Me.Button2.DireccionLectura = Nothing
-        Me.Button2.Etiqueta = Nothing
-        Me.Button2.Font = New System.Drawing.Font("GothicI", 8.0!)
+        Me.Button2.Etiqueta = "Mandos"
+        Me.Button2.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.Link = Nothing
         Me.Button2.Location = New System.Drawing.Point(40, 472)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(100, 90)
         Me.Button2.TabIndex = 18
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button2.Text = "Mandos"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button2.UseVisualStyleBackColor = True
         '
         'FormManual
@@ -611,6 +621,7 @@ Partial Class FormManual
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         Me.SplitContainer1.Panel2.PerformLayout()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)

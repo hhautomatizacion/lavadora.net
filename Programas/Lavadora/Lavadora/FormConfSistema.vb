@@ -126,23 +126,11 @@ Public Class FormConfSistema
         End If
     End Sub
     Private Sub HhToggleButton3_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhToggleButton3.Click
-
         bDepuracion = HhToggleButton3.Checked
-
     End Sub
     Private Sub HhToggleButton2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhToggleButton2.Click
-
         bPermitirSalir = HhToggleButton2.Checked
-
-
     End Sub
 
-   
-    Private Sub HhComboEntry2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhComboEntry2.SelectedIndexChanged
 
-    End Sub
-
-    Private Sub HhComboEntry4_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhComboEntry4.SelectedIndexChanged
-
-    End Sub
 End Class

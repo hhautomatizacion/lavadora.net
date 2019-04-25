@@ -48,7 +48,13 @@ Public Class FormManual
         HhMomentaryButton6.Etiqueta = "Aditivos"
         HhMomentaryButton6.AutoActualizar = True
 
+        HhMomentaryButton7.Link = mMasterk
+        HhMomentaryButton7.DireccionEscritura = "MX1000"
+        HhMomentaryButton7.DireccionLectura = "MX1808"
         HhMomentaryButton7.Etiqueta = "Centrifuga"
+        HhMomentaryButton7.AutoActualizar = True
+
+
 
         HhNumericDisplay1.Link = mMasterk
         HhNumericDisplay1.DireccionLectura = "DW0030"
@@ -168,8 +174,9 @@ Public Class FormManual
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX1700"
             fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
-
-            fForm.Button1.Etiqueta = "Cancelar"
+            fForm.HhMomentaryButton2.Link = mMasterk
+            fForm.HhMomentaryButton2.DireccionEscritura = "MX1810"
+            fForm.HhMomentaryButton2.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -264,6 +271,8 @@ Public Class FormManual
             fForm.HhMomentaryButton1.DireccionEscritura = "MX1704"
             fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
 
+            fForm.Button1.Link = mMasterk
+            fForm.Button1.DireccionEscritura = "MX1814"
             fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
@@ -303,6 +312,8 @@ Public Class FormManual
             fForm.HhMomentaryButton1.DireccionEscritura = "MX1702"
             fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
 
+            fForm.Button1.Link = mMasterk
+            fForm.Button1.DireccionEscritura = "MX1812"
             fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
@@ -347,6 +358,8 @@ Public Class FormManual
             fForm.HhMomentaryButton1.DireccionEscritura = "MX1707"
             fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
 
+            fForm.Button1.Link = mMasterk
+            fForm.Button1.DireccionEscritura = "MX1817"
             fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
@@ -380,6 +393,8 @@ Public Class FormManual
             fForm.HhMomentaryButton1.DireccionEscritura = "MX1703"
             fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
 
+            fForm.Button1.Link = mMasterk
+            fForm.Button1.DireccionEscritura = "MX1813"
             fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
@@ -416,6 +431,8 @@ Public Class FormManual
             fForm.HhMomentaryButton1.DireccionEscritura = "MX1708"
             fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
 
+            fForm.Button1.Link = mMasterk
+            fForm.Button1.DireccionEscritura = "MX1818"
             fForm.Button1.Etiqueta = "Cancelar"
 
             fForm.ShowDialog()
@@ -463,4 +480,5 @@ Public Class FormManual
             HhTimeCounterDisplay1.ValorMaximo = HhTimeCounterDisplay1.Valor
         End If
     End Sub
+
 End Class

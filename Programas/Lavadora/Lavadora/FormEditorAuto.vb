@@ -55,8 +55,6 @@ Public Class FormEditorAuto
             fForm.HhMomentaryButton1.DireccionEscritura = "MX20"
             fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
 
-            fForm.Button1.Etiqueta = "Cancelar"
-
             fForm.ShowDialog()
         End Using
         HhGridDisplay1.AutoActualizar = False
@@ -82,7 +80,6 @@ Public Class FormEditorAuto
         HhGridDisplay1.LongitudPaso = 10
         HhGridDisplay1.LongitudTexto = 4
         HhGridDisplay1.MostrarSeleccion = True
-        HhGridDisplay1.Inicializar()
         HhGridDisplay1.AutoActualizar = True
 
         HhNumericEntry1.Link = mMasterk
@@ -113,21 +110,36 @@ Public Class FormEditorAuto
         HhMomentaryButton5.DireccionEscritura = "MX0028"
         HhMomentaryButton5.Etiqueta = "Nueva"
 
-
+        Button2.Link = mMasterk
+        Button2.DireccionEscritura = "MX0210"
         Button2.Etiqueta = "Llenado"
 
+        Button3.Link = mMasterk
+        Button3.DireccionEscritura = "MX0213"
         Button3.Etiqueta = "Desague"
 
+        Button5.Link = mMasterk
+        Button5.DireccionEscritura = "MX0211"
         Button5.Etiqueta = "Rotacion"
 
+        Button6.Link = mMasterk
+        Button6.DireccionEscritura = "MX0212"
         Button6.Etiqueta = "Mantenimiento"
 
+        Button7.Link = mMasterk
+        Button7.DireccionEscritura = "MX0214"
         Button7.Etiqueta = "Temperatura"
 
+        Button8.Link = mMasterk
+        Button8.DireccionEscritura = "MX0218"
         Button8.Etiqueta = "Centrifuga"
 
+        Button9.Link = mMasterk
+        Button9.DireccionEscritura = "MX0217"
         Button9.Etiqueta = "Aditivos"
 
+        Button10.Link = mMasterk
+        Button10.DireccionEscritura = "MX0215"
         Button10.Etiqueta = "Muestreo"
 
         Button4.Etiqueta = "Guardar"

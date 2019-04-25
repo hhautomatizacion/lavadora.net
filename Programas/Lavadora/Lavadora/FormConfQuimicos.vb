@@ -1,6 +1,7 @@
 Public Class FormConfQuimicos
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        UnAttach(Me)
         Me.Close()
 
     End Sub
@@ -19,6 +20,17 @@ Public Class FormConfQuimicos
         HhNumericEntry2.ValorMinimo = 1
         HhNumericEntry2.ValorMaximo = 600
         HhNumericEntry2.AutoActualizar = True
+
+
+        HhNumericEntry3.Link = mMasterk
+        HhNumericEntry3.DireccionLectura = "DW0908"
+        HhNumericEntry3.DireccionEscritura = "DW0908"
+        HhNumericEntry3.ValorMinimo = 1
+        HhNumericEntry3.ValorMaximo = 6000
+        HhNumericEntry3.Factor = 0.1
+        HhNumericEntry3.Decimales = 1
+        HhNumericEntry3.Unidades = "seg"
+        HhNumericEntry3.AutoActualizar = True
 
         Button1.Etiqueta = "Aceptar"
     End Sub

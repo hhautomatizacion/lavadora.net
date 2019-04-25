@@ -20,14 +20,15 @@ Partial Class FormConfRotacion
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConfRotacion))
-        Me.Button1 = New hhMomentaryButton.hhMomentaryButton
-        Me.HhNumericEntry7 = New hhNumericEntry.hhNumericEntry
-        Me.HhNumericEntry6 = New hhNumericEntry.hhNumericEntry
-        Me.HhNumericEntry5 = New hhNumericEntry.hhNumericEntry
-        Me.HhNumericEntry4 = New hhNumericEntry.hhNumericEntry
-        Me.HhNumericEntry3 = New hhNumericEntry.hhNumericEntry
-        Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry
-        Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry
+        Me.Button1 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhNumericEntry7 = New hhNumericEntry.hhNumericEntry()
+        Me.HhNumericEntry6 = New hhNumericEntry.hhNumericEntry()
+        Me.HhNumericEntry5 = New hhNumericEntry.hhNumericEntry()
+        Me.HhNumericEntry4 = New hhNumericEntry.hhNumericEntry()
+        Me.HhNumericEntry3 = New hhNumericEntry.hhNumericEntry()
+        Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry()
+        Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry()
+        Me.HhNumericEntry8 = New hhNumericEntry.hhNumericEntry()
         Me.SuspendLayout()
         '
         'Button1
@@ -37,15 +38,16 @@ Partial Class FormConfRotacion
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Etiqueta = Nothing
-        Me.Button1.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button1.Etiqueta = "Ok"
+        Me.Button1.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(688, 473)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 2
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button1.Text = "Aceptar"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button1.UseVisualStyleBackColor = True
         '
         'HhNumericEntry7
@@ -58,9 +60,9 @@ Partial Class FormConfRotacion
         Me.HhNumericEntry7.DireccionLectura = Nothing
         Me.HhNumericEntry7.Etiqueta = "Acel. rotacion"
         Me.HhNumericEntry7.Factor = 1.0!
-        Me.HhNumericEntry7.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry7.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhNumericEntry7.Link = Nothing
-        Me.HhNumericEntry7.Location = New System.Drawing.Point(220, 455)
+        Me.HhNumericEntry7.Location = New System.Drawing.Point(220, 383)
         Me.HhNumericEntry7.Name = "HhNumericEntry7"
         Me.HhNumericEntry7.Size = New System.Drawing.Size(220, 40)
         Me.HhNumericEntry7.TabIndex = 16
@@ -82,9 +84,9 @@ Partial Class FormConfRotacion
         Me.HhNumericEntry6.DireccionLectura = Nothing
         Me.HhNumericEntry6.Etiqueta = "Vel. despedrado"
         Me.HhNumericEntry6.Factor = 1.0!
-        Me.HhNumericEntry6.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry6.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhNumericEntry6.Link = Nothing
-        Me.HhNumericEntry6.Location = New System.Drawing.Point(220, 365)
+        Me.HhNumericEntry6.Location = New System.Drawing.Point(220, 306)
         Me.HhNumericEntry6.Name = "HhNumericEntry6"
         Me.HhNumericEntry6.Size = New System.Drawing.Size(220, 40)
         Me.HhNumericEntry6.TabIndex = 14
@@ -106,9 +108,9 @@ Partial Class FormConfRotacion
         Me.HhNumericEntry5.DireccionLectura = Nothing
         Me.HhNumericEntry5.Etiqueta = "Reg. frec. variador"
         Me.HhNumericEntry5.Factor = 1.0!
-        Me.HhNumericEntry5.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry5.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhNumericEntry5.Link = Nothing
-        Me.HhNumericEntry5.Location = New System.Drawing.Point(220, 50)
+        Me.HhNumericEntry5.Location = New System.Drawing.Point(220, 25)
         Me.HhNumericEntry5.Name = "HhNumericEntry5"
         Me.HhNumericEntry5.Size = New System.Drawing.Size(220, 40)
         Me.HhNumericEntry5.TabIndex = 12
@@ -130,9 +132,9 @@ Partial Class FormConfRotacion
         Me.HhNumericEntry4.DireccionLectura = Nothing
         Me.HhNumericEntry4.Etiqueta = "Tiempo descarga"
         Me.HhNumericEntry4.Factor = 1.0!
-        Me.HhNumericEntry4.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry4.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhNumericEntry4.Link = Nothing
-        Me.HhNumericEntry4.Location = New System.Drawing.Point(220, 275)
+        Me.HhNumericEntry4.Location = New System.Drawing.Point(220, 233)
         Me.HhNumericEntry4.Name = "HhNumericEntry4"
         Me.HhNumericEntry4.Size = New System.Drawing.Size(220, 40)
         Me.HhNumericEntry4.TabIndex = 10
@@ -154,9 +156,9 @@ Partial Class FormConfRotacion
         Me.HhNumericEntry3.DireccionLectura = Nothing
         Me.HhNumericEntry3.Etiqueta = "Vel. descarga"
         Me.HhNumericEntry3.Factor = 1.0!
-        Me.HhNumericEntry3.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry3.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhNumericEntry3.Link = Nothing
-        Me.HhNumericEntry3.Location = New System.Drawing.Point(220, 230)
+        Me.HhNumericEntry3.Location = New System.Drawing.Point(220, 188)
         Me.HhNumericEntry3.Name = "HhNumericEntry3"
         Me.HhNumericEntry3.Size = New System.Drawing.Size(220, 40)
         Me.HhNumericEntry3.TabIndex = 8
@@ -178,9 +180,9 @@ Partial Class FormConfRotacion
         Me.HhNumericEntry2.DireccionLectura = Nothing
         Me.HhNumericEntry2.Etiqueta = "Frec. maxima"
         Me.HhNumericEntry2.Factor = 1.0!
-        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry2.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhNumericEntry2.Link = Nothing
-        Me.HhNumericEntry2.Location = New System.Drawing.Point(220, 140)
+        Me.HhNumericEntry2.Location = New System.Drawing.Point(220, 115)
         Me.HhNumericEntry2.Name = "HhNumericEntry2"
         Me.HhNumericEntry2.Size = New System.Drawing.Size(220, 40)
         Me.HhNumericEntry2.TabIndex = 6
@@ -202,9 +204,9 @@ Partial Class FormConfRotacion
         Me.HhNumericEntry1.DireccionLectura = Nothing
         Me.HhNumericEntry1.Etiqueta = "RPM a 60Hz"
         Me.HhNumericEntry1.Factor = 1.0!
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhNumericEntry1.Link = Nothing
-        Me.HhNumericEntry1.Location = New System.Drawing.Point(220, 95)
+        Me.HhNumericEntry1.Location = New System.Drawing.Point(220, 70)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
         Me.HhNumericEntry1.Size = New System.Drawing.Size(220, 40)
         Me.HhNumericEntry1.TabIndex = 4
@@ -216,11 +218,36 @@ Partial Class FormConfRotacion
         Me.HhNumericEntry1.ValorMaximo = 0
         Me.HhNumericEntry1.ValorMinimo = 0
         '
+        'HhNumericEntry8
+        '
+        Me.HhNumericEntry8.AutoActualizar = False
+        Me.HhNumericEntry8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhNumericEntry8.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhNumericEntry8.Decimales = 1
+        Me.HhNumericEntry8.DireccionEscritura = "DW0818"
+        Me.HhNumericEntry8.DireccionLectura = "DW0818"
+        Me.HhNumericEntry8.Etiqueta = "Espera vel. cero"
+        Me.HhNumericEntry8.Factor = 0.1!
+        Me.HhNumericEntry8.Font = New System.Drawing.Font("Segoe Script", 16.0!)
+        Me.HhNumericEntry8.Link = Nothing
+        Me.HhNumericEntry8.Location = New System.Drawing.Point(220, 452)
+        Me.HhNumericEntry8.Name = "HhNumericEntry8"
+        Me.HhNumericEntry8.Size = New System.Drawing.Size(220, 40)
+        Me.HhNumericEntry8.TabIndex = 25
+        Me.HhNumericEntry8.Text = "0.0"
+        Me.HhNumericEntry8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.HhNumericEntry8.Tooltip = Nothing
+        Me.HhNumericEntry8.Unidades = "seg"
+        Me.HhNumericEntry8.Valor = 0
+        Me.HhNumericEntry8.ValorMaximo = 0
+        Me.HhNumericEntry8.ValorMinimo = 0
+        '
         'FormConfRotacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 575)
+        Me.Controls.Add(Me.HhNumericEntry8)
         Me.Controls.Add(Me.HhNumericEntry7)
         Me.Controls.Add(Me.HhNumericEntry6)
         Me.Controls.Add(Me.HhNumericEntry5)
@@ -245,4 +272,5 @@ Partial Class FormConfRotacion
     Friend WithEvents HhNumericEntry5 As hhNumericEntry.hhNumericEntry
     Friend WithEvents HhNumericEntry6 As hhNumericEntry.hhNumericEntry
     Friend WithEvents HhNumericEntry7 As hhNumericEntry.hhNumericEntry
+    Friend WithEvents HhNumericEntry8 As hhNumericEntry.hhNumericEntry
 End Class

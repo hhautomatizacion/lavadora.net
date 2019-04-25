@@ -5,17 +5,7 @@ Public Class FormConfigura
     End Sub
 
     Private Sub Form4_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Button2.Etiqueta = "Sistema"
 
-        Button3.Etiqueta = "Rotacion"
-
-        Button4.Etiqueta = "Llenado"
-
-        Button5.Etiqueta = "Aditivos"
-
-        Button6.Etiqueta = "Mandos"
-
-        Button1.Etiqueta = "Aceptar"
     End Sub
 
 
@@ -51,6 +41,13 @@ Public Class FormConfigura
     End Sub
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        Using f As New FormConfCentrifuga
+
+            f.ShowDialog()
+        End Using
+    End Sub
+
+    Private Sub HhMomentaryButton1_Click(sender As Object, e As EventArgs) Handles HhMomentaryButton1.Click
         Using f As New FormConfVolquete
             f.ShowDialog()
         End Using

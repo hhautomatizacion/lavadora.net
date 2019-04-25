@@ -2,9 +2,7 @@ Public Class FormConfRotacion
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         UnAttach(Me)
-
         Me.Close()
-
     End Sub
 
     Private Sub FormConfRotacion_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -16,7 +14,7 @@ Public Class FormConfRotacion
         HhNumericEntry5.Etiqueta = "Registro control"
         HhNumericEntry5.Tooltip = "Registro en el|variador para señal|arranque/paro"
         HhNumericEntry5.ValorMinimo = 0
-        HhNumericEntry5.ValorMaximo = 120
+        HhNumericEntry5.ValorMaximo = 1
         HhNumericEntry5.AutoActualizar = True
 
         HhNumericEntry1.Link = mMasterk
@@ -26,7 +24,7 @@ Public Class FormConfRotacion
         HhNumericEntry1.Etiqueta = "RPM a 60Hz"
         HhNumericEntry1.Tooltip = "Numero de|RPM a 60Hz"
         HhNumericEntry1.ValorMinimo = 1
-        HhNumericEntry1.ValorMaximo = 2000
+        HhNumericEntry1.ValorMaximo = 3000
         HhNumericEntry1.AutoActualizar = True
 
         HhNumericEntry2.Link = mMasterk
@@ -36,7 +34,7 @@ Public Class FormConfRotacion
         HhNumericEntry2.Etiqueta = "Frec maxima"
         HhNumericEntry2.Tooltip = "Frecuencia maxima|del variador|(Hz)"
         HhNumericEntry2.ValorMinimo = 1
-        HhNumericEntry2.ValorMaximo = 225
+        HhNumericEntry2.ValorMaximo = 300
         HhNumericEntry2.AutoActualizar = True
 
 
@@ -84,8 +82,13 @@ Public Class FormConfRotacion
         HhNumericEntry7.ValorMinimo = 0
         HhNumericEntry7.ValorMaximo = 1000
         HhNumericEntry7.AutoActualizar = True
-        HhNumericEntry7.Factor = 0.01
-        HhNumericEntry7.Decimales = 2
+        HhNumericEntry7.Factor = 0.1
+        HhNumericEntry7.Decimales = 1
+
+        HhNumericEntry8.Link = mMasterk
+        HhNumericEntry8.ValorMinimo = 1
+        HhNumericEntry8.ValorMaximo = 1000
+        HhNumericEntry8.AutoActualizar = True
 
         Button1.Etiqueta = "Aceptar"
     End Sub

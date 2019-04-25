@@ -15,5 +15,5 @@
 * Documentacion de funciones, herramientas
 
 ---
-![Captura de pantalla 2015-06-18 15.42.06.png](/Historial/Captura de pantalla 2015-06-18 15.42.06.png)
+![Captura de pantalla 2015-06-18 15.42.06.png](/Historial/Captura%20de%20pantalla%202015-06-18%2015.42.06.png)
 ---

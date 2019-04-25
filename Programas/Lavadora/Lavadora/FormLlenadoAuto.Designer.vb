@@ -20,14 +20,14 @@ Partial Class FormLlenadoAuto
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormLlenadoAuto))
-        Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton
-        Me.HhToggleButton1 = New hhToggleButton.hhToggleButton
-        Me.HhToggleButton2 = New hhToggleButton.hhToggleButton
-        Me.HhToggleButton3 = New hhToggleButton.hhToggleButton
-        Me.Button1 = New hhMomentaryButton.hhMomentaryButton
-        Me.HhToggleButton4 = New hhToggleButton.hhToggleButton
-        Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry
-        Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry
+        Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhToggleButton1 = New hhToggleButton.hhToggleButton()
+        Me.HhToggleButton2 = New hhToggleButton.hhToggleButton()
+        Me.HhToggleButton3 = New hhToggleButton.hhToggleButton()
+        Me.HhToggleButton4 = New hhToggleButton.hhToggleButton()
+        Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry()
+        Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry()
+        Me.HhMomentaryButton2 = New hhMomentaryButton.hhMomentaryButton()
         Me.SuspendLayout()
         '
         'HhMomentaryButton1
@@ -37,15 +37,16 @@ Partial Class FormLlenadoAuto
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Etiqueta = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.HhMomentaryButton1.Etiqueta = "Aceptar"
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
         Me.HhMomentaryButton1.Location = New System.Drawing.Point(207, 328)
         Me.HhMomentaryButton1.Name = "HhMomentaryButton1"
         Me.HhMomentaryButton1.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton1.TabIndex = 0
-        Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton1.Text = "Aceptar"
+        Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton1.UseVisualStyleBackColor = True
         '
         'HhToggleButton1
@@ -98,24 +99,6 @@ Partial Class FormLlenadoAuto
         Me.HhToggleButton3.TabIndex = 6
         Me.HhToggleButton3.Tooltip = Nothing
         Me.HhToggleButton3.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Appearance = System.Windows.Forms.Appearance.Button
-        Me.Button1.AutoActualizar = False
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.Button1.DireccionEscritura = Nothing
-        Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Etiqueta = Nothing
-        Me.Button1.Font = New System.Drawing.Font("CityBlueprint", 10.0!)
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Link = Nothing
-        Me.Button1.Location = New System.Drawing.Point(313, 328)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 90)
-        Me.Button1.TabIndex = 7
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'HhToggleButton4
         '
@@ -182,15 +165,34 @@ Partial Class FormLlenadoAuto
         Me.HhNumericEntry1.ValorMaximo = 0
         Me.HhNumericEntry1.ValorMinimo = 0
         '
+        'HhMomentaryButton2
+        '
+        Me.HhMomentaryButton2.Appearance = System.Windows.Forms.Appearance.Button
+        Me.HhMomentaryButton2.AutoActualizar = False
+        Me.HhMomentaryButton2.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhMomentaryButton2.DireccionEscritura = Nothing
+        Me.HhMomentaryButton2.DireccionLectura = Nothing
+        Me.HhMomentaryButton2.Etiqueta = "Cancelar"
+        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhMomentaryButton2.Image = Global.Lavadora.My.Resources.Resources.cross
+        Me.HhMomentaryButton2.Link = Nothing
+        Me.HhMomentaryButton2.Location = New System.Drawing.Point(313, 328)
+        Me.HhMomentaryButton2.Name = "HhMomentaryButton2"
+        Me.HhMomentaryButton2.Size = New System.Drawing.Size(100, 90)
+        Me.HhMomentaryButton2.TabIndex = 20
+        Me.HhMomentaryButton2.Text = "Cancelar"
+        Me.HhMomentaryButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HhMomentaryButton2.UseVisualStyleBackColor = True
+        '
         'FormLlenadoAuto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(425, 430)
+        Me.Controls.Add(Me.HhMomentaryButton2)
         Me.Controls.Add(Me.HhNumericEntry2)
         Me.Controls.Add(Me.HhNumericEntry1)
         Me.Controls.Add(Me.HhToggleButton4)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.HhToggleButton3)
         Me.Controls.Add(Me.HhToggleButton2)
         Me.Controls.Add(Me.HhToggleButton1)
@@ -207,8 +209,8 @@ Partial Class FormLlenadoAuto
     Friend WithEvents HhToggleButton1 As hhToggleButton.hhToggleButton
     Friend WithEvents HhToggleButton2 As hhToggleButton.hhToggleButton
     Friend WithEvents HhToggleButton3 As hhToggleButton.hhToggleButton
-    Friend WithEvents Button1 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents HhToggleButton4 As hhToggleButton.hhToggleButton
     Friend WithEvents HhNumericEntry1 As hhNumericEntry.hhNumericEntry
     Friend WithEvents HhNumericEntry2 As hhNumericEntry.hhNumericEntry
+    Friend WithEvents HhMomentaryButton2 As hhMomentaryButton.hhMomentaryButton
 End Class

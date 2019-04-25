@@ -17,6 +17,11 @@ Public Class FormConfVolquete
         HhNumericEntry2.Unidades = "seg"
         HhNumericEntry2.AutoActualizar = True
 
+        HhToggleButton21.Link = mMasterk
+        HhToggleButton21.DireccionEscritura = "KX0100"
+        HhToggleButton21.DireccionLectura = "KX0100"
+        HhToggleButton21.AutoActualizar = True
+
         Button1.Etiqueta = "Aceptar"
     End Sub
 

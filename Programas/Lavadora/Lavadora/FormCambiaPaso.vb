@@ -24,15 +24,15 @@ Public Class FormCambiaPaso
         HhNumericEntry1.Actualizar()
 
         HhMomentaryButton1.Link = mMasterk
-        HhMomentaryButton1.DireccionEscritura = "MX240"
+        HhMomentaryButton1.DireccionEscritura = "MX0240"
         HhMomentaryButton1.Etiqueta = "Aceptar"
 
         HhMomentaryButton2.Link = mMasterk
-        HhMomentaryButton2.DireccionEscritura = "MX244"
+        HhMomentaryButton2.DireccionEscritura = "MX0244"
         HhMomentaryButton2.Etiqueta = "Anterior"
 
         HhMomentaryButton3.Link = mMasterk
-        HhMomentaryButton3.DireccionEscritura = "MX245"
+        HhMomentaryButton3.DireccionEscritura = "MX0245"
         HhMomentaryButton3.Etiqueta = "Siguiente"
 
         Button2.Etiqueta = "Cancelar"

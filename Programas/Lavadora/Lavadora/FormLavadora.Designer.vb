@@ -1,9 +1,9 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormLavadora
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
@@ -17,47 +17,51 @@ Partial Class FormLavadora
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormLavadora))
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.HhAnimacion1 = New hhAnimacion.hhAnimacion
-        Me.HhAnimacion2 = New hhAnimacion.hhAnimacion
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.HhBooleanLabel1 = New hhBooleanLabel.hhBooleanLabel
-        Me.HhBooleanLabel2 = New hhBooleanLabel.hhBooleanLabel
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel
-        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.HhCharacterDisplay2 = New hhCharacterDisplay.hhCharacterDisplay
-        Me.SplitContainer3 = New System.Windows.Forms.SplitContainer
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.HhCharacterDisplay1 = New hhCharacterDisplay.hhCharacterDisplay
-        Me.SplitContainer4 = New System.Windows.Forms.SplitContainer
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.HhCharacterDisplay3 = New hhCharacterDisplay.hhCharacterDisplay
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
-        Me.Button5 = New hhMomentaryButton.hhMomentaryButton
-        Me.Button7 = New hhMomentaryButton.hhMomentaryButton
-        Me.Button6 = New hhMomentaryButton.hhMomentaryButton
-        Me.Button1 = New hhMomentaryButton.hhMomentaryButton
-        Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton
-        Me.HhMomentaryButton2 = New hhMomentaryButton.hhMomentaryButton
-        Me.Button3 = New hhMomentaryButton.hhMomentaryButton
+        Me.HhAnimacion1 = New hhAnimacion.hhAnimacion()
+        Me.HhAnimacion2 = New hhAnimacion.hhAnimacion()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.HhBooleanLabel1 = New hhBooleanLabel.hhBooleanLabel()
+        Me.HhBooleanLabel2 = New hhBooleanLabel.hhBooleanLabel()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.HhCharacterDisplay2 = New hhCharacterDisplay.hhCharacterDisplay()
+        Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.HhCharacterDisplay1 = New hhCharacterDisplay.hhCharacterDisplay()
+        Me.SplitContainer4 = New System.Windows.Forms.SplitContainer()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.HhCharacterDisplay3 = New hhCharacterDisplay.hhCharacterDisplay()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Button5 = New hhMomentaryButton.hhMomentaryButton()
+        Me.Button7 = New hhMomentaryButton.hhMomentaryButton()
+        Me.Button6 = New hhMomentaryButton.hhMomentaryButton()
+        Me.Button1 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhMomentaryButton2 = New hhMomentaryButton.hhMomentaryButton()
+        Me.Button3 = New hhMomentaryButton.hhMomentaryButton()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
+        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer3.Panel1.SuspendLayout()
         Me.SplitContainer3.Panel2.SuspendLayout()
         Me.SplitContainer3.SuspendLayout()
+        CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer4.Panel1.SuspendLayout()
         Me.SplitContainer4.Panel2.SuspendLayout()
         Me.SplitContainer4.SuspendLayout()
@@ -227,7 +231,7 @@ Partial Class FormLavadora
         Me.HhCharacterDisplay2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhCharacterDisplay2.DireccionLectura = Nothing
         Me.HhCharacterDisplay2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhCharacterDisplay2.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhCharacterDisplay2.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhCharacterDisplay2.Link = Nothing
         Me.HhCharacterDisplay2.Location = New System.Drawing.Point(0, 0)
         Me.HhCharacterDisplay2.Longitud = 0
@@ -271,7 +275,7 @@ Partial Class FormLavadora
         Me.HhCharacterDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhCharacterDisplay1.DireccionLectura = Nothing
         Me.HhCharacterDisplay1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhCharacterDisplay1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhCharacterDisplay1.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhCharacterDisplay1.Link = Nothing
         Me.HhCharacterDisplay1.Location = New System.Drawing.Point(0, 0)
         Me.HhCharacterDisplay1.Longitud = 0
@@ -315,7 +319,7 @@ Partial Class FormLavadora
         Me.HhCharacterDisplay3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhCharacterDisplay3.DireccionLectura = Nothing
         Me.HhCharacterDisplay3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HhCharacterDisplay3.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhCharacterDisplay3.Font = New System.Drawing.Font("Segoe Script", 16.0!)
         Me.HhCharacterDisplay3.Link = Nothing
         Me.HhCharacterDisplay3.Location = New System.Drawing.Point(0, 0)
         Me.HhCharacterDisplay3.Longitud = 0
@@ -326,6 +330,7 @@ Partial Class FormLavadora
         '
         'PictureBox1
         '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox1.Image = Global.Lavadora.My.Resources.Resources.logo
         Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
@@ -368,7 +373,7 @@ Partial Class FormLavadora
         Me.Button5.DireccionEscritura = Nothing
         Me.Button5.DireccionLectura = Nothing
         Me.Button5.Etiqueta = Nothing
-        Me.Button5.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button5.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
         Me.Button5.Link = Nothing
         Me.Button5.Location = New System.Drawing.Point(17, 169)
@@ -387,7 +392,7 @@ Partial Class FormLavadora
         Me.Button7.DireccionEscritura = Nothing
         Me.Button7.DireccionLectura = Nothing
         Me.Button7.Etiqueta = Nothing
-        Me.Button7.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button7.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.Button7.Image = Global.Lavadora.My.Resources.Resources.cog
         Me.Button7.Link = Nothing
         Me.Button7.Location = New System.Drawing.Point(17, 457)
@@ -406,7 +411,7 @@ Partial Class FormLavadora
         Me.Button6.DireccionEscritura = Nothing
         Me.Button6.DireccionLectura = Nothing
         Me.Button6.Etiqueta = Nothing
-        Me.Button6.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button6.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
         Me.Button6.Link = Nothing
         Me.Button6.Location = New System.Drawing.Point(17, 312)
@@ -425,7 +430,7 @@ Partial Class FormLavadora
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
         Me.Button1.Etiqueta = Nothing
-        Me.Button1.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button1.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(151, 457)
@@ -444,7 +449,7 @@ Partial Class FormLavadora
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
         Me.HhMomentaryButton1.Etiqueta = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
         Me.HhMomentaryButton1.Location = New System.Drawing.Point(17, 26)
@@ -463,7 +468,7 @@ Partial Class FormLavadora
         Me.HhMomentaryButton2.DireccionEscritura = Nothing
         Me.HhMomentaryButton2.DireccionLectura = Nothing
         Me.HhMomentaryButton2.Etiqueta = Nothing
-        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.HhMomentaryButton2.Image = CType(resources.GetObject("HhMomentaryButton2.Image"), System.Drawing.Image)
         Me.HhMomentaryButton2.Link = Nothing
         Me.HhMomentaryButton2.Location = New System.Drawing.Point(151, 26)
@@ -482,7 +487,7 @@ Partial Class FormLavadora
         Me.Button3.DireccionEscritura = Nothing
         Me.Button3.DireccionLectura = Nothing
         Me.Button3.Etiqueta = Nothing
-        Me.Button3.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button3.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.Button3.Image = Global.Lavadora.My.Resources.Resources.setting_tools
         Me.Button3.Link = Nothing
         Me.Button3.Location = New System.Drawing.Point(151, 312)
@@ -511,16 +516,20 @@ Partial Class FormLavadora
         Me.Text = "Lavadora"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.SplitContainer2.Panel1.ResumeLayout(False)
         Me.SplitContainer2.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.ResumeLayout(False)
         Me.SplitContainer3.Panel1.ResumeLayout(False)
         Me.SplitContainer3.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer3.ResumeLayout(False)
         Me.SplitContainer4.Panel1.ResumeLayout(False)
         Me.SplitContainer4.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer4.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
@@ -555,5 +564,4 @@ Partial Class FormLavadora
     Friend WithEvents HhMomentaryButton1 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents HhMomentaryButton2 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-
 End Class
