@@ -22,7 +22,7 @@ Public Class FormConfVolquete
         HhToggleButton21.DireccionLectura = "KX0100"
         HhToggleButton21.AutoActualizar = True
 
-        Button1.Etiqueta = "Aceptar"
+        Button1.Texto = "Aceptar"
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click

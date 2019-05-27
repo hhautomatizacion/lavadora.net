@@ -589,7 +589,7 @@ Partial Class FormTest
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Etiqueta = Nothing
+        Me.Button1.Texto = Nothing
         Me.Button1.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
@@ -607,7 +607,7 @@ Partial Class FormTest
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button2.DireccionEscritura = Nothing
         Me.Button2.DireccionLectura = Nothing
-        Me.Button2.Etiqueta = Nothing
+        Me.Button2.Texto = Nothing
         Me.Button2.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.Link = Nothing

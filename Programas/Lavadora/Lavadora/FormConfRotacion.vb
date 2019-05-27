@@ -90,7 +90,7 @@ Public Class FormConfRotacion
         HhNumericEntry8.ValorMaximo = 1000
         HhNumericEntry8.AutoActualizar = True
 
-        Button1.Etiqueta = "Aceptar"
+        Button1.Texto = "Aceptar"
     End Sub
 
     Private Sub HhNumericEntry3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhNumericEntry3.TextChanged

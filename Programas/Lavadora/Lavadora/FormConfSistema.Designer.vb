@@ -20,27 +20,27 @@ Partial Class FormConfSistema
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConfSistema))
-        Me.Button1 = New hhMomentaryButton.hhMomentaryButton
-        Me.HhComboEntry1 = New hhComboEntry.hhComboEntry
-        Me.HhToggleButton1 = New hhToggleButton.hhToggleButton
-        Me.HhToggleButton2 = New hhToggleButton.hhToggleButton
-        Me.HhToggleButton3 = New hhToggleButton.hhToggleButton
-        Me.TabControl1 = New System.Windows.Forms.TabControl
-        Me.TabPage1 = New System.Windows.Forms.TabPage
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
-        Me.HhComboEntry2 = New hhComboEntry.hhComboEntry
-        Me.HhComboEntry3 = New hhComboEntry.hhComboEntry
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.TabPage2 = New System.Windows.Forms.TabPage
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel
-        Me.HhComboEntry4 = New hhComboEntry.hhComboEntry
-        Me.HhComboEntry5 = New hhComboEntry.hhComboEntry
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.TabPage3 = New System.Windows.Forms.TabPage
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel
-        Me.HhComboEntry6 = New hhComboEntry.hhComboEntry
-        Me.HhComboEntry7 = New hhComboEntry.hhComboEntry
-        Me.Label3 = New System.Windows.Forms.Label
+        Me.Button1 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhComboEntry1 = New hhComboEntry.hhComboEntry()
+        Me.HhToggleButton1 = New hhToggleButton.hhToggleButton()
+        Me.HhToggleButton2 = New hhToggleButton.hhToggleButton()
+        Me.HhToggleButton3 = New hhToggleButton.hhToggleButton()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.HhComboEntry2 = New hhComboEntry.hhComboEntry()
+        Me.HhComboEntry3 = New hhComboEntry.hhComboEntry()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.HhComboEntry4 = New hhComboEntry.hhComboEntry()
+        Me.HhComboEntry5 = New hhComboEntry.hhComboEntry()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.HhComboEntry6 = New hhComboEntry.hhComboEntry()
+        Me.HhComboEntry7 = New hhComboEntry.hhComboEntry()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -57,8 +57,8 @@ Partial Class FormConfSistema
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Etiqueta = Nothing
-        Me.Button1.Font = New System.Drawing.Font("Purisa", 10.0!)
+        Me.Button1.Texto = Nothing
+        Me.Button1.Font = New System.Drawing.Font("Comic Sans MS", 10.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(688, 473)
@@ -232,7 +232,7 @@ Partial Class FormConfSistema
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(768, 194)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TextoBotones"
+        Me.TabPage2.Text = "TextoEtiquetas"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel2
@@ -308,7 +308,7 @@ Partial Class FormConfSistema
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(768, 194)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "TextoEtiquetas"
+        Me.TabPage3.Text = "TextoBotones"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel3

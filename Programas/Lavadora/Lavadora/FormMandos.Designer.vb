@@ -37,7 +37,7 @@ Partial Class FormMandos
         Me.HhMomentaryButton6.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton6.DireccionEscritura = Nothing
         Me.HhMomentaryButton6.DireccionLectura = Nothing
-        Me.HhMomentaryButton6.Etiqueta = Nothing
+        Me.HhMomentaryButton6.Texto = Nothing
         Me.HhMomentaryButton6.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.HhMomentaryButton6.Image = CType(resources.GetObject("HhMomentaryButton6.Image"), System.Drawing.Image)
         Me.HhMomentaryButton6.Link = Nothing
@@ -55,7 +55,7 @@ Partial Class FormMandos
         Me.HhMomentaryButton5.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton5.DireccionEscritura = Nothing
         Me.HhMomentaryButton5.DireccionLectura = Nothing
-        Me.HhMomentaryButton5.Etiqueta = Nothing
+        Me.HhMomentaryButton5.Texto = Nothing
         Me.HhMomentaryButton5.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.HhMomentaryButton5.Image = CType(resources.GetObject("HhMomentaryButton5.Image"), System.Drawing.Image)
         Me.HhMomentaryButton5.Link = Nothing
@@ -73,7 +73,7 @@ Partial Class FormMandos
         Me.HhMomentaryButton4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton4.DireccionEscritura = Nothing
         Me.HhMomentaryButton4.DireccionLectura = Nothing
-        Me.HhMomentaryButton4.Etiqueta = Nothing
+        Me.HhMomentaryButton4.Texto = Nothing
         Me.HhMomentaryButton4.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.HhMomentaryButton4.Image = CType(resources.GetObject("HhMomentaryButton4.Image"), System.Drawing.Image)
         Me.HhMomentaryButton4.Link = Nothing
@@ -91,7 +91,7 @@ Partial Class FormMandos
         Me.HhMomentaryButton3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton3.DireccionEscritura = Nothing
         Me.HhMomentaryButton3.DireccionLectura = Nothing
-        Me.HhMomentaryButton3.Etiqueta = Nothing
+        Me.HhMomentaryButton3.Texto = Nothing
         Me.HhMomentaryButton3.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.HhMomentaryButton3.Image = CType(resources.GetObject("HhMomentaryButton3.Image"), System.Drawing.Image)
         Me.HhMomentaryButton3.Link = Nothing
@@ -109,7 +109,7 @@ Partial Class FormMandos
         Me.HhMomentaryButton2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton2.DireccionEscritura = Nothing
         Me.HhMomentaryButton2.DireccionLectura = Nothing
-        Me.HhMomentaryButton2.Etiqueta = Nothing
+        Me.HhMomentaryButton2.Texto = Nothing
         Me.HhMomentaryButton2.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.HhMomentaryButton2.Image = CType(resources.GetObject("HhMomentaryButton2.Image"), System.Drawing.Image)
         Me.HhMomentaryButton2.Link = Nothing
@@ -127,7 +127,7 @@ Partial Class FormMandos
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Etiqueta = Nothing
+        Me.HhMomentaryButton1.Texto = Nothing
         Me.HhMomentaryButton1.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
@@ -145,7 +145,7 @@ Partial Class FormMandos
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Etiqueta = Nothing
+        Me.Button1.Texto = Nothing
         Me.Button1.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
@@ -163,7 +163,7 @@ Partial Class FormMandos
         Me.HhMomentaryButton7.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton7.DireccionEscritura = Nothing
         Me.HhMomentaryButton7.DireccionLectura = Nothing
-        Me.HhMomentaryButton7.Etiqueta = Nothing
+        Me.HhMomentaryButton7.Texto = Nothing
         Me.HhMomentaryButton7.Font = New System.Drawing.Font("GothicI", 8.0!)
         Me.HhMomentaryButton7.Image = CType(resources.GetObject("HhMomentaryButton7.Image"), System.Drawing.Image)
         Me.HhMomentaryButton7.Link = Nothing

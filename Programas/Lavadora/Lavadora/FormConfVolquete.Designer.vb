@@ -81,7 +81,7 @@ Partial Class FormConfVolquete
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Etiqueta = Nothing
+        Me.Button1.Texto = Nothing
         Me.Button1.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing

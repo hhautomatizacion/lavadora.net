@@ -69,7 +69,7 @@ Public Class FormLavadora
 
         HhCharacterDisplay3.Link = mMasterk
         HhCharacterDisplay3.DireccionLectura = "DW0000"
-        HhCharacterDisplay3.Longitud = 6
+        HhCharacterDisplay3.LongitudTexto = 6
         HhCharacterDisplay3.AutoActualizar = False
 
 
@@ -77,7 +77,7 @@ Public Class FormLavadora
         HhMomentaryButton1.Link = mMasterk
         HhMomentaryButton1.DireccionEscritura = "MX1000"
         HhMomentaryButton1.DireccionLectura = "MX07"
-        HhMomentaryButton1.Etiqueta = "Manual"
+        HhMomentaryButton1.Texto = "Manual"
         HhMomentaryButton1.AutoActualizar = True
 
 
@@ -85,14 +85,14 @@ Public Class FormLavadora
         HhMomentaryButton2.Link = mMasterk
         HhMomentaryButton2.DireccionEscritura = "MX1000"
         HhMomentaryButton2.DireccionLectura = "MX0100"
-        HhMomentaryButton2.Etiqueta = "Automatico"
+        HhMomentaryButton2.Texto = "Automatico"
         HhMomentaryButton2.AutoActualizar = True
 
-        Button5.Etiqueta = "Mandos"
-        Button6.Etiqueta = "Historial"
-        Button3.Etiqueta = "Configuracion"
-        Button7.Etiqueta = "Pruebas"
-        Button1.Etiqueta = "Salir"
+        Button5.Texto = "Mandos"
+        Button6.Texto = "Historial"
+        Button3.Texto = "Configuracion"
+        Button7.Texto = "Pruebas"
+        Button1.Texto = "Salir"
 
         Label1.BorderStyle = BorderStyle.Fixed3D
 
@@ -233,40 +233,13 @@ Public Class FormLavadora
                 End Using
                 wPagina.Valor = 0
             Case 6
-                Using hhProgressBox As New hhProgressBox.hhProgressBox
-                    hhProgressBox.Link = mMasterk
-                    hhProgressBox.ValorMaximo = 990
-                    hhProgressBox.ValorMinimo = 0
-                    hhProgressBox.DireccionLectura = "DW0222"
-                    hhProgressBox.DireccionOk = "MX008B"
-                    hhProgressBox.DireccionCancel = "MX008B"
-                    hhProgressBox.AutoActualizar = True
-                    hhProgressBox.ShowDialog()
-                End Using
+                'Eliminado animacion nueva receta
                 wPagina.Valor = 0
             Case 7
-                Using hhProgressBox As New hhProgressBox.hhProgressBox
-                    hhProgressBox.Link = mMasterk
-                    hhProgressBox.ValorMaximo = 990
-                    hhProgressBox.ValorMinimo = 0
-                    hhProgressBox.DireccionLectura = "DW0222"
-                    hhProgressBox.DireccionOk = "MX006F"
-                    hhProgressBox.DireccionCancel = "MX006F"
-                    hhProgressBox.AutoActualizar = True
-                    hhProgressBox.ShowDialog()
-                End Using
+                'Eliminado animacion enviar receta
                 wPagina.Valor = 0
             Case 8
-                Using hhProgressBox As New hhProgressBox.hhProgressBox
-                    hhProgressBox.Link = mMasterk
-                    hhProgressBox.ValorMaximo = 990
-                    hhProgressBox.ValorMinimo = 0
-                    hhProgressBox.DireccionLectura = "DW0222"
-                    hhProgressBox.DireccionOk = "MX0124"
-                    hhProgressBox.DireccionCancel = "MX0124"
-                    hhProgressBox.AutoActualizar = True
-                    hhProgressBox.ShowDialog()
-                End Using
+                'Eliminado animacion editar receta
                 wPagina.Valor = 0
             Case 9
                 'Posiblemente se borre, paso "funcion"
@@ -509,12 +482,12 @@ Public Class FormLavadora
                     h.Link = mMasterk
                     h.Tamanio = 50
                     h.Imagen = My.Resources.step9
-                    h.TextoOk = "Siguiente"
-                    h.DireccionOk = "MX99"
-                    h.ImagenOk = My.Resources.control_end_blue
-                    h.TextoCancel = "Esperar"
-                    h.ImagenCancel = My.Resources.tick
-                    h.DireccionCancel = "MX98"
+                    h.TextoOk = "Esperar"
+                    h.ImagenOk = My.Resources.tick
+                    h.DireccionOk = "MX98"
+                    h.TextoCancel = "Siguiente"
+                    h.DireccionCancel = "MX99"
+                    h.ImagenCancel = My.Resources.control_end_blue
                     h.ShowDialog()
                 End Using
                 wPagina.Valor = 0
@@ -548,7 +521,6 @@ Public Class FormLavadora
         If Len(HhCharacterDisplay3.Text) = 0 Then
             HhCharacterDisplay3.Actualizar()
         End If
-
     End Sub
 
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click

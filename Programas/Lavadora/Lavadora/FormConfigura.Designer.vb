@@ -59,7 +59,7 @@ Partial Class FormConfigura
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Etiqueta = "Mandos"
+        Me.HhMomentaryButton1.Texto = "Mandos"
         Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
@@ -79,7 +79,7 @@ Partial Class FormConfigura
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button3.DireccionEscritura = Nothing
         Me.Button3.DireccionLectura = Nothing
-        Me.Button3.Etiqueta = "Rotacion"
+        Me.Button3.Texto = "Rotacion"
         Me.Button3.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
         Me.Button3.Link = Nothing
@@ -99,7 +99,7 @@ Partial Class FormConfigura
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button2.DireccionEscritura = Nothing
         Me.Button2.DireccionLectura = Nothing
-        Me.Button2.Etiqueta = "Sistema"
+        Me.Button2.Texto = "Sistema"
         Me.Button2.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.Link = Nothing
@@ -119,7 +119,7 @@ Partial Class FormConfigura
         Me.Button4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button4.DireccionEscritura = Nothing
         Me.Button4.DireccionLectura = Nothing
-        Me.Button4.Etiqueta = "Llenado"
+        Me.Button4.Texto = "Llenado"
         Me.Button4.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
         Me.Button4.Link = Nothing
@@ -139,7 +139,7 @@ Partial Class FormConfigura
         Me.Button5.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button5.DireccionEscritura = Nothing
         Me.Button5.DireccionLectura = Nothing
-        Me.Button5.Etiqueta = "Aditivos"
+        Me.Button5.Texto = "Aditivos"
         Me.Button5.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
         Me.Button5.Link = Nothing
@@ -159,7 +159,7 @@ Partial Class FormConfigura
         Me.Button6.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button6.DireccionEscritura = Nothing
         Me.Button6.DireccionLectura = Nothing
-        Me.Button6.Etiqueta = "Centrifuga"
+        Me.Button6.Texto = "Centrifuga"
         Me.Button6.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.Button6.Image = Global.Lavadora.My.Resources.Resources.step11
         Me.Button6.Link = Nothing
@@ -178,7 +178,7 @@ Partial Class FormConfigura
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Etiqueta = "Aceptar"
+        Me.Button1.Texto = "Aceptar"
         Me.Button1.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing

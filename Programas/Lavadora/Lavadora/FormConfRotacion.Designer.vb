@@ -38,7 +38,7 @@ Partial Class FormConfRotacion
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Etiqueta = "Ok"
+        Me.Button1.Texto = "Ok"
         Me.Button1.Font = New System.Drawing.Font("Segoe Script", 8.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing

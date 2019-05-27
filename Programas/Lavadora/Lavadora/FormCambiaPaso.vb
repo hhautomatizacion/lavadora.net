@@ -25,17 +25,17 @@ Public Class FormCambiaPaso
 
         HhMomentaryButton1.Link = mMasterk
         HhMomentaryButton1.DireccionEscritura = "MX0240"
-        HhMomentaryButton1.Etiqueta = "Aceptar"
+        HhMomentaryButton1.Texto = "Aceptar"
 
         HhMomentaryButton2.Link = mMasterk
         HhMomentaryButton2.DireccionEscritura = "MX0244"
-        HhMomentaryButton2.Etiqueta = "Anterior"
+        HhMomentaryButton2.Texto = "Anterior"
 
         HhMomentaryButton3.Link = mMasterk
         HhMomentaryButton3.DireccionEscritura = "MX0245"
-        HhMomentaryButton3.Etiqueta = "Siguiente"
+        HhMomentaryButton3.Texto = "Siguiente"
 
-        Button2.Etiqueta = "Cancelar"
+        Button2.Texto = "Cancelar"
 
     End Sub
 

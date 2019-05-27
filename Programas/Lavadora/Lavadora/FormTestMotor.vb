@@ -29,6 +29,6 @@ Public Class FormTestMotor
         HhNumericDisplay1.Tooltip = "Velocidad actual"
         HhNumericDisplay1.AutoActualizar = True
 
-        Button1.Etiqueta = "Salir"
+        Button1.Texto = "Salir"
     End Sub
 End Class

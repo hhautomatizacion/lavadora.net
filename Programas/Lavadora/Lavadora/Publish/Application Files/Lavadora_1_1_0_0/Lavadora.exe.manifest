@@ -49,31 +49,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>3JtL4upbMIyYj25CBbdu+J62CRE=</dsig:DigestValue>
+        <dsig:DigestValue>yFHQDahdhA/w2KAGzBCJyBGeGtE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhBooleanLabel.dll" size="10752">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhBooleanLabel.dll" size="11776">
       <assemblyIdentity name="hhBooleanLabel" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>UFlRovmyUWleaeHP/95WKUOjZMk=</dsig:DigestValue>
+        <dsig:DigestValue>AWh4re9Do30XrG3llWlvVu9QRcQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhCharacterDisplay.dll" size="10240">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhCharacterDisplay.dll" size="16384">
       <assemblyIdentity name="hhCharacterDisplay" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>xqRWX6m8kQBPhfUPu151MkQxkOk=</dsig:DigestValue>
+        <dsig:DigestValue>8ucP/6xe1CcebQp81I0+N/MFroI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -85,43 +85,43 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>4mXUkimV1rilbM/DM1N+HI8i2o8=</dsig:DigestValue>
+        <dsig:DigestValue>LXnesAaDNyAlzRy7TwXwImqKdfU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhComboEntry.dll" size="22016">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhComboEntry.dll" size="46080">
       <assemblyIdentity name="hhComboEntry" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/hVMYqs+VQ6QFQOLUdWKnMCkoGQ=</dsig:DigestValue>
+        <dsig:DigestValue>G5X3yTg3W7GtqnVUfPAzvtBi1Ak=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhDialogoArchivos.dll" size="38912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhDialogoArchivos.dll" size="40960">
       <assemblyIdentity name="hhDialogoArchivos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>X8EDaCaFtwAtq1rawL9S+oosO9E=</dsig:DigestValue>
+        <dsig:DigestValue>WyHR+Amx5BTXQmmXVwQjPnHP76E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhGridDisplay.dll" size="23552">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhGridDisplay.dll" size="25088">
       <assemblyIdentity name="hhGridDisplay" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>gGNdgBzOzcT3grw8OyiQKpc+wu4=</dsig:DigestValue>
+        <dsig:DigestValue>j9zaNtNzx7WHMxewv5pvg1APIDs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -133,19 +133,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ND621iFPDCFTxsKRtSA9sJgEDeg=</dsig:DigestValue>
+        <dsig:DigestValue>DIOvwKts6hCMckwztDoR+EfmKxA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhMomentaryButton.dll" size="11776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhMomentaryButton.dll" size="12288">
       <assemblyIdentity name="hhMomentaryButton" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>LG3NM4bOytZnaPL7LNtKQvwWeIg=</dsig:DigestValue>
+        <dsig:DigestValue>a0Q0XHFLw93BB/bBQliSpnQp3MY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -157,19 +157,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ujF2RGgtIWaqueRt/YEjImcmkAE=</dsig:DigestValue>
+        <dsig:DigestValue>En2cbA/RzBdhuIZ95BlW1367+x4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhNumericDisplay.dll" size="16384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhNumericDisplay.dll" size="16896">
       <assemblyIdentity name="hhNumericDisplay" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>+HyRJD/wxpFWe5EzVD6OrtaqV/g=</dsig:DigestValue>
+        <dsig:DigestValue>+S1SvTAcpF11lvxz/nAUmuNDo2s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -181,31 +181,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>MdSvo82X7tFdffe27b+gOuQW/r4=</dsig:DigestValue>
+        <dsig:DigestValue>I7PetCeSmQM9wCuvoa1vGqWdvJ8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhProgressBox.dll" size="16384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhProgressBox.dll" size="15872">
       <assemblyIdentity name="hhProgressBox" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>hwT3Txki6fJNq6Bvb18tazPLXxM=</dsig:DigestValue>
+        <dsig:DigestValue>P1O9sEs7CK7mzL/KzvCkRIySH8Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhTimeCounterDisplay.dll" size="16384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hhTimeCounterDisplay.dll" size="16896">
       <assemblyIdentity name="hhTimeCounterDisplay" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>a9IAT1isjDZPBnXa85eNzvktFH4=</dsig:DigestValue>
+        <dsig:DigestValue>5LdFqxFor7cSSTixiWJ/nuRT5hY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -217,7 +217,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>aydaAziE9DnPJ5xcHuD/hRH59jM=</dsig:DigestValue>
+        <dsig:DigestValue>0Z0WJPKXXVfI7ND+3V0sQhhY530=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -229,19 +229,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>JQy/tFb4FT0mtiIgTUFan55ShDo=</dsig:DigestValue>
+        <dsig:DigestValue>A6IHX5PEZYNvnSoz0V16o0xrjPk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Lavadora.exe" size="424448">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Lavadora.exe" size="427520">
       <assemblyIdentity name="Lavadora" version="1.1.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>zLhqi8eFmUzRlOYKdXgIJLPYXxk=</dsig:DigestValue>
+        <dsig:DigestValue>wiBl88Ii6WZeOlfsOvhG0NOFv+k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -258,14 +258,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MasterKlib.dll" size="21504">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MasterKlib.dll" size="22016">
       <assemblyIdentity name="MasterKlib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>mjzZHix3jtJjYorFkv6Ns/rmICY=</dsig:DigestValue>
+        <dsig:DigestValue>4acK1empwamoqVEdthTrmt9bb9c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

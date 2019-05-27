@@ -1,7 +1,4 @@
 Public Class FormConfSistema
-
-   
-
     Private Sub FormConfSistema_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         HhToggleButton1.Etiqueta = "Auto-iniciar"
         If My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True).GetValue(Application.ProductName, "") = "" Then
@@ -29,11 +26,11 @@ Public Class FormConfSistema
             Next
         End Using
         HhComboEntry2.LongitudTexto = 255
-        HhComboEntry2.Text = GetSetting("hhControls", "Font", "Name", "Verdana")
+        HhComboEntry2.Text = GetSetting("hhControls", "Font", "FontName", "Verdana")
         HhComboEntry4.LongitudTexto = 255
-        HhComboEntry4.Text = GetSetting("hhControls", "Font", "ButtonFontName", "Verdana")
+        HhComboEntry4.Text = GetSetting("hhControls", "Font", "LabelFontName", "Verdana")
         HhComboEntry6.LongitudTexto = 255
-        HhComboEntry6.Text = GetSetting("hhControls", "Font", "LabelFontName", "Verdana")
+        HhComboEntry6.Text = GetSetting("hhControls", "Font", "ButtonFontName", "Verdana")
 
         Dim i As Integer
         For i = 2 To 60 Step 2
@@ -45,13 +42,13 @@ Public Class FormConfSistema
         TabControl1.Font = New Font(sNombreFuente, iTamanioFuente)
 
         HhComboEntry3.LongitudTexto = 2
-        HhComboEntry3.Text = GetSetting("hhControls", "Font", "Size", "14")
+        HhComboEntry3.Text = GetSetting("hhControls", "Font", "FontSize", "18")
         HhComboEntry5.LongitudTexto = 2
-        HhComboEntry5.Text = GetSetting("hhControls", "Font", "ButtonFontSize", "10")
+        HhComboEntry5.Text = GetSetting("hhControls", "Font", "LabelFontSize", "14")
         HhComboEntry7.LongitudTexto = 2
-        HhComboEntry7.Text = GetSetting("hhControls", "Font", "LabelFontSize", "12")
+        HhComboEntry7.Text = GetSetting("hhControls", "Font", "ButtonFontSize", "10")
 
-        Button1.Etiqueta = "Aceptar"
+        Button1.Texto = "Aceptar"
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -59,19 +56,19 @@ Public Class FormConfSistema
         sNombrePuerto = HhComboEntry1.Text
         sNombreFuente = HhComboEntry2.Text
         iTamanioFuente = Val(HhComboEntry3.Text)
-        sNombreFuentebotones = HhComboEntry4.Text
-        iTamanioFuentebotones = Val(HhComboEntry5.Text)
-        sNombreFuenteetiquetas = HhComboEntry6.Text
-        iTamanioFuenteetiquetas = Val(HhComboEntry7.Text)
+        sNombreFuenteEtiquetas = HhComboEntry4.Text
+        iTamanioFuenteEtiquetas = Val(HhComboEntry5.Text)
+        sNombreFuenteBotones = HhComboEntry6.Text
+        iTamanioFuenteBotones = Val(HhComboEntry7.Text)
 
         If Len(sNombrePuerto) Then
             AbrirPuerto()
-         
+
         Else
             MsgBox("Puerto no valido")
         End If
-        If Len(sNombreFuente) And Len(snombrefuentebotones) And Len(snombrefuenteetiquetas) Then
-            If iTamanioFuente > 0 And itamaniofuentebotones > 0 And itamaniofuenteetiquetas > 0 Then
+        If Len(sNombreFuente) And Len(sNombreFuenteBotones) And Len(sNombreFuenteEtiquetas) Then
+            If iTamanioFuente > 0 And iTamanioFuenteBotones > 0 And iTamanioFuenteEtiquetas > 0 Then
                 GuardarOpciones()
             Else
                 MsgBox("Tamaño de letra no valido")
@@ -84,6 +81,22 @@ Public Class FormConfSistema
         Me.Close()
     End Sub
 
+    Private Sub HhComboEntry6_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhComboEntry6.TextChanged
+        Try
+            Label3.Font = New Font(HhComboEntry6.Text, Val(HhComboEntry7.Text))
+            Label3.Text = HhComboEntry6.Text
+        Catch ex As Exception
+
+        End Try
+    End Sub
+    Private Sub HhComboEntry7_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhComboEntry7.TextChanged
+        Try
+            Label3.Font = New Font(HhComboEntry6.Text, Val(HhComboEntry7.Text))
+            Label3.Text = HhComboEntry6.Text
+        Catch ex As Exception
+
+        End Try
+    End Sub
     Private Sub HhComboEntry4_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhComboEntry4.TextChanged
         Try
             Label2.Font = New Font(HhComboEntry4.Text, Val(HhComboEntry5.Text))
@@ -131,6 +144,5 @@ Public Class FormConfSistema
     Private Sub HhToggleButton2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhToggleButton2.Click
         bPermitirSalir = HhToggleButton2.Checked
     End Sub
-
 
 End Class

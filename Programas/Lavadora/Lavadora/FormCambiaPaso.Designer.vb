@@ -34,7 +34,7 @@ Partial Class FormCambiaPaso
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button2.DireccionEscritura = Nothing
         Me.Button2.DireccionLectura = Nothing
-        Me.Button2.Etiqueta = Nothing
+        Me.Button2.Texto = Nothing
         Me.Button2.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.Link = Nothing
@@ -52,7 +52,7 @@ Partial Class FormCambiaPaso
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Etiqueta = Nothing
+        Me.HhMomentaryButton1.Texto = Nothing
         Me.HhMomentaryButton1.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
@@ -94,7 +94,7 @@ Partial Class FormCambiaPaso
         Me.HhMomentaryButton2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton2.DireccionEscritura = Nothing
         Me.HhMomentaryButton2.DireccionLectura = Nothing
-        Me.HhMomentaryButton2.Etiqueta = Nothing
+        Me.HhMomentaryButton2.Texto = Nothing
         Me.HhMomentaryButton2.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.HhMomentaryButton2.Image = CType(resources.GetObject("HhMomentaryButton2.Image"), System.Drawing.Image)
         Me.HhMomentaryButton2.Link = Nothing
@@ -112,7 +112,7 @@ Partial Class FormCambiaPaso
         Me.HhMomentaryButton3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton3.DireccionEscritura = Nothing
         Me.HhMomentaryButton3.DireccionLectura = Nothing
-        Me.HhMomentaryButton3.Etiqueta = Nothing
+        Me.HhMomentaryButton3.Texto = Nothing
         Me.HhMomentaryButton3.Font = New System.Drawing.Font("Purisa", 10.0!)
         Me.HhMomentaryButton3.Image = CType(resources.GetObject("HhMomentaryButton3.Image"), System.Drawing.Image)
         Me.HhMomentaryButton3.Link = Nothing

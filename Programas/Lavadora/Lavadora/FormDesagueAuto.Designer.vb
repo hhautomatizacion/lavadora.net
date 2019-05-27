@@ -35,9 +35,9 @@ Partial Class FormDesagueAuto
         Me.HhToggleButton1.DireccionEscritura = Nothing
         Me.HhToggleButton1.DireccionLectura = Nothing
         Me.HhToggleButton1.Etiqueta = Nothing
-        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.HhToggleButton1.Link = Nothing
-        Me.HhToggleButton1.Location = New System.Drawing.Point(210, 11)
+        Me.HhToggleButton1.Location = New System.Drawing.Point(207, 9)
         Me.HhToggleButton1.Name = "HhToggleButton1"
         Me.HhToggleButton1.Size = New System.Drawing.Size(45, 45)
         Me.HhToggleButton1.TabIndex = 0
@@ -52,9 +52,9 @@ Partial Class FormDesagueAuto
         Me.HhToggleButton2.DireccionEscritura = Nothing
         Me.HhToggleButton2.DireccionLectura = Nothing
         Me.HhToggleButton2.Etiqueta = Nothing
-        Me.HhToggleButton2.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhToggleButton2.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.HhToggleButton2.Link = Nothing
-        Me.HhToggleButton2.Location = New System.Drawing.Point(210, 60)
+        Me.HhToggleButton2.Location = New System.Drawing.Point(207, 60)
         Me.HhToggleButton2.Name = "HhToggleButton2"
         Me.HhToggleButton2.Size = New System.Drawing.Size(45, 45)
         Me.HhToggleButton2.TabIndex = 3
@@ -65,17 +65,18 @@ Partial Class FormDesagueAuto
         '
         Me.HhNumericEntry1.AutoActualizar = False
         Me.HhNumericEntry1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhNumericEntry1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhNumericEntry1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericEntry1.Decimales = 0
         Me.HhNumericEntry1.DireccionEscritura = Nothing
         Me.HhNumericEntry1.DireccionLectura = Nothing
         Me.HhNumericEntry1.Etiqueta = Nothing
         Me.HhNumericEntry1.Factor = 1.0!
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 18.0!)
         Me.HhNumericEntry1.Link = Nothing
-        Me.HhNumericEntry1.Location = New System.Drawing.Point(210, 108)
+        Me.HhNumericEntry1.Location = New System.Drawing.Point(208, 111)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
-        Me.HhNumericEntry1.Size = New System.Drawing.Size(200, 40)
+        Me.HhNumericEntry1.Size = New System.Drawing.Size(150, 40)
         Me.HhNumericEntry1.TabIndex = 4
         Me.HhNumericEntry1.Text = "0"
         Me.HhNumericEntry1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -92,16 +93,16 @@ Partial Class FormDesagueAuto
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Etiqueta = "Aceptar"
         Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
-        Me.HhMomentaryButton1.Location = New System.Drawing.Point(207, 328)
+        Me.HhMomentaryButton1.Location = New System.Drawing.Point(152, 473)
         Me.HhMomentaryButton1.Name = "HhMomentaryButton1"
         Me.HhMomentaryButton1.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton1.TabIndex = 6
         Me.HhMomentaryButton1.Text = "Aceptar"
         Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HhMomentaryButton1.Texto = "Aceptar"
         Me.HhMomentaryButton1.UseVisualStyleBackColor = True
         '
         'Button1
@@ -111,23 +112,23 @@ Partial Class FormDesagueAuto
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Etiqueta = "Cancelar"
         Me.Button1.Font = New System.Drawing.Font("Verdana", 10.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
-        Me.Button1.Location = New System.Drawing.Point(313, 328)
+        Me.Button1.Location = New System.Drawing.Point(258, 473)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 7
         Me.Button1.Text = "Cancelar"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button1.Texto = "Cancelar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'FormDesagueAuto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(425, 430)
+        Me.ClientSize = New System.Drawing.Size(370, 575)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.HhMomentaryButton1)
         Me.Controls.Add(Me.HhNumericEntry1)

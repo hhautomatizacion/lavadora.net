@@ -1,8 +1,7 @@
 Public Class FormEditorAuto
    
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        UnAttach(Me)
-        Me.Close()
+        DialogResult = DialogResult.Cancel
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
@@ -53,27 +52,20 @@ Public Class FormEditorAuto
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX20"
-            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
 
             fForm.ShowDialog()
         End Using
         HhGridDisplay1.AutoActualizar = False
         HhGridDisplay1.Inicializar()
         HhGridDisplay1.AutoActualizar = True
-
-
-
-
     End Sub
 
     Private Sub FormEditorAuto_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-        
         Me.Dispose()
     End Sub
 
     Private Sub FormEditorAuto_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-
         HhGridDisplay1.Link = mMasterk
         HhGridDisplay1.DireccionLectura = "DW3000"
         HhGridDisplay1.DireccionPaso = "DW0050"
@@ -92,60 +84,59 @@ Public Class FormEditorAuto
 
         HhMomentaryButton1.Link = mMasterk
         HhMomentaryButton1.DireccionEscritura = "MX0027"
-        HhMomentaryButton1.Etiqueta = "Fin"
+        HhMomentaryButton1.Texto = "Fin"
 
         HhMomentaryButton2.Link = mMasterk
         HhMomentaryButton2.DireccionEscritura = "MX0031"
-        HhMomentaryButton2.Etiqueta = "Insertar"
+        HhMomentaryButton2.Texto = "Insertar"
 
         HhMomentaryButton3.Link = mMasterk
         HhMomentaryButton3.DireccionEscritura = "MX0029"
-        HhMomentaryButton3.Etiqueta = "Eliminar"
+        HhMomentaryButton3.Texto = "Eliminar"
 
         HhMomentaryButton4.Link = mMasterk
         HhMomentaryButton4.DireccionEscritura = "MX0076"
-        HhMomentaryButton4.Etiqueta = "Envia"
+        HhMomentaryButton4.Texto = "Envia"
 
         HhMomentaryButton5.Link = mMasterk
         HhMomentaryButton5.DireccionEscritura = "MX0028"
-        HhMomentaryButton5.Etiqueta = "Nueva"
+        HhMomentaryButton5.Texto = "Nueva"
 
         Button2.Link = mMasterk
         Button2.DireccionEscritura = "MX0210"
-        Button2.Etiqueta = "Llenado"
+        Button2.Texto = "Llenado"
 
         Button3.Link = mMasterk
         Button3.DireccionEscritura = "MX0213"
-        Button3.Etiqueta = "Desague"
+        Button3.Texto = "Desague"
 
         Button5.Link = mMasterk
         Button5.DireccionEscritura = "MX0211"
-        Button5.Etiqueta = "Rotacion"
+        Button5.Texto = "Rotacion"
 
         Button6.Link = mMasterk
         Button6.DireccionEscritura = "MX0212"
-        Button6.Etiqueta = "Mantenimiento"
+        Button6.Texto = "Mantenimiento"
 
         Button7.Link = mMasterk
         Button7.DireccionEscritura = "MX0214"
-        Button7.Etiqueta = "Temperatura"
+        Button7.Texto = "Temperatura"
 
         Button8.Link = mMasterk
         Button8.DireccionEscritura = "MX0218"
-        Button8.Etiqueta = "Centrifuga"
+        Button8.Texto = "Centrifuga"
 
         Button9.Link = mMasterk
         Button9.DireccionEscritura = "MX0217"
-        Button9.Etiqueta = "Aditivos"
+        Button9.Texto = "Aditivos"
 
         Button10.Link = mMasterk
         Button10.DireccionEscritura = "MX0215"
-        Button10.Etiqueta = "Muestreo"
+        Button10.Texto = "Muestreo"
 
-        Button4.Etiqueta = "Guardar"
+        Button4.Texto = "Guardar"
 
-        Button1.Etiqueta = "Salir"
-
+        Button1.Texto = "Salir"
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
@@ -174,91 +165,102 @@ Public Class FormEditorAuto
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX23"
-            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
 
-            fForm.Button1.Etiqueta = "Cancelar"
+            fForm.Button1.Texto = "Cancelar"
 
             fForm.ShowDialog()
         End Using
         HhGridDisplay1.AutoActualizar = False
         HhGridDisplay1.Inicializar()
         HhGridDisplay1.AutoActualizar = True
-
     End Sub
     Private Sub HhMomentaryButton2_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HhMomentaryButton2.MouseDown
-        HhGridDisplay1.AutoActualizar = False
+        'HhGridDisplay1.AutoActualizar = False
     End Sub
 
     Private Sub HhMomentaryButton2_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HhMomentaryButton2.MouseUp
-        Do
-            Application.DoEvents()
-        Loop Until mMasterk.ObtenerBoolean("MX0030") = False
-        HhGridDisplay1.Inicializar()
+        'Do
+        'Application.DoEvents()
+        'Loop Until mMasterk.ObtenerBoolean("MX0030") = False
+        'HhGridDisplay1.Inicializar()
         HhGridDisplay1.AutoActualizar = True
     End Sub
     Private Sub HhMomentaryButton3_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HhMomentaryButton3.MouseDown
-        HhGridDisplay1.AutoActualizar = False
+        'HhGridDisplay1.AutoActualizar = False
     End Sub
 
     Private Sub HhMomentaryButton3_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HhMomentaryButton3.MouseUp
-
-        Do
-            Application.DoEvents()
-        Loop Until mMasterk.ObtenerBoolean("MX0040") = False
-        HhGridDisplay1.Inicializar()
-        HhGridDisplay1.AutoActualizar = True
+        'Do
+        'Application.DoEvents()
+        'Loop Until mMasterk.ObtenerBoolean("MX0040") = False
+        'HhGridDisplay1.Inicializar()
+        'HhGridDisplay1.AutoActualizar = True
     End Sub
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        'mejorar esto, si no se sobreescribe el archivo no debe cerrarse el cuadro de dialogo de archivo
-
+        Dim bSalir As Boolean
+        Dim bCancelar As Boolean
+        Dim bArchivoGuardado As Boolean
         Dim bArchivoExiste As Boolean
-
-
         Dim bf As New System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
 
+        bArchivoGuardado = False
+        bCancelar = False
+        bSalir = False
 
-        HhDialogoArchivos1.Unidad = Environment.CurrentDirectory
-        HhDialogoArchivos1.Extension = "*.REC"
-        HhDialogoArchivos1.Longitud = 20
-        HhDialogoArchivos1.ShowDialog()
+        While Not bSalir
+            HhDialogoArchivos1.Unidad = Environment.CurrentDirectory
+            HhDialogoArchivos1.Extension = "*.REC"
+            HhDialogoArchivos1.Longitud = 20
+            HhDialogoArchivos1.ShowDialog()
+            Debug.Print(HhDialogoArchivos1.ToString)
+            If HhDialogoArchivos1.Resultado = Windows.Forms.DialogResult.Cancel Then
+                Debug.Print("Cancelar guardar")
+                bSalir = True
+            Else
+                Debug.Print("Comprobar nombre vacio")
+                If Len(HhDialogoArchivos1.NombreCompleto) >= Len(HhDialogoArchivos1.Extension) Then
+                    Try
+                        Debug.Print("Revisar si existe archivo")
+                        bArchivoExiste = False
+                        If My.Computer.FileSystem.FileExists(HhDialogoArchivos1.NombreCompleto) Then
+                            bArchivoExiste = True
+                        End If
 
-        If Len(HhDialogoArchivos1.NombreCompleto) Then
-            Try
-                bArchivoExiste = False
-                If My.Computer.FileSystem.FileExists(HhDialogoArchivos1.NombreCompleto) Then
-                    bArchivoExiste = True
-                End If
-            Catch ex As Exception
-
-                Exit Sub
-            End Try
-
-            If bArchivoExiste Then
-                Using m As New hhMsgBox.hhMsgBox
-                    m.Mensaje = "Sobreescribir archivo existente?"
-                    'hhmsgbox1.Link = mMasterk
-                    m.Tamanio = 50
-                    m.TextoOk = "Si"
-                    m.TextoCancel = "No"
-                    'hhmsgbox1.DireccionOk = "MX0C"
-                    'hhmsgbox1.DireccionCancel = "MX0B"
-                    m.ShowDialog()
-                    If m.Resultado = Windows.Forms.DialogResult.OK Then
-                    Else
+                    Catch ex As Exception
                         Exit Sub
+                    End Try
+                    If bArchivoExiste Then
+                        Debug.Print("Preguntar si sobreescribir")
+                        Using m As New hhMsgBox.hhMsgBox
+                            m.Mensaje = "Sobreescribir archivo existente?"
+                            m.Tamanio = 50
+                            m.ImagenOk = My.Resources.tick
+                            m.TextoOk = "Si"
+                            m.ImagenCancel = My.Resources.cross
+                            m.TextoCancel = "No"
+                            m.ShowDialog()
+                            If m.Resultado = Windows.Forms.DialogResult.OK Then
+                                bCancelar = False
+                            Else
+                                bCancelar = True
+                            End If
+                        End Using
                     End If
-                End Using
+                    If Not bCancelar Then
+                        Try
+                            Debug.Print("Guardar archivo")
+                            Dim fs As New System.IO.FileStream(HhDialogoArchivos1.NombreCompleto, IO.FileMode.OpenOrCreate)
+                            bf.Serialize(fs, HhGridDisplay1.Receta)
+                            fs.Close()
+                            bArchivoGuardado = True
+                            bSalir = True
+                        Catch
+                        End Try
+                    End If
+                End If
             End If
-            Try
-
-                Dim fs As New System.IO.FileStream(HhDialogoArchivos1.NombreCompleto, IO.FileMode.OpenOrCreate)
-                bf.Serialize(fs, HhGridDisplay1.Receta)
-                fs.Close()
-            Catch
-
-            End Try
-
-        End If
+        End While
     End Sub
 
 
@@ -297,9 +299,9 @@ Public Class FormEditorAuto
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX21"
-            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
 
-            fForm.Button1.Etiqueta = "Cancelar"
+            fForm.Button1.Texto = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -350,9 +352,9 @@ Public Class FormEditorAuto
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX22"
-            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
 
-            fForm.Button1.Etiqueta = "Cancelar"
+            fForm.Button1.Texto = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -398,9 +400,9 @@ Public Class FormEditorAuto
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX25"
-            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
 
-            fForm.Button1.Etiqueta = "Cancelar"
+            fForm.Button1.Texto = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -420,10 +422,8 @@ Public Class FormEditorAuto
             fForm.HhNumericEntry1.Etiqueta = "Velocidad"
             fForm.HhNumericEntry1.Tooltip = "Velocidad|(rpm)"
             fForm.HhNumericEntry1.ValorMinimo = 0
-            'cambiar
-            fForm.HhNumericEntry1.ValorMaximo = 2000
+            fForm.HhNumericEntry1.ValorMaximo = 3000
             fForm.HhNumericEntry1.AutoActualizar = True
-
 
             fForm.HhNumericEntry2.Link = mMasterk
             fForm.HhNumericEntry2.DireccionEscritura = "DW0118"
@@ -437,18 +437,15 @@ Public Class FormEditorAuto
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX74"
-            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
 
-            fForm.Button1.Etiqueta = "Cancelar"
+            fForm.Button1.Texto = "Cancelar"
 
             fForm.ShowDialog()
         End Using
         HhGridDisplay1.AutoActualizar = False
         HhGridDisplay1.Inicializar()
         HhGridDisplay1.AutoActualizar = True
-
-
-
     End Sub
 
     Private Sub HhGridDisplay1_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles HhGridDisplay1.CellClick
@@ -458,7 +455,6 @@ Public Class FormEditorAuto
             iValor = iValor + 1
             mMasterk.EstablecerEntero("DW50", iValor)
         End If
-
     End Sub
 
     Private Sub HhGridDisplay1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles HhGridDisplay1.CellContentClick
@@ -499,9 +495,9 @@ Public Class FormEditorAuto
 
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX24"
-            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
 
-            fForm.Button1.Etiqueta = "Cancelar"
+            fForm.Button1.Texto = "Cancelar"
 
             fForm.ShowDialog()
         End Using
@@ -516,35 +512,36 @@ Public Class FormEditorAuto
         Using fForm As New FormMuestreoAuto
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX26"
-            fForm.HhMomentaryButton1.Etiqueta = "Aceptar"
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
 
-            fForm.Button1.Etiqueta = "Cancelar"
+            fForm.Button1.Texto = "Cancelar"
 
             fForm.ShowDialog()
         End Using
         HhGridDisplay1.AutoActualizar = False
         HhGridDisplay1.Inicializar()
         HhGridDisplay1.AutoActualizar = True
-
-
     End Sub
 
     Private Sub HhMomentaryButton4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton4.Click
-        Me.Close()
+        DialogResult = DialogResult.OK
     End Sub
 
-    Private Sub HhMomentaryButton5_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HhMomentaryButton5.MouseDown
+    Private Sub HhMomentaryButton5_Click(sender As Object, e As EventArgs) Handles HhMomentaryButton5.Click
         HhGridDisplay1.AutoActualizar = False
-    End Sub
-
-    Private Sub HhMomentaryButton5_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HhMomentaryButton5.MouseUp
-        Do
-            Application.DoEvents()
-        Loop Until mMasterk.ObtenerBoolean("MX3A") = False
         HhGridDisplay1.Inicializar()
         HhGridDisplay1.AutoActualizar = True
-
     End Sub
 
-   
+    Private Sub HhMomentaryButton2_Click(sender As Object, e As EventArgs) Handles HhMomentaryButton2.Click
+        HhGridDisplay1.AutoActualizar = False
+        HhGridDisplay1.Inicializar()
+        HhGridDisplay1.AutoActualizar = True
+    End Sub
+
+    Private Sub HhMomentaryButton3_Click(sender As Object, e As EventArgs) Handles HhMomentaryButton3.Click
+        HhGridDisplay1.AutoActualizar = False
+        HhGridDisplay1.Inicializar()
+        HhGridDisplay1.AutoActualizar = True
+    End Sub
 End Class

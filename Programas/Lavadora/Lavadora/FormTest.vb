@@ -202,9 +202,9 @@ Public Class FormTest
         HhToggleButton30.AutoActualizar = True
         HhToggleButton31.AutoActualizar = True
 
-        Button1.Etiqueta = "Aceptar"
+        Button1.Texto = "Aceptar"
 
-        Button2.Etiqueta = "Pruebas motor"
+        Button2.Texto = "Pruebas motor"
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click

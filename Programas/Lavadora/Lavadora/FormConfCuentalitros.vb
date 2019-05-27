@@ -63,7 +63,7 @@ Public Class FormConfCuentalitros
         HhNumericEntry6.Tooltip = "Tiempo de espara|soda maquina vacia"
         HhNumericEntry6.AutoActualizar = True
 
-        Button1.Etiqueta = "Aceptar"
+        Button1.Texto = "Aceptar"
 
     End Sub
 

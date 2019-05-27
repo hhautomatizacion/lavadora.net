@@ -76,27 +76,27 @@ Public Class FormAutomatico
         HhMomentaryButton1.Link = mMasterk
         HhMomentaryButton1.DireccionEscritura = "MX0B"
         HhMomentaryButton1.DireccionLectura = "MX0100"
-        HhMomentaryButton1.Etiqueta = "Play"
+        HhMomentaryButton1.Texto = "Play"
         HhMomentaryButton1.AutoActualizar = True
 
         HhMomentaryButton2.Link = mMasterk
         HhMomentaryButton2.DireccionEscritura = "MX0243"
         HhMomentaryButton2.DireccionLectura = "MX0241"
-        HhMomentaryButton2.Etiqueta = "Pause"
+        HhMomentaryButton2.Texto = "Pause"
         HhMomentaryButton2.AutoActualizar = True
 
         HhMomentaryButton3.Link = mMasterk
         HhMomentaryButton3.DireccionEscritura = "MX0C"
-        HhMomentaryButton3.Etiqueta = "Stop"
+        HhMomentaryButton3.Texto = "Stop"
 
         HhMomentaryButton4.Link = mMasterk
         HhMomentaryButton4.DireccionEscritura = "MX0075"
-        HhMomentaryButton4.Etiqueta = "Editar"
+        HhMomentaryButton4.Texto = "Editar"
 
-        Button1.Etiqueta = "Salir"
-        Button3.Etiqueta = "Salta paso"
-        Button4.Etiqueta = "Recetas"
-        Button5.Etiqueta = "Mandos"
+        Button1.Texto = "Salir"
+        Button3.Texto = "Salta paso"
+        Button4.Texto = "Recetas"
+        Button5.Texto = "Mandos"
 
         HhGridDisplay1.Link = mMasterk
         HhGridDisplay1.DireccionLectura = "DW2000"
@@ -190,8 +190,6 @@ Public Class FormAutomatico
         HhNumericDisplay3.ValorMinimo = iValue - 2
     End Sub
 
-
-
     Private Sub HhNumericDisplay2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhNumericDisplay2.TextChanged
         Dim iValue As Integer
         iValue = Val(HhNumericDisplay2.Text)
@@ -204,25 +202,18 @@ Public Class FormAutomatico
             HhNumericDisplay1.ValorMaximo = iValue + 2
             HhNumericDisplay1.ValorMinimo = iValue - 2
         End If
-
-    End Sub
-
-    Private Sub HhMomentaryButton4_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HhMomentaryButton4.MouseUp
-        Using f As New FormEditorAuto
-            Do
-                Application.DoEvents()
-            Loop Until mMasterk.ObtenerBoolean("MX0123") = False
-            f.HhGridDisplay1.Receta = HhGridDisplay1.Receta
-            f.ShowDialog()
-        End Using
-        HhGridDisplay1.AutoActualizar = False
-        HhGridDisplay1.Inicializar()
-        HhGridDisplay1.AutoActualizar = True
     End Sub
 
     Private Sub HhTimeCounterDisplay4_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhTimeCounterDisplay4.TextChanged
         HhTimeCounterDisplay4.ValorMaximo = HhTimeCounterDisplay4.Valor
     End Sub
 
-
+    Private Sub HhMomentaryButton4_Click(sender As Object, e As EventArgs) Handles HhMomentaryButton4.Click
+        Using f As New FormEditorAuto
+            f.HhGridDisplay1.Receta = HhGridDisplay1.Receta
+            If f.ShowDialog() = DialogResult.OK Then
+                HhGridDisplay1.Inicializar()
+            End If
+        End Using
+    End Sub
 End Class

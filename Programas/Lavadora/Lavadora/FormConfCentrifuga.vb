@@ -106,6 +106,6 @@
 
 
 
-        Button1.Etiqueta = "Aceptar"
+        Button1.Texto = "Aceptar"
     End Sub
 End Class

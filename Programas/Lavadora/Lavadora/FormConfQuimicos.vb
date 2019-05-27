@@ -32,6 +32,6 @@ Public Class FormConfQuimicos
         HhNumericEntry3.Unidades = "seg"
         HhNumericEntry3.AutoActualizar = True
 
-        Button1.Etiqueta = "Aceptar"
+        Button1.Texto = "Aceptar"
     End Sub
 End Class

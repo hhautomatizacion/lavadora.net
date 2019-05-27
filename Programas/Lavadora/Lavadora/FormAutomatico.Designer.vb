@@ -20,6 +20,9 @@ Partial Class FormAutomatico
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAutomatico))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.HhNumericDisplay2 = New hhNumericDisplay.hhNumericDisplay()
@@ -37,6 +40,8 @@ Partial Class FormAutomatico
         Me.HhTimeCounterDisplay1 = New hhTimeCounterDisplay.hhTimeCounterDisplay()
         Me.HhDialogoArchivos1 = New DialogoArchivos.hhDialogoArchivos()
         Me.HhGridDisplay1 = New hhGridDisplay.hhGridDisplay()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.HhMomentaryButton4 = New hhMomentaryButton.hhMomentaryButton()
         Me.Button5 = New hhMomentaryButton.hhMomentaryButton()
         Me.Button4 = New hhMomentaryButton.hhMomentaryButton()
@@ -71,7 +76,7 @@ Partial Class FormAutomatico
         Me.HhNumericDisplay2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay2.DireccionLectura = Nothing
         Me.HhNumericDisplay2.Etiqueta = Nothing
-        Me.HhNumericDisplay2.Font = New System.Drawing.Font("Segoe Script", 16.0!)
+        Me.HhNumericDisplay2.Font = New System.Drawing.Font("Arial", 18.0!)
         Me.HhNumericDisplay2.Link = Nothing
         Me.HhNumericDisplay2.Location = New System.Drawing.Point(206, 60)
         Me.HhNumericDisplay2.Name = "HhNumericDisplay2"
@@ -92,7 +97,7 @@ Partial Class FormAutomatico
         Me.HhNumericDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay1.DireccionLectura = Nothing
         Me.HhNumericDisplay1.Etiqueta = Nothing
-        Me.HhNumericDisplay1.Font = New System.Drawing.Font("Segoe Script", 16.0!)
+        Me.HhNumericDisplay1.Font = New System.Drawing.Font("Arial", 18.0!)
         Me.HhNumericDisplay1.Link = Nothing
         Me.HhNumericDisplay1.Location = New System.Drawing.Point(206, 17)
         Me.HhNumericDisplay1.Name = "HhNumericDisplay1"
@@ -124,7 +129,7 @@ Partial Class FormAutomatico
         Me.HhNumericDisplay4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay4.DireccionLectura = Nothing
         Me.HhNumericDisplay4.Etiqueta = Nothing
-        Me.HhNumericDisplay4.Font = New System.Drawing.Font("Segoe Script", 16.0!)
+        Me.HhNumericDisplay4.Font = New System.Drawing.Font("Arial", 18.0!)
         Me.HhNumericDisplay4.Link = Nothing
         Me.HhNumericDisplay4.Location = New System.Drawing.Point(206, 60)
         Me.HhNumericDisplay4.Name = "HhNumericDisplay4"
@@ -145,7 +150,7 @@ Partial Class FormAutomatico
         Me.HhNumericDisplay3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay3.DireccionLectura = Nothing
         Me.HhNumericDisplay3.Etiqueta = Nothing
-        Me.HhNumericDisplay3.Font = New System.Drawing.Font("Segoe Script", 16.0!)
+        Me.HhNumericDisplay3.Font = New System.Drawing.Font("Arial", 18.0!)
         Me.HhNumericDisplay3.Link = Nothing
         Me.HhNumericDisplay3.Location = New System.Drawing.Point(206, 17)
         Me.HhNumericDisplay3.Name = "HhNumericDisplay3"
@@ -177,7 +182,7 @@ Partial Class FormAutomatico
         Me.HhNumericDisplay6.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay6.DireccionLectura = Nothing
         Me.HhNumericDisplay6.Etiqueta = Nothing
-        Me.HhNumericDisplay6.Font = New System.Drawing.Font("Segoe Script", 16.0!)
+        Me.HhNumericDisplay6.Font = New System.Drawing.Font("Arial", 18.0!)
         Me.HhNumericDisplay6.Link = Nothing
         Me.HhNumericDisplay6.Location = New System.Drawing.Point(206, 60)
         Me.HhNumericDisplay6.Name = "HhNumericDisplay6"
@@ -198,7 +203,7 @@ Partial Class FormAutomatico
         Me.HhNumericDisplay5.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay5.DireccionLectura = Nothing
         Me.HhNumericDisplay5.Etiqueta = Nothing
-        Me.HhNumericDisplay5.Font = New System.Drawing.Font("Segoe Script", 16.0!)
+        Me.HhNumericDisplay5.Font = New System.Drawing.Font("Arial", 18.0!)
         Me.HhNumericDisplay5.Link = Nothing
         Me.HhNumericDisplay5.Location = New System.Drawing.Point(206, 17)
         Me.HhNumericDisplay5.Name = "HhNumericDisplay5"
@@ -232,7 +237,7 @@ Partial Class FormAutomatico
         Me.HhTimeCounterDisplay4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhTimeCounterDisplay4.DireccionLectura = Nothing
         Me.HhTimeCounterDisplay4.Etiqueta = Nothing
-        Me.HhTimeCounterDisplay4.Font = New System.Drawing.Font("Segoe Script", 16.0!)
+        Me.HhTimeCounterDisplay4.Font = New System.Drawing.Font("Arial", 18.0!)
         Me.HhTimeCounterDisplay4.Link = Nothing
         Me.HhTimeCounterDisplay4.Location = New System.Drawing.Point(206, 142)
         Me.HhTimeCounterDisplay4.Name = "HhTimeCounterDisplay4"
@@ -252,7 +257,7 @@ Partial Class FormAutomatico
         Me.HhTimeCounterDisplay3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhTimeCounterDisplay3.DireccionLectura = Nothing
         Me.HhTimeCounterDisplay3.Etiqueta = Nothing
-        Me.HhTimeCounterDisplay3.Font = New System.Drawing.Font("Segoe Script", 16.0!)
+        Me.HhTimeCounterDisplay3.Font = New System.Drawing.Font("Arial", 18.0!)
         Me.HhTimeCounterDisplay3.Link = Nothing
         Me.HhTimeCounterDisplay3.Location = New System.Drawing.Point(206, 101)
         Me.HhTimeCounterDisplay3.Name = "HhTimeCounterDisplay3"
@@ -272,7 +277,7 @@ Partial Class FormAutomatico
         Me.HhTimeCounterDisplay2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhTimeCounterDisplay2.DireccionLectura = Nothing
         Me.HhTimeCounterDisplay2.Etiqueta = Nothing
-        Me.HhTimeCounterDisplay2.Font = New System.Drawing.Font("Segoe Script", 16.0!)
+        Me.HhTimeCounterDisplay2.Font = New System.Drawing.Font("Arial", 18.0!)
         Me.HhTimeCounterDisplay2.Link = Nothing
         Me.HhTimeCounterDisplay2.Location = New System.Drawing.Point(206, 60)
         Me.HhTimeCounterDisplay2.Name = "HhTimeCounterDisplay2"
@@ -292,7 +297,7 @@ Partial Class FormAutomatico
         Me.HhTimeCounterDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhTimeCounterDisplay1.DireccionLectura = Nothing
         Me.HhTimeCounterDisplay1.Etiqueta = Nothing
-        Me.HhTimeCounterDisplay1.Font = New System.Drawing.Font("Segoe Script", 16.0!)
+        Me.HhTimeCounterDisplay1.Font = New System.Drawing.Font("Arial", 18.0!)
         Me.HhTimeCounterDisplay1.Link = Nothing
         Me.HhTimeCounterDisplay1.Location = New System.Drawing.Point(206, 19)
         Me.HhTimeCounterDisplay1.Name = "HhTimeCounterDisplay1"
@@ -317,13 +322,22 @@ Partial Class FormAutomatico
         Me.HhGridDisplay1.AllowUserToDeleteRows = False
         Me.HhGridDisplay1.AllowUserToResizeRows = False
         Me.HhGridDisplay1.AutoActualizar = False
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Stylus BT", 14.0!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.HhGridDisplay1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.HhGridDisplay1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.HhGridDisplay1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         Me.HhGridDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhGridDisplay1.DireccionEscritura = Nothing
         Me.HhGridDisplay1.DireccionLectura = Nothing
         Me.HhGridDisplay1.DireccionPaso = Nothing
         Me.HhGridDisplay1.EscribirPaso = False
-        Me.HhGridDisplay1.Font = New System.Drawing.Font("Segoe Script", 16.0!)
+        Me.HhGridDisplay1.Font = New System.Drawing.Font("Arial", 18.0!)
         Me.HhGridDisplay1.Link = Nothing
         Me.HhGridDisplay1.Location = New System.Drawing.Point(362, 5)
         Me.HhGridDisplay1.LongitudPaso = 0
@@ -334,12 +348,34 @@ Partial Class FormAutomatico
         Me.HhGridDisplay1.PasoActual = 0
         Me.HhGridDisplay1.Receta = Nothing
         Me.HhGridDisplay1.RowHeadersVisible = False
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe Script", 16.0!)
-        Me.HhGridDisplay1.RowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe Script", 16.0!)
+        Me.HhGridDisplay1.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.HhGridDisplay1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.HhGridDisplay1.ShowCellToolTips = False
         Me.HhGridDisplay1.Size = New System.Drawing.Size(418, 360)
         Me.HhGridDisplay1.TabIndex = 72
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridViewTextBoxColumn1.HeaderText = "#"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn1.Width = 52
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Pasos"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn2.Width = 345
         '
         'HhMomentaryButton4
         '
@@ -348,8 +384,7 @@ Partial Class FormAutomatico
         Me.HhMomentaryButton4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton4.DireccionEscritura = Nothing
         Me.HhMomentaryButton4.DireccionLectura = Nothing
-        Me.HhMomentaryButton4.Etiqueta = Nothing
-        Me.HhMomentaryButton4.Font = New System.Drawing.Font("Segoe Script", 8.0!)
+        Me.HhMomentaryButton4.Font = New System.Drawing.Font("Harlow Solid Italic", 10.0!)
         Me.HhMomentaryButton4.Image = CType(resources.GetObject("HhMomentaryButton4.Image"), System.Drawing.Image)
         Me.HhMomentaryButton4.Link = Nothing
         Me.HhMomentaryButton4.Location = New System.Drawing.Point(468, 467)
@@ -357,6 +392,7 @@ Partial Class FormAutomatico
         Me.HhMomentaryButton4.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton4.TabIndex = 71
         Me.HhMomentaryButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton4.Texto = Nothing
         Me.HhMomentaryButton4.UseVisualStyleBackColor = True
         '
         'Button5
@@ -366,8 +402,7 @@ Partial Class FormAutomatico
         Me.Button5.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button5.DireccionEscritura = Nothing
         Me.Button5.DireccionLectura = Nothing
-        Me.Button5.Etiqueta = Nothing
-        Me.Button5.Font = New System.Drawing.Font("Segoe Script", 8.0!)
+        Me.Button5.Font = New System.Drawing.Font("Harlow Solid Italic", 10.0!)
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
         Me.Button5.Link = Nothing
         Me.Button5.Location = New System.Drawing.Point(574, 467)
@@ -375,6 +410,7 @@ Partial Class FormAutomatico
         Me.Button5.Size = New System.Drawing.Size(100, 90)
         Me.Button5.TabIndex = 70
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button5.Texto = Nothing
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button4
@@ -384,8 +420,7 @@ Partial Class FormAutomatico
         Me.Button4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button4.DireccionEscritura = Nothing
         Me.Button4.DireccionLectura = Nothing
-        Me.Button4.Etiqueta = Nothing
-        Me.Button4.Font = New System.Drawing.Font("Segoe Script", 8.0!)
+        Me.Button4.Font = New System.Drawing.Font("Harlow Solid Italic", 10.0!)
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
         Me.Button4.Link = Nothing
         Me.Button4.Location = New System.Drawing.Point(362, 467)
@@ -393,6 +428,7 @@ Partial Class FormAutomatico
         Me.Button4.Size = New System.Drawing.Size(100, 90)
         Me.Button4.TabIndex = 69
         Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button4.Texto = Nothing
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button3
@@ -402,8 +438,7 @@ Partial Class FormAutomatico
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button3.DireccionEscritura = Nothing
         Me.Button3.DireccionLectura = Nothing
-        Me.Button3.Etiqueta = Nothing
-        Me.Button3.Font = New System.Drawing.Font("Segoe Script", 8.0!)
+        Me.Button3.Font = New System.Drawing.Font("Harlow Solid Italic", 10.0!)
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
         Me.Button3.Link = Nothing
         Me.Button3.Location = New System.Drawing.Point(680, 371)
@@ -411,6 +446,7 @@ Partial Class FormAutomatico
         Me.Button3.Size = New System.Drawing.Size(100, 90)
         Me.Button3.TabIndex = 55
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button3.Texto = Nothing
         Me.Button3.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton3
@@ -420,8 +456,7 @@ Partial Class FormAutomatico
         Me.HhMomentaryButton3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton3.DireccionEscritura = Nothing
         Me.HhMomentaryButton3.DireccionLectura = Nothing
-        Me.HhMomentaryButton3.Etiqueta = Nothing
-        Me.HhMomentaryButton3.Font = New System.Drawing.Font("Segoe Script", 8.0!)
+        Me.HhMomentaryButton3.Font = New System.Drawing.Font("Harlow Solid Italic", 10.0!)
         Me.HhMomentaryButton3.Image = CType(resources.GetObject("HhMomentaryButton3.Image"), System.Drawing.Image)
         Me.HhMomentaryButton3.Link = Nothing
         Me.HhMomentaryButton3.Location = New System.Drawing.Point(574, 371)
@@ -429,6 +464,7 @@ Partial Class FormAutomatico
         Me.HhMomentaryButton3.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton3.TabIndex = 46
         Me.HhMomentaryButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton3.Texto = Nothing
         Me.HhMomentaryButton3.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton2
@@ -438,8 +474,7 @@ Partial Class FormAutomatico
         Me.HhMomentaryButton2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton2.DireccionEscritura = Nothing
         Me.HhMomentaryButton2.DireccionLectura = Nothing
-        Me.HhMomentaryButton2.Etiqueta = Nothing
-        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Segoe Script", 8.0!)
+        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Harlow Solid Italic", 10.0!)
         Me.HhMomentaryButton2.Image = CType(resources.GetObject("HhMomentaryButton2.Image"), System.Drawing.Image)
         Me.HhMomentaryButton2.Link = Nothing
         Me.HhMomentaryButton2.Location = New System.Drawing.Point(468, 371)
@@ -447,6 +482,7 @@ Partial Class FormAutomatico
         Me.HhMomentaryButton2.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton2.TabIndex = 37
         Me.HhMomentaryButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton2.Texto = Nothing
         Me.HhMomentaryButton2.UseVisualStyleBackColor = True
         '
         'Button1
@@ -456,8 +492,7 @@ Partial Class FormAutomatico
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Etiqueta = Nothing
-        Me.Button1.Font = New System.Drawing.Font("Segoe Script", 8.0!)
+        Me.Button1.Font = New System.Drawing.Font("Harlow Solid Italic", 10.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(680, 467)
@@ -465,6 +500,7 @@ Partial Class FormAutomatico
         Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 0
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button1.Texto = Nothing
         Me.Button1.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton1
@@ -474,8 +510,7 @@ Partial Class FormAutomatico
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Etiqueta = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Segoe Script", 8.0!)
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Harlow Solid Italic", 10.0!)
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
         Me.HhMomentaryButton1.Location = New System.Drawing.Point(362, 371)
@@ -483,6 +518,7 @@ Partial Class FormAutomatico
         Me.HhMomentaryButton1.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton1.TabIndex = 1
         Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton1.Texto = Nothing
         Me.HhMomentaryButton1.UseVisualStyleBackColor = True
         '
         'FormAutomatico
@@ -540,4 +576,6 @@ Partial Class FormAutomatico
     Friend WithEvents HhNumericDisplay3 As hhNumericDisplay.hhNumericDisplay
     Friend WithEvents HhNumericDisplay6 As hhNumericDisplay.hhNumericDisplay
     Friend WithEvents HhNumericDisplay5 As hhNumericDisplay.hhNumericDisplay
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
 End Class
