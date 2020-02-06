@@ -15,5 +15,5 @@
 * Modelos de componentes que se hayan probado
 
 ---
-![volqueteo 4.tif](/Pruebas/volqueteo%204.tif)
+![volqueteo.jpg](/Pruebas/volqueteo.jpg)
 ---

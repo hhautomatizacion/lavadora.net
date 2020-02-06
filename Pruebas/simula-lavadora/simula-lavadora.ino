@@ -6,7 +6,6 @@ byte pospuerta=0;
 byte inclinacion=70;
 byte quimicos=0;
 byte agua=0;
-
 byte antx;
 int vapor;
 int puerta;
@@ -17,7 +16,7 @@ boolean inherciat;
 boolean pulsocuentalitros;
 boolean cambio;
 
-void setup() 
+void setup()
 {
 	Wire.begin();
 	Serial.begin(9600);
@@ -34,12 +33,11 @@ void setup()
 }
 
 
-void loop() 
+void loop()
 {
 	delay(50);
-	digitalWrite(13, LOW);   
+	digitalWrite(13, LOW);
 	cambio = false;
-
 	// Desague
 	if (digitalRead(2)==LOW)
 	{
@@ -66,8 +64,6 @@ void loop()
 			}
 		}
 	}
-
-   
 	// Agua fria o caliente
 	if (digitalRead(3)==LOW)
 	{
@@ -85,7 +81,6 @@ void loop()
 			}
 		}
 	}
-   
 	// Vapor
 	if (digitalRead(4) == LOW)
 	{
@@ -118,7 +113,7 @@ void loop()
 					cambio = true;
 					Serial.print("Inhercia temp ");
 					Serial.println(temperatura);
-				}  
+				}
 			}
 			else
 			{
@@ -129,11 +124,10 @@ void loop()
 					Serial.println(temperatura);
 				}
 			}
-		} 
+		}
 	}
-  
 	// Abrir
-	if (digitalRead(5)==LOW)  
+	if (digitalRead(5)==LOW)
 	{
 		puerta++;
 		if (puerta > 5)
@@ -148,9 +142,8 @@ void loop()
 			}
 		}
 	}
-
 	// Cerrar
-	if (digitalRead(6)==LOW)   
+	if (digitalRead(6)==LOW)
 	{
 		puerta++;
 		if (puerta > 5)
@@ -165,7 +158,6 @@ void loop()
 			}
 		}
 	}
-
 	// Cubeta
 	if (digitalRead(8) == LOW)
 	{
@@ -187,17 +179,15 @@ void loop()
 		cubeta++;
 		if (cubeta >= 50)
 		{
-			cubeta=0; 
+			cubeta=0;
 			if (quimicos < 100)
 			{
-				quimicos++;  
+				quimicos++;
 			}
-		} 
+		}
 	}
-  
-   
 	// Bajar
-	if ((digitalRead(10)==LOW) && (digitalRead(7)==LOW))  
+	if ((digitalRead(10)==LOW) && (digitalRead(7)==LOW))
 	{
 		volquete++;
 		if (volquete > 3)
@@ -214,7 +204,7 @@ void loop()
 	}
 
 	// Subir
-	if ((digitalRead(10)==LOW) && (digitalRead(7)==HIGH))  
+	if ((digitalRead(10)==LOW) && (digitalRead(7)==HIGH))
 	{
 		volquete++;
 		if (volquete > 5)
@@ -236,9 +226,9 @@ void loop()
 	if (pulsocuentalitros)
 	{
 		bitClear(x,0);
-    }
-    else
-    {
+	}
+	else
+	{
 		bitSet(x,0);
 	}
 
@@ -246,12 +236,12 @@ void loop()
 	{
 		bitClear(x,1);
 		bitSet(x,2);
-    }  
+	}
 	else if ((pospuerta >= 0 ) && (pospuerta <= 10))
 	{
 		bitSet(x,1);
-		bitClear(x,2);  
-    }  
+		bitClear(x,2);
+	}
 	else
 	{
 		bitSet(x,1);
@@ -266,33 +256,30 @@ void loop()
 	{
 		bitClear(x,3);
 	}
-  
 	if ((inclinacion >= 120 ) && (inclinacion <= 140))
 	{
 		bitClear(x,4);
 		bitSet(x,5);
-		bitSet(x,6);  
-	}  
+		bitSet(x,6);
+	}
 	else if ((inclinacion >= 60 ) && (inclinacion <= 80))
 	{
 		bitSet(x,4);
 		bitClear(x,5);
-		bitSet(x,6);  
-	}  
+		bitSet(x,6);
+	}
 	else if ((inclinacion >= 0 ) && (inclinacion <= 20))
 	{
 		bitSet(x,4);
 		bitSet(x,5);
-		bitClear(x,6);  
-	}  
+		bitClear(x,6);
+	}
 	else
 	{
 		bitSet(x,4);
 		bitSet(x,5);
-		bitSet(x,6);  
-	}  
-
-
+		bitSet(x,6);
+	}
 	if (quimicos <= 10)
 	{
 		bitSet(x,7);
@@ -301,12 +288,11 @@ void loop()
 	{
 		bitClear(x,7);
 	}
-
 	analogWrite(11,temperatura);
 	if (cambio)
 	{ 
 		delay(50);
-		digitalWrite(13, HIGH);  
+		digitalWrite(13, HIGH);
 	}
 	if (x != antx)
 	{
@@ -338,8 +324,8 @@ void loop()
 		{
 			Serial.println("Cubeta vacia");
 		}
-		Wire.beginTransmission(39); 
-		Wire.write(x);              
-		Wire.endTransmission();     
-	}  
+		Wire.beginTransmission(39);
+		Wire.write(x);
+		Wire.endTransmission();
+	}
 }
