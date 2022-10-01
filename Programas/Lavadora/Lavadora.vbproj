@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0128F04C-99C2-45E9-AB06-F655D155F483}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Lavadora.My.MyApplication</StartupObject>
+    <RootNamespace>Lavadora</RootNamespace>
+    <AssemblyName>Lavadora</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>46A8916E4E6C40CBB1345148CC296FF36160C272</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Lavadora_1_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <SignAssembly>false</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>https://raw.githubusercontent.com/hhautomatizacion/lavadora.net/master/Programas/Lavadora/Lavadora/Publish/</UpdateUrl>
+    <ProductName>Lavadora</ProductName>
+    <PublisherName>hhAutomatizacion</PublisherName>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.2.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+    <BootstrapperComponentsUrl>Publish\</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Lavadora.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Lavadora.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="hhAnimacion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\masterklib\Programas\hhAnimacion\hhAnimacion\lib\hhAnimacion.dll</HintPath>
+    </Reference>
+    <Reference Include="hhBooleanLabel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\masterklib\Programas\hhBooleanLabel\hhBooleanLabel\lib\hhBooleanLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="hhCharacterDisplay">
+      <HintPath>..\..\..\masterklib\Programas\hhCharacterDisplay\hhCharacterDisplay\bin\Debug\hhCharacterDisplay.dll</HintPath>
+    </Reference>
+    <Reference Include="hhCharacterEntry, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\masterklib\Programas\hhCharacterEntry\hhCharacterEntry\lib\hhCharacterEntry.dll</HintPath>
+    </Reference>
+    <Reference Include="hhComboEntry, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\masterklib\Programas\hhComboEntry\hhComboEntry\bin\Debug\hhComboEntry.dll</HintPath>
+    </Reference>
+    <Reference Include="hhDialogoArchivos">
+      <HintPath>..\..\..\masterklib\Programas\hhDialogoArchivos\hhDialogoArchivos\bin\Debug\hhDialogoArchivos.dll</HintPath>
+    </Reference>
+    <Reference Include="hhGridDisplay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\masterklib\Programas\hhGridDisplay\hhGridDisplay\bin\Debug\hhGridDisplay.dll</HintPath>
+    </Reference>
+    <Reference Include="hhInputBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\masterklib\Programas\hhInputBox\hhInputBox\lib\hhInputBox.dll</HintPath>
+    </Reference>
+    <Reference Include="hhMomentaryButton">
+      <HintPath>..\..\..\masterklib\Programas\hhMomentaryButton\hhMomentaryButton\bin\Debug\hhMomentaryButton.dll</HintPath>
+    </Reference>
+    <Reference Include="hhMsgBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\masterklib\Programas\hhMsgBox\hhMsgBox\lib\hhMsgBox.dll</HintPath>
+    </Reference>
+    <Reference Include="hhNumericDisplay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\masterklib\Programas\hhNumericDisplay\hhNumericDisplay\bin\Debug\hhNumericDisplay.dll</HintPath>
+    </Reference>
+    <Reference Include="hhNumericEntry, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\masterklib\Programas\hhNumericEntry\hhNumericEntry\bin\Debug\hhNumericEntry.dll</HintPath>
+    </Reference>
+    <Reference Include="hhPasswordEntry">
+      <HintPath>..\..\..\masterklib\Programas\hhPasswordEntry\hhPasswordEntry\bin\Debug\hhPasswordEntry.dll</HintPath>
+    </Reference>
+    <Reference Include="hhProgressBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\masterklib\Programas\hhProgressBox\hhProgressBox\lib\hhProgressBox.dll</HintPath>
+    </Reference>
+    <Reference Include="hhTimeCounterDisplay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\masterklib\Programas\hhTimeCounterDisplay\hhTimeCounterDisplay\bin\Debug\hhTimeCounterDisplay.dll</HintPath>
+    </Reference>
+    <Reference Include="hhToggleButton, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\masterklib\Programas\hhToggleButton\hhToggleButton\bin\Debug\hhToggleButton.dll</HintPath>
+    </Reference>
+    <Reference Include="hhWordRegister, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\masterklib\Programas\hhWordRegister\hhWordRegister\lib\hhWordRegister.dll</HintPath>
+    </Reference>
+    <Reference Include="MasterKlib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\masterklib\Programas\masterklib\masterklib\bin\Debug\MasterKlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAditivosAuto.Designer.vb">
+      <DependentUpon>FormAditivosAuto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAditivosAuto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCambiaPaso.Designer.vb">
+      <DependentUpon>FormCambiaPaso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCambiaPaso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCentrifugaAuto.Designer.vb">
+      <DependentUpon>FormCentrifugaAuto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCentrifugaAuto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfCentrifuga.Designer.vb">
+      <DependentUpon>FormConfCentrifuga.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfCentrifuga.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfCuentalitros.Designer.vb">
+      <DependentUpon>FormConfCuentalitros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfCuentalitros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfQuimicos.Designer.vb">
+      <DependentUpon>FormConfQuimicos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfQuimicos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfRotacion.Designer.vb">
+      <DependentUpon>FormConfRotacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfRotacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfSistema.Designer.vb">
+      <DependentUpon>FormConfSistema.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfSistema.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfVolquete.Designer.vb">
+      <DependentUpon>FormConfVolquete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfVolquete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesagueAuto.Designer.vb">
+      <DependentUpon>FormDesagueAuto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesagueAuto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditorAuto.Designer.vb">
+      <DependentUpon>FormEditorAuto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditorAuto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLavadora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLavadora.Designer.vb">
+      <DependentUpon>FormLavadora.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfigura.Designer.vb">
+      <DependentUpon>FormConfigura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfigura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCalefaccionAuto.Designer.vb">
+      <DependentUpon>FormCalefaccionAuto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCalefaccionAuto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManttoAuto.Designer.vb">
+      <DependentUpon>FormManttoAuto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormManttoAuto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManual.Designer.vb">
+      <DependentUpon>FormManual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormManual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMuestreoAuto.Designer.vb">
+      <DependentUpon>FormMuestreoAuto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMuestreoAuto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRotacionAuto.Designer.vb">
+      <DependentUpon>FormRotacionAuto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormRotacionAuto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutomatico.Designer.vb">
+      <DependentUpon>FormAutomatico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAutomatico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLlenadoAuto.Designer.vb">
+      <DependentUpon>FormLlenadoAuto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLlenadoAuto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMandos.Designer.vb">
+      <DependentUpon>FormMandos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMandos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTest.Designer.vb">
+      <DependentUpon>FormTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTestMotor.Designer.vb">
+      <DependentUpon>FormTestMotor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTestMotor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfUsuarios.Designer.vb">
+      <DependentUpon>FormConfUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="FormRotacionDescarga.Designer.vb">
+      <DependentUpon>FormRotacionDescarga.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormRotacionDescarga.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormAditivosAuto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAditivosAuto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCambiaPaso.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCambiaPaso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCentrifugaAuto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCentrifugaAuto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfCentrifuga.resx">
+      <DependentUpon>FormConfCentrifuga.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfCuentalitros.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormConfCuentalitros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfQuimicos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormConfQuimicos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfRotacion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormConfRotacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfSistema.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormConfSistema.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfVolquete.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormConfVolquete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesagueAuto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormDesagueAuto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditorAuto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormEditorAuto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLavadora.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLavadora.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfigura.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormConfigura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCalefaccionAuto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCalefaccionAuto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManttoAuto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormManttoAuto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManual.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormManual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMuestreoAuto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMuestreoAuto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRotacionAuto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormRotacionAuto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutomatico.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAutomatico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLlenadoAuto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLlenadoAuto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMandos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMandos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTest.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTestMotor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormTestMotor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfUsuarios.resx">
+      <DependentUpon>FormConfUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRotacionDescarga.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormRotacionDescarga.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\laptop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\stepa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\step9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\step13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\level.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\control_play_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\rock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\step15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\step12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\control_end_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\step10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\control_fastforward_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\traffic_lights_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\lightning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\traffic_lights_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\control_stop_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\setting_tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\step4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\step5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\icons8-grupo-de-usuarios-hombre-hombre-40.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
