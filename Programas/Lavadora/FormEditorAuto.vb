@@ -1,137 +1,550 @@
+Imports LavadoraLib
+Imports LavadoraLib.Receta
+
 Public Class FormEditorAuto
-   
+    Dim pPasoLlenado As New LavadoraLib.Receta.Paso
+    Dim pPasoDesague As New LavadoraLib.Receta.Paso
+    Dim pPasoRotacion As New LavadoraLib.Receta.Paso
+    Dim pPasoMantenimiento As New LavadoraLib.Receta.Paso
+    Dim pPasoTemperatura As New LavadoraLib.Receta.Paso
+    Dim pPasoCentrifuga As New LavadoraLib.Receta.Paso
+    Dim pPasoAditivos As New LavadoraLib.Receta.Paso
+    Dim pPasoMuestreo As New LavadoraLib.Receta.Paso
+    Dim pPasoFin As New LavadoraLib.Receta.Paso
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         DialogResult = DialogResult.Cancel
     End Sub
 
+    Private Function AgregarPaso(grid As hhGridDisplay.hhGridDisplay, paso As LavadoraLib.Receta.Paso) As Collection
+        Dim cReceta As New Collection
+        Dim pPasoSinModificar As New LavadoraLib.Receta.Paso
+        Dim iContador As Integer
+        iContador = 1
+        For Each pPasoSinModificar In grid.Receta
+            If iContador = grid.PasoActual Then
+                cReceta.Add(paso)
+                If pPasoSinModificar.IdPaso <> paso.IdPaso Then
+                    cReceta.Add(pPasoSinModificar)
+                End If
+            Else
+                cReceta.Add(pPasoSinModificar)
+            End If
+            iContador = iContador + 1
+        Next pPasoSinModificar
+        Return cReceta
+    End Function
+    Private Function ObtenerPasoActual(grid As hhGridDisplay.hhGridDisplay) As LavadoraLib.Receta.Paso
+        Dim iPasoActual As Integer
+        Dim pPasoActual As New LavadoraLib.Receta.Paso
+        iPasoActual = grid.PasoActual
+        If iPasoActual = 0 Then iPasoActual = 1
+        If grid.Receta.Count > iPasoActual Then
+            pPasoActual = grid.Receta.Item(iPasoActual)
+        End If
+        Return pPasoActual
+    End Function
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Dim cReceta As New Collection
+        Dim pPaso As New LavadoraLib.Receta.Paso
+
+        pPaso = ObtenerPasoActual(HhGridDisplay1)
+        If pPaso.IdPaso = 19532 Then
+        Else
+            pPaso = pPasoLlenado
+        End If
         Using fForm As New FormLlenadoAuto
-            fForm.HhToggleButton1.Link = mMasterk
-            fForm.HhToggleButton1.DireccionLectura = "MX010"
-            fForm.HhToggleButton1.DireccionEscritura = "MX010"
             fForm.HhToggleButton1.Etiqueta = "Agua fria"
-            fForm.HhToggleButton1.AutoActualizar = True
+            fForm.HhToggleButton1.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 0)
 
-            fForm.HhToggleButton2.Link = mMasterk
-            fForm.HhToggleButton2.DireccionLectura = "MX011"
-            fForm.HhToggleButton2.DireccionEscritura = "MX011"
             fForm.HhToggleButton2.Etiqueta = "Agua caliente"
-            fForm.HhToggleButton2.AutoActualizar = True
+            fForm.HhToggleButton2.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 1)
 
-            fForm.HhToggleButton3.Link = mMasterk
-            fForm.HhToggleButton3.DireccionLectura = "MX012"
-            fForm.HhToggleButton3.DireccionEscritura = "MX012"
             fForm.HhToggleButton3.Etiqueta = "Rotacion"
-            fForm.HhToggleButton3.AutoActualizar = True
+            fForm.HhToggleButton3.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 2)
 
-            fForm.HhToggleButton4.Link = mMasterk
-            fForm.HhToggleButton4.DireccionLectura = "MX13"
-            fForm.HhToggleButton4.DireccionEscritura = "MX13"
             fForm.HhToggleButton4.Etiqueta = "Temperatura"
-            fForm.HhToggleButton4.AutoActualizar = True
+            fForm.HhToggleButton4.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 3)
 
-            fForm.HhNumericEntry1.Link = mMasterk
-            fForm.HhNumericEntry1.DireccionEscritura = "DW0135"
-            fForm.HhNumericEntry1.DireccionLectura = "DW0135"
             fForm.HhNumericEntry1.Unidades = "lts"
             fForm.HhNumericEntry1.Etiqueta = "Cantidad agua"
             fForm.HhNumericEntry1.Tooltip = "Cantidad agua|(Litros)"
             fForm.HhNumericEntry1.ValorMinimo = 0
             fForm.HhNumericEntry1.ValorMaximo = 2000
-            fForm.HhNumericEntry1.AutoActualizar = True
+            fForm.HhNumericEntry1.Valor = pPaso.Litros
 
-            fForm.HhNumericEntry2.Link = mMasterk
-            fForm.HhNumericEntry2.DireccionEscritura = "DW0134"
-            fForm.HhNumericEntry2.DireccionLectura = "DW0134"
             fForm.HhNumericEntry2.Unidades = "°C"
             fForm.HhNumericEntry2.Etiqueta = "Temperatura"
             fForm.HhNumericEntry2.Tooltip = "Temperatura|(°C)"
             fForm.HhNumericEntry2.ValorMinimo = 0
             fForm.HhNumericEntry2.ValorMaximo = 100
-            fForm.HhNumericEntry2.AutoActualizar = True
+            fForm.HhNumericEntry2.Valor = pPaso.Centigrados
 
-            fForm.HhMomentaryButton1.Link = mMasterk
-            fForm.HhMomentaryButton1.DireccionEscritura = "MX20"
             fForm.HhMomentaryButton1.Texto = "Aceptar"
 
-            fForm.ShowDialog()
+            If fForm.ShowDialog() = vbOK Then
+                pPaso.Litros = fForm.HhNumericEntry1.Valor
+                pPaso.Centigrados = fForm.HhNumericEntry2.Valor
+                If fForm.HhToggleButton1.Checked Then
+                    pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 0)
+                Else
+                    pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 0)
+                End If
+                If fForm.HhToggleButton2.Checked Then
+                    pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 1)
+                Else
+                    pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 1)
+                End If
+                If fForm.HhToggleButton3.Checked Then
+                    pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 2)
+                Else
+                    pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 2)
+                End If
+                If fForm.HhToggleButton4.Checked Then
+                    pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 3)
+                Else
+                    pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 3)
+                End If
+
+                creceta = AgregarPaso(HhGridDisplay1, pPaso)
+
+                pPasoLlenado = pPaso
+
+                HhGridDisplay1.Receta = cReceta
+                HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
+                HhGridDisplay1.Actualizar()
+            End If
         End Using
-        HhGridDisplay1.AutoActualizar = False
-        HhGridDisplay1.Inicializar()
-        HhGridDisplay1.AutoActualizar = True
+    End Sub
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        Dim pPaso As New LavadoraLib.Receta.Paso
+        Dim pPasoSinModificar As New LavadoraLib.Receta.Paso
+        Dim cReceta As New Collection
+
+        pPaso = ObtenerPasoActual(HhGridDisplay1)
+        If pPaso.IdPaso = 17732 Then
+        Else
+            pPaso = pPasoDesague
+        End If
+        Using fForm As New FormDesagueAuto
+            fForm.HhToggleButton1.Etiqueta = "Desague 1"
+            fForm.HhToggleButton1.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 5)
+
+            fForm.HhToggleButton2.Etiqueta = "Rotacion"
+            fForm.HhToggleButton2.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 7)
+
+            fForm.HhNumericEntry1.Unidades = "seg"
+            fForm.HhNumericEntry1.Etiqueta = "Tiempo"
+            fForm.HhNumericEntry1.Tooltip = "Tiempo|(Segundos)"
+            fForm.HhNumericEntry1.ValorMinimo = 0
+            fForm.HhNumericEntry1.ValorMaximo = 300
+            fForm.HhNumericEntry1.Valor = pPaso.Segundos
+
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
+
+            fForm.Button1.Texto = "Cancelar"
+
+            If fForm.ShowDialog() = vbOK Then
+                pPaso.Segundos = fForm.HhNumericEntry1.Valor
+
+                If fForm.HhToggleButton1.Checked Then
+                    pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 5)
+                Else
+                    pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 5)
+                End If
+                If fForm.HhToggleButton2.Checked Then
+                    pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 7)
+                Else
+                    pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 7)
+                End If
+
+                cReceta = AgregarPaso(HhGridDisplay1, pPaso)
+
+                pPasoDesague = pPaso
+
+                HhGridDisplay1.Receta = cReceta
+                HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
+                HhGridDisplay1.Actualizar()
+            End If
+        End Using
+    End Sub
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        Dim pPaso As New LavadoraLib.Receta.Paso
+        Dim pPasoSinModificar As New LavadoraLib.Receta.Paso
+        Dim cReceta As New Collection
+
+        pPaso = ObtenerPasoActual(HhGridDisplay1)
+        If pPaso.IdPaso = 20306 Then
+        Else
+            pPaso = pPasoRotacion
+        End If
+        Using fForm As New FormRotacionAuto
+            fForm.HhNumericEntry3.Unidades = "rev"
+            fForm.HhNumericEntry3.Etiqueta = "Giros"
+            fForm.HhNumericEntry3.Tooltip = "Cantidad de giros"
+            fForm.HhNumericEntry3.ValorMinimo = 1
+            fForm.HhNumericEntry3.ValorMaximo = 1000
+            fForm.HhNumericEntry3.Valor = pPaso.ParametroAuxiliar
+
+            fForm.HhNumericEntry2.Unidades = "seg"
+            fForm.HhNumericEntry2.Etiqueta = "Pausa"
+            fForm.HhNumericEntry2.Tooltip = "Tiempo de pausa|(Segundos)"
+            fForm.HhNumericEntry2.ValorMinimo = 1
+            fForm.HhNumericEntry2.ValorMaximo = 60
+            fForm.HhNumericEntry2.Valor = pPaso.Segundos
+
+            fForm.HhNumericEntry1.Unidades = "rpm"
+            fForm.HhNumericEntry1.Etiqueta = "Velocidad"
+            fForm.HhNumericEntry1.Tooltip = "Velocidad de rotacion|(rpm)"
+            fForm.HhNumericEntry1.ValorMinimo = 0
+            fForm.HhNumericEntry1.ValorMaximo = 2000
+            fForm.HhNumericEntry1.Valor = pPaso.RPM
+
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
+
+            fForm.Button1.Texto = "Cancelar"
+
+            If fForm.ShowDialog() = vbOK Then
+                pPaso.ParametroAuxiliar = fForm.HhNumericEntry3.Valor
+                pPaso.Segundos = fForm.HhNumericEntry2.Valor
+                pPaso.RPM = fForm.HhNumericEntry1.Valor
+
+                cReceta = AgregarPaso(HhGridDisplay1, pPaso)
+
+                pPasoRotacion = pPaso
+
+                HhGridDisplay1.Receta = cReceta
+                HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
+                HhGridDisplay1.Actualizar()
+            End If
+        End Using
+    End Sub
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        Dim pPaso As New LavadoraLib.Receta.Paso
+        Dim pPasoSinModificar As New LavadoraLib.Receta.Paso
+        Dim cReceta As New Collection
+
+        pPaso = ObtenerPasoActual(HhGridDisplay1)
+        If pPaso.IdPaso = 16717 Then
+        Else
+            pPaso = pPasoMantenimiento
+        End If
+        Using fForm As New FormMantenimientoAuto
+            fForm.HhToggleButton1.Etiqueta = "Temperatura constante"
+            fForm.HhToggleButton1.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 4)
+
+            fForm.HhNumericEntry1.Unidades = "min"
+            fForm.HhNumericEntry1.Etiqueta = "Tiempo"
+            fForm.HhNumericEntry1.Tooltip = "Tiempo de trabajo|(Minutos)"
+            fForm.HhNumericEntry1.ValorMinimo = 0
+            fForm.HhNumericEntry1.ValorMaximo = 600
+            fForm.HhNumericEntry1.Valor = pPaso.Minutos
+
+            fForm.HhNumericEntry2.Unidades = "°C"
+            fForm.HhNumericEntry2.Etiqueta = "Temperatura"
+            fForm.HhNumericEntry2.Tooltip = "Temperatura|(°C)"
+            fForm.HhNumericEntry2.ValorMinimo = 0
+            fForm.HhNumericEntry2.ValorMaximo = 100
+            fForm.HhNumericEntry2.Valor = pPaso.Centigrados
+
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
+
+            fForm.Button1.Texto = "Cancelar"
+
+            If fForm.ShowDialog() = vbOK Then
+                pPaso.Minutos = fForm.HhNumericEntry1.Valor
+                pPaso.Centigrados = fForm.HhNumericEntry2.Valor
+                If fForm.HhToggleButton1.Checked Then
+                    pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 4)
+                Else
+                    pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 4)
+                End If
+
+                cReceta = AgregarPaso(HhGridDisplay1, pPaso)
+
+                pPasoMantenimiento = pPaso
+
+                HhGridDisplay1.Receta = cReceta
+                HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
+                HhGridDisplay1.Actualizar()
+            End If
+        End Using
     End Sub
 
+    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
+        Dim pPaso As New LavadoraLib.Receta.Paso
+        Dim pPasoSinModificar As New LavadoraLib.Receta.Paso
+        Dim cReceta As New Collection
+
+        pPaso = ObtenerPasoActual(HhGridDisplay1)
+        If pPaso.IdPaso = 17748 Then
+        Else
+            pPaso = pPasoTemperatura
+        End If
+        Using fForm As New FormTemperaturaAuto
+            fForm.HhNumericEntry1.Unidades = "°C"
+            fForm.HhNumericEntry1.Etiqueta = "Temperatura final"
+            fForm.HhNumericEntry1.Tooltip = "Temperatura final|(°C)"
+            fForm.HhNumericEntry1.ValorMinimo = 0
+            fForm.HhNumericEntry1.ValorMaximo = 100
+            fForm.HhNumericEntry1.Valor = pPaso.Centigrados
+
+            fForm.HhToggleButton1.Etiqueta = "Con rotacion"
+            fForm.HhToggleButton1.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 6)
+
+            fForm.HhNumericEntry2.Unidades = "°C/min"
+            fForm.HhNumericEntry2.Etiqueta = "Gradiente"
+            fForm.HhNumericEntry2.Tooltip = "Gradiente de temp.|(°C/min)"
+            fForm.HhNumericEntry2.ValorMinimo = 0
+            fForm.HhNumericEntry2.ValorMaximo = 100
+            fForm.HhNumericEntry2.Valor = pPaso.ParametroAuxiliar
+
+            fForm.HhToggleButton2.Etiqueta = "Con gradiente"
+            fForm.HhToggleButton2.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 9)
+
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
+
+            fForm.Button1.Texto = "Cancelar"
+
+            If fForm.ShowDialog() = vbOK Then
+                pPaso.Centigrados = fForm.HhNumericEntry1.Valor
+                pPaso.ParametroAuxiliar = fForm.HhNumericEntry2.Valor
+                If fForm.HhToggleButton1.Checked Then
+                    pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 6)
+                Else
+                    pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 6)
+                End If
+                If fForm.HhToggleButton2.Checked Then
+                    pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 9)
+                Else
+                    pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 9)
+                End If
+
+                cReceta = AgregarPaso(HhGridDisplay1, pPaso)
+
+                pPasoTemperatura = pPaso
+
+                HhGridDisplay1.Receta = cReceta
+                HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
+                HhGridDisplay1.Actualizar()
+            End If
+        End Using
+    End Sub
+
+
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+        Dim pPaso As New LavadoraLib.Receta.Paso
+        Dim pPasoSinModificar As New LavadoraLib.Receta.Paso
+        Dim cReceta As New Collection
+
+        pPaso = ObtenerPasoActual(HhGridDisplay1)
+        If pPaso.IdPaso = 17731 Then
+        Else
+            pPaso = pPasoCentrifuga
+        End If
+        Using fForm As New FormCentrifugaAuto
+            fForm.HhNumericEntry1.Unidades = "rpm"
+            fForm.HhNumericEntry1.Etiqueta = "Velocidad"
+            fForm.HhNumericEntry1.Tooltip = "Velocidad|(rpm)"
+            fForm.HhNumericEntry1.ValorMinimo = 0
+            fForm.HhNumericEntry1.ValorMaximo = 3000
+            fForm.HhNumericEntry1.Valor = pPaso.RPM
+
+            fForm.HhNumericEntry2.Unidades = "min"
+            fForm.HhNumericEntry2.Etiqueta = "Tiempo"
+            fForm.HhNumericEntry2.Tooltip = "Tiempo|(Minutos)"
+            fForm.HhNumericEntry2.ValorMinimo = 0
+            fForm.HhNumericEntry2.ValorMaximo = 120
+            fForm.HhNumericEntry2.Valor = pPaso.Minutos
+
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
+
+            fForm.Button1.Texto = "Cancelar"
+
+            If fForm.ShowDialog() = vbOK Then
+                pPaso.RPM = fForm.HhNumericEntry1.Valor
+                pPaso.Minutos = fForm.HhNumericEntry2.Valor
+
+                cReceta = AgregarPaso(HhGridDisplay1, pPaso)
+
+                pPasoCentrifuga = pPaso
+
+                HhGridDisplay1.Receta = cReceta
+                HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
+                HhGridDisplay1.Actualizar()
+            End If
+        End Using
+    End Sub
+
+    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
+        Dim pPaso As New LavadoraLib.Receta.Paso
+        Dim pPasoSinModificar As New LavadoraLib.Receta.Paso
+        Dim cReceta As New Collection
+
+        pPaso = ObtenerPasoActual(HhGridDisplay1)
+        If pPaso.IdPaso = 17473 Then
+        Else
+            pPaso = pPasoAditivos
+        End If
+        Using fForm As New FormAditivosAuto
+            fForm.HhNumericEntry1.Etiqueta = "Enjuagues"
+            fForm.HhNumericEntry1.ValorMinimo = 1
+            fForm.HhNumericEntry1.ValorMaximo = 10
+            fForm.HhNumericEntry1.Valor = pPaso.ParametroAuxiliar
+
+            fForm.HhToggleButton1.Etiqueta = "Cubeta 1"
+            fForm.HhToggleButton1.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 8)
+
+            fForm.HhToggleButton2.Etiqueta = "A la izquierda"
+            fForm.HhToggleButton2.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 10)
+
+            fForm.HhToggleButton3.Etiqueta = "A la derecha"
+            fForm.HhToggleButton3.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 11)
+
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
+
+            fForm.Button1.Texto = "Cancelar"
+
+            If fForm.ShowDialog() = vbOK Then
+
+                pPaso.ParametroAuxiliar = fForm.HhNumericEntry1.Valor
+
+                If fForm.HhToggleButton1.Checked Then
+                    pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 8)
+                Else
+                    pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 8)
+                End If
+                If fForm.HhToggleButton2.Checked Then
+                    pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 10)
+                Else
+                    pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 10)
+                End If
+                If fForm.HhToggleButton3.Checked Then
+                    pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 11)
+                Else
+                    pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 11)
+                End If
+
+                cReceta = AgregarPaso(HhGridDisplay1, pPaso)
+
+                pPasoAditivos = pPaso
+
+                HhGridDisplay1.Receta = cReceta
+                HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
+                HhGridDisplay1.Actualizar()
+            End If
+        End Using
+    End Sub
+    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
+        Dim pPaso As New LavadoraLib.Receta.Paso
+        Dim pPasoSinModificar As New LavadoraLib.Receta.Paso
+        Dim cReceta As New Collection
+
+        pPaso = ObtenerPasoActual(HhGridDisplay1)
+        If pPaso.IdPaso = 21837 Then
+        Else
+            pPaso = pPasoMuestreo
+        End If
+        Using fForm As New FormMuestreoAuto
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
+
+            fForm.Button1.Texto = "Cancelar"
+
+            If fForm.ShowDialog() = vbOK Then
+                cReceta = AgregarPaso(HhGridDisplay1, pPaso)
+
+                pPasoMuestreo = pPaso
+
+                HhGridDisplay1.Receta = cReceta
+                HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
+                HhGridDisplay1.Actualizar()
+            End If
+        End Using
+    End Sub
+
+    Private Sub HhMomentaryButton1_Click(sender As Object, e As EventArgs) Handles HhMomentaryButton1.Click
+        Dim pPaso As New LavadoraLib.Receta.Paso
+        Dim pPasoSinModificar As New LavadoraLib.Receta.Paso
+        Dim cReceta As New Collection
+
+        pPaso = ObtenerPasoActual(HhGridDisplay1)
+        If pPaso.IdPaso = 18758 Then
+        Else
+            pPaso = pPasoFin
+        End If
+        Using fForm As New FormMuestreoAuto
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
+
+            fForm.Button1.Texto = "Cancelar"
+
+            If fForm.ShowDialog() = vbOK Then
+                cReceta = AgregarPaso(HhGridDisplay1, pPaso)
+
+                pPasoFin = pPaso
+
+                HhGridDisplay1.Receta = cReceta
+                HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
+                HhGridDisplay1.Actualizar()
+            End If
+        End Using
+    End Sub
     Private Sub FormEditorAuto_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         Me.Dispose()
     End Sub
 
     Private Sub FormEditorAuto_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        HhGridDisplay1.Link = mMasterk
-        HhGridDisplay1.DireccionLectura = "DW3000"
-        HhGridDisplay1.DireccionPaso = "DW0050"
+        pPasoLlenado.IdPaso = 19532
+        pPasoLlenado.NombrePaso = "LLENADO"
+        pPasoDesague.IdPaso = 17732
+        pPasoDesague.NombrePaso = "DESAGUE"
+        pPasoRotacion.IdPaso = 20306
+        pPasoRotacion.NombrePaso = "ROTACION"
+        pPasoMantenimiento.IdPaso = 16717
+        pPasoMantenimiento.NombrePaso = "MANTENIMIENTO"
+        pPasoTemperatura.IdPaso = 17748
+        pPasoTemperatura.NombrePaso = "TEMPERATURA"
+        pPasoCentrifuga.IdPaso = 17731
+        pPasoCentrifuga.NombrePaso = "CENTRIFUGA"
+        pPasoAditivos.IdPaso = 17473
+        pPasoAditivos.NombrePaso = "ADITIVOS"
+        pPasoMuestreo.IdPaso = 21837
+        pPasoMuestreo.NombrePaso = "MUESTREO"
+        pPasoFin.IdPaso = 18758
+        pPasoFin.NombrePaso = "FIN"
+
         HhGridDisplay1.LongitudPaso = 10
         HhGridDisplay1.LongitudTexto = 4
         HhGridDisplay1.MostrarSeleccion = True
+        HhGridDisplay1.EscribirPaso = True
         HhGridDisplay1.AutoActualizar = True
 
-        HhNumericEntry1.Link = mMasterk
-        HhNumericEntry1.DireccionLectura = "DW0050"
-        HhNumericEntry1.DireccionEscritura = "DW0050"
         HhNumericEntry1.ValorMaximo = 100
         HhNumericEntry1.ValorMinimo = 1
         HhNumericEntry1.Etiqueta = "Paso #"
-        HhNumericEntry1.AutoActualizar = True
 
-        HhMomentaryButton1.Link = mMasterk
-        HhMomentaryButton1.DireccionEscritura = "MX0027"
         HhMomentaryButton1.Texto = "Fin"
 
-        HhMomentaryButton2.Link = mMasterk
-        HhMomentaryButton2.DireccionEscritura = "MX0031"
         HhMomentaryButton2.Texto = "Insertar"
 
-        HhMomentaryButton3.Link = mMasterk
-        HhMomentaryButton3.DireccionEscritura = "MX0029"
         HhMomentaryButton3.Texto = "Eliminar"
 
-        HhMomentaryButton4.Link = mMasterk
-        HhMomentaryButton4.DireccionEscritura = "MX0076"
         HhMomentaryButton4.Texto = "Envia"
 
-        HhMomentaryButton5.Link = mMasterk
-        HhMomentaryButton5.DireccionEscritura = "MX0028"
         HhMomentaryButton5.Texto = "Nueva"
 
-        Button2.Link = mMasterk
-        Button2.DireccionEscritura = "MX0210"
         Button2.Texto = "Llenado"
 
-        Button3.Link = mMasterk
-        Button3.DireccionEscritura = "MX0213"
         Button3.Texto = "Desague"
 
-        Button5.Link = mMasterk
-        Button5.DireccionEscritura = "MX0211"
         Button5.Texto = "Rotacion"
 
-        Button6.Link = mMasterk
-        Button6.DireccionEscritura = "MX0212"
         Button6.Texto = "Mantenimiento"
 
-        Button7.Link = mMasterk
-        Button7.DireccionEscritura = "MX0214"
         Button7.Texto = "Temperatura"
 
-        Button8.Link = mMasterk
-        Button8.DireccionEscritura = "MX0218"
         Button8.Texto = "Centrifuga"
 
-        Button9.Link = mMasterk
-        Button9.DireccionEscritura = "MX0217"
         Button9.Texto = "Aditivos"
 
-        Button10.Link = mMasterk
-        Button10.DireccionEscritura = "MX0215"
         Button10.Texto = "Muestreo"
 
         Button4.Texto = "Guardar"
@@ -139,64 +552,7 @@ Public Class FormEditorAuto
         Button1.Texto = "Salir"
     End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        Using fForm As New FormDesagueAuto
-            fForm.HhToggleButton1.Link = mMasterk
-            fForm.HhToggleButton1.DireccionEscritura = "MX15"
-            fForm.HhToggleButton1.DireccionLectura = "MX15"
-            fForm.HhToggleButton1.Etiqueta = "Desague 1"
-            fForm.HhToggleButton1.AutoActualizar = True
 
-            fForm.HhToggleButton2.Link = mMasterk
-            fForm.HhToggleButton2.DireccionEscritura = "MX17"
-            fForm.HhToggleButton2.DireccionLectura = "MX17"
-            fForm.HhToggleButton2.Etiqueta = "Rotacion"
-            fForm.HhToggleButton2.AutoActualizar = True
-
-            fForm.HhNumericEntry1.Link = mMasterk
-            fForm.HhNumericEntry1.DireccionEscritura = "DW0147"
-            fForm.HhNumericEntry1.DireccionLectura = "DW0147"
-            fForm.HhNumericEntry1.Unidades = "seg"
-            fForm.HhNumericEntry1.Etiqueta = "Tiempo"
-            fForm.HhNumericEntry1.Tooltip = "Tiempo|(Segundos)"
-            fForm.HhNumericEntry1.ValorMinimo = 0
-            fForm.HhNumericEntry1.ValorMaximo = 300
-            fForm.HhNumericEntry1.AutoActualizar = True
-
-            fForm.HhMomentaryButton1.Link = mMasterk
-            fForm.HhMomentaryButton1.DireccionEscritura = "MX23"
-            fForm.HhMomentaryButton1.Texto = "Aceptar"
-
-            fForm.Button1.Texto = "Cancelar"
-
-            fForm.ShowDialog()
-        End Using
-        HhGridDisplay1.AutoActualizar = False
-        HhGridDisplay1.Inicializar()
-        HhGridDisplay1.AutoActualizar = True
-    End Sub
-    Private Sub HhMomentaryButton2_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HhMomentaryButton2.MouseDown
-        'HhGridDisplay1.AutoActualizar = False
-    End Sub
-
-    Private Sub HhMomentaryButton2_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HhMomentaryButton2.MouseUp
-        'Do
-        'Application.DoEvents()
-        'Loop Until mMasterk.ObtenerBoolean("MX0030") = False
-        'HhGridDisplay1.Inicializar()
-        HhGridDisplay1.AutoActualizar = True
-    End Sub
-    Private Sub HhMomentaryButton3_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HhMomentaryButton3.MouseDown
-        'HhGridDisplay1.AutoActualizar = False
-    End Sub
-
-    Private Sub HhMomentaryButton3_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HhMomentaryButton3.MouseUp
-        'Do
-        'Application.DoEvents()
-        'Loop Until mMasterk.ObtenerBoolean("MX0040") = False
-        'HhGridDisplay1.Inicializar()
-        'HhGridDisplay1.AutoActualizar = True
-    End Sub
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         Dim bSalir As Boolean
         Dim bCancelar As Boolean
@@ -213,15 +569,11 @@ Public Class FormEditorAuto
             HhDialogoArchivos1.Extension = "*.REC"
             HhDialogoArchivos1.Longitud = 20
             HhDialogoArchivos1.ShowDialog()
-            Debug.Print(HhDialogoArchivos1.ToString)
             If HhDialogoArchivos1.Resultado = Windows.Forms.DialogResult.Cancel Then
-                Debug.Print("Cancelar guardar")
                 bSalir = True
             Else
-                Debug.Print("Comprobar nombre vacio")
                 If Len(HhDialogoArchivos1.NombreCompleto) >= Len(HhDialogoArchivos1.Extension) Then
                     Try
-                        Debug.Print("Revisar si existe archivo")
                         bArchivoExiste = False
                         If My.Computer.FileSystem.FileExists(HhDialogoArchivos1.NombreCompleto) Then
                             bArchivoExiste = True
@@ -231,7 +583,6 @@ Public Class FormEditorAuto
                         Exit Sub
                     End Try
                     If bArchivoExiste Then
-                        Debug.Print("Preguntar si sobreescribir")
                         Using m As New hhMsgBox.hhMsgBox
                             m.Mensaje = "Sobreescribir archivo existente?"
                             m.Tamanio = 50
@@ -249,7 +600,6 @@ Public Class FormEditorAuto
                     End If
                     If Not bCancelar Then
                         Try
-                            Debug.Print("Guardar archivo")
                             Dim fs As New System.IO.FileStream(HhDialogoArchivos1.NombreCompleto, IO.FileMode.OpenOrCreate)
                             bf.Serialize(fs, HhGridDisplay1.Receta)
                             fs.Close()
@@ -262,192 +612,6 @@ Public Class FormEditorAuto
             End If
         End While
     End Sub
-
-
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
-        Using fForm As New FormRotacionAuto
-            fForm.HhNumericEntry3.Link = mMasterk
-            fForm.HhNumericEntry3.Unidades = "rev"
-            fForm.HhNumericEntry3.Etiqueta = "Giros"
-            fForm.HhNumericEntry3.Tooltip = "Cantidad de giros"
-            fForm.HhNumericEntry3.DireccionEscritura = "DW0123"
-            fForm.HhNumericEntry3.DireccionLectura = "DW0123"
-            fForm.HhNumericEntry3.ValorMinimo = 1
-            fForm.HhNumericEntry3.ValorMaximo = 1000
-            fForm.HhNumericEntry3.AutoActualizar = True
-
-            fForm.HhNumericEntry2.Link = mMasterk
-            fForm.HhNumericEntry2.Unidades = "seg"
-            fForm.HhNumericEntry2.Etiqueta = "Pausa"
-            fForm.HhNumericEntry2.Tooltip = "Tiempo de pausa|(Segundos)"
-            fForm.HhNumericEntry2.DireccionEscritura = "DW0127"
-            fForm.HhNumericEntry2.DireccionLectura = "DW0127"
-            fForm.HhNumericEntry2.ValorMinimo = 1
-            fForm.HhNumericEntry2.ValorMaximo = 60
-            fForm.HhNumericEntry2.AutoActualizar = True
-
-            fForm.HhNumericEntry1.Link = mMasterk
-            fForm.HhNumericEntry1.Unidades = "rpm"
-            fForm.HhNumericEntry1.Etiqueta = "Velocidad"
-            fForm.HhNumericEntry1.Tooltip = "Velocidad de rotacion|(rpm)"
-            fForm.HhNumericEntry1.DireccionEscritura = "DW0126"
-            fForm.HhNumericEntry1.DireccionLectura = "DW0126"
-            fForm.HhNumericEntry1.ValorMinimo = 0
-            '--cambiar
-            fForm.HhNumericEntry1.ValorMaximo = 2000
-            fForm.HhNumericEntry1.AutoActualizar = True
-
-            fForm.HhMomentaryButton1.Link = mMasterk
-            fForm.HhMomentaryButton1.DireccionEscritura = "MX21"
-            fForm.HhMomentaryButton1.Texto = "Aceptar"
-
-            fForm.Button1.Texto = "Cancelar"
-
-            fForm.ShowDialog()
-        End Using
-        HhGridDisplay1.AutoActualizar = False
-        HhGridDisplay1.Inicializar()
-        HhGridDisplay1.AutoActualizar = True
-
-
-    End Sub
-
-    Private Sub HhMomentaryButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton1.Click
-        'boton fin
-
-        HhGridDisplay1.AutoActualizar = False
-        HhGridDisplay1.Inicializar()
-        HhGridDisplay1.AutoActualizar = True
-
-    End Sub
-
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-        Using fForm As New FormMantenimientoManual
-            fForm.HhToggleButton1.Link = mMasterk
-            fForm.HhToggleButton1.Etiqueta = "Temperatura constante"
-            fForm.HhToggleButton1.DireccionLectura = "MX14"
-            fForm.HhToggleButton1.DireccionEscritura = "MX14"
-            fForm.HhToggleButton1.AutoActualizar = True
-
-            fForm.HhNumericEntry1.Link = mMasterk
-            fForm.HhNumericEntry1.Unidades = "min"
-            fForm.HhNumericEntry1.Etiqueta = "Tiempo"
-            fForm.HhNumericEntry1.Tooltip = "Tiempo de trabajo|(Minutos)"
-            fForm.HhNumericEntry1.DireccionLectura = "DW0198"
-            fForm.HhNumericEntry1.DireccionEscritura = "DW0198"
-            fForm.HhNumericEntry1.ValorMinimo = 0
-            fForm.HhNumericEntry1.ValorMaximo = 600
-            fForm.HhNumericEntry1.AutoActualizar = True
-
-
-            fForm.HhNumericEntry2.Link = mMasterk
-            fForm.HhNumericEntry2.Unidades = "°C"
-            fForm.HhNumericEntry2.Etiqueta = "Temperatura"
-            fForm.HhNumericEntry2.Tooltip = "Temperatura|(°C)"
-            fForm.HhNumericEntry2.DireccionEscritura = "DW0194"
-            fForm.HhNumericEntry2.DireccionLectura = "DW0194"
-            fForm.HhNumericEntry2.ValorMinimo = 0
-            fForm.HhNumericEntry2.ValorMaximo = 100
-            fForm.HhNumericEntry2.AutoActualizar = True
-
-            fForm.HhMomentaryButton1.Link = mMasterk
-            fForm.HhMomentaryButton1.DireccionEscritura = "MX22"
-            fForm.HhMomentaryButton1.Texto = "Aceptar"
-
-            fForm.Button1.Texto = "Cancelar"
-
-            fForm.ShowDialog()
-        End Using
-        HhGridDisplay1.AutoActualizar = False
-        HhGridDisplay1.Inicializar()
-        HhGridDisplay1.AutoActualizar = True
-
-    End Sub
-
-    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
-        Using fForm As New FormCalefaccionManual
-            fForm.HhNumericEntry1.Link = mMasterk
-            fForm.HhNumericEntry1.DireccionEscritura = "DW0184"
-            fForm.HhNumericEntry1.DireccionLectura = "DW0184"
-            fForm.HhNumericEntry1.Unidades = "°C"
-            fForm.HhNumericEntry1.Etiqueta = "Temperatura final"
-            fForm.HhNumericEntry1.Tooltip = "Temperatura final|(°C)"
-            fForm.HhNumericEntry1.ValorMinimo = 0
-            fForm.HhNumericEntry1.ValorMaximo = 100
-            fForm.HhNumericEntry1.AutoActualizar = True
-
-            fForm.HhToggleButton1.Link = mMasterk
-            fForm.HhToggleButton1.DireccionEscritura = "MX16"
-            fForm.HhToggleButton1.DireccionLectura = "MX16"
-            fForm.HhToggleButton1.Etiqueta = "Con rotacion"
-            fForm.HhToggleButton1.AutoActualizar = True
-
-            fForm.HhNumericEntry2.Link = mMasterk
-            fForm.HhNumericEntry2.DireccionEscritura = "DW0183"
-            fForm.HhNumericEntry2.DireccionLectura = "DW0183"
-            fForm.HhNumericEntry2.Unidades = "°C/min"
-            fForm.HhNumericEntry2.Etiqueta = "Gradiente"
-            fForm.HhNumericEntry2.Tooltip = "Gradiente de temp.|(°C/min)"
-            fForm.HhNumericEntry2.ValorMinimo = 0
-            fForm.HhNumericEntry2.ValorMaximo = 100
-            fForm.HhNumericEntry2.AutoActualizar = True
-
-            fForm.HhToggleButton2.Link = mMasterk
-            fForm.HhToggleButton2.DireccionEscritura = "MX19"
-            fForm.HhToggleButton2.DireccionLectura = "MX19"
-            fForm.HhToggleButton2.Etiqueta = "Con gradiente"
-            fForm.HhToggleButton2.AutoActualizar = True
-
-            fForm.HhMomentaryButton1.Link = mMasterk
-            fForm.HhMomentaryButton1.DireccionEscritura = "MX25"
-            fForm.HhMomentaryButton1.Texto = "Aceptar"
-
-            fForm.Button1.Texto = "Cancelar"
-
-            fForm.ShowDialog()
-        End Using
-        HhGridDisplay1.AutoActualizar = False
-        HhGridDisplay1.Inicializar()
-        HhGridDisplay1.AutoActualizar = True
-
-
-    End Sub
-
-    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
-        Using fForm As New FormCentrifugaAuto
-            fForm.HhNumericEntry1.Link = mMasterk
-            fForm.HhNumericEntry1.DireccionEscritura = "DW0116"
-            fForm.HhNumericEntry1.DireccionLectura = "DW0116"
-            fForm.HhNumericEntry1.Unidades = "rpm"
-            fForm.HhNumericEntry1.Etiqueta = "Velocidad"
-            fForm.HhNumericEntry1.Tooltip = "Velocidad|(rpm)"
-            fForm.HhNumericEntry1.ValorMinimo = 0
-            fForm.HhNumericEntry1.ValorMaximo = 3000
-            fForm.HhNumericEntry1.AutoActualizar = True
-
-            fForm.HhNumericEntry2.Link = mMasterk
-            fForm.HhNumericEntry2.DireccionEscritura = "DW0118"
-            fForm.HhNumericEntry2.DireccionLectura = "DW0118"
-            fForm.HhNumericEntry2.Unidades = "min"
-            fForm.HhNumericEntry2.Etiqueta = "Tiempo"
-            fForm.HhNumericEntry2.Tooltip = "Tiempo|(Minutos)"
-            fForm.HhNumericEntry2.ValorMinimo = 0
-            fForm.HhNumericEntry2.ValorMaximo = 120
-            fForm.HhNumericEntry2.AutoActualizar = True
-
-            fForm.HhMomentaryButton1.Link = mMasterk
-            fForm.HhMomentaryButton1.DireccionEscritura = "MX74"
-            fForm.HhMomentaryButton1.Texto = "Aceptar"
-
-            fForm.Button1.Texto = "Cancelar"
-
-            fForm.ShowDialog()
-        End Using
-        HhGridDisplay1.AutoActualizar = False
-        HhGridDisplay1.Inicializar()
-        HhGridDisplay1.AutoActualizar = True
-    End Sub
-
     Private Sub HhGridDisplay1_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles HhGridDisplay1.CellClick
         Dim iValor As Integer
         iValor = e.RowIndex
@@ -456,92 +620,48 @@ Public Class FormEditorAuto
             mMasterk.EstablecerEntero("DW50", iValor)
         End If
     End Sub
-
-    Private Sub HhGridDisplay1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles HhGridDisplay1.CellContentClick
-
-    End Sub
-
-    Private Sub HhGridDisplay1_SelectionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhGridDisplay1.SelectionChanged
-
-    End Sub
-
-    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
-        Using fForm As New FormAditivosAuto
-                  fForm.HhNumericEntry1.Link = mMasterk
-            fForm.HhNumericEntry1.DireccionEscritura = "DW0153"
-            fForm.HhNumericEntry1.DireccionLectura = "DW0153"
-            fForm.HhNumericEntry1.Etiqueta = "Enjuagues"
-            fForm.HhNumericEntry1.ValorMinimo = 1
-            fForm.HhNumericEntry1.ValorMaximo = 10
-            fForm.HhNumericEntry1.AutoActualizar = True
-
-            fForm.HhToggleButton1.Link = mMasterk
-            fForm.HhToggleButton1.DireccionEscritura = "MX18"
-            fForm.HhToggleButton1.DireccionLectura = "MX18"
-            fForm.HhToggleButton1.Etiqueta = "Cubeta 1"
-            fForm.HhToggleButton1.AutoActualizar = True
-
-            fForm.HhToggleButton2.Link = mMasterk
-            fForm.HhToggleButton2.DireccionEscritura = "MX1A"
-            fForm.HhToggleButton2.DireccionLectura = "MX1A"
-            fForm.HhToggleButton2.Etiqueta = "A la izquierda"
-            fForm.HhToggleButton2.AutoActualizar = True
-
-            fForm.HhToggleButton3.Link = mMasterk
-            fForm.HhToggleButton3.DireccionEscritura = "MX1B"
-            fForm.HhToggleButton3.DireccionLectura = "MX1B"
-            fForm.HhToggleButton3.Etiqueta = "A la derecha"
-            fForm.HhToggleButton3.AutoActualizar = True
-
-            fForm.HhMomentaryButton1.Link = mMasterk
-            fForm.HhMomentaryButton1.DireccionEscritura = "MX24"
-            fForm.HhMomentaryButton1.Texto = "Aceptar"
-
-            fForm.Button1.Texto = "Cancelar"
-
-            fForm.ShowDialog()
-        End Using
-        HhGridDisplay1.AutoActualizar = False
-        HhGridDisplay1.Inicializar()
-        HhGridDisplay1.AutoActualizar = True
-
-
-    End Sub
-
-    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
-        Using fForm As New FormMuestreoAuto
-            fForm.HhMomentaryButton1.Link = mMasterk
-            fForm.HhMomentaryButton1.DireccionEscritura = "MX26"
-            fForm.HhMomentaryButton1.Texto = "Aceptar"
-
-            fForm.Button1.Texto = "Cancelar"
-
-            fForm.ShowDialog()
-        End Using
-        HhGridDisplay1.AutoActualizar = False
-        HhGridDisplay1.Inicializar()
-        HhGridDisplay1.AutoActualizar = True
-    End Sub
-
     Private Sub HhMomentaryButton4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton4.Click
         DialogResult = DialogResult.OK
     End Sub
 
     Private Sub HhMomentaryButton5_Click(sender As Object, e As EventArgs) Handles HhMomentaryButton5.Click
-        HhGridDisplay1.AutoActualizar = False
-        HhGridDisplay1.Inicializar()
-        HhGridDisplay1.AutoActualizar = True
+        Dim iIter As Integer
+        Dim cReceta As New Collection
+        Dim pPaso As New LavadoraLib.Receta.Paso
+        For iIter = 1 To 100
+            cReceta.Add(pPaso)
+        Next iIter
+        HhGridDisplay1.Receta = cReceta
+        HhGridDisplay1.PasoActual = 1
     End Sub
 
     Private Sub HhMomentaryButton2_Click(sender As Object, e As EventArgs) Handles HhMomentaryButton2.Click
-        HhGridDisplay1.AutoActualizar = False
-        HhGridDisplay1.Inicializar()
-        HhGridDisplay1.AutoActualizar = True
+        Dim iContador As Integer
+        Dim pPaso As New LavadoraLib.Receta.Paso
+        Dim pPasoEnBlanco As New LavadoraLib.Receta.Paso
+        Dim cReceta As New Collection
+        iContador = 1
+        For Each pPaso In HhGridDisplay1.Receta
+            If iContador = HhGridDisplay1.PasoActual Then
+                cReceta.Add(pPasoEnBlanco)
+            End If
+            cReceta.Add(pPaso)
+            iContador = iContador + 1
+        Next pPaso
+        HhGridDisplay1.Receta = cReceta
     End Sub
 
     Private Sub HhMomentaryButton3_Click(sender As Object, e As EventArgs) Handles HhMomentaryButton3.Click
-        HhGridDisplay1.AutoActualizar = False
-        HhGridDisplay1.Inicializar()
-        HhGridDisplay1.AutoActualizar = True
+        Dim iContador As Integer
+        Dim pPaso As New LavadoraLib.Receta.Paso
+        Dim cReceta As New Collection
+        iContador = 1
+        For Each pPaso In HhGridDisplay1.Receta
+            If iContador <> HhGridDisplay1.PasoActual Then
+                cReceta.Add(pPaso)
+            End If
+            iContador = iContador + 1
+        Next pPaso
+        HhGridDisplay1.Receta = cReceta
     End Sub
 End Class

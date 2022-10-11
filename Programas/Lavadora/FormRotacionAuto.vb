@@ -17,6 +17,7 @@ Public Class FormRotacionAuto
 
 
     Private Sub HhMomentaryButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton1.Click
+        DialogResult = vbOK
         UnAttach(Me)
         Me.Close()
     End Sub

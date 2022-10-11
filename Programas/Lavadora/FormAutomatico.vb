@@ -104,8 +104,9 @@ Public Class FormAutomatico
         HhGridDisplay1.LongitudPaso = 10
         HhGridDisplay1.LongitudTexto = 4
         HhGridDisplay1.MostrarSeleccion = True
-        HhGridDisplay1.Inicializar()
+        HhGridDisplay1.EscribirPaso = False
         HhGridDisplay1.AutoActualizar = True
+        HhGridDisplay1.RecibirReceta()
     End Sub
     Private Sub HhNumericDisplay6_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhNumericDisplay6.TextChanged
         HhNumericDisplay6.ValorMaximo = Val(HhNumericDisplay6.Text)
@@ -170,6 +171,8 @@ Public Class FormAutomatico
                 Catch ex As Exception
                 Finally
                     HhGridDisplay1.Receta = cPasos
+                    HhGridDisplay1.EnviarReceta()
+                    HhGridDisplay1.Actualizar()
                 End Try
                 fs.Close()
             End If
@@ -248,8 +251,12 @@ Public Class FormAutomatico
         If bPasswordOk Then
             Using f As New FormEditorAuto
                 f.HhGridDisplay1.Receta = HhGridDisplay1.Receta
+                f.HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual
+                f.HhGridDisplay1.Actualizar()
                 If f.ShowDialog() = DialogResult.OK Then
-                    HhGridDisplay1.Inicializar()
+                    HhGridDisplay1.Receta = f.HhGridDisplay1.Receta
+                    HhGridDisplay1.Actualizar()
+                    HhGridDisplay1.EnviarReceta()
                 End If
             End Using
         End If

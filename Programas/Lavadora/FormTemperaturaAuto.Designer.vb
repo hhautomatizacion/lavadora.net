@@ -1,5 +1,5 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormCalefaccionManual
+Partial Class FormTemperaturaAuto
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -19,7 +19,7 @@ Partial Class FormCalefaccionManual
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormCalefaccionManual))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormTemperaturaAuto))
         Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry()
         Me.HhToggleButton1 = New hhToggleButton.hhToggleButton()
         Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry()

@@ -237,7 +237,7 @@ Public Class FormManual
     End Sub
 
     Private Sub HhMomentaryButton5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton5.Click
-        Using fForm As New FormCalefaccionManual
+        Using fForm As New FormTemperaturaAuto
             fForm.HhNumericEntry1.Link = mMasterk
             fForm.HhNumericEntry1.DireccionEscritura = "DW0184"
             fForm.HhNumericEntry1.DireccionLectura = "DW0184"
@@ -280,7 +280,7 @@ Public Class FormManual
     End Sub
 
     Private Sub HhMomentaryButton4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton4.Click
-        Using fForm As New FormMantenimientoManual
+        Using fForm As New FormMantenimientoAuto
             fForm.HhToggleButton1.Link = mMasterk
             fForm.HhToggleButton1.Etiqueta = "Temperatura constante"
             fForm.HhToggleButton1.DireccionLectura = "MX1714"

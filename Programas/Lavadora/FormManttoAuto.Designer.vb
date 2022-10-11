@@ -1,5 +1,5 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormMantenimientoManual
+Partial Class FormMantenimientoAuto
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -19,7 +19,7 @@ Partial Class FormMantenimientoManual
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMantenimientoManual))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMantenimientoAuto))
         Me.Button1 = New hhMomentaryButton.hhMomentaryButton()
         Me.HhToggleButton1 = New hhToggleButton.hhToggleButton()
         Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton()
@@ -34,14 +34,15 @@ Partial Class FormMantenimientoManual
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
-        Me.Button1.Location = New System.Drawing.Point(258, 473)
+        Me.Button1.Location = New System.Drawing.Point(344, 582)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 90)
+        Me.Button1.Size = New System.Drawing.Size(133, 111)
         Me.Button1.TabIndex = 0
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button1.Texto = Nothing
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -53,11 +54,12 @@ Partial Class FormMantenimientoManual
         Me.HhToggleButton1.DireccionEscritura = Nothing
         Me.HhToggleButton1.DireccionLectura = Nothing
         Me.HhToggleButton1.Etiqueta = Nothing
-        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.HhToggleButton1.Link = Nothing
-        Me.HhToggleButton1.Location = New System.Drawing.Point(207, 11)
+        Me.HhToggleButton1.Location = New System.Drawing.Point(276, 14)
+        Me.HhToggleButton1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.HhToggleButton1.Name = "HhToggleButton1"
-        Me.HhToggleButton1.Size = New System.Drawing.Size(45, 45)
+        Me.HhToggleButton1.Size = New System.Drawing.Size(60, 55)
         Me.HhToggleButton1.TabIndex = 5
         Me.HhToggleButton1.Tooltip = Nothing
         Me.HhToggleButton1.UseVisualStyleBackColor = True
@@ -69,14 +71,15 @@ Partial Class FormMantenimientoManual
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
-        Me.HhMomentaryButton1.Location = New System.Drawing.Point(152, 473)
+        Me.HhMomentaryButton1.Location = New System.Drawing.Point(203, 582)
+        Me.HhMomentaryButton1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.HhMomentaryButton1.Name = "HhMomentaryButton1"
-        Me.HhMomentaryButton1.Size = New System.Drawing.Size(100, 90)
+        Me.HhMomentaryButton1.Size = New System.Drawing.Size(133, 111)
         Me.HhMomentaryButton1.TabIndex = 7
-        Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton1.Texto = Nothing
         Me.HhMomentaryButton1.UseVisualStyleBackColor = True
         '
@@ -91,11 +94,12 @@ Partial Class FormMantenimientoManual
         Me.HhNumericEntry2.DireccionLectura = Nothing
         Me.HhNumericEntry2.Etiqueta = Nothing
         Me.HhNumericEntry2.Factor = 1.0!
-        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhNumericEntry2.Link = Nothing
-        Me.HhNumericEntry2.Location = New System.Drawing.Point(208, 108)
+        Me.HhNumericEntry2.Location = New System.Drawing.Point(277, 133)
+        Me.HhNumericEntry2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.HhNumericEntry2.Name = "HhNumericEntry2"
-        Me.HhNumericEntry2.Size = New System.Drawing.Size(150, 40)
+        Me.HhNumericEntry2.Size = New System.Drawing.Size(199, 49)
         Me.HhNumericEntry2.TabIndex = 11
         Me.HhNumericEntry2.Text = "0"
         Me.HhNumericEntry2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -116,11 +120,12 @@ Partial Class FormMantenimientoManual
         Me.HhNumericEntry1.DireccionLectura = Nothing
         Me.HhNumericEntry1.Etiqueta = Nothing
         Me.HhNumericEntry1.Factor = 1.0!
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhNumericEntry1.Link = Nothing
-        Me.HhNumericEntry1.Location = New System.Drawing.Point(208, 62)
+        Me.HhNumericEntry1.Location = New System.Drawing.Point(277, 76)
+        Me.HhNumericEntry1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
-        Me.HhNumericEntry1.Size = New System.Drawing.Size(150, 40)
+        Me.HhNumericEntry1.Size = New System.Drawing.Size(199, 49)
         Me.HhNumericEntry1.TabIndex = 1
         Me.HhNumericEntry1.Text = "0"
         Me.HhNumericEntry1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -132,9 +137,9 @@ Partial Class FormMantenimientoManual
         '
         'FormMantenimientoManual
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(370, 575)
+        Me.ClientSize = New System.Drawing.Size(493, 708)
         Me.Controls.Add(Me.HhNumericEntry2)
         Me.Controls.Add(Me.HhMomentaryButton1)
         Me.Controls.Add(Me.HhToggleButton1)
@@ -142,6 +147,7 @@ Partial Class FormMantenimientoManual
         Me.Controls.Add(Me.Button1)
         Me.Cursor = System.Windows.Forms.Cursors.Cross
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FormMantenimientoManual"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Form7"

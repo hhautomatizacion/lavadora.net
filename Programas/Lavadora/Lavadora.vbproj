@@ -74,6 +74,9 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BitManipulation">
+      <HintPath>..\..\..\masterklib\Programas\BitManipulation\BitManipulation\bin\Debug\BitManipulation.dll</HintPath>
+    </Reference>
     <Reference Include="hhAnimacion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\masterklib\Programas\hhAnimacion\hhAnimacion\lib\hhAnimacion.dll</HintPath>
@@ -87,7 +90,7 @@
     </Reference>
     <Reference Include="hhCharacterEntry, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\masterklib\Programas\hhCharacterEntry\hhCharacterEntry\lib\hhCharacterEntry.dll</HintPath>
+      <HintPath>..\..\..\masterklib\Programas\hhCharacterEntry\hhCharacterEntry\bin\Debug\hhCharacterEntry.dll</HintPath>
     </Reference>
     <Reference Include="hhComboEntry, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -138,9 +141,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\masterklib\Programas\hhWordRegister\hhWordRegister\lib\hhWordRegister.dll</HintPath>
     </Reference>
+    <Reference Include="LavadoraLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\masterklib\Programas\LavadoraLib\LavadoraLib\bin\Debug\LavadoraLib.dll</HintPath>
+    </Reference>
     <Reference Include="MasterKlib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\masterklib\Programas\masterklib\masterklib\bin\Debug\MasterKlib.dll</HintPath>
+      <HintPath>..\..\..\masterklib\Programas\masterklib\masterklib\bin\Debug\MasterKlib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -226,6 +233,12 @@
     <Compile Include="FormEditorAuto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormFinAuto.Designer.vb">
+      <DependentUpon>FormFinAuto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormFinAuto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormLavadora.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -239,10 +252,10 @@
     <Compile Include="FormConfigura.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCalefaccionAuto.Designer.vb">
-      <DependentUpon>FormCalefaccionAuto.vb</DependentUpon>
+    <Compile Include="FormTemperaturaAuto.Designer.vb">
+      <DependentUpon>FormTemperaturaAuto.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormCalefaccionAuto.vb">
+    <Compile Include="FormTemperaturaAuto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormManttoAuto.Designer.vb">
@@ -372,6 +385,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>FormEditorAuto.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormFinAuto.resx">
+      <DependentUpon>FormFinAuto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLavadora.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormLavadora.vb</DependentUpon>
@@ -380,9 +396,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>FormConfigura.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCalefaccionAuto.resx">
+    <EmbeddedResource Include="FormTemperaturaAuto.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>FormCalefaccionAuto.vb</DependentUpon>
+      <DependentUpon>FormTemperaturaAuto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormManttoAuto.resx">
       <SubType>Designer</SubType>
