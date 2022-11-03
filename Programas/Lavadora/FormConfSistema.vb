@@ -1,14 +1,14 @@
 Public Class FormConfSistema
     Private Sub FormConfSistema_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        HhToggleButton1.Etiqueta = "Auto-iniciar"
+        'HhToggleButton1.Etiqueta = "Auto-iniciar"
         If My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True).GetValue(Application.ProductName, "") = "" Then
             HhToggleButton1.Checked = False
         Else
             HhToggleButton1.Checked = True
         End If
-        HhToggleButton2.Etiqueta = "PermiteSalir"
+        'HhToggleButton2.Etiqueta = "PermiteSalir"
         HhToggleButton2.Checked = bPermitirSalir
-        HhToggleButton3.Etiqueta = "Depuracion"
+        'HhToggleButton3.Etiqueta = "Depuracion"
         HhToggleButton3.Checked = bDepuracion
 
         For Each sPuertoSerie As String In My.Computer.Ports.SerialPortNames
@@ -145,4 +145,7 @@ Public Class FormConfSistema
         bPermitirSalir = HhToggleButton2.Checked
     End Sub
 
+    Private Sub HhToggleButton3_CheckedChanged(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

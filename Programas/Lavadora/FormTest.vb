@@ -39,6 +39,8 @@ Public Class FormTest
         HhToggleButton29.Link = mMasterk
         HhToggleButton30.Link = mMasterk
         HhToggleButton31.Link = mMasterk
+        HhToggleButton32.Link = mMasterk
+        HhToggleButton33.Link = mMasterk
 
         HhToggleButton1.DireccionLectura = "PX05"
         HhToggleButton2.DireccionLectura = "PX06"
@@ -71,6 +73,8 @@ Public Class FormTest
         HhToggleButton29.DireccionLectura = "PX4B"
         HhToggleButton30.DireccionLectura = "PX4C"
         HhToggleButton31.DireccionLectura = "PX4D"
+        HhToggleButton32.DireccionLectura = "PX4E"
+        HhToggleButton33.DireccionLectura = "PX4F"
 
         HhToggleButton1.DireccionEscritura = "PX05"
         HhToggleButton2.DireccionEscritura = "PX06"
@@ -103,6 +107,8 @@ Public Class FormTest
         HhToggleButton29.DireccionEscritura = "MX14B"
         HhToggleButton30.DireccionEscritura = "MX14C"
         HhToggleButton31.DireccionEscritura = "MX14D"
+        HhToggleButton32.DireccionEscritura = "MX14E"
+        HhToggleButton33.DireccionEscritura = "MX14F"
 
         HhToggleButton1.Tooltip = "Paro emergencia|P05 - 101 (NC)"
         HhToggleButton2.Tooltip = "Start|P06 - 102"
@@ -135,40 +141,78 @@ Public Class FormTest
         HhToggleButton29.Tooltip = "Enjuague cubeta|P4B - 3002"
         HhToggleButton30.Tooltip = "Unidad hidraulica|P4C - 3005"
         HhToggleButton31.Tooltip = "Torreta|P4D - 3006"
+        HhToggleButton32.Tooltip = "Bomba jet|P4E"
+        HhToggleButton33.Tooltip = "Valvula jet|P4F"
 
-        HhToggleButton1.Etiqueta = "Emergencia OK"
-        HhToggleButton2.Etiqueta = "Start"
-        HhToggleButton3.Etiqueta = "Termico OK"
-        HhToggleButton4.Etiqueta = "Variador OK"
-        HhToggleButton5.Etiqueta = "Velocidad minima"
-        HhToggleButton6.Etiqueta = "Puerta abierta"
-        HhToggleButton7.Etiqueta = "Puerta cerrada"
-        HhToggleButton8.Etiqueta = "Sonda medio"
-        HhToggleButton9.Etiqueta = "Sonda bajo"
-        HhToggleButton10.Etiqueta = "Sensor cesto"
-        HhToggleButton11.Etiqueta = "Cuentalitros"
-        HhToggleButton12.Etiqueta = "Maq. arriba"
-        HhToggleButton13.Etiqueta = "Maq. horizontal"
-        HhToggleButton14.Etiqueta = "Maq. abajo"
-        HhToggleButton15.Etiqueta = "Intro quimicos"
-        HhToggleButton16.Etiqueta = "Enjuague quim."
-        HhToggleButton17.Etiqueta = "Sonda quimicos"
+        HhLabel1.Tooltip = "Paro emergencia|P05 - 101 (NC)"
+        HhLabel2.Tooltip = "Start|P06 - 102"
+        HhLabel3.Tooltip = "Termico motor|P07 - 104 (NC)"
+        HhLabel4.Tooltip = "Alarma variador|P08 - 105 (NC)"
+        HhLabel5.Tooltip = "Velocidad minima|P09 - 106"
+        HhLabel6.Tooltip = "Puerta abierta|P0A - 107"
+        HhLabel7.Tooltip = "Puerta cerrada|P0B - 108"
+        HhLabel8.Tooltip = "Sonda nivel medio|P0C - 202"
+        HhLabel9.Tooltip = "Sonda nivel bajo|P0D - 203"
+        HhLabel10.Tooltip = "Sensor cesto|P04 - 204"
+        HhLabel11.Tooltip = "Cuentalitros|P00 - 205"
+        HhLabel12.Tooltip = "Maquina arriba|P0E - 206"
+        HhLabel13.Tooltip = "Maquina horizontal|P0F - 207"
+        HhLabel14.Tooltip = "Maquina abajo|P10 - 208"
+        HhLabel15.Tooltip = "Introducir quimicos|P11 - 303"
+        HhLabel16.Tooltip = "Enjuague quimicos|P12 - 304"
+        HhLabel17.Tooltip = "Sonda nivel quimicos|P13 - 307"
+        HhLabel18.Tooltip = "Start|P40 - 1001"
+        HhLabel19.Tooltip = "Desague|P41 - 1003"
+        HhLabel20.Tooltip = "Agua fria|P42 - 1004"
+        HhLabel21.Tooltip = "Agua caliente|P43 - 1005"
+        HhLabel22.Tooltip = "Agua tratada|P44"
+        HhLabel23.Tooltip = "Vapor|P45 - 1007"
+        HhLabel24.Tooltip = "Abrir puerta|P46 - 1008"
+        HhLabel25.Tooltip = "Cerrar puerta|P47 - 2001"
+        HhLabel26.Tooltip = "Seguros puerta|P48 - 2002"
+        HhLabel27.Tooltip = "Bajar maquina|P49 - 2006"
+        HhLabel28.Tooltip = "Bomba cubeta|P4A - 3001"
+        HhLabel29.Tooltip = "Enjuague cubeta|P4B - 3002"
+        HhLabel30.Tooltip = "Unidad hidraulica|P4C - 3005"
+        HhLabel31.Tooltip = "Torreta|P4D - 3006"
+        hhlabel32.Tooltip = "Bomba jet|P4E"
+        hhlabel33.Tooltip = "Valvula jet|P4F"
 
-        HhToggleButton18.Etiqueta = "Start"
-        HhToggleButton19.Etiqueta = "Desague"
-        HhToggleButton20.Etiqueta = "Agua fria"
-        HhToggleButton21.Etiqueta = "Agua caliente"
-        HhToggleButton22.Etiqueta = "Agua tratada"
-        HhToggleButton23.Etiqueta = "Vapor"
-        HhToggleButton24.Etiqueta = "Abrir puerta"
-        HhToggleButton25.Etiqueta = "Cerrar puerta"
-        HhToggleButton26.Etiqueta = "Libera seguros"
-        HhToggleButton27.Etiqueta = "Bajar maquina"
-        HhToggleButton28.Etiqueta = "Bomba quimicos"
-        HhToggleButton29.Etiqueta = "Enjuague quim."
-        HhToggleButton30.Etiqueta = "Volquete"
-        HhToggleButton31.Etiqueta = "Torreta"
 
+        HhLabel1.Texto = "Emergencia OK"
+        HhLabel2.Texto = "Start"
+        HhLabel3.Texto = "Termico OK"
+        HhLabel4.Texto = "Variador OK"
+        HhLabel5.Texto = "Velocidad minima"
+        HhLabel6.Texto = "Puerta abierta"
+        HhLabel7.Texto = "Puerta cerrada"
+        HhLabel8.Texto = "Sonda medio"
+        HhLabel9.Texto = "Sonda bajo"
+        HhLabel10.Texto = "Sensor cesto"
+        HhLabel11.Texto = "Cuentalitros"
+        HhLabel12.Texto = "Maq. arriba"
+        HhLabel13.Texto = "Maq. horizontal"
+        HhLabel14.Texto = "Maq. abajo"
+        HhLabel15.Texto = "Intro quimicos"
+        HhLabel16.Texto = "Enjuague quim."
+        HhLabel17.Texto = "Sonda quimicos"
+
+        HhLabel18.Texto = "Start"
+        HhLabel19.Texto = "Desague"
+        HhLabel20.Texto = "Agua fria"
+        HhLabel21.Texto = "Agua caliente"
+        HhLabel22.Texto = "Agua tratada"
+        HhLabel23.Texto = "Vapor"
+        HhLabel24.Texto = "Abrir puerta"
+        HhLabel25.Texto = "Cerrar puerta"
+        HhLabel26.Texto = "Libera seguros"
+        HhLabel27.Texto = "Bajar maquina"
+        HhLabel28.Texto = "Bomba quimicos"
+        HhLabel29.Texto = "Enjuague quim."
+        HhLabel30.Texto = "Volquete"
+        HhLabel31.Texto = "Torreta"
+        HhLabel32.Texto = "Bomba jet"
+        HhLabel33.Texto = "Valvula jet"
 
         HhToggleButton1.AutoActualizar = True
         HhToggleButton2.AutoActualizar = True
@@ -201,10 +245,14 @@ Public Class FormTest
         HhToggleButton29.AutoActualizar = True
         HhToggleButton30.AutoActualizar = True
         HhToggleButton31.AutoActualizar = True
+        HhToggleButton32.AutoActualizar = True
+        HhToggleButton33.AutoActualizar = True
 
-        Button1.Texto = "Aceptar"
+        Button1.Texto = "Salir"
 
-        Button2.Texto = "Pruebas motor"
+        Button2.Texto = "Motor"
+
+        HhMomentaryButton1.Texto = "Analogo"
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -216,6 +264,11 @@ Public Class FormTest
         Using f As New FormTestMotor
             f.ShowDialog()
         End Using
+    End Sub
 
+    Private Sub HhMomentaryButton1_Click(sender As Object, e As EventArgs) Handles HhMomentaryButton1.Click
+        Using f As New FormTestAnalogo
+            f.ShowDialog()
+        End Using
     End Sub
 End Class

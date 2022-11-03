@@ -18,7 +18,7 @@
     <SignManifests>false</SignManifests>
     <SignAssembly>false</SignAssembly>
     <DelaySign>false</DelaySign>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -40,7 +40,7 @@
     <PublisherName>hhAutomatizacion</PublisherName>
     <WebPage>publish.htm</WebPage>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.2.0.0</ApplicationVersion>
+    <ApplicationVersion>1.3.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -79,11 +79,11 @@
     </Reference>
     <Reference Include="hhAnimacion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\masterklib\Programas\hhAnimacion\hhAnimacion\lib\hhAnimacion.dll</HintPath>
+      <HintPath>..\..\..\masterklib\Programas\hhAnimacion\hhAnimacion\bin\Debug\hhAnimacion.dll</HintPath>
     </Reference>
     <Reference Include="hhBooleanLabel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\masterklib\Programas\hhBooleanLabel\hhBooleanLabel\lib\hhBooleanLabel.dll</HintPath>
+      <HintPath>..\..\..\masterklib\Programas\hhBooleanLabel\hhBooleanLabel\bin\Debug\hhBooleanLabel.dll</HintPath>
     </Reference>
     <Reference Include="hhCharacterDisplay">
       <HintPath>..\..\..\masterklib\Programas\hhCharacterDisplay\hhCharacterDisplay\bin\Debug\hhCharacterDisplay.dll</HintPath>
@@ -105,14 +105,17 @@
     </Reference>
     <Reference Include="hhInputBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\masterklib\Programas\hhInputBox\hhInputBox\lib\hhInputBox.dll</HintPath>
+      <HintPath>..\..\..\masterklib\Programas\hhInputBox\hhInputBox\bin\Debug\hhInputBox.dll</HintPath>
+    </Reference>
+    <Reference Include="hhLabel">
+      <HintPath>..\..\..\masterklib\Programas\hhLabel\hhLabel\bin\Debug\hhLabel.dll</HintPath>
     </Reference>
     <Reference Include="hhMomentaryButton">
       <HintPath>..\..\..\masterklib\Programas\hhMomentaryButton\hhMomentaryButton\bin\Debug\hhMomentaryButton.dll</HintPath>
     </Reference>
     <Reference Include="hhMsgBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\masterklib\Programas\hhMsgBox\hhMsgBox\lib\hhMsgBox.dll</HintPath>
+      <HintPath>..\..\..\masterklib\Programas\hhMsgBox\hhMsgBox\bin\Debug\hhMsgBox.dll</HintPath>
     </Reference>
     <Reference Include="hhNumericDisplay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -139,7 +142,7 @@
     </Reference>
     <Reference Include="hhWordRegister, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\masterklib\Programas\hhWordRegister\hhWordRegister\lib\hhWordRegister.dll</HintPath>
+      <HintPath>..\..\..\masterklib\Programas\hhWordRegister\hhWordRegister\bin\Debug\hhWordRegister.dll</HintPath>
     </Reference>
     <Reference Include="LavadoraLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -197,10 +200,10 @@
     <Compile Include="FormConfCuentalitros.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormConfQuimicos.Designer.vb">
-      <DependentUpon>FormConfQuimicos.vb</DependentUpon>
+    <Compile Include="FormConfAditivos.Designer.vb">
+      <DependentUpon>FormConfAditivos.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormConfQuimicos.vb">
+    <Compile Include="FormConfAditivos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormConfRotacion.Designer.vb">
@@ -237,6 +240,12 @@
       <DependentUpon>FormFinAuto.vb</DependentUpon>
     </Compile>
     <Compile Include="FormFinAuto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormJetAuto.Designer.vb">
+      <DependentUpon>FormJetAuto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormJetAuto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLavadora.vb">
@@ -306,6 +315,12 @@
     <Compile Include="FormTest.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormTestAnalogo.Designer.vb">
+      <DependentUpon>FormTestAnalogo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTestAnalogo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormTestMotor.Designer.vb">
       <DependentUpon>FormTestMotor.vb</DependentUpon>
     </Compile>
@@ -323,6 +338,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -333,12 +349,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="FormRotacionDescarga.Designer.vb">
-      <DependentUpon>FormRotacionDescarga.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormRotacionDescarga.vb">
-      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -361,9 +371,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>FormConfCuentalitros.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormConfQuimicos.resx">
+    <EmbeddedResource Include="FormConfAditivos.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>FormConfQuimicos.vb</DependentUpon>
+      <DependentUpon>FormConfAditivos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConfRotacion.resx">
       <SubType>Designer</SubType>
@@ -387,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormFinAuto.resx">
       <DependentUpon>FormFinAuto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormJetAuto.resx">
+      <DependentUpon>FormJetAuto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLavadora.resx">
       <SubType>Designer</SubType>
@@ -432,6 +445,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>FormTest.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTestAnalogo.resx">
+      <DependentUpon>FormTestAnalogo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTestMotor.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormTestMotor.vb</DependentUpon>
@@ -444,10 +460,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormRotacionDescarga.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FormRotacionDescarga.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -574,6 +586,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Iconos\icons8-grupo-de-usuarios-hombre-hombre-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\icons8-nozzle-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\spin_left-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\spin_right-2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

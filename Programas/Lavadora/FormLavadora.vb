@@ -5,14 +5,17 @@ Public Class FormLavadora
     Dim WithEvents wPagina As hhWordRegister.hhWordRegister
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        cParametros = New Collection
+        'cParametros = New Collection
         wPagina = New hhWordRegister.hhWordRegister
         CargarOpciones()
         AbrirPuerto()
 
-
-
         mMasterk = New MasterKlib.MasterK
+
+        Try
+            Label1.Font = New Font(sNombreFuenteBotones, iTamanioFuenteBotones)
+        Catch
+        End Try
 
         mMasterk.Puerto = sPuerto
         mMasterk.Estacion = 0
@@ -20,23 +23,22 @@ Public Class FormLavadora
         Timer1.Enabled = True
 
         wPagina.Link = mMasterk
-        wPagina.Nombre = "Pagina"
+        wPagina.Name = "Pagina"
         wPagina.DireccionEscritura = "DW60"
         wPagina.DireccionLectura = "DW60"
         wPagina.ValorMaximo = 32
         wPagina.AutoActualizar = True
 
-
-        HhAnimacion1.Color1 = SystemColors.HighlightText
-        HhAnimacion1.Color2 = SystemColors.Highlight
+        HhAnimacion1.Color1 = cColorNormal
+        HhAnimacion1.Color2 = ccolorseleccion
         HhAnimacion1.Intervalo = 100
         HhAnimacion1.Pasos = 32
         HhAnimacion1.Text = "TX"
         HhAnimacion1.BorderStyle = BorderStyle.Fixed3D
         HhAnimacion1.Inicializar()
 
-        HhAnimacion2.Color2 = SystemColors.Highlight
-        HhAnimacion2.Color1 = SystemColors.HighlightText
+        HhAnimacion2.Color1 = cColorNormal
+        HhAnimacion2.Color2 = ccolorseleccion
         HhAnimacion2.Intervalo = 100
         HhAnimacion2.Pasos = 32
         HhAnimacion2.Text = "RX"
@@ -46,10 +48,6 @@ Public Class FormLavadora
         HhBooleanLabel1.Link = mMasterk
         HhBooleanLabel1.TextoFalso = "Manual"
         HhBooleanLabel1.TextoVerdadero = "Automatico"
-        HhBooleanLabel1.ColorTextoFalso = SystemColors.ControlText
-        HhBooleanLabel1.ColorFondoFalso = SystemColors.Control
-        HhBooleanLabel1.ColorTextoVerdadero = SystemColors.HighlightText
-        HhBooleanLabel1.ColorFondoVerdadero = SystemColors.Highlight
         HhBooleanLabel1.DireccionLectura = "MX0001"
         HhBooleanLabel1.AutoSize = True
         HhBooleanLabel1.BorderStyle = BorderStyle.Fixed3D
@@ -58,10 +56,6 @@ Public Class FormLavadora
         HhBooleanLabel2.Link = mMasterk
         HhBooleanLabel2.TextoFalso = "Stop"
         HhBooleanLabel2.TextoVerdadero = "Start"
-        HhBooleanLabel2.ColorTextoFalso = SystemColors.ControlText
-        HhBooleanLabel2.ColorFondoFalso = SystemColors.Control
-        HhBooleanLabel2.ColorTextoVerdadero = SystemColors.HighlightText
-        HhBooleanLabel2.ColorFondoVerdadero = SystemColors.Highlight
         HhBooleanLabel2.DireccionLectura = "MX0100"
         HhBooleanLabel2.AutoSize = True
         HhBooleanLabel2.BorderStyle = BorderStyle.Fixed3D
@@ -72,14 +66,12 @@ Public Class FormLavadora
         HhCharacterDisplay3.LongitudTexto = 6
         HhCharacterDisplay3.AutoActualizar = False
 
-
         'dejar de utilizar mx1000
         HhMomentaryButton1.Link = mMasterk
         HhMomentaryButton1.DireccionEscritura = "MX1000"
         HhMomentaryButton1.DireccionLectura = "MX07"
         HhMomentaryButton1.Texto = "Manual"
         HhMomentaryButton1.AutoActualizar = True
-
 
         'dejar de utilizar mx1000
         HhMomentaryButton2.Link = mMasterk
@@ -96,33 +88,20 @@ Public Class FormLavadora
 
         Label1.BorderStyle = BorderStyle.Fixed3D
 
-
         StatusStrip1.Items.Add(New ToolStripControlHost(HhAnimacion1))
 
         StatusStrip1.Items.Add(New ToolStripControlHost(HhAnimacion2))
 
-
         StatusStrip1.Items.Add(New ToolStripControlHost(HhBooleanLabel1))
-        StatusStrip1.Items(2).AutoSize = False
-        StatusStrip1.Items(2).Width = 100
 
         StatusStrip1.Items.Add(New ToolStripControlHost(HhBooleanLabel2))
-        StatusStrip1.Items(3).AutoSize = False
-        StatusStrip1.Items(3).Width = 100
+
         Dim t As New ToolStripStatusLabel
         t.Spring = True
 
         StatusStrip1.Items.Add(t)
 
-
         StatusStrip1.Items.Add(New ToolStripControlHost(Label1))
-
-        'HhCharacterEntry1.Link = mMasterk
-        'HhCharacterEntry1.LongitudTexto = 10
-        'HhCharacterEntry1.DireccionEscritura = "DW0251"
-        'HhCharacterEntry1.DireccionLectura = "DW0251"
-        'HhCharacterEntry1.AutoActualizar = True
-
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -202,9 +181,9 @@ Public Class FormLavadora
                 End Using
                 wPagina.Valor = 0
             Case 2
-                Using fFormRotDesc As New FormRotacionDescarga
-                    fFormRotDesc.ShowDialog()
-                End Using
+                'Using fFormRotDesc As New FormRotacionDescarga
+                '    fFormRotDesc.ShowDialog()
+                'End Using
                 wPagina.Valor = 0
             Case 3
                 Using h As New hhMsgBox.hhMsgBox
@@ -279,12 +258,12 @@ Public Class FormLavadora
                     h.Tamanio = 50
                     h.Mensaje = "Proceder con paso aditivos?"
                     h.Imagen = My.Resources.step12
+                    h.DireccionOk = "MX0115"
                     h.TextoOk = "Aditivos"
                     h.ImagenOk = My.Resources.step12
                     h.DireccionCancel = "MX0116"
                     h.TextoCancel = "Sigueinte"
                     h.ImagenCancel = My.Resources.control_end_blue
-                    h.DireccionOk = "MX0115"
                     h.ShowDialog()
                 End Using
                 wPagina.Valor = 0
@@ -325,13 +304,16 @@ Public Class FormLavadora
                     h.Mensaje = "Ingrese tiempo de mantenimiento (minutos)"
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.Link = mMasterk
                     h.DireccionValor = "DW0584"
                     h.Unidades = "min"
                     h.ValorMinimo = 1
                     h.ValorMaximo = 60
+                    h.TextoOk = "Aceptar"
                     h.DireccionOk = "MX0128"
+                    h.ImagenOk = My.Resources.tick
+                    h.TextoCancel = "Cancelar"
                     h.DireccionCancel = "MX0129"
+                    h.ImagenCancel = My.Resources.control_fastforward_blue
                     h.ShowDialog()
                 End Using
 
@@ -342,7 +324,6 @@ Public Class FormLavadora
                     h.Mensaje = "Ingrese tiempo de despedrado (minutos)"
                     h.Link = mMasterk
                     h.Tamanio = 50
-                    h.Link = mMasterk
                     h.DireccionValor = "DW0584"
                     h.Unidades = "min"
                     h.ValorMinimo = 1
@@ -587,7 +568,7 @@ Public Class FormLavadora
                     m.TextoCancel = ""
                     m.ImagenCancel = My.Resources.cross
                     m.DireccionOk = "MX0C"
-                    m.DireccionCancel = "MX0B"
+                    m.DireccionCancel = "MX07"
                     m.ShowDialog()
                     If m.Resultado = Windows.Forms.DialogResult.OK Then
                         f.ShowDialog()
@@ -604,7 +585,27 @@ Public Class FormLavadora
     Private Sub HhMomentaryButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton2.Click
 
         Using f As New FormAutomatico
-            f.ShowDialog()
+            If mMasterk.ObtenerBoolean("MX07") Then
+                Using m As New hhMsgBox.hhMsgBox
+                    m.Mensaje = "Paso manual trabajando. Parar el paso?"
+                    m.Link = mMasterk
+                    m.Tamanio = 50
+                    m.Imagen = My.Resources.traffic_lights_green
+                    m.TextoOk = ""
+                    m.ImagenOk = My.Resources.control_stop_blue
+                    m.TextoCancel = ""
+                    m.ImagenCancel = My.Resources.cross
+                    m.DireccionOk = "MX08"
+                    m.DireccionCancel = "MX0100"
+                    m.ShowDialog()
+                    If m.Resultado = Windows.Forms.DialogResult.OK Then
+                        f.ShowDialog()
+                    End If
+                End Using
+            Else
+                f.ShowDialog()
+            End If
+
         End Using
     End Sub
 

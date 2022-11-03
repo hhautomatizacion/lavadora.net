@@ -20,11 +20,15 @@ Partial Class FormTestMotor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormTestMotor))
-        Me.Button1 = New hhMomentaryButton.hhMomentaryButton
-        Me.HhToggleButton1 = New hhToggleButton.hhToggleButton
-        Me.HhToggleButton2 = New hhToggleButton.hhToggleButton
-        Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry
-        Me.HhNumericDisplay1 = New hhNumericDisplay.hhNumericDisplay
+        Me.Button1 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhToggleButton1 = New hhToggleButton.hhToggleButton()
+        Me.HhToggleButton2 = New hhToggleButton.hhToggleButton()
+        Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry()
+        Me.HhNumericDisplay1 = New hhNumericDisplay.hhNumericDisplay()
+        Me.HhLabel1 = New hhLabel.hhLabel()
+        Me.HhLabel2 = New hhLabel.hhLabel()
+        Me.HhLabel3 = New hhLabel.hhLabel()
+        Me.HhLabel4 = New hhLabel.hhLabel()
         Me.SuspendLayout()
         '
         'Button1
@@ -34,15 +38,15 @@ Partial Class FormTestMotor
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Texto = Nothing
-        Me.Button1.Font = New System.Drawing.Font("CityBlueprint", 10.0!)
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(688, 473)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 63
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button1.Texto = Nothing
         Me.Button1.UseVisualStyleBackColor = True
         '
         'HhToggleButton1
@@ -52,10 +56,9 @@ Partial Class FormTestMotor
         Me.HhToggleButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhToggleButton1.DireccionEscritura = Nothing
         Me.HhToggleButton1.DireccionLectura = Nothing
-        Me.HhToggleButton1.Etiqueta = "Izquierda"
-        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.HhToggleButton1.Link = Nothing
-        Me.HhToggleButton1.Location = New System.Drawing.Point(210, 31)
+        Me.HhToggleButton1.Location = New System.Drawing.Point(250, 31)
         Me.HhToggleButton1.Name = "HhToggleButton1"
         Me.HhToggleButton1.Size = New System.Drawing.Size(45, 45)
         Me.HhToggleButton1.TabIndex = 65
@@ -69,10 +72,9 @@ Partial Class FormTestMotor
         Me.HhToggleButton2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhToggleButton2.DireccionEscritura = Nothing
         Me.HhToggleButton2.DireccionLectura = Nothing
-        Me.HhToggleButton2.Etiqueta = "Derecha"
-        Me.HhToggleButton2.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhToggleButton2.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.HhToggleButton2.Link = Nothing
-        Me.HhToggleButton2.Location = New System.Drawing.Point(210, 82)
+        Me.HhToggleButton2.Location = New System.Drawing.Point(250, 82)
         Me.HhToggleButton2.Name = "HhToggleButton2"
         Me.HhToggleButton2.Size = New System.Drawing.Size(45, 45)
         Me.HhToggleButton2.TabIndex = 67
@@ -83,17 +85,17 @@ Partial Class FormTestMotor
         '
         Me.HhNumericEntry1.AutoActualizar = False
         Me.HhNumericEntry1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhNumericEntry1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhNumericEntry1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericEntry1.Decimales = 0
         Me.HhNumericEntry1.DireccionEscritura = Nothing
         Me.HhNumericEntry1.DireccionLectura = Nothing
-        Me.HhNumericEntry1.Etiqueta = "Frecuencia"
         Me.HhNumericEntry1.Factor = 1.0!
         Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhNumericEntry1.Link = Nothing
-        Me.HhNumericEntry1.Location = New System.Drawing.Point(210, 133)
+        Me.HhNumericEntry1.Location = New System.Drawing.Point(250, 133)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
-        Me.HhNumericEntry1.Size = New System.Drawing.Size(200, 40)
+        Me.HhNumericEntry1.Size = New System.Drawing.Size(200, 45)
         Me.HhNumericEntry1.TabIndex = 69
         Me.HhNumericEntry1.Text = "0"
         Me.HhNumericEntry1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -110,12 +112,11 @@ Partial Class FormTestMotor
         Me.HhNumericDisplay1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhNumericDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay1.DireccionLectura = Nothing
-        Me.HhNumericDisplay1.Etiqueta = "RPM"
         Me.HhNumericDisplay1.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhNumericDisplay1.Link = Nothing
         Me.HhNumericDisplay1.Location = New System.Drawing.Point(588, 348)
         Me.HhNumericDisplay1.Name = "HhNumericDisplay1"
-        Me.HhNumericDisplay1.Size = New System.Drawing.Size(200, 40)
+        Me.HhNumericDisplay1.Size = New System.Drawing.Size(200, 45)
         Me.HhNumericDisplay1.TabIndex = 71
         Me.HhNumericDisplay1.Text = "0"
         Me.HhNumericDisplay1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -124,11 +125,99 @@ Partial Class FormTestMotor
         Me.HhNumericDisplay1.ValorMaximo = 0
         Me.HhNumericDisplay1.ValorMinimo = 0
         '
+        'HhLabel1
+        '
+        Me.HhLabel1.AutoActualizar = False
+        Me.HhLabel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.HhLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HhLabel1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhLabel1.DireccionLectura = Nothing
+        Me.HhLabel1.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhLabel1.Link = Nothing
+        Me.HhLabel1.Location = New System.Drawing.Point(20, 31)
+        Me.HhLabel1.LongitudTexto = 0
+        Me.HhLabel1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.HhLabel1.Name = "HhLabel1"
+        Me.HhLabel1.Size = New System.Drawing.Size(226, 45)
+        Me.HhLabel1.TabIndex = 128
+        Me.HhLabel1.Text = "Izquierda"
+        Me.HhLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhLabel1.Texto = "Izquierda"
+        Me.HhLabel1.Tooltip = Nothing
+        '
+        'HhLabel2
+        '
+        Me.HhLabel2.AutoActualizar = False
+        Me.HhLabel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.HhLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HhLabel2.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhLabel2.DireccionLectura = Nothing
+        Me.HhLabel2.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhLabel2.Link = Nothing
+        Me.HhLabel2.Location = New System.Drawing.Point(20, 82)
+        Me.HhLabel2.LongitudTexto = 0
+        Me.HhLabel2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.HhLabel2.Name = "HhLabel2"
+        Me.HhLabel2.Size = New System.Drawing.Size(226, 45)
+        Me.HhLabel2.TabIndex = 129
+        Me.HhLabel2.Text = "Derecha"
+        Me.HhLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhLabel2.Texto = "Derecha"
+        Me.HhLabel2.Tooltip = Nothing
+        '
+        'HhLabel3
+        '
+        Me.HhLabel3.AutoActualizar = False
+        Me.HhLabel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.HhLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HhLabel3.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhLabel3.DireccionLectura = Nothing
+        Me.HhLabel3.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhLabel3.Link = Nothing
+        Me.HhLabel3.Location = New System.Drawing.Point(358, 348)
+        Me.HhLabel3.LongitudTexto = 0
+        Me.HhLabel3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.HhLabel3.Name = "HhLabel3"
+        Me.HhLabel3.Size = New System.Drawing.Size(226, 45)
+        Me.HhLabel3.TabIndex = 131
+        Me.HhLabel3.Text = "RPM"
+        Me.HhLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhLabel3.Texto = "RPM"
+        Me.HhLabel3.Tooltip = Nothing
+        '
+        'HhLabel4
+        '
+        Me.HhLabel4.AutoActualizar = False
+        Me.HhLabel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.HhLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HhLabel4.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhLabel4.DireccionLectura = Nothing
+        Me.HhLabel4.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhLabel4.Link = Nothing
+        Me.HhLabel4.Location = New System.Drawing.Point(20, 133)
+        Me.HhLabel4.LongitudTexto = 0
+        Me.HhLabel4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.HhLabel4.Name = "HhLabel4"
+        Me.HhLabel4.Size = New System.Drawing.Size(226, 45)
+        Me.HhLabel4.TabIndex = 132
+        Me.HhLabel4.Text = "Frecuencia"
+        Me.HhLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhLabel4.Texto = "Frecuencia"
+        Me.HhLabel4.Tooltip = Nothing
+        '
         'FormTestMotor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 575)
+        Me.Controls.Add(Me.HhLabel4)
+        Me.Controls.Add(Me.HhLabel3)
+        Me.Controls.Add(Me.HhLabel2)
+        Me.Controls.Add(Me.HhLabel1)
         Me.Controls.Add(Me.HhNumericDisplay1)
         Me.Controls.Add(Me.HhNumericEntry1)
         Me.Controls.Add(Me.HhToggleButton2)
@@ -137,6 +226,7 @@ Partial Class FormTestMotor
         Me.Cursor = System.Windows.Forms.Cursors.Cross
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormTestMotor"
+        Me.RightToLeftLayout = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "FormTestMotor"
         Me.ResumeLayout(False)
@@ -147,4 +237,8 @@ Partial Class FormTestMotor
     Friend WithEvents HhToggleButton2 As hhToggleButton.hhToggleButton
     Friend WithEvents HhNumericEntry1 As hhNumericEntry.hhNumericEntry
     Friend WithEvents HhNumericDisplay1 As hhNumericDisplay.hhNumericDisplay
+    Friend WithEvents HhLabel1 As hhLabel.hhLabel
+    Friend WithEvents HhLabel2 As hhLabel.hhLabel
+    Friend WithEvents HhLabel3 As hhLabel.hhLabel
+    Friend WithEvents HhLabel4 As hhLabel.hhLabel
 End Class

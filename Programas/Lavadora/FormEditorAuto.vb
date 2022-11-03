@@ -11,6 +11,7 @@ Public Class FormEditorAuto
     Dim pPasoAditivos As New LavadoraLib.Receta.Paso
     Dim pPasoMuestreo As New LavadoraLib.Receta.Paso
     Dim pPasoFin As New LavadoraLib.Receta.Paso
+    Dim pPasoJet As New LavadoraLib.Receta.Paso
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         DialogResult = DialogResult.Cancel
     End Sub
@@ -53,27 +54,21 @@ Public Class FormEditorAuto
             pPaso = pPasoLlenado
         End If
         Using fForm As New FormLlenadoAuto
-            fForm.HhToggleButton1.Etiqueta = "Agua fria"
             fForm.HhToggleButton1.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 0)
 
-            fForm.HhToggleButton2.Etiqueta = "Agua caliente"
             fForm.HhToggleButton2.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 1)
 
-            fForm.HhToggleButton3.Etiqueta = "Rotacion"
             fForm.HhToggleButton3.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 2)
 
-            fForm.HhToggleButton4.Etiqueta = "Temperatura"
             fForm.HhToggleButton4.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 3)
 
             fForm.HhNumericEntry1.Unidades = "lts"
-            fForm.HhNumericEntry1.Etiqueta = "Cantidad agua"
             fForm.HhNumericEntry1.Tooltip = "Cantidad agua|(Litros)"
             fForm.HhNumericEntry1.ValorMinimo = 0
             fForm.HhNumericEntry1.ValorMaximo = 2000
             fForm.HhNumericEntry1.Valor = pPaso.Litros
 
             fForm.HhNumericEntry2.Unidades = "°C"
-            fForm.HhNumericEntry2.Etiqueta = "Temperatura"
             fForm.HhNumericEntry2.Tooltip = "Temperatura|(°C)"
             fForm.HhNumericEntry2.ValorMinimo = 0
             fForm.HhNumericEntry2.ValorMaximo = 100
@@ -105,13 +100,12 @@ Public Class FormEditorAuto
                     pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 3)
                 End If
 
-                creceta = AgregarPaso(HhGridDisplay1, pPaso)
+                cReceta = AgregarPaso(HhGridDisplay1, pPaso)
 
                 pPasoLlenado = pPaso
 
                 HhGridDisplay1.Receta = cReceta
                 HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
-                HhGridDisplay1.Actualizar()
             End If
         End Using
     End Sub
@@ -126,14 +120,11 @@ Public Class FormEditorAuto
             pPaso = pPasoDesague
         End If
         Using fForm As New FormDesagueAuto
-            fForm.HhToggleButton1.Etiqueta = "Desague 1"
             fForm.HhToggleButton1.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 5)
 
-            fForm.HhToggleButton2.Etiqueta = "Rotacion"
             fForm.HhToggleButton2.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 7)
 
             fForm.HhNumericEntry1.Unidades = "seg"
-            fForm.HhNumericEntry1.Etiqueta = "Tiempo"
             fForm.HhNumericEntry1.Tooltip = "Tiempo|(Segundos)"
             fForm.HhNumericEntry1.ValorMinimo = 0
             fForm.HhNumericEntry1.ValorMaximo = 300
@@ -163,7 +154,6 @@ Public Class FormEditorAuto
 
                 HhGridDisplay1.Receta = cReceta
                 HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
-                HhGridDisplay1.Actualizar()
             End If
         End Using
     End Sub
@@ -179,21 +169,18 @@ Public Class FormEditorAuto
         End If
         Using fForm As New FormRotacionAuto
             fForm.HhNumericEntry3.Unidades = "rev"
-            fForm.HhNumericEntry3.Etiqueta = "Giros"
             fForm.HhNumericEntry3.Tooltip = "Cantidad de giros"
             fForm.HhNumericEntry3.ValorMinimo = 1
             fForm.HhNumericEntry3.ValorMaximo = 1000
             fForm.HhNumericEntry3.Valor = pPaso.ParametroAuxiliar
 
             fForm.HhNumericEntry2.Unidades = "seg"
-            fForm.HhNumericEntry2.Etiqueta = "Pausa"
             fForm.HhNumericEntry2.Tooltip = "Tiempo de pausa|(Segundos)"
             fForm.HhNumericEntry2.ValorMinimo = 1
             fForm.HhNumericEntry2.ValorMaximo = 60
             fForm.HhNumericEntry2.Valor = pPaso.Segundos
 
             fForm.HhNumericEntry1.Unidades = "rpm"
-            fForm.HhNumericEntry1.Etiqueta = "Velocidad"
             fForm.HhNumericEntry1.Tooltip = "Velocidad de rotacion|(rpm)"
             fForm.HhNumericEntry1.ValorMinimo = 0
             fForm.HhNumericEntry1.ValorMaximo = 2000
@@ -214,7 +201,6 @@ Public Class FormEditorAuto
 
                 HhGridDisplay1.Receta = cReceta
                 HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
-                HhGridDisplay1.Actualizar()
             End If
         End Using
     End Sub
@@ -229,18 +215,15 @@ Public Class FormEditorAuto
             pPaso = pPasoMantenimiento
         End If
         Using fForm As New FormMantenimientoAuto
-            fForm.HhToggleButton1.Etiqueta = "Temperatura constante"
             fForm.HhToggleButton1.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 4)
 
             fForm.HhNumericEntry1.Unidades = "min"
-            fForm.HhNumericEntry1.Etiqueta = "Tiempo"
             fForm.HhNumericEntry1.Tooltip = "Tiempo de trabajo|(Minutos)"
             fForm.HhNumericEntry1.ValorMinimo = 0
             fForm.HhNumericEntry1.ValorMaximo = 600
             fForm.HhNumericEntry1.Valor = pPaso.Minutos
 
             fForm.HhNumericEntry2.Unidades = "°C"
-            fForm.HhNumericEntry2.Etiqueta = "Temperatura"
             fForm.HhNumericEntry2.Tooltip = "Temperatura|(°C)"
             fForm.HhNumericEntry2.ValorMinimo = 0
             fForm.HhNumericEntry2.ValorMaximo = 100
@@ -265,7 +248,6 @@ Public Class FormEditorAuto
 
                 HhGridDisplay1.Receta = cReceta
                 HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
-                HhGridDisplay1.Actualizar()
             End If
         End Using
     End Sub
@@ -282,23 +264,19 @@ Public Class FormEditorAuto
         End If
         Using fForm As New FormTemperaturaAuto
             fForm.HhNumericEntry1.Unidades = "°C"
-            fForm.HhNumericEntry1.Etiqueta = "Temperatura final"
             fForm.HhNumericEntry1.Tooltip = "Temperatura final|(°C)"
             fForm.HhNumericEntry1.ValorMinimo = 0
             fForm.HhNumericEntry1.ValorMaximo = 100
             fForm.HhNumericEntry1.Valor = pPaso.Centigrados
 
-            fForm.HhToggleButton1.Etiqueta = "Con rotacion"
             fForm.HhToggleButton1.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 6)
 
             fForm.HhNumericEntry2.Unidades = "°C/min"
-            fForm.HhNumericEntry2.Etiqueta = "Gradiente"
             fForm.HhNumericEntry2.Tooltip = "Gradiente de temp.|(°C/min)"
             fForm.HhNumericEntry2.ValorMinimo = 0
             fForm.HhNumericEntry2.ValorMaximo = 100
             fForm.HhNumericEntry2.Valor = pPaso.ParametroAuxiliar
 
-            fForm.HhToggleButton2.Etiqueta = "Con gradiente"
             fForm.HhToggleButton2.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 9)
 
             fForm.HhMomentaryButton1.Texto = "Aceptar"
@@ -325,7 +303,6 @@ Public Class FormEditorAuto
 
                 HhGridDisplay1.Receta = cReceta
                 HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
-                HhGridDisplay1.Actualizar()
             End If
         End Using
     End Sub
@@ -343,14 +320,12 @@ Public Class FormEditorAuto
         End If
         Using fForm As New FormCentrifugaAuto
             fForm.HhNumericEntry1.Unidades = "rpm"
-            fForm.HhNumericEntry1.Etiqueta = "Velocidad"
             fForm.HhNumericEntry1.Tooltip = "Velocidad|(rpm)"
             fForm.HhNumericEntry1.ValorMinimo = 0
             fForm.HhNumericEntry1.ValorMaximo = 3000
             fForm.HhNumericEntry1.Valor = pPaso.RPM
 
             fForm.HhNumericEntry2.Unidades = "min"
-            fForm.HhNumericEntry2.Etiqueta = "Tiempo"
             fForm.HhNumericEntry2.Tooltip = "Tiempo|(Minutos)"
             fForm.HhNumericEntry2.ValorMinimo = 0
             fForm.HhNumericEntry2.ValorMaximo = 120
@@ -370,7 +345,6 @@ Public Class FormEditorAuto
 
                 HhGridDisplay1.Receta = cReceta
                 HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
-                HhGridDisplay1.Actualizar()
             End If
         End Using
     End Sub
@@ -386,18 +360,22 @@ Public Class FormEditorAuto
             pPaso = pPasoAditivos
         End If
         Using fForm As New FormAditivosAuto
-            fForm.HhNumericEntry1.Etiqueta = "Enjuagues"
+            If mMasterk.ObtenerBoolean("KX04") Then
+                fForm.HhNumericEntry2.Enabled = False
+            End If
+
             fForm.HhNumericEntry1.ValorMinimo = 1
             fForm.HhNumericEntry1.ValorMaximo = 10
             fForm.HhNumericEntry1.Valor = pPaso.ParametroAuxiliar
 
-            fForm.HhToggleButton1.Etiqueta = "Cubeta 1"
+            fForm.HhNumericEntry2.ValorMinimo = 1
+            fForm.HhNumericEntry2.ValorMaximo = 600
+            fForm.HhNumericEntry2.Unidades = "seg"
+
             fForm.HhToggleButton1.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 8)
 
-            fForm.HhToggleButton2.Etiqueta = "A la izquierda"
             fForm.HhToggleButton2.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 10)
 
-            fForm.HhToggleButton3.Etiqueta = "A la derecha"
             fForm.HhToggleButton3.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 11)
 
             fForm.HhMomentaryButton1.Texto = "Aceptar"
@@ -406,6 +384,7 @@ Public Class FormEditorAuto
 
             If fForm.ShowDialog() = vbOK Then
 
+                pPaso.Segundos = fForm.HhNumericEntry2.Valor
                 pPaso.ParametroAuxiliar = fForm.HhNumericEntry1.Valor
 
                 If fForm.HhToggleButton1.Checked Then
@@ -430,7 +409,6 @@ Public Class FormEditorAuto
 
                 HhGridDisplay1.Receta = cReceta
                 HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
-                HhGridDisplay1.Actualizar()
             End If
         End Using
     End Sub
@@ -456,7 +434,6 @@ Public Class FormEditorAuto
 
                 HhGridDisplay1.Receta = cReceta
                 HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
-                HhGridDisplay1.Actualizar()
             End If
         End Using
     End Sub
@@ -483,7 +460,39 @@ Public Class FormEditorAuto
 
                 HhGridDisplay1.Receta = cReceta
                 HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
-                HhGridDisplay1.Actualizar()
+            End If
+        End Using
+    End Sub
+    Private Sub HhMomentaryButton6_Click(sender As Object, e As EventArgs) Handles HhMomentaryButton6.Click
+        Dim pPaso As New LavadoraLib.Receta.Paso
+        Dim pPasoSinModificar As New LavadoraLib.Receta.Paso
+        Dim cReceta As New Collection
+
+        pPaso = ObtenerPasoActual(HhGridDisplay1)
+        If pPaso.IdPaso = 17738 Then
+        Else
+            pPaso = pPasoJet
+        End If
+        Using fForm As New FormJetAuto
+            fForm.HhToggleButton1.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 12)
+
+            fForm.HhMomentaryButton1.Texto = "Aceptar"
+
+            fForm.Button1.Texto = "Cancelar"
+
+            If fForm.ShowDialog() = vbOK Then
+                If fForm.HhToggleButton1.Checked Then
+                    pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 12)
+                Else
+                    pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 12)
+                End If
+
+                cReceta = AgregarPaso(HhGridDisplay1, pPaso)
+
+                pPasoJet = pPaso
+
+                HhGridDisplay1.Receta = cReceta
+                HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual + 1
             End If
         End Using
     End Sub
@@ -510,6 +519,8 @@ Public Class FormEditorAuto
         pPasoMuestreo.NombrePaso = "MUESTREO"
         pPasoFin.IdPaso = 18758
         pPasoFin.NombrePaso = "FIN"
+        pPasojet.IdPaso = 17738
+        pPasojet.NombrePaso = "JET"
 
         HhGridDisplay1.LongitudPaso = 10
         HhGridDisplay1.LongitudTexto = 4
@@ -519,7 +530,6 @@ Public Class FormEditorAuto
 
         HhNumericEntry1.ValorMaximo = 100
         HhNumericEntry1.ValorMinimo = 1
-        HhNumericEntry1.Etiqueta = "Paso #"
 
         HhMomentaryButton1.Texto = "Fin"
 
@@ -614,11 +624,8 @@ Public Class FormEditorAuto
     End Sub
     Private Sub HhGridDisplay1_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles HhGridDisplay1.CellClick
         Dim iValor As Integer
-        iValor = e.RowIndex
-        If iValor >= 0 Then
-            iValor = iValor + 1
-            mMasterk.EstablecerEntero("DW50", iValor)
-        End If
+        iValor = e.RowIndex + 1
+        HhNumericEntry1.Valor = iValor
     End Sub
     Private Sub HhMomentaryButton4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton4.Click
         DialogResult = DialogResult.OK
@@ -662,6 +669,15 @@ Public Class FormEditorAuto
             End If
             iContador = iContador + 1
         Next pPaso
+        If cReceta.Count <= 0 Then
+            cReceta.Add(pPaso)
+        End If
         HhGridDisplay1.Receta = cReceta
+    End Sub
+
+    Private Sub HhNumericEntry1_TextChanged(sender As Object, e As EventArgs) Handles HhNumericEntry1.TextChanged
+        Dim iValor As Integer
+        iValor = HhNumericEntry1.Valor
+        HhGridDisplay1.PasoActual = ivalor
     End Sub
 End Class

@@ -25,6 +25,9 @@ Partial Class FormDesagueAuto
         Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry()
         Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton()
         Me.Button1 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhLabel1 = New hhLabel.hhLabel()
+        Me.HhLabel2 = New hhLabel.hhLabel()
+        Me.HhLabel3 = New hhLabel.hhLabel()
         Me.SuspendLayout()
         '
         'HhToggleButton1
@@ -34,8 +37,7 @@ Partial Class FormDesagueAuto
         Me.HhToggleButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhToggleButton1.DireccionEscritura = Nothing
         Me.HhToggleButton1.DireccionLectura = Nothing
-        Me.HhToggleButton1.Etiqueta = Nothing
-        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.HhToggleButton1.Link = Nothing
         Me.HhToggleButton1.Location = New System.Drawing.Point(207, 9)
         Me.HhToggleButton1.Name = "HhToggleButton1"
@@ -51,8 +53,7 @@ Partial Class FormDesagueAuto
         Me.HhToggleButton2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhToggleButton2.DireccionEscritura = Nothing
         Me.HhToggleButton2.DireccionLectura = Nothing
-        Me.HhToggleButton2.Etiqueta = Nothing
-        Me.HhToggleButton2.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhToggleButton2.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.HhToggleButton2.Link = Nothing
         Me.HhToggleButton2.Location = New System.Drawing.Point(207, 60)
         Me.HhToggleButton2.Name = "HhToggleButton2"
@@ -70,9 +71,8 @@ Partial Class FormDesagueAuto
         Me.HhNumericEntry1.Decimales = 0
         Me.HhNumericEntry1.DireccionEscritura = Nothing
         Me.HhNumericEntry1.DireccionLectura = Nothing
-        Me.HhNumericEntry1.Etiqueta = Nothing
         Me.HhNumericEntry1.Factor = 1.0!
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhNumericEntry1.Link = Nothing
         Me.HhNumericEntry1.Location = New System.Drawing.Point(208, 111)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
@@ -93,7 +93,7 @@ Partial Class FormDesagueAuto
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
         Me.HhMomentaryButton1.Location = New System.Drawing.Point(152, 473)
@@ -112,7 +112,7 @@ Partial Class FormDesagueAuto
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(258, 473)
@@ -124,11 +124,76 @@ Partial Class FormDesagueAuto
         Me.Button1.Texto = "Cancelar"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'HhLabel1
+        '
+        Me.HhLabel1.AutoActualizar = False
+        Me.HhLabel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.HhLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HhLabel1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhLabel1.DireccionLectura = Nothing
+        Me.HhLabel1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhLabel1.Link = Nothing
+        Me.HhLabel1.Location = New System.Drawing.Point(14, 9)
+        Me.HhLabel1.LongitudTexto = 0
+        Me.HhLabel1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.HhLabel1.Name = "HhLabel1"
+        Me.HhLabel1.Size = New System.Drawing.Size(188, 45)
+        Me.HhLabel1.TabIndex = 9
+        Me.HhLabel1.Text = "Desague 1"
+        Me.HhLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhLabel1.Texto = "Desague 1"
+        Me.HhLabel1.Tooltip = Nothing
+        '
+        'HhLabel2
+        '
+        Me.HhLabel2.AutoActualizar = False
+        Me.HhLabel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.HhLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HhLabel2.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhLabel2.DireccionLectura = Nothing
+        Me.HhLabel2.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhLabel2.Link = Nothing
+        Me.HhLabel2.Location = New System.Drawing.Point(14, 60)
+        Me.HhLabel2.LongitudTexto = 0
+        Me.HhLabel2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.HhLabel2.Name = "HhLabel2"
+        Me.HhLabel2.Size = New System.Drawing.Size(188, 45)
+        Me.HhLabel2.TabIndex = 10
+        Me.HhLabel2.Text = "Rotacion"
+        Me.HhLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhLabel2.Texto = "Rotacion"
+        Me.HhLabel2.Tooltip = Nothing
+        '
+        'HhLabel3
+        '
+        Me.HhLabel3.AutoActualizar = False
+        Me.HhLabel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.HhLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HhLabel3.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhLabel3.DireccionLectura = Nothing
+        Me.HhLabel3.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhLabel3.Link = Nothing
+        Me.HhLabel3.Location = New System.Drawing.Point(11, 111)
+        Me.HhLabel3.LongitudTexto = 0
+        Me.HhLabel3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.HhLabel3.Name = "HhLabel3"
+        Me.HhLabel3.Size = New System.Drawing.Size(188, 40)
+        Me.HhLabel3.TabIndex = 11
+        Me.HhLabel3.Text = "Tiempo"
+        Me.HhLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhLabel3.Texto = "Tiempo"
+        Me.HhLabel3.Tooltip = Nothing
+        '
         'FormDesagueAuto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.ClientSize = New System.Drawing.Size(370, 575)
+        Me.Controls.Add(Me.HhLabel3)
+        Me.Controls.Add(Me.HhLabel2)
+        Me.Controls.Add(Me.HhLabel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.HhMomentaryButton1)
         Me.Controls.Add(Me.HhNumericEntry1)
@@ -147,4 +212,7 @@ Partial Class FormDesagueAuto
     Friend WithEvents HhNumericEntry1 As hhNumericEntry.hhNumericEntry
     Friend WithEvents HhMomentaryButton1 As hhMomentaryButton.hhMomentaryButton
     Friend WithEvents Button1 As hhMomentaryButton.hhMomentaryButton
+    Friend WithEvents HhLabel1 As hhLabel.hhLabel
+    Friend WithEvents HhLabel2 As hhLabel.hhLabel
+    Friend WithEvents HhLabel3 As hhLabel.hhLabel
 End Class

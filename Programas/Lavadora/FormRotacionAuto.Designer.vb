@@ -25,6 +25,9 @@ Partial Class FormRotacionAuto
         Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry()
         Me.HhNumericEntry2 = New hhNumericEntry.hhNumericEntry()
         Me.HhNumericEntry3 = New hhNumericEntry.hhNumericEntry()
+        Me.HhLabel1 = New hhLabel.hhLabel()
+        Me.HhLabel2 = New hhLabel.hhLabel()
+        Me.HhLabel3 = New hhLabel.hhLabel()
         Me.SuspendLayout()
         '
         'Button1
@@ -34,14 +37,14 @@ Partial Class FormRotacionAuto
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(258, 473)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 0
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button1.Texto = Nothing
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -52,14 +55,14 @@ Partial Class FormRotacionAuto
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
         Me.HhMomentaryButton1.Location = New System.Drawing.Point(152, 473)
         Me.HhMomentaryButton1.Name = "HhMomentaryButton1"
         Me.HhMomentaryButton1.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton1.TabIndex = 1
-        Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton1.Texto = Nothing
         Me.HhMomentaryButton1.UseVisualStyleBackColor = True
         '
@@ -72,13 +75,12 @@ Partial Class FormRotacionAuto
         Me.HhNumericEntry1.Decimales = 0
         Me.HhNumericEntry1.DireccionEscritura = Nothing
         Me.HhNumericEntry1.DireccionLectura = Nothing
-        Me.HhNumericEntry1.Etiqueta = Nothing
         Me.HhNumericEntry1.Factor = 1.0!
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhNumericEntry1.Link = Nothing
-        Me.HhNumericEntry1.Location = New System.Drawing.Point(208, 104)
+        Me.HhNumericEntry1.Location = New System.Drawing.Point(208, 114)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
-        Me.HhNumericEntry1.Size = New System.Drawing.Size(150, 40)
+        Me.HhNumericEntry1.Size = New System.Drawing.Size(150, 45)
         Me.HhNumericEntry1.TabIndex = 2
         Me.HhNumericEntry1.Text = "0"
         Me.HhNumericEntry1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -97,13 +99,12 @@ Partial Class FormRotacionAuto
         Me.HhNumericEntry2.Decimales = 0
         Me.HhNumericEntry2.DireccionEscritura = Nothing
         Me.HhNumericEntry2.DireccionLectura = Nothing
-        Me.HhNumericEntry2.Etiqueta = Nothing
         Me.HhNumericEntry2.Factor = 1.0!
-        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhNumericEntry2.Link = Nothing
-        Me.HhNumericEntry2.Location = New System.Drawing.Point(208, 58)
+        Me.HhNumericEntry2.Location = New System.Drawing.Point(208, 63)
         Me.HhNumericEntry2.Name = "HhNumericEntry2"
-        Me.HhNumericEntry2.Size = New System.Drawing.Size(150, 40)
+        Me.HhNumericEntry2.Size = New System.Drawing.Size(150, 45)
         Me.HhNumericEntry2.TabIndex = 5
         Me.HhNumericEntry2.Text = "0"
         Me.HhNumericEntry2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -122,13 +123,12 @@ Partial Class FormRotacionAuto
         Me.HhNumericEntry3.Decimales = 0
         Me.HhNumericEntry3.DireccionEscritura = Nothing
         Me.HhNumericEntry3.DireccionLectura = Nothing
-        Me.HhNumericEntry3.Etiqueta = Nothing
         Me.HhNumericEntry3.Factor = 1.0!
-        Me.HhNumericEntry3.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericEntry3.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhNumericEntry3.Link = Nothing
         Me.HhNumericEntry3.Location = New System.Drawing.Point(208, 12)
         Me.HhNumericEntry3.Name = "HhNumericEntry3"
-        Me.HhNumericEntry3.Size = New System.Drawing.Size(150, 40)
+        Me.HhNumericEntry3.Size = New System.Drawing.Size(150, 45)
         Me.HhNumericEntry3.TabIndex = 9
         Me.HhNumericEntry3.Text = "0"
         Me.HhNumericEntry3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -138,11 +138,74 @@ Partial Class FormRotacionAuto
         Me.HhNumericEntry3.ValorMaximo = 0
         Me.HhNumericEntry3.ValorMinimo = 0
         '
+        'HhLabel1
+        '
+        Me.HhLabel1.AutoActualizar = False
+        Me.HhLabel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.HhLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HhLabel1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhLabel1.DireccionLectura = Nothing
+        Me.HhLabel1.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhLabel1.Link = Nothing
+        Me.HhLabel1.Location = New System.Drawing.Point(14, 12)
+        Me.HhLabel1.LongitudTexto = 0
+        Me.HhLabel1.Name = "HhLabel1"
+        Me.HhLabel1.Size = New System.Drawing.Size(188, 45)
+        Me.HhLabel1.TabIndex = 10
+        Me.HhLabel1.Text = "Giros"
+        Me.HhLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhLabel1.Texto = "Giros"
+        Me.HhLabel1.Tooltip = Nothing
+        '
+        'HhLabel2
+        '
+        Me.HhLabel2.AutoActualizar = False
+        Me.HhLabel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.HhLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HhLabel2.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhLabel2.DireccionLectura = Nothing
+        Me.HhLabel2.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhLabel2.Link = Nothing
+        Me.HhLabel2.Location = New System.Drawing.Point(14, 63)
+        Me.HhLabel2.LongitudTexto = 0
+        Me.HhLabel2.Name = "HhLabel2"
+        Me.HhLabel2.Size = New System.Drawing.Size(188, 45)
+        Me.HhLabel2.TabIndex = 11
+        Me.HhLabel2.Text = "Pausa"
+        Me.HhLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhLabel2.Texto = "Pausa"
+        Me.HhLabel2.Tooltip = Nothing
+        '
+        'HhLabel3
+        '
+        Me.HhLabel3.AutoActualizar = False
+        Me.HhLabel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.HhLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HhLabel3.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhLabel3.DireccionLectura = Nothing
+        Me.HhLabel3.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhLabel3.Link = Nothing
+        Me.HhLabel3.Location = New System.Drawing.Point(14, 114)
+        Me.HhLabel3.LongitudTexto = 0
+        Me.HhLabel3.Name = "HhLabel3"
+        Me.HhLabel3.Size = New System.Drawing.Size(188, 45)
+        Me.HhLabel3.TabIndex = 12
+        Me.HhLabel3.Text = "Velocidad"
+        Me.HhLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhLabel3.Texto = "Velocidad"
+        Me.HhLabel3.Tooltip = Nothing
+        '
         'FormRotacionAuto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(370, 575)
+        Me.Controls.Add(Me.HhLabel3)
+        Me.Controls.Add(Me.HhLabel2)
+        Me.Controls.Add(Me.HhLabel1)
         Me.Controls.Add(Me.HhNumericEntry3)
         Me.Controls.Add(Me.HhNumericEntry2)
         Me.Controls.Add(Me.HhNumericEntry1)
@@ -161,4 +224,7 @@ Partial Class FormRotacionAuto
     Friend WithEvents HhNumericEntry1 As hhNumericEntry.hhNumericEntry
     Friend WithEvents HhNumericEntry2 As hhNumericEntry.hhNumericEntry
     Friend WithEvents HhNumericEntry3 As hhNumericEntry.hhNumericEntry
+    Friend WithEvents HhLabel1 As hhLabel.hhLabel
+    Friend WithEvents HhLabel2 As hhLabel.hhLabel
+    Friend WithEvents HhLabel3 As hhLabel.hhLabel
 End Class

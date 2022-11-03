@@ -56,18 +56,24 @@ Partial Class FormEditorAuto
         Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormEditorAuto))
+        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.HhNumericEntry1 = New hhNumericEntry.hhNumericEntry()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -106,7 +112,6 @@ Partial Class FormEditorAuto
         Me.DataGridViewTextBoxColumn32 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn33 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn34 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HhGridDisplay1 = New hhGridDisplay.hhGridDisplay()
         Me.DataGridViewTextBoxColumn45 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn46 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn43 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -132,34 +137,41 @@ Partial Class FormEditorAuto
         Me.Button1 = New hhMomentaryButton.hhMomentaryButton()
         Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton()
         Me.Button2 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhGridDisplay1 = New hhGridDisplay.hhGridDisplay()
+        Me.DataGridViewTextBoxColumn51 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn52 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn49 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn50 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn47 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn48 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HhMomentaryButton6 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhLabel1 = New hhLabel.hhLabel()
         CType(Me.HhGridDisplay1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'HhNumericEntry1
         '
         Me.HhNumericEntry1.AutoActualizar = False
-        Me.HhNumericEntry1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhNumericEntry1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhNumericEntry1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhNumericEntry1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericEntry1.Decimales = 0
         Me.HhNumericEntry1.DireccionEscritura = Nothing
         Me.HhNumericEntry1.DireccionLectura = Nothing
-        Me.HhNumericEntry1.Etiqueta = Nothing
         Me.HhNumericEntry1.Factor = 1.0!
         Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhNumericEntry1.Link = Nothing
-        Me.HhNumericEntry1.Location = New System.Drawing.Point(761, 15)
-        Me.HhNumericEntry1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.HhNumericEntry1.Location = New System.Drawing.Point(620, 12)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
-        Me.HhNumericEntry1.Size = New System.Drawing.Size(289, 52)
+        Me.HhNumericEntry1.Size = New System.Drawing.Size(168, 43)
         Me.HhNumericEntry1.TabIndex = 3
         Me.HhNumericEntry1.Text = "0"
         Me.HhNumericEntry1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.HhNumericEntry1.Tooltip = Nothing
         Me.HhNumericEntry1.Unidades = Nothing
         Me.HhNumericEntry1.Valor = 0
-        Me.HhNumericEntry1.ValorMaximo = 0
-        Me.HhNumericEntry1.ValorMinimo = 0
+        Me.HhNumericEntry1.ValorMaximo = 99
+        Me.HhNumericEntry1.ValorMinimo = 1
         '
         'DataGridViewTextBoxColumn11
         '
@@ -572,54 +584,12 @@ Partial Class FormEditorAuto
         Me.DataGridViewTextBoxColumn34.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.DataGridViewTextBoxColumn34.Width = 291
         '
-        'HhGridDisplay1
-        '
-        Me.HhGridDisplay1.AllowUserToAddRows = False
-        Me.HhGridDisplay1.AllowUserToDeleteRows = False
-        Me.HhGridDisplay1.AllowUserToResizeRows = False
-        Me.HhGridDisplay1.AutoActualizar = False
-        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle37.Font = New System.Drawing.Font("Verdana", 14.0!)
-        DataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.HhGridDisplay1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle37
-        Me.HhGridDisplay1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.HhGridDisplay1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn45, Me.DataGridViewTextBoxColumn46})
-        Me.HhGridDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.HhGridDisplay1.DireccionEscritura = Nothing
-        Me.HhGridDisplay1.DireccionLectura = Nothing
-        Me.HhGridDisplay1.DireccionPaso = Nothing
-        Me.HhGridDisplay1.EscribirPaso = False
-        Me.HhGridDisplay1.Font = New System.Drawing.Font("Verdana", 14.0!)
-        Me.HhGridDisplay1.Link = Nothing
-        Me.HhGridDisplay1.Location = New System.Drawing.Point(493, 71)
-        Me.HhGridDisplay1.LongitudPaso = 0
-        Me.HhGridDisplay1.LongitudTexto = 0
-        Me.HhGridDisplay1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.HhGridDisplay1.MostrarSeleccion = False
-        Me.HhGridDisplay1.MultiSelect = False
-        Me.HhGridDisplay1.Name = "HhGridDisplay1"
-        Me.HhGridDisplay1.PasoActual = 0
-        Me.HhGridDisplay1.ReadOnly = True
-        Me.HhGridDisplay1.Receta = Nothing
-        Me.HhGridDisplay1.RowHeadersVisible = False
-        Me.HhGridDisplay1.RowHeadersWidth = 51
-        DataGridViewCellStyle40.Font = New System.Drawing.Font("Segoe Script", 18.0!)
-        Me.HhGridDisplay1.RowsDefaultCellStyle = DataGridViewCellStyle40
-        Me.HhGridDisplay1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.HhGridDisplay1.ShowCellToolTips = False
-        Me.HhGridDisplay1.Size = New System.Drawing.Size(557, 487)
-        Me.HhGridDisplay1.TabIndex = 5
-        '
         'DataGridViewTextBoxColumn45
         '
         Me.DataGridViewTextBoxColumn45.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle38.Font = New System.Drawing.Font("Verdana", 10.0!)
-        Me.DataGridViewTextBoxColumn45.DefaultCellStyle = DataGridViewCellStyle38
+        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle37.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.DataGridViewTextBoxColumn45.DefaultCellStyle = DataGridViewCellStyle37
         Me.DataGridViewTextBoxColumn45.HeaderText = "#"
         Me.DataGridViewTextBoxColumn45.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn45.Name = "DataGridViewTextBoxColumn45"
@@ -630,9 +600,9 @@ Partial Class FormEditorAuto
         'DataGridViewTextBoxColumn46
         '
         Me.DataGridViewTextBoxColumn46.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle39.Font = New System.Drawing.Font("Verdana", 10.0!)
-        Me.DataGridViewTextBoxColumn46.DefaultCellStyle = DataGridViewCellStyle39
+        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle38.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.DataGridViewTextBoxColumn46.DefaultCellStyle = DataGridViewCellStyle38
         Me.DataGridViewTextBoxColumn46.HeaderText = "Pasos"
         Me.DataGridViewTextBoxColumn46.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn46.Name = "DataGridViewTextBoxColumn46"
@@ -643,9 +613,9 @@ Partial Class FormEditorAuto
         'DataGridViewTextBoxColumn43
         '
         Me.DataGridViewTextBoxColumn43.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle41.Font = New System.Drawing.Font("Verdana", 14.0!)
-        Me.DataGridViewTextBoxColumn43.DefaultCellStyle = DataGridViewCellStyle41
+        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle39.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.DataGridViewTextBoxColumn43.DefaultCellStyle = DataGridViewCellStyle39
         Me.DataGridViewTextBoxColumn43.HeaderText = "#"
         Me.DataGridViewTextBoxColumn43.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn43.Name = "DataGridViewTextBoxColumn43"
@@ -656,9 +626,9 @@ Partial Class FormEditorAuto
         'DataGridViewTextBoxColumn44
         '
         Me.DataGridViewTextBoxColumn44.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle42.Font = New System.Drawing.Font("Verdana", 14.0!)
-        Me.DataGridViewTextBoxColumn44.DefaultCellStyle = DataGridViewCellStyle42
+        DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle40.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.DataGridViewTextBoxColumn44.DefaultCellStyle = DataGridViewCellStyle40
         Me.DataGridViewTextBoxColumn44.HeaderText = "Pasos"
         Me.DataGridViewTextBoxColumn44.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn44.Name = "DataGridViewTextBoxColumn44"
@@ -669,9 +639,9 @@ Partial Class FormEditorAuto
         'DataGridViewTextBoxColumn41
         '
         Me.DataGridViewTextBoxColumn41.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle43.Font = New System.Drawing.Font("Verdana", 14.0!)
-        Me.DataGridViewTextBoxColumn41.DefaultCellStyle = DataGridViewCellStyle43
+        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle41.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.DataGridViewTextBoxColumn41.DefaultCellStyle = DataGridViewCellStyle41
         Me.DataGridViewTextBoxColumn41.HeaderText = "#"
         Me.DataGridViewTextBoxColumn41.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn41.Name = "DataGridViewTextBoxColumn41"
@@ -682,9 +652,9 @@ Partial Class FormEditorAuto
         'DataGridViewTextBoxColumn42
         '
         Me.DataGridViewTextBoxColumn42.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle44.Font = New System.Drawing.Font("Verdana", 14.0!)
-        Me.DataGridViewTextBoxColumn42.DefaultCellStyle = DataGridViewCellStyle44
+        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle42.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.DataGridViewTextBoxColumn42.DefaultCellStyle = DataGridViewCellStyle42
         Me.DataGridViewTextBoxColumn42.HeaderText = "Pasos"
         Me.DataGridViewTextBoxColumn42.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn42.Name = "DataGridViewTextBoxColumn42"
@@ -695,9 +665,9 @@ Partial Class FormEditorAuto
         'DataGridViewTextBoxColumn39
         '
         Me.DataGridViewTextBoxColumn39.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle45.Font = New System.Drawing.Font("Verdana", 14.0!)
-        Me.DataGridViewTextBoxColumn39.DefaultCellStyle = DataGridViewCellStyle45
+        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle43.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.DataGridViewTextBoxColumn39.DefaultCellStyle = DataGridViewCellStyle43
         Me.DataGridViewTextBoxColumn39.HeaderText = "#"
         Me.DataGridViewTextBoxColumn39.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn39.Name = "DataGridViewTextBoxColumn39"
@@ -708,9 +678,9 @@ Partial Class FormEditorAuto
         'DataGridViewTextBoxColumn40
         '
         Me.DataGridViewTextBoxColumn40.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle46.Font = New System.Drawing.Font("Verdana", 14.0!)
-        Me.DataGridViewTextBoxColumn40.DefaultCellStyle = DataGridViewCellStyle46
+        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle44.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.DataGridViewTextBoxColumn40.DefaultCellStyle = DataGridViewCellStyle44
         Me.DataGridViewTextBoxColumn40.HeaderText = "Pasos"
         Me.DataGridViewTextBoxColumn40.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn40.Name = "DataGridViewTextBoxColumn40"
@@ -721,8 +691,8 @@ Partial Class FormEditorAuto
         'DataGridViewTextBoxColumn37
         '
         Me.DataGridViewTextBoxColumn37.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn37.DefaultCellStyle = DataGridViewCellStyle47
+        DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn37.DefaultCellStyle = DataGridViewCellStyle45
         Me.DataGridViewTextBoxColumn37.HeaderText = "#"
         Me.DataGridViewTextBoxColumn37.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn37.Name = "DataGridViewTextBoxColumn37"
@@ -733,8 +703,8 @@ Partial Class FormEditorAuto
         'DataGridViewTextBoxColumn38
         '
         Me.DataGridViewTextBoxColumn38.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.DataGridViewTextBoxColumn38.DefaultCellStyle = DataGridViewCellStyle48
+        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.DataGridViewTextBoxColumn38.DefaultCellStyle = DataGridViewCellStyle46
         Me.DataGridViewTextBoxColumn38.HeaderText = "Pasos"
         Me.DataGridViewTextBoxColumn38.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn38.Name = "DataGridViewTextBoxColumn38"
@@ -752,10 +722,9 @@ Partial Class FormEditorAuto
         Me.HhMomentaryButton5.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.HhMomentaryButton5.Image = CType(resources.GetObject("HhMomentaryButton5.Image"), System.Drawing.Image)
         Me.HhMomentaryButton5.Link = Nothing
-        Me.HhMomentaryButton5.Location = New System.Drawing.Point(352, 308)
-        Me.HhMomentaryButton5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.HhMomentaryButton5.Location = New System.Drawing.Point(264, 250)
         Me.HhMomentaryButton5.Name = "HhMomentaryButton5"
-        Me.HhMomentaryButton5.Size = New System.Drawing.Size(133, 111)
+        Me.HhMomentaryButton5.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton5.TabIndex = 26
         Me.HhMomentaryButton5.Text = "Nueva"
         Me.HhMomentaryButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -772,10 +741,9 @@ Partial Class FormEditorAuto
         Me.Button10.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
         Me.Button10.Link = Nothing
-        Me.Button10.Location = New System.Drawing.Point(180, 406)
-        Me.Button10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button10.Location = New System.Drawing.Point(135, 330)
         Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(133, 111)
+        Me.Button10.Size = New System.Drawing.Size(100, 90)
         Me.Button10.TabIndex = 24
         Me.Button10.Text = "Muestreo"
         Me.Button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -792,10 +760,9 @@ Partial Class FormEditorAuto
         Me.Button9.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
         Me.Button9.Link = Nothing
-        Me.Button9.Location = New System.Drawing.Point(15, 406)
-        Me.Button9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button9.Location = New System.Drawing.Point(11, 330)
         Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(133, 111)
+        Me.Button9.Size = New System.Drawing.Size(100, 90)
         Me.Button9.TabIndex = 23
         Me.Button9.Text = "Quimicos"
         Me.Button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -812,10 +779,9 @@ Partial Class FormEditorAuto
         Me.Button8.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.Button8.Image = CType(resources.GetObject("Button8.Image"), System.Drawing.Image)
         Me.Button8.Link = Nothing
-        Me.Button8.Location = New System.Drawing.Point(177, 276)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button8.Location = New System.Drawing.Point(133, 224)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(133, 111)
+        Me.Button8.Size = New System.Drawing.Size(100, 90)
         Me.Button8.TabIndex = 20
         Me.Button8.Text = "Centrifuga"
         Me.Button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -832,10 +798,9 @@ Partial Class FormEditorAuto
         Me.HhMomentaryButton4.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.HhMomentaryButton4.Image = CType(resources.GetObject("HhMomentaryButton4.Image"), System.Drawing.Image)
         Me.HhMomentaryButton4.Link = Nothing
-        Me.HhMomentaryButton4.Location = New System.Drawing.Point(776, 582)
-        Me.HhMomentaryButton4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.HhMomentaryButton4.Location = New System.Drawing.Point(582, 473)
         Me.HhMomentaryButton4.Name = "HhMomentaryButton4"
-        Me.HhMomentaryButton4.Size = New System.Drawing.Size(133, 111)
+        Me.HhMomentaryButton4.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton4.TabIndex = 21
         Me.HhMomentaryButton4.Text = "Enviar"
         Me.HhMomentaryButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -852,12 +817,11 @@ Partial Class FormEditorAuto
         Me.Button7.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
         Me.Button7.Link = Nothing
-        Me.Button7.Location = New System.Drawing.Point(15, 276)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button7.Location = New System.Drawing.Point(11, 224)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(133, 111)
+        Me.Button7.Size = New System.Drawing.Size(100, 90)
         Me.Button7.TabIndex = 18
-        Me.Button7.Text = "Tempera..."
+        Me.Button7.Text = "Temperatura"
         Me.Button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button7.Texto = "Temperatura"
         Me.Button7.UseVisualStyleBackColor = True
@@ -872,12 +836,11 @@ Partial Class FormEditorAuto
         Me.Button6.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
         Me.Button6.Link = Nothing
-        Me.Button6.Location = New System.Drawing.Point(177, 145)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button6.Location = New System.Drawing.Point(133, 118)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(133, 111)
+        Me.Button6.Size = New System.Drawing.Size(100, 90)
         Me.Button6.TabIndex = 16
-        Me.Button6.Text = "Manteni..."
+        Me.Button6.Text = "Mantenimiento"
         Me.Button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button6.Texto = "Mantenimiento"
         Me.Button6.UseVisualStyleBackColor = True
@@ -892,10 +855,9 @@ Partial Class FormEditorAuto
         Me.Button4.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.Button4.Image = Global.Lavadora.My.Resources.Resources.disk
         Me.Button4.Link = Nothing
-        Me.Button4.Location = New System.Drawing.Point(493, 582)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button4.Location = New System.Drawing.Point(370, 473)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(133, 111)
+        Me.Button4.Size = New System.Drawing.Size(100, 90)
         Me.Button4.TabIndex = 12
         Me.Button4.Text = "Guardar"
         Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -912,10 +874,9 @@ Partial Class FormEditorAuto
         Me.Button5.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
         Me.Button5.Link = Nothing
-        Me.Button5.Location = New System.Drawing.Point(15, 145)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button5.Location = New System.Drawing.Point(11, 118)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(133, 111)
+        Me.Button5.Size = New System.Drawing.Size(100, 90)
         Me.Button5.TabIndex = 14
         Me.Button5.Text = "Rotacion"
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -932,10 +893,9 @@ Partial Class FormEditorAuto
         Me.Button3.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
         Me.Button3.Link = Nothing
-        Me.Button3.Location = New System.Drawing.Point(177, 15)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button3.Location = New System.Drawing.Point(133, 12)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(133, 111)
+        Me.Button3.Size = New System.Drawing.Size(100, 90)
         Me.Button3.TabIndex = 7
         Me.Button3.Text = "Desague"
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -952,10 +912,9 @@ Partial Class FormEditorAuto
         Me.HhMomentaryButton3.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.HhMomentaryButton3.Image = CType(resources.GetObject("HhMomentaryButton3.Image"), System.Drawing.Image)
         Me.HhMomentaryButton3.Link = Nothing
-        Me.HhMomentaryButton3.Location = New System.Drawing.Point(352, 190)
-        Me.HhMomentaryButton3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.HhMomentaryButton3.Location = New System.Drawing.Point(264, 154)
         Me.HhMomentaryButton3.Name = "HhMomentaryButton3"
-        Me.HhMomentaryButton3.Size = New System.Drawing.Size(133, 111)
+        Me.HhMomentaryButton3.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton3.TabIndex = 10
         Me.HhMomentaryButton3.Text = "Eliminar"
         Me.HhMomentaryButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -972,10 +931,9 @@ Partial Class FormEditorAuto
         Me.HhMomentaryButton2.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.HhMomentaryButton2.Image = CType(resources.GetObject("HhMomentaryButton2.Image"), System.Drawing.Image)
         Me.HhMomentaryButton2.Link = Nothing
-        Me.HhMomentaryButton2.Location = New System.Drawing.Point(352, 71)
-        Me.HhMomentaryButton2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.HhMomentaryButton2.Location = New System.Drawing.Point(264, 58)
         Me.HhMomentaryButton2.Name = "HhMomentaryButton2"
-        Me.HhMomentaryButton2.Size = New System.Drawing.Size(133, 111)
+        Me.HhMomentaryButton2.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton2.TabIndex = 8
         Me.HhMomentaryButton2.Text = "Insertar"
         Me.HhMomentaryButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -992,10 +950,9 @@ Partial Class FormEditorAuto
         Me.Button1.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
-        Me.Button1.Location = New System.Drawing.Point(917, 582)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Location = New System.Drawing.Point(688, 473)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(133, 111)
+        Me.Button1.Size = New System.Drawing.Size(100, 90)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Cancelar"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -1012,10 +969,9 @@ Partial Class FormEditorAuto
         Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.HhMomentaryButton1.Image = Global.Lavadora.My.Resources.Resources._stop
         Me.HhMomentaryButton1.Link = Nothing
-        Me.HhMomentaryButton1.Location = New System.Drawing.Point(180, 537)
-        Me.HhMomentaryButton1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.HhMomentaryButton1.Location = New System.Drawing.Point(135, 436)
         Me.HhMomentaryButton1.Name = "HhMomentaryButton1"
-        Me.HhMomentaryButton1.Size = New System.Drawing.Size(133, 111)
+        Me.HhMomentaryButton1.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton1.TabIndex = 2
         Me.HhMomentaryButton1.Text = "Fin"
         Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -1032,21 +988,178 @@ Partial Class FormEditorAuto
         Me.Button2.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.Link = Nothing
-        Me.Button2.Location = New System.Drawing.Point(15, 15)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Location = New System.Drawing.Point(11, 12)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(133, 111)
+        Me.Button2.Size = New System.Drawing.Size(100, 90)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Llenado"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button2.Texto = "Llenado"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'HhGridDisplay1
+        '
+        Me.HhGridDisplay1.AllowUserToAddRows = False
+        Me.HhGridDisplay1.AllowUserToDeleteRows = False
+        Me.HhGridDisplay1.AllowUserToResizeRows = False
+        Me.HhGridDisplay1.AutoActualizar = False
+        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle47.Font = New System.Drawing.Font("Verdana", 14.0!)
+        DataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.HhGridDisplay1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle47
+        Me.HhGridDisplay1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.HhGridDisplay1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn51, Me.DataGridViewTextBoxColumn52})
+        Me.HhGridDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhGridDisplay1.DireccionEscritura = Nothing
+        Me.HhGridDisplay1.DireccionLectura = Nothing
+        Me.HhGridDisplay1.DireccionPaso = Nothing
+        Me.HhGridDisplay1.EscribirPaso = False
+        Me.HhGridDisplay1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhGridDisplay1.Link = Nothing
+        Me.HhGridDisplay1.Location = New System.Drawing.Point(370, 58)
+        Me.HhGridDisplay1.LongitudPaso = 0
+        Me.HhGridDisplay1.LongitudTexto = 0
+        Me.HhGridDisplay1.MostrarSeleccion = False
+        Me.HhGridDisplay1.MultiSelect = False
+        Me.HhGridDisplay1.Name = "HhGridDisplay1"
+        Me.HhGridDisplay1.PasoActual = 0
+        Me.HhGridDisplay1.ReadOnly = True
+        Me.HhGridDisplay1.Receta = Nothing
+        Me.HhGridDisplay1.RowHeadersVisible = False
+        Me.HhGridDisplay1.RowHeadersWidth = 51
+        DataGridViewCellStyle50.Font = New System.Drawing.Font("Segoe Script", 18.0!)
+        Me.HhGridDisplay1.RowsDefaultCellStyle = DataGridViewCellStyle50
+        Me.HhGridDisplay1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.HhGridDisplay1.ShowCellToolTips = False
+        Me.HhGridDisplay1.Size = New System.Drawing.Size(418, 396)
+        Me.HhGridDisplay1.TabIndex = 5
+        '
+        'DataGridViewTextBoxColumn51
+        '
+        Me.DataGridViewTextBoxColumn51.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle48.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.DataGridViewTextBoxColumn51.DefaultCellStyle = DataGridViewCellStyle48
+        Me.DataGridViewTextBoxColumn51.HeaderText = "#"
+        Me.DataGridViewTextBoxColumn51.Name = "DataGridViewTextBoxColumn51"
+        Me.DataGridViewTextBoxColumn51.ReadOnly = True
+        Me.DataGridViewTextBoxColumn51.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn51.Width = 41
+        '
+        'DataGridViewTextBoxColumn52
+        '
+        Me.DataGridViewTextBoxColumn52.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle49.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.DataGridViewTextBoxColumn52.DefaultCellStyle = DataGridViewCellStyle49
+        Me.DataGridViewTextBoxColumn52.HeaderText = "Pasos"
+        Me.DataGridViewTextBoxColumn52.Name = "DataGridViewTextBoxColumn52"
+        Me.DataGridViewTextBoxColumn52.ReadOnly = True
+        Me.DataGridViewTextBoxColumn52.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn52.Width = 357
+        '
+        'DataGridViewTextBoxColumn49
+        '
+        Me.DataGridViewTextBoxColumn49.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle51.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.DataGridViewTextBoxColumn49.DefaultCellStyle = DataGridViewCellStyle51
+        Me.DataGridViewTextBoxColumn49.HeaderText = "#"
+        Me.DataGridViewTextBoxColumn49.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn49.Name = "DataGridViewTextBoxColumn49"
+        Me.DataGridViewTextBoxColumn49.ReadOnly = True
+        Me.DataGridViewTextBoxColumn49.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn49.Width = 52
+        '
+        'DataGridViewTextBoxColumn50
+        '
+        Me.DataGridViewTextBoxColumn50.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle52.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.DataGridViewTextBoxColumn50.DefaultCellStyle = DataGridViewCellStyle52
+        Me.DataGridViewTextBoxColumn50.HeaderText = "Pasos"
+        Me.DataGridViewTextBoxColumn50.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn50.Name = "DataGridViewTextBoxColumn50"
+        Me.DataGridViewTextBoxColumn50.ReadOnly = True
+        Me.DataGridViewTextBoxColumn50.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn50.Width = 481
+        '
+        'DataGridViewTextBoxColumn47
+        '
+        Me.DataGridViewTextBoxColumn47.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle53.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.DataGridViewTextBoxColumn47.DefaultCellStyle = DataGridViewCellStyle53
+        Me.DataGridViewTextBoxColumn47.HeaderText = "#"
+        Me.DataGridViewTextBoxColumn47.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn47.Name = "DataGridViewTextBoxColumn47"
+        Me.DataGridViewTextBoxColumn47.ReadOnly = True
+        Me.DataGridViewTextBoxColumn47.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn47.Width = 52
+        '
+        'DataGridViewTextBoxColumn48
+        '
+        Me.DataGridViewTextBoxColumn48.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle54.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.DataGridViewTextBoxColumn48.DefaultCellStyle = DataGridViewCellStyle54
+        Me.DataGridViewTextBoxColumn48.HeaderText = "Pasos"
+        Me.DataGridViewTextBoxColumn48.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn48.Name = "DataGridViewTextBoxColumn48"
+        Me.DataGridViewTextBoxColumn48.ReadOnly = True
+        Me.DataGridViewTextBoxColumn48.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn48.Width = 481
+        '
+        'HhMomentaryButton6
+        '
+        Me.HhMomentaryButton6.Appearance = System.Windows.Forms.Appearance.Button
+        Me.HhMomentaryButton6.AutoActualizar = False
+        Me.HhMomentaryButton6.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhMomentaryButton6.DireccionEscritura = Nothing
+        Me.HhMomentaryButton6.DireccionLectura = Nothing
+        Me.HhMomentaryButton6.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.HhMomentaryButton6.Image = Global.Lavadora.My.Resources.Resources.icons8_nozzle_64__1_
+        Me.HhMomentaryButton6.Link = Nothing
+        Me.HhMomentaryButton6.Location = New System.Drawing.Point(10, 436)
+        Me.HhMomentaryButton6.Name = "HhMomentaryButton6"
+        Me.HhMomentaryButton6.Size = New System.Drawing.Size(100, 90)
+        Me.HhMomentaryButton6.TabIndex = 28
+        Me.HhMomentaryButton6.Text = "Jet"
+        Me.HhMomentaryButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HhMomentaryButton6.Texto = "Jet"
+        Me.HhMomentaryButton6.UseVisualStyleBackColor = True
+        '
+        'HhLabel1
+        '
+        Me.HhLabel1.AutoActualizar = False
+        Me.HhLabel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.HhLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HhLabel1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhLabel1.DireccionLectura = Nothing
+        Me.HhLabel1.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhLabel1.Link = Nothing
+        Me.HhLabel1.Location = New System.Drawing.Point(370, 12)
+        Me.HhLabel1.LongitudTexto = 0
+        Me.HhLabel1.Name = "HhLabel1"
+        Me.HhLabel1.Size = New System.Drawing.Size(244, 43)
+        Me.HhLabel1.TabIndex = 29
+        Me.HhLabel1.Text = "Paso #"
+        Me.HhLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhLabel1.Texto = "Paso #"
+        Me.HhLabel1.Tooltip = Nothing
+        '
         'FormEditorAuto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1067, 708)
+        Me.ClientSize = New System.Drawing.Size(800, 575)
+        Me.Controls.Add(Me.HhLabel1)
+        Me.Controls.Add(Me.HhMomentaryButton6)
         Me.Controls.Add(Me.HhMomentaryButton5)
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.Button9)
@@ -1066,7 +1179,6 @@ Partial Class FormEditorAuto
         Me.Controls.Add(Me.Button2)
         Me.Cursor = System.Windows.Forms.Cursors.Cross
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FormEditorAuto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "EditorAuto"
@@ -1138,4 +1250,12 @@ Partial Class FormEditorAuto
     Friend WithEvents DataGridViewTextBoxColumn44 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn45 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn46 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn47 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn48 As DataGridViewTextBoxColumn
+    Friend WithEvents HhMomentaryButton6 As hhMomentaryButton.hhMomentaryButton
+    Friend WithEvents DataGridViewTextBoxColumn49 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn50 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn51 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn52 As DataGridViewTextBoxColumn
+    Friend WithEvents HhLabel1 As hhLabel.hhLabel
 End Class

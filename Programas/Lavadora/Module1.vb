@@ -1,6 +1,12 @@
 Module Module1
-    Declare Function SetComputerName Lib "kernel32" Alias "SetComputerNameA" (ByVal lpComputerName As String) As Long
-    Public cParametros As Collection
+    'Declare Function SetComputerName Lib "kernel32" Alias "SetComputerNameA" (ByVal lpComputerName As String) As Long
+    'Public cParametros As Collection
+    Public cColorAlerta As Color
+    Public cColorAlertaTexto As Color
+    Public cColorNormal As Color
+    Public cColorNormalTexto As Color
+    Public cColorSeleccion As Color
+    Public cColorSeleccionTexto As Color
     Public sPuerto As New System.IO.Ports.SerialPort
     Public sNombreFuente As String
     Public iTamanioFuente As Integer
@@ -59,9 +65,9 @@ Module Module1
     'The function used to actually send the request to shutdown windows. Set the 'shutdownTypes' parameter to whether you want windows to "shutdown, reboot, logOff, ect..."
     Declare Function ExitWindowsEx Lib "user32" (ByVal shutdownType As Integer, ByVal dwReserved As Integer) As Integer
 
-    Public Function ChangeComputerName(ByVal sNewComputerName As String) As Boolean
-        Return CBool(SetComputerName(sNewComputerName))
-    End Function
+    'Public Function ChangeComputerName(ByVal sNewComputerName As String) As Boolean
+    'Return CBool(SetComputerName(sNewComputerName))
+    'End Function
     Public Sub ClearBit(ByRef MyByte, ByVal MyBit)
         Dim BitMask As Int16
         BitMask = 2 ^ (MyBit)
@@ -84,13 +90,11 @@ Module Module1
     End Sub
     Function Version() As String
         Dim sVer As String
-
         Try
-
-            sVer = My.Application.Deployment.CurrentVersion.ToString
+            sVer = Application.ProductVersion
         Catch
             Try
-                sVer = Application.ProductVersion
+                sVer = My.Application.Deployment.CurrentVersion.ToString
             Catch ex As Exception
                 sVer = "Desconocido"
             End Try
@@ -98,7 +102,13 @@ Module Module1
         Return sVer
     End Function
     Sub CargarOpciones()
-        sTerminal = System.Net.Dns.GetHostName
+        cColorAlerta = Color.FromArgb(GetSetting("hhControls", "Colors", "AlertBackColor", System.Drawing.Color.Red.ToArgb.ToString))
+        cColorNormal = Color.FromArgb(GetSetting("hhControls", "Colors", "NormalBackColor", System.Drawing.SystemColors.Window.ToArgb.ToString))
+        cColorAlertaTexto = Color.FromArgb(GetSetting("hhControls", "Colors", "AlertTextColor", System.Drawing.Color.Black.ToArgb.ToString))
+        cColorNormalTexto = Color.FromArgb(GetSetting("hhControls", "Colors", "NormalTextColor", System.Drawing.SystemColors.WindowText.ToArgb.ToString))
+        cColorSeleccion = Color.FromArgb(GetSetting("hhControls", "Colors", "HighlightColor", SystemColors.Highlight.ToArgb.ToString))
+        cColorSeleccionTexto = Color.FromArgb(GetSetting("hhControls", "Colors", "HighlightTextColor", System.Drawing.SystemColors.HighlightText.ToArgb.ToString))
+        sTerminal = GetSetting("Lavadora", "Principal", "Terminal", System.Net.Dns.GetHostName)
         sNombrePuerto = GetSetting("Lavadora", "Principal", "Puerto", "COM1")
         sNombreFuente = GetSetting("hhControls", "Font", "FontName", "Verdana")
         iTamanioFuente = Val(GetSetting("hhControls", "Font", "FontSize", "14"))
@@ -108,15 +118,18 @@ Module Module1
         iTamanioFuenteBotones = Val(GetSetting("hhControls", "Font", "ButtonFontSize", "8"))
         bDepuracion = -Val(GetSetting("Lavadora", "Principal", "Depuracion", "0"))
         bPermitirSalir = -Val(GetSetting("Lavadora", "Principal", "PermitirSalir", "0"))
-        sVersion = GetSetting("Lavadora", "Principal", "Version", "")
-        If sVersion <> Version() Then
-            sVersion = Version()
-            GuardarOpciones()
-        End If
+        sVersion = Version()
+        GuardarOpciones()
     End Sub
     Sub GuardarOpciones()
+        SaveSetting("hhControls", "Colors", "AlertBackColor", cColorAlerta.ToArgb.ToString)
+        SaveSetting("hhControls", "Colors", "NormalBackColor", cColorNormal.ToArgb.ToString)
+        SaveSetting("hhControls", "Colors", "AlertTextColor", cColorAlertaTexto.ToArgb.ToString)
+        SaveSetting("hhControls", "Colors", "NormalTextColor", cColorNormalTexto.ToArgb.ToString)
+        SaveSetting("hhControls", "Colors", "HighlightColor", cColorSeleccion.ToArgb.ToString)
+        SaveSetting("hhControls", "Colors", "HighlightTextColor", cColorSeleccionTexto.ToArgb.ToString)
+        SaveSetting("Lavadora", "Principal", "Terminal", sTerminal)
         SaveSetting("Lavadora", "Principal", "Puerto", sNombrePuerto)
-        SaveSetting("Lavadora", "Principal", "Version", sVersion)
         SaveSetting("hhControls", "Font", "FontName", sNombreFuente)
         SaveSetting("hhControls", "Font", "FontSize", iTamanioFuente.ToString)
         SaveSetting("hhControls", "Font", "ButtonFontName", sNombreFuenteBotones)
@@ -149,6 +162,7 @@ Module Module1
             .StopBits = IO.Ports.StopBits.One
             .ReceivedBytesThreshold = 1
             .ReadTimeout = 40
+            .WriteTimeout = 25
         End With
         Try
             sPuerto.Open()
@@ -158,13 +172,15 @@ Module Module1
         End Try
     End Sub
     Private Sub mMasterk_Fail(ByVal sender As Object, ByVal e As MasterKlib.MyEventArgs) Handles mMasterk.Fail
-        FormLavadora.HhAnimacion1.BackColor = Color.Red
+        FormLavadora.HhAnimacion1.ForeColor = ccoloralertatexto
+        FormLavadora.HhAnimacion1.BackColor = ccoloralerta
     End Sub
     Private Sub mMasterk_RX(ByVal sender As Object, ByVal e As MasterKlib.MyEventArgs) Handles mMasterk.RX
         FormLavadora.HhAnimacion2.Animar()
     End Sub
     Private Sub mMasterk_Timeout(ByVal sender As Object, ByVal e As MasterKlib.MyEventArgs) Handles mMasterk.Timeout
-        FormLavadora.HhAnimacion2.BackColor = Color.Red
+        FormLavadora.HhAnimacion2.ForeColor = ccoloralertatexto
+        FormLavadora.HhAnimacion2.BackColor = ccoloralerta
     End Sub
     Private Sub mMasterk_TX(ByVal sender As Object, ByVal e As MasterKlib.MyEventArgs) Handles mMasterk.TX
         FormLavadora.HhAnimacion1.Animar()

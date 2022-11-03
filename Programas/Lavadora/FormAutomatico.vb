@@ -15,7 +15,6 @@ Public Class FormAutomatico
 
         HhNumericDisplay1.Link = mMasterk
         HhNumericDisplay1.DireccionLectura = "DW0030"
-        HhNumericDisplay1.Etiqueta = "Temperatura"
         HhNumericDisplay1.Tooltip = "Temperatura actual"
         HhNumericDisplay1.ValorMaximo = 80
         HhNumericDisplay1.ValorMinimo = 0
@@ -23,53 +22,44 @@ Public Class FormAutomatico
 
         HhNumericDisplay2.Link = mMasterk
         HhNumericDisplay2.DireccionLectura = "DW0560"
-        HhNumericDisplay2.Etiqueta = "Set"
         HhNumericDisplay2.Tooltip = "Temperatura programada"
         HhNumericDisplay2.AutoActualizar = True
 
         HhNumericDisplay3.Link = mMasterk
         HhNumericDisplay3.DireccionLectura = "DW0508"
-        HhNumericDisplay3.Etiqueta = "Volumen baño"
         HhNumericDisplay3.Tooltip = "Litros actual"
         HhNumericDisplay3.AutoActualizar = True
 
         HhNumericDisplay4.Link = mMasterk
         HhNumericDisplay4.DireccionLectura = "DW0512"
-        HhNumericDisplay4.Etiqueta = "Set"
         HhNumericDisplay4.Tooltip = "Litros programados"
         HhNumericDisplay4.AutoActualizar = True
 
         HhNumericDisplay5.Link = mMasterk
         HhNumericDisplay5.DireccionLectura = "DW0514"
-        HhNumericDisplay5.Etiqueta = "RPM"
         HhNumericDisplay5.Tooltip = "Velocidad actual"
         HhNumericDisplay5.AutoActualizar = True
 
         HhNumericDisplay6.Link = mMasterk
         HhNumericDisplay6.DireccionLectura = "DW0020"
-        HhNumericDisplay6.Etiqueta = "Set"
         HhNumericDisplay6.Tooltip = "Velocidad programada"
         HhNumericDisplay6.AutoActualizar = True
 
         HhTimeCounterDisplay1.Link = mMasterk
         HhTimeCounterDisplay1.DireccionLectura = "DW0660"
-        HhTimeCounterDisplay1.Etiqueta = "Tiempo paso"
         HhTimeCounterDisplay1.Tooltip = "Tiempo paso"
         HhTimeCounterDisplay1.AutoActualizar = True
 
         HhTimeCounterDisplay2.Link = mMasterk
         HhTimeCounterDisplay2.DireccionLectura = "DW0658"
-        HhTimeCounterDisplay2.Etiqueta = "Duracion paso"
         HhTimeCounterDisplay2.Tooltip = "Duracion paso"
         HhTimeCounterDisplay2.AutoActualizar = True
 
         HhTimeCounterDisplay3.Link = mMasterk
         HhTimeCounterDisplay3.DireccionLectura = "DW0650"
-        HhTimeCounterDisplay3.Etiqueta = "Tiempo rec."
         HhTimeCounterDisplay3.Tooltip = "Tiempo receta"
         HhTimeCounterDisplay3.AutoActualizar = True
 
-        HhTimeCounterDisplay4.Etiqueta = "Duracion rec."
         HhTimeCounterDisplay4.Tooltip = "Duracion receta"
         HhTimeCounterDisplay4.AutoActualizar = False
 
@@ -134,13 +124,13 @@ Public Class FormAutomatico
         End If
         If bPasswordOk Then
             Using f As New FormCambiaPaso
+                mMasterk.EstablecerEntero("DW50", HhGridDisplay1.PasoActual)
+                f.HhGridDisplay1.Receta = HhGridDisplay1.Receta
+                f.HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual
+                f.HhGridDisplay1.Actualizar()
                 f.ShowDialog()
             End Using
         End If
-    End Sub
-    Private Sub HhGridDisplay1_Inicializado(ByVal sender As Object, ByVal e As System.EventArgs) Handles HhGridDisplay1.Inicializado
-        HhTimeCounterDisplay4.Valor = HhGridDisplay1.DuracionReceta
-        HhTimeCounterDisplay3.ValorMaximo = HhTimeCounterDisplay4.Valor
     End Sub
     Private Sub HhTimeCounterDisplay2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhTimeCounterDisplay2.TextChanged
         HhTimeCounterDisplay1.ValorMaximo = HhTimeCounterDisplay2.Valor
@@ -252,13 +242,18 @@ Public Class FormAutomatico
             Using f As New FormEditorAuto
                 f.HhGridDisplay1.Receta = HhGridDisplay1.Receta
                 f.HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual
-                f.HhGridDisplay1.Actualizar()
+                f.HhNumericEntry1.Valor = HhGridDisplay1.PasoActual
                 If f.ShowDialog() = DialogResult.OK Then
                     HhGridDisplay1.Receta = f.HhGridDisplay1.Receta
-                    HhGridDisplay1.Actualizar()
                     HhGridDisplay1.EnviarReceta()
+                    HhGridDisplay1.Actualizar()
                 End If
             End Using
         End If
+    End Sub
+    Private Sub HhGridDisplay1_CambioDeReceta(sender As Object, e As EventArgs) Handles HhGridDisplay1.CambioDeReceta
+        HhTimeCounterDisplay4.Valor = HhGridDisplay1.DuracionReceta
+        HhTimeCounterDisplay3.ValorMaximo = HhTimeCounterDisplay4.Valor
+        HhLabel7.Texto = HhGridDisplay1.Receta.Count
     End Sub
 End Class
