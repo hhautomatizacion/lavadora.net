@@ -30,6 +30,24 @@ Public Class FormConfAditivos
         HhNumericEntry3.Unidades = "seg"
         HhNumericEntry3.AutoActualizar = True
 
+        HhToggleButton2.Link = mMasterk
+        HhToggleButton2.DireccionEscritura = "KX04"
+        HhToggleButton2.DireccionLectura = "KX04"
+        HhToggleButton2.AutoActualizar = True
+
+
+
+        HhToggleButton4.Link = mMasterk
+        HhToggleButton4.DireccionEscritura = "KX05"
+        HhToggleButton4.DireccionLectura = "KX05"
+        HhToggleButton4.AutoActualizar = True
+
+        HhToggleButton1.Link = mMasterk
+        HhToggleButton1.DireccionEscritura = "KX06"
+        HhToggleButton1.DireccionLectura = "KX06"
+        HhToggleButton1.AutoActualizar = True
+
+
         Button1.Texto = "Aceptar"
     End Sub
 End Class

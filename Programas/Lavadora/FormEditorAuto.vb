@@ -1,6 +1,7 @@
+Imports System.ComponentModel
+Imports DialogoArchivos
 Imports LavadoraLib
 Imports LavadoraLib.Receta
-
 Public Class FormEditorAuto
     Dim pPasoLlenado As New LavadoraLib.Receta.Paso
     Dim pPasoDesague As New LavadoraLib.Receta.Paso
@@ -15,7 +16,6 @@ Public Class FormEditorAuto
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         DialogResult = DialogResult.Cancel
     End Sub
-
     Private Function AgregarPaso(grid As hhGridDisplay.hhGridDisplay, paso As LavadoraLib.Receta.Paso) As Collection
         Dim cReceta As New Collection
         Dim pPasoSinModificar As New LavadoraLib.Receta.Paso
@@ -371,12 +371,13 @@ Public Class FormEditorAuto
             fForm.HhNumericEntry2.ValorMinimo = 1
             fForm.HhNumericEntry2.ValorMaximo = 600
             fForm.HhNumericEntry2.Unidades = "seg"
+            fForm.HhNumericEntry2.Valor = pPaso.Segundos
 
             fForm.HhToggleButton1.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 8)
 
-            fForm.HhToggleButton2.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 10)
+            'fForm.HhToggleButton2.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 10)
 
-            fForm.HhToggleButton3.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 11)
+            'fForm.HhToggleButton3.Checked = BitManipulation.BitManipulation.ExamineBit(pPaso.Argumentos, 11)
 
             fForm.HhMomentaryButton1.Texto = "Aceptar"
 
@@ -391,16 +392,6 @@ Public Class FormEditorAuto
                     pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 8)
                 Else
                     pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 8)
-                End If
-                If fForm.HhToggleButton2.Checked Then
-                    pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 10)
-                Else
-                    pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 10)
-                End If
-                If fForm.HhToggleButton3.Checked Then
-                    pPaso.Argumentos = BitManipulation.BitManipulation.SetBit(pPaso.Argumentos, 11)
-                Else
-                    pPaso.Argumentos = BitManipulation.BitManipulation.ClearBit(pPaso.Argumentos, 11)
                 End If
 
                 cReceta = AgregarPaso(HhGridDisplay1, pPaso)
@@ -519,17 +510,14 @@ Public Class FormEditorAuto
         pPasoMuestreo.NombrePaso = "MUESTREO"
         pPasoFin.IdPaso = 18758
         pPasoFin.NombrePaso = "FIN"
-        pPasojet.IdPaso = 17738
-        pPasojet.NombrePaso = "JET"
+        pPasoJet.IdPaso = 17738
+        pPasoJet.NombrePaso = "JET"
 
         HhGridDisplay1.LongitudPaso = 10
-        HhGridDisplay1.LongitudTexto = 4
+        HhGridDisplay1.LongitudReceta = 200
         HhGridDisplay1.MostrarSeleccion = True
         HhGridDisplay1.EscribirPaso = True
         HhGridDisplay1.AutoActualizar = True
-
-        HhNumericEntry1.ValorMaximo = 100
-        HhNumericEntry1.ValorMinimo = 1
 
         HhMomentaryButton1.Texto = "Fin"
 
@@ -568,76 +556,94 @@ Public Class FormEditorAuto
         Dim bCancelar As Boolean
         Dim bArchivoGuardado As Boolean
         Dim bArchivoExiste As Boolean
-        Dim bf As New System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-
+        Dim pPaso As LavadoraLib.Receta.Paso
+        Dim iContador As Integer
+        Dim i As New IniFileVb.IniFileVb
         bArchivoGuardado = False
         bCancelar = False
         bSalir = False
 
-        While Not bSalir
-            HhDialogoArchivos1.Unidad = Environment.CurrentDirectory
-            HhDialogoArchivos1.Extension = "*.REC"
-            HhDialogoArchivos1.Longitud = 20
-            HhDialogoArchivos1.ShowDialog()
-            If HhDialogoArchivos1.Resultado = Windows.Forms.DialogResult.Cancel Then
-                bSalir = True
-            Else
-                If Len(HhDialogoArchivos1.NombreCompleto) >= Len(HhDialogoArchivos1.Extension) Then
-                    Try
-                        bArchivoExiste = False
-                        If My.Computer.FileSystem.FileExists(HhDialogoArchivos1.NombreCompleto) Then
-                            bArchivoExiste = True
-                        End If
-
-                    Catch ex As Exception
-                        Exit Sub
-                    End Try
-                    If bArchivoExiste Then
-                        Using m As New hhMsgBox.hhMsgBox
-                            m.Mensaje = "Sobreescribir archivo existente?"
-                            m.Tamanio = 50
-                            m.ImagenOk = My.Resources.tick
-                            m.TextoOk = "Si"
-                            m.ImagenCancel = My.Resources.cross
-                            m.TextoCancel = "No"
-                            m.ShowDialog()
-                            If m.Resultado = Windows.Forms.DialogResult.OK Then
-                                bCancelar = False
-                            Else
-                                bCancelar = True
-                            End If
-                        End Using
-                    End If
-                    If Not bCancelar Then
+        Using a As New hhDialogoArchivos
+            While Not bSalir
+                a.Unidad = Environment.CurrentDirectory
+                a.Extension = "*.REC"
+                a.Longitud = 40
+                a.ShowDialog()
+                If a.Resultado = Windows.Forms.DialogResult.Cancel Then
+                    bSalir = True
+                Else
+                    If Len(a.NombreCompleto) >= Len(a.Extension) Then
                         Try
-                            Dim fs As New System.IO.FileStream(HhDialogoArchivos1.NombreCompleto, IO.FileMode.OpenOrCreate)
-                            bf.Serialize(fs, HhGridDisplay1.Receta)
-                            fs.Close()
-                            bArchivoGuardado = True
-                            bSalir = True
-                        Catch
+                            bArchivoExiste = False
+                            If My.Computer.FileSystem.FileExists(a.NombreCompleto) Then
+                                bArchivoExiste = True
+                            End If
+                        Catch ex As Exception
+                            Exit Sub
                         End Try
+                        If bArchivoExiste Then
+                            Using m As New hhMsgBox.hhMsgBox
+                                m.Mensaje = "Sobreescribir archivo existente?"
+                                m.Tamanio = 50
+                                m.ImagenOk = My.Resources.tick
+                                m.TextoOk = "Si"
+                                m.ImagenCancel = My.Resources.cross
+                                m.TextoCancel = "No"
+                                m.ShowDialog()
+                                If m.Resultado = Windows.Forms.DialogResult.OK Then
+                                    bCancelar = False
+                                Else
+                                    bCancelar = True
+                                End If
+                            End Using
+                        End If
+                        If bCancelar Then
+                        Else
+                            i.SetKeyValue("Receta", "Nombre", a.NombreArchivo)
+                            i.SetKeyValue("Receta", "Descripcion", a.Descripcion)
+
+                            iContador = 1
+                            For Each pPaso In HhGridDisplay1.Receta
+                                If pPaso.IdPaso <> 0 Then
+                                    i.SetKeyValue("Paso" & iContador.ToString, "IdPaso", pPaso.IdPaso)
+                                    i.SetKeyValue("Paso" & iContador.ToString, "ParametroAuxiliar", pPaso.ParametroAuxiliar)
+                                    i.SetKeyValue("Paso" & iContador.ToString, "Centigrados", pPaso.Centigrados)
+                                    i.SetKeyValue("Paso" & iContador.ToString, "Litros", pPaso.Litros)
+                                    i.SetKeyValue("Paso" & iContador.ToString, "RPM", pPaso.RPM)
+                                    i.SetKeyValue("Paso" & iContador.ToString, "Segundos", pPaso.Segundos)
+                                    i.SetKeyValue("Paso" & iContador.ToString, "Minutos", pPaso.Minutos)
+                                    i.SetKeyValue("Paso" & iContador.ToString, "Argumentos", pPaso.Argumentos)
+                                    iContador = iContador + 1
+                                End If
+                            Next
+                            i.Save(a.NombreCompleto)
+
+                            bArchivoGuardado = True
+
+                            bSalir = True
+                        End If
                     End If
                 End If
+            End While
+            If bArchivoGuardado Then
+            Else
+                MsgBox("Error al guardar la receta")
             End If
-        End While
+        End Using
     End Sub
-    Private Sub HhGridDisplay1_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles HhGridDisplay1.CellClick
-        Dim iValor As Integer
-        iValor = e.RowIndex + 1
-        HhNumericEntry1.Valor = iValor
-    End Sub
+
     Private Sub HhMomentaryButton4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton4.Click
+        Dim sTemp As String
+        sTemp = mMasterk.ObtenerCadena("DW0250", 20)
+        sTemp = "*" & sTemp.Replace("*", "")
+        mMasterk.EstablecerCadena("DW0250", sTemp)
         DialogResult = DialogResult.OK
     End Sub
 
     Private Sub HhMomentaryButton5_Click(sender As Object, e As EventArgs) Handles HhMomentaryButton5.Click
-        Dim iIter As Integer
         Dim cReceta As New Collection
         Dim pPaso As New LavadoraLib.Receta.Paso
-        For iIter = 1 To 100
-            cReceta.Add(pPaso)
-        Next iIter
+        cReceta.Add(pPaso)
         HhGridDisplay1.Receta = cReceta
         HhGridDisplay1.PasoActual = 1
     End Sub
@@ -673,11 +679,5 @@ Public Class FormEditorAuto
             cReceta.Add(pPaso)
         End If
         HhGridDisplay1.Receta = cReceta
-    End Sub
-
-    Private Sub HhNumericEntry1_TextChanged(sender As Object, e As EventArgs) Handles HhNumericEntry1.TextChanged
-        Dim iValor As Integer
-        iValor = HhNumericEntry1.Valor
-        HhGridDisplay1.PasoActual = ivalor
     End Sub
 End Class

@@ -29,16 +29,20 @@ Partial Class FormTestMotor
         Me.HhLabel2 = New hhLabel.hhLabel()
         Me.HhLabel3 = New hhLabel.hhLabel()
         Me.HhLabel4 = New hhLabel.hhLabel()
+        Me.HhLabel5 = New hhLabel.hhLabel()
+        Me.HhNumericDisplay2 = New hhNumericDisplay.hhNumericDisplay()
         Me.SuspendLayout()
         '
         'Button1
         '
         Me.Button1.Appearance = System.Windows.Forms.Appearance.Button
         Me.Button1.AutoActualizar = False
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(688, 473)
@@ -47,16 +51,19 @@ Partial Class FormTestMotor
         Me.Button1.TabIndex = 63
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button1.Texto = Nothing
+        Me.Button1.Tooltip = Nothing
         Me.Button1.UseVisualStyleBackColor = True
         '
         'HhToggleButton1
         '
         Me.HhToggleButton1.Appearance = System.Windows.Forms.Appearance.Button
         Me.HhToggleButton1.AutoActualizar = False
+        Me.HhToggleButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.HhToggleButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhToggleButton1.DireccionEscritura = Nothing
         Me.HhToggleButton1.DireccionLectura = Nothing
-        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhToggleButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhToggleButton1.Link = Nothing
         Me.HhToggleButton1.Location = New System.Drawing.Point(250, 31)
         Me.HhToggleButton1.Name = "HhToggleButton1"
@@ -69,10 +76,12 @@ Partial Class FormTestMotor
         '
         Me.HhToggleButton2.Appearance = System.Windows.Forms.Appearance.Button
         Me.HhToggleButton2.AutoActualizar = False
+        Me.HhToggleButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.HhToggleButton2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhToggleButton2.DireccionEscritura = Nothing
         Me.HhToggleButton2.DireccionLectura = Nothing
-        Me.HhToggleButton2.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.HhToggleButton2.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhToggleButton2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhToggleButton2.Link = Nothing
         Me.HhToggleButton2.Location = New System.Drawing.Point(250, 82)
         Me.HhToggleButton2.Name = "HhToggleButton2"
@@ -91,7 +100,8 @@ Partial Class FormTestMotor
         Me.HhNumericEntry1.DireccionEscritura = Nothing
         Me.HhNumericEntry1.DireccionLectura = Nothing
         Me.HhNumericEntry1.Factor = 1.0!
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericEntry1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhNumericEntry1.Link = Nothing
         Me.HhNumericEntry1.Location = New System.Drawing.Point(250, 133)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
@@ -112,7 +122,8 @@ Partial Class FormTestMotor
         Me.HhNumericDisplay1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhNumericDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay1.DireccionLectura = Nothing
-        Me.HhNumericDisplay1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericDisplay1.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericDisplay1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhNumericDisplay1.Link = Nothing
         Me.HhNumericDisplay1.Location = New System.Drawing.Point(588, 348)
         Me.HhNumericDisplay1.Name = "HhNumericDisplay1"
@@ -132,7 +143,7 @@ Partial Class FormTestMotor
         Me.HhLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhLabel1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhLabel1.DireccionLectura = Nothing
-        Me.HhLabel1.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel1.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HhLabel1.Link = Nothing
         Me.HhLabel1.Location = New System.Drawing.Point(20, 31)
@@ -153,7 +164,7 @@ Partial Class FormTestMotor
         Me.HhLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhLabel2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhLabel2.DireccionLectura = Nothing
-        Me.HhLabel2.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel2.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HhLabel2.Link = Nothing
         Me.HhLabel2.Location = New System.Drawing.Point(20, 82)
@@ -174,7 +185,7 @@ Partial Class FormTestMotor
         Me.HhLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhLabel3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhLabel3.DireccionLectura = Nothing
-        Me.HhLabel3.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel3.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HhLabel3.Link = Nothing
         Me.HhLabel3.Location = New System.Drawing.Point(358, 348)
@@ -195,7 +206,7 @@ Partial Class FormTestMotor
         Me.HhLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhLabel4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhLabel4.DireccionLectura = Nothing
-        Me.HhLabel4.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel4.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HhLabel4.Link = Nothing
         Me.HhLabel4.Location = New System.Drawing.Point(20, 133)
@@ -209,11 +220,55 @@ Partial Class FormTestMotor
         Me.HhLabel4.Texto = "Frecuencia"
         Me.HhLabel4.Tooltip = Nothing
         '
+        'HhLabel5
+        '
+        Me.HhLabel5.AutoActualizar = False
+        Me.HhLabel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.HhLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HhLabel5.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhLabel5.DireccionLectura = Nothing
+        Me.HhLabel5.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhLabel5.Link = Nothing
+        Me.HhLabel5.Location = New System.Drawing.Point(358, 290)
+        Me.HhLabel5.LongitudTexto = 0
+        Me.HhLabel5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.HhLabel5.Name = "HhLabel5"
+        Me.HhLabel5.Size = New System.Drawing.Size(226, 45)
+        Me.HhLabel5.TabIndex = 134
+        Me.HhLabel5.Text = "Frecuencia"
+        Me.HhLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhLabel5.Texto = "Frecuencia"
+        Me.HhLabel5.Tooltip = Nothing
+        '
+        'HhNumericDisplay2
+        '
+        Me.HhNumericDisplay2.AutoActualizar = False
+        Me.HhNumericDisplay2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhNumericDisplay2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HhNumericDisplay2.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhNumericDisplay2.DireccionLectura = Nothing
+        Me.HhNumericDisplay2.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericDisplay2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.HhNumericDisplay2.Link = Nothing
+        Me.HhNumericDisplay2.Location = New System.Drawing.Point(589, 288)
+        Me.HhNumericDisplay2.Name = "HhNumericDisplay2"
+        Me.HhNumericDisplay2.Size = New System.Drawing.Size(200, 45)
+        Me.HhNumericDisplay2.TabIndex = 135
+        Me.HhNumericDisplay2.Text = "0"
+        Me.HhNumericDisplay2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhNumericDisplay2.Tooltip = Nothing
+        Me.HhNumericDisplay2.Valor = 0
+        Me.HhNumericDisplay2.ValorMaximo = 0
+        Me.HhNumericDisplay2.ValorMinimo = 0
+        '
         'FormTestMotor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 575)
+        Me.Controls.Add(Me.HhNumericDisplay2)
+        Me.Controls.Add(Me.HhLabel5)
         Me.Controls.Add(Me.HhLabel4)
         Me.Controls.Add(Me.HhLabel3)
         Me.Controls.Add(Me.HhLabel2)
@@ -241,4 +296,6 @@ Partial Class FormTestMotor
     Friend WithEvents HhLabel2 As hhLabel.hhLabel
     Friend WithEvents HhLabel3 As hhLabel.hhLabel
     Friend WithEvents HhLabel4 As hhLabel.hhLabel
+    Friend WithEvents HhLabel5 As hhLabel.hhLabel
+    Friend WithEvents HhNumericDisplay2 As hhNumericDisplay.hhNumericDisplay
 End Class

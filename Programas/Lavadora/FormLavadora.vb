@@ -5,12 +5,10 @@ Public Class FormLavadora
     Dim WithEvents wPagina As hhWordRegister.hhWordRegister
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'cParametros = New Collection
+        mMasterk = New MasterKlib.MasterK
         wPagina = New hhWordRegister.hhWordRegister
         CargarOpciones()
         AbrirPuerto()
-
-        mMasterk = New MasterKlib.MasterK
 
         Try
             Label1.Font = New Font(sNombreFuenteBotones, iTamanioFuenteBotones)
@@ -30,7 +28,7 @@ Public Class FormLavadora
         wPagina.AutoActualizar = True
 
         HhAnimacion1.Color1 = cColorNormal
-        HhAnimacion1.Color2 = ccolorseleccion
+        HhAnimacion1.Color2 = cColorSeleccion
         HhAnimacion1.Intervalo = 100
         HhAnimacion1.Pasos = 32
         HhAnimacion1.Text = "TX"
@@ -38,7 +36,7 @@ Public Class FormLavadora
         HhAnimacion1.Inicializar()
 
         HhAnimacion2.Color1 = cColorNormal
-        HhAnimacion2.Color2 = ccolorseleccion
+        HhAnimacion2.Color2 = cColorSeleccion
         HhAnimacion2.Intervalo = 100
         HhAnimacion2.Pasos = 32
         HhAnimacion2.Text = "RX"
@@ -66,16 +64,14 @@ Public Class FormLavadora
         HhCharacterDisplay3.LongitudTexto = 6
         HhCharacterDisplay3.AutoActualizar = False
 
-        'dejar de utilizar mx1000
         HhMomentaryButton1.Link = mMasterk
-        HhMomentaryButton1.DireccionEscritura = "MX1000"
+        HhMomentaryButton1.DireccionEscritura = "FX14"
         HhMomentaryButton1.DireccionLectura = "MX07"
         HhMomentaryButton1.Texto = "Manual"
         HhMomentaryButton1.AutoActualizar = True
 
-        'dejar de utilizar mx1000
         HhMomentaryButton2.Link = mMasterk
-        HhMomentaryButton2.DireccionEscritura = "MX1000"
+        HhMomentaryButton2.DireccionEscritura = "FX14"
         HhMomentaryButton2.DireccionLectura = "MX0100"
         HhMomentaryButton2.Texto = "Automatico"
         HhMomentaryButton2.AutoActualizar = True
@@ -181,9 +177,6 @@ Public Class FormLavadora
                 End Using
                 wPagina.Valor = 0
             Case 2
-                'Using fFormRotDesc As New FormRotacionDescarga
-                '    fFormRotDesc.ShowDialog()
-                'End Using
                 wPagina.Valor = 0
             Case 3
                 Using h As New hhMsgBox.hhMsgBox
@@ -231,16 +224,12 @@ Public Class FormLavadora
                 End Using
                 wPagina.Valor = 0
             Case 6
-                'Eliminado animacion nueva receta
                 wPagina.Valor = 0
             Case 7
-                'Eliminado animacion enviar receta
                 wPagina.Valor = 0
             Case 8
-                'Eliminado animacion editar receta
                 wPagina.Valor = 0
             Case 9
-                'Posiblemente se borre, paso "funcion"
                 Using h As New hhMsgBox.hhMsgBox
                     h.Mensaje = "Proceder con funcion mandos?"
                     h.Link = mMasterk
@@ -333,7 +322,6 @@ Public Class FormLavadora
                     h.ShowDialog()
                 End Using
             Case 15
-                'Posiblemente se borre, paso "funcion"
                 Using h As New hhMsgBox.hhMsgBox
                     h.Mensaje = "Cerrar puerta?"
                     h.Link = mMasterk
@@ -391,7 +379,6 @@ Public Class FormLavadora
                 End Using
                 wPagina.Valor = 0
             Case 19
-
                 Using h As New hhMsgBox.hhMsgBox
                     h.Mensaje = "Termico de motor disparado."
                     h.Link = mMasterk
@@ -463,7 +450,6 @@ Public Class FormLavadora
                     h.ShowDialog()
                 End Using
                 wPagina.Valor = 0
-
             Case 24
                 wPagina.Valor = 0
                 Using hhProgressBox As New hhProgressBox.hhProgressBox
@@ -506,10 +492,8 @@ Public Class FormLavadora
                     h.ShowDialog()
                 End Using
                 wPagina.Valor = 0
-
         End Select
     End Sub
-
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
         Label1.Text = Now.ToString("yyyy-MM-dd HH:mm:ss")
         If Len(HhCharacterDisplay1.Text) = 0 Then
@@ -522,7 +506,6 @@ Public Class FormLavadora
             HhCharacterDisplay3.Actualizar()
         End If
     End Sub
-
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
         Dim bPasswordOk As Boolean
         Dim iNivelPasswordMinimo As Integer
@@ -547,16 +530,8 @@ Public Class FormLavadora
             End Using
         End If
     End Sub
-
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         Using f As New FormMandos
-            f.ShowDialog()
-        End Using
-    End Sub
-
-    Private Sub HhMomentaryButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton1.Click
-        Using f As New FormManual
-
             If mMasterk.ObtenerBoolean("MX0100") Then
                 Using m As New hhMsgBox.hhMsgBox
                     m.Mensaje = "La maquina esta trabajando. Parar la maquina?"
@@ -568,7 +543,50 @@ Public Class FormLavadora
                     m.TextoCancel = ""
                     m.ImagenCancel = My.Resources.cross
                     m.DireccionOk = "MX0C"
-                    m.DireccionCancel = "MX07"
+                    m.DireccionCancel = "FX14"
+                    m.ShowDialog()
+                    If m.Resultado = Windows.Forms.DialogResult.OK Then
+                        f.ShowDialog()
+                    End If
+                End Using
+            Else
+                If mMasterk.ObtenerBoolean("MX07") Then
+                    Using m As New hhMsgBox.hhMsgBox
+                        m.Mensaje = "Paso manual trabajando. Parar el paso?"
+                        m.Link = mMasterk
+                        m.Tamanio = 50
+                        m.Imagen = My.Resources.traffic_lights_green
+                        m.TextoOk = ""
+                        m.ImagenOk = My.Resources.control_stop_blue
+                        m.TextoCancel = ""
+                        m.ImagenCancel = My.Resources.cross
+                        m.DireccionOk = "MX08"
+                        m.DireccionCancel = "FX14"
+                        m.ShowDialog()
+                        If m.Resultado = Windows.Forms.DialogResult.OK Then
+                            f.ShowDialog()
+                        End If
+                    End Using
+                Else
+                    f.ShowDialog()
+                End If
+            End If
+        End Using
+    End Sub
+    Private Sub HhMomentaryButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton1.Click
+        Using f As New FormManual
+            If mMasterk.ObtenerBoolean("MX0100") Then
+                Using m As New hhMsgBox.hhMsgBox
+                    m.Mensaje = "La maquina esta trabajando. Parar la maquina?"
+                    m.Link = mMasterk
+                    m.Tamanio = 50
+                    m.Imagen = My.Resources.traffic_lights_green
+                    m.TextoOk = ""
+                    m.ImagenOk = My.Resources.control_stop_blue
+                    m.TextoCancel = ""
+                    m.ImagenCancel = My.Resources.cross
+                    m.DireccionOk = "MX0C"
+                    m.DireccionCancel = "FX14"
                     m.ShowDialog()
                     If m.Resultado = Windows.Forms.DialogResult.OK Then
                         f.ShowDialog()
@@ -577,13 +595,9 @@ Public Class FormLavadora
             Else
                 f.ShowDialog()
             End If
-
-
         End Using
     End Sub
-
     Private Sub HhMomentaryButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HhMomentaryButton2.Click
-
         Using f As New FormAutomatico
             If mMasterk.ObtenerBoolean("MX07") Then
                 Using m As New hhMsgBox.hhMsgBox
@@ -596,7 +610,7 @@ Public Class FormLavadora
                     m.TextoCancel = ""
                     m.ImagenCancel = My.Resources.cross
                     m.DireccionOk = "MX08"
-                    m.DireccionCancel = "MX0100"
+                    m.DireccionCancel = "FX14"
                     m.ShowDialog()
                     If m.Resultado = Windows.Forms.DialogResult.OK Then
                         f.ShowDialog()
@@ -605,9 +619,6 @@ Public Class FormLavadora
             Else
                 f.ShowDialog()
             End If
-
         End Using
     End Sub
-
-
 End Class

@@ -1,6 +1,8 @@
 
+Imports IniFileVb
+
 Public Class FormAutomatico
-    
+
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         UnAttach(Me)
         Me.Close()
@@ -11,13 +13,16 @@ Public Class FormAutomatico
     End Sub
 
     Private Sub FormAutomatico_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim sRecetaNombre As String
+        Dim sRecetaDescripcion As String
+
         mMasterk.EstablecerBoolean("MX0001", True)
 
         HhNumericDisplay1.Link = mMasterk
         HhNumericDisplay1.DireccionLectura = "DW0030"
         HhNumericDisplay1.Tooltip = "Temperatura actual"
-        HhNumericDisplay1.ValorMaximo = 80
-        HhNumericDisplay1.ValorMinimo = 0
+        HhNumericDisplay1.ValorMaximo = 44
+        HhNumericDisplay1.ValorMinimo = 5
         HhNumericDisplay1.AutoActualizar = True
 
         HhNumericDisplay2.Link = mMasterk
@@ -88,11 +93,23 @@ Public Class FormAutomatico
         Button4.Texto = "Recetas"
         Button5.Texto = "Mandos"
 
+
+        sRecetaNombre = ObtenerCadenaLarga("DW1930", 40)
+        sRecetaDescripcion = ObtenerCadenaLarga("DW1950", 100)
+
+        HhCharacterDisplay1.LongitudTexto = 40
+        HhCharacterDisplay1.Texto = sRecetaNombre
+
+        HhCharacterDisplay2.LongitudTexto = 100
+        HhCharacterDisplay2.Texto = sRecetaDescripcion
+
+        HhGridDisplay1.RecetaNombre = sRecetaNombre
+        HhGridDisplay1.RecetaDescripcion = sRecetaDescripcion
         HhGridDisplay1.Link = mMasterk
         HhGridDisplay1.DireccionLectura = "DW2000"
         HhGridDisplay1.DireccionPaso = "DW0600"
         HhGridDisplay1.LongitudPaso = 10
-        HhGridDisplay1.LongitudTexto = 4
+        HhGridDisplay1.LongitudReceta = 200
         HhGridDisplay1.MostrarSeleccion = True
         HhGridDisplay1.EscribirPaso = False
         HhGridDisplay1.AutoActualizar = True
@@ -138,12 +155,16 @@ Public Class FormAutomatico
     End Sub
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         Dim bArchivoExiste As Boolean
+        Dim sRecetaDescripcion As String
+        Dim sRecetaNombre As String
         Dim cPasos As New Collection
-        Dim bf As New System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+        Dim i As New IniFileVb.IniFileVb
+        Dim iContador As Integer
+        Dim pPaso As LavadoraLib.Receta.Paso
 
         HhDialogoArchivos1.Unidad = Environment.CurrentDirectory
         HhDialogoArchivos1.Extension = "*.REC"
-        HhDialogoArchivos1.Longitud = 20
+        HhDialogoArchivos1.Longitud = 40
         HhDialogoArchivos1.ShowDialog()
 
         If Len(HhDialogoArchivos1.NombreCompleto) Then
@@ -155,16 +176,36 @@ Public Class FormAutomatico
                 Exit Sub
             End Try
             If bArchivoExiste Then
-                Dim fs As New System.IO.FileStream(HhDialogoArchivos1.NombreCompleto, IO.FileMode.Open)
-                Try
-                    cPasos = bf.Deserialize(fs)
-                Catch ex As Exception
-                Finally
-                    HhGridDisplay1.Receta = cPasos
-                    HhGridDisplay1.EnviarReceta()
-                    HhGridDisplay1.Actualizar()
-                End Try
-                fs.Close()
+                i.Load(HhDialogoArchivos1.NombreCompleto)
+                For iContador = 1 To 200
+                    pPaso = New LavadoraLib.Receta.Paso
+
+                    pPaso.IdPaso = Val(i.GetKeyValue("Paso" & iContador.ToString, "IdPaso"))
+                    pPaso.ParametroAuxiliar = Val(i.GetKeyValue("Paso" & iContador.ToString, "ParametroAuxiliar"))
+                    pPaso.Centigrados = Val(i.GetKeyValue("Paso" & iContador.ToString, "Centigrados"))
+                    pPaso.Litros = Val(i.GetKeyValue("Paso" & iContador.ToString, "Litros"))
+                    pPaso.RPM = Val(i.GetKeyValue("Paso" & iContador.ToString, "RPM"))
+                    pPaso.Segundos = Val(i.GetKeyValue("Paso" & iContador.ToString, "Segundos"))
+                    pPaso.Minutos = Val(i.GetKeyValue("Paso" & iContador.ToString, "Minutos"))
+                    pPaso.Argumentos = Val(i.GetKeyValue("Paso" & iContador.ToString, "Argumentos"))
+                    If pPaso.IdPaso <> 0 Then
+                        cPasos.Add(pPaso)
+                    End If
+                Next
+                sRecetaNombre = i.GetKeyValue("Receta", "Nombre").PadRight(40)
+                sRecetaDescripcion = i.GetKeyValue("Receta", "Descripcion").PadRight(100)
+                mMasterk.EstablecerCadena("DW1930", sRecetaNombre)
+                mMasterk.EstablecerCadena("DW1950", sRecetaDescripcion)
+
+                HhCharacterDisplay1.Texto = sRecetaNombre
+                HhCharacterDisplay1.LongitudTexto = 40
+                HhCharacterDisplay2.Texto = sRecetaDescripcion
+                HhCharacterDisplay2.LongitudTexto = 100
+                HhGridDisplay1.RecetaNombre = sRecetaNombre
+                HhGridDisplay1.RecetaDescripcion = sRecetaDescripcion
+                HhGridDisplay1.Receta = cPasos
+                HhGridDisplay1.EnviarReceta()
+                HhGridDisplay1.Actualizar()
             End If
         End If
     End Sub
@@ -181,7 +222,7 @@ Public Class FormAutomatico
                     m.ImagenOk = My.Resources.control_stop_blue
                     m.ImagenCancel = My.Resources.cross
                     m.DireccionOk = "MX0C"
-                    m.DireccionCancel = "MX0B"
+                    m.DireccionCancel = "FX14"
                     m.ShowDialog()
                     If m.Resultado = Windows.Forms.DialogResult.OK Then
                         fForm.ShowDialog()
@@ -242,7 +283,12 @@ Public Class FormAutomatico
             Using f As New FormEditorAuto
                 f.HhGridDisplay1.Receta = HhGridDisplay1.Receta
                 f.HhGridDisplay1.PasoActual = HhGridDisplay1.PasoActual
-                f.HhNumericEntry1.Valor = HhGridDisplay1.PasoActual
+                f.HhGridDisplay1.RecetaNombre = HhGridDisplay1.RecetaNombre
+                f.HhGridDisplay1.RecetaDescripcion = HhGridDisplay1.RecetaDescripcion
+                f.HhCharacterDisplay1.LongitudTexto = 40
+                f.HhCharacterDisplay1.Texto = HhGridDisplay1.RecetaNombre
+                f.HhCharacterDisplay2.LongitudTexto = 100
+                f.HhCharacterDisplay2.Texto = HhGridDisplay1.RecetaDescripcion
                 If f.ShowDialog() = DialogResult.OK Then
                     HhGridDisplay1.Receta = f.HhGridDisplay1.Receta
                     HhGridDisplay1.EnviarReceta()
@@ -252,8 +298,7 @@ Public Class FormAutomatico
         End If
     End Sub
     Private Sub HhGridDisplay1_CambioDeReceta(sender As Object, e As EventArgs) Handles HhGridDisplay1.CambioDeReceta
-        HhTimeCounterDisplay4.Valor = HhGridDisplay1.DuracionReceta
+        HhTimeCounterDisplay4.Valor = HhGridDisplay1.RecetaDuracion
         HhTimeCounterDisplay3.ValorMaximo = HhTimeCounterDisplay4.Valor
-        HhLabel7.Texto = HhGridDisplay1.Receta.Count
     End Sub
 End Class

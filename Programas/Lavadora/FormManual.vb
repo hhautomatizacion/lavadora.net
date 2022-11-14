@@ -1,45 +1,43 @@
+Imports DialogoArchivos
+Imports hhCharacterEntry
+Imports hhComboEntry
+
 Public Class FormManual
     Private Sub FormManual_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         mMasterk.EstablecerBoolean("MX0001", False)
 
         HhMomentaryButton3.Link = mMasterk
-        'dejar de utilizar direccion mx1000
-        HhMomentaryButton3.DireccionEscritura = "MX1000"
+        HhMomentaryButton3.DireccionEscritura = "FX14"
         HhMomentaryButton3.DireccionLectura = "MX1801"
         HhMomentaryButton3.Texto = "Rotacion"
         HhMomentaryButton3.AutoActualizar = True
 
         HhMomentaryButton2.Link = mMasterk
-        'dejar de utilizar direccion mx1000
-        HhMomentaryButton2.DireccionEscritura = "MX1000"
+        HhMomentaryButton2.DireccionEscritura = "FX14"
         HhMomentaryButton2.DireccionLectura = "MX1803"
         HhMomentaryButton2.Texto = "Desague"
         HhMomentaryButton2.AutoActualizar = True
 
         HhMomentaryButton1.Link = mMasterk
-        'dejar de utilizar direccion mx1000
-        HhMomentaryButton1.DireccionEscritura = "MX1000"
+        HhMomentaryButton1.DireccionEscritura = "FX14"
         HhMomentaryButton1.DireccionLectura = "MX1800"
         HhMomentaryButton1.Texto = "Llenado"
         HhMomentaryButton1.AutoActualizar = True
 
         HhMomentaryButton4.Link = mMasterk
-        'dejar de utilizar direccion mx1000
-        HhMomentaryButton4.DireccionEscritura = "MX1000"
+        HhMomentaryButton4.DireccionEscritura = "FX14"
         HhMomentaryButton4.DireccionLectura = "MX1802"
         HhMomentaryButton4.Texto = "Mantenimiento"
         HhMomentaryButton4.AutoActualizar = True
 
         HhMomentaryButton5.Link = mMasterk
-        'dejar de utilizar direccion mx1000
-        HhMomentaryButton5.DireccionEscritura = "MX1000"
+        HhMomentaryButton5.DireccionEscritura = "FX14"
         HhMomentaryButton5.DireccionLectura = "MX1804"
         HhMomentaryButton5.Texto = "Temperatura"
         HhMomentaryButton5.AutoActualizar = True
 
         HhMomentaryButton6.Link = mMasterk
-        'dejar de utilizar direccion mx1000
-        HhMomentaryButton6.DireccionEscritura = "MX1000"
+        HhMomentaryButton6.DireccionEscritura = "FX14"
         HhMomentaryButton6.DireccionLectura = "MX1807"
         HhMomentaryButton6.Texto = "Aditivos"
         HhMomentaryButton6.AutoActualizar = True
@@ -50,11 +48,17 @@ Public Class FormManual
         HhMomentaryButton7.Texto = "Centrifuga"
         HhMomentaryButton7.AutoActualizar = True
 
+        HhMomentaryButton8.Link = mMasterk
+        HhMomentaryButton8.DireccionEscritura = "MX1000"
+        HhMomentaryButton8.DireccionLectura = "MX1809"
+        HhMomentaryButton8.Texto = "Jet"
+        HhMomentaryButton8.AutoActualizar = True
+
         HhNumericDisplay1.Link = mMasterk
         HhNumericDisplay1.DireccionLectura = "DW0030"
         HhNumericDisplay1.Tooltip = "Temperatura actual"
         HhNumericDisplay1.ValorMaximo = 44
-        HhNumericDisplay1.ValorMinimo = 0
+        HhNumericDisplay1.ValorMinimo = 5
         HhNumericDisplay1.AutoActualizar = True
 
         HhNumericDisplay2.Link = mMasterk
@@ -97,7 +101,7 @@ Public Class FormManual
         Button1.Texto = "Salir"
     End Sub
 
-    Private Sub HhNumericDisplay6_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub HhNumericDisplay6_TextChanged(sender As Object, e As EventArgs) Handles HhNumericDisplay6.TextChanged
         HhNumericDisplay6.ValorMaximo = Val(HhNumericDisplay6.Text)
         HhNumericDisplay6.ValorMinimo = Val(HhNumericDisplay6.Text)
 
@@ -105,7 +109,7 @@ Public Class FormManual
         HhNumericDisplay5.ValorMinimo = Val(HhNumericDisplay6.Text) - 2
     End Sub
 
-    Private Sub HhNumericDisplay4_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub HhNumericDisplay4_TextChanged(sender As Object, e As EventArgs) Handles HhNumericDisplay4.TextChanged
         HhNumericDisplay4.ValorMaximo = Val(HhNumericDisplay4.Text)
         HhNumericDisplay4.ValorMinimo = Val(HhNumericDisplay4.Text)
         HhNumericDisplay3.ValorMaximo = Val(HhNumericDisplay4.Text) + 1
@@ -117,25 +121,21 @@ Public Class FormManual
             fForm.HhToggleButton1.Link = mMasterk
             fForm.HhToggleButton1.DireccionLectura = "MX1710"
             fForm.HhToggleButton1.DireccionEscritura = "MX1710"
-            'fForm.HhToggleButton1.Etiqueta = "Agua fria"
             fForm.HhToggleButton1.AutoActualizar = True
 
             fForm.HhToggleButton2.Link = mMasterk
             fForm.HhToggleButton2.DireccionLectura = "MX1711"
             fForm.HhToggleButton2.DireccionEscritura = "MX1711"
-            'fForm.HhToggleButton2.Etiqueta = "Agua caliente"
             fForm.HhToggleButton2.AutoActualizar = True
 
             fForm.HhToggleButton3.Link = mMasterk
             fForm.HhToggleButton3.DireccionLectura = "MX1712"
             fForm.HhToggleButton3.DireccionEscritura = "MX1712"
-            'fForm.HhToggleButton3.Etiqueta = "Rotacion"
             fForm.HhToggleButton3.AutoActualizar = True
 
             fForm.HhToggleButton4.Link = mMasterk
             fForm.HhToggleButton4.DireccionLectura = "MX1713"
             fForm.HhToggleButton4.DireccionEscritura = "MX1713"
-            'fForm.HhToggleButton4.Etiqueta = "Calefaccion"
             fForm.HhToggleButton4.AutoActualizar = True
 
             fForm.HhNumericEntry1.Link = mMasterk
@@ -191,7 +191,6 @@ Public Class FormManual
             fForm.HhNumericEntry1.DireccionEscritura = "DW0126"
             fForm.HhNumericEntry1.DireccionLectura = "DW0126"
             fForm.HhNumericEntry1.ValorMinimo = 0
-            '--cambiar
             fForm.HhNumericEntry1.ValorMaximo = 2000
             fForm.HhNumericEntry1.AutoActualizar = True
 
@@ -296,16 +295,6 @@ Public Class FormManual
             fForm.HhToggleButton1.DireccionLectura = "MX18"
             fForm.HhToggleButton1.AutoActualizar = True
 
-            fForm.HhToggleButton2.Link = mMasterk
-            fForm.HhToggleButton2.DireccionEscritura = "MX1A"
-            fForm.HhToggleButton2.DireccionLectura = "MX1A"
-            fForm.HhToggleButton2.AutoActualizar = True
-
-            fForm.HhToggleButton3.Link = mMasterk
-            fForm.HhToggleButton3.DireccionEscritura = "MX1B"
-            fForm.HhToggleButton3.DireccionLectura = "MX1B"
-            fForm.HhToggleButton3.AutoActualizar = True
-
             fForm.HhMomentaryButton1.Link = mMasterk
             fForm.HhMomentaryButton1.DireccionEscritura = "MX1707"
             fForm.HhMomentaryButton1.Texto = "Aceptar"
@@ -358,7 +347,6 @@ Public Class FormManual
             fForm.HhNumericEntry1.Unidades = "rpm"
             fForm.HhNumericEntry1.Tooltip = "Velocidad|(rpm)"
             fForm.HhNumericEntry1.ValorMinimo = 0
-            'cambiar
             fForm.HhNumericEntry1.ValorMaximo = 2000
             fForm.HhNumericEntry1.AutoActualizar = True
 
@@ -382,8 +370,7 @@ Public Class FormManual
             fForm.ShowDialog()
         End Using
     End Sub
-
-    Private Sub HhNumericDisplay2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub HhNumericDisplay2_TextChanged(sender As Object, e As EventArgs) Handles HhNumericDisplay2.TextChanged
         HhNumericDisplay2.ValorMaximo = Val(HhNumericDisplay2.Text)
         HhNumericDisplay2.ValorMinimo = Val(HhNumericDisplay2.Text)
         If Val(HhNumericDisplay2.Text) = 0 Then
@@ -394,27 +381,41 @@ Public Class FormManual
             HhNumericDisplay1.ValorMinimo = Val(HhNumericDisplay2.Text) - 1
         End If
     End Sub
-
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         UnAttach(Me)
         Me.Close()
     End Sub
-
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Using f As New FormMandos
             f.ShowDialog()
         End Using
     End Sub
-
-    Private Sub HhTimeCounterDisplay2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub HhTimeCounterDisplay2_TextChanged(sender As Object, e As EventArgs) Handles HhTimeCounterDisplay2.TextChanged
         HhTimeCounterDisplay1.ValorMaximo = HhTimeCounterDisplay2.Valor
         HhTimeCounterDisplay2.ValorMaximo = HhTimeCounterDisplay2.Valor
     End Sub
-
     Private Sub HhTimeCounterDisplay1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
         If HhTimeCounterDisplay2.Valor = 0 Then
             HhTimeCounterDisplay1.ValorMaximo = HhTimeCounterDisplay1.Valor
         End If
     End Sub
 
+    Private Sub HhMomentaryButton8_Click(sender As Object, e As EventArgs) Handles HhMomentaryButton8.Click
+        Using f As New FormJetAuto
+            f.HhToggleButton1.Link = mMasterk
+            f.HhToggleButton1.DireccionEscritura = "MX171C"
+            f.HhToggleButton1.DireccionLectura = "MX171C"
+            f.HhToggleButton1.AutoActualizar = True
+
+            f.HhMomentaryButton1.Link = mMasterk
+            f.HhMomentaryButton1.DireccionEscritura = "MX1709"
+            f.HhMomentaryButton1.Texto = "Aceptar"
+
+            f.Button1.Link = mMasterk
+            f.Button1.DireccionEscritura = "MX1819"
+            f.Button1.Texto = "Cancelar"
+
+            f.ShowDialog()
+        End Using
+    End Sub
 End Class

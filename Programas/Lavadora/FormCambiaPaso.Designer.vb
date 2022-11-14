@@ -165,7 +165,6 @@ Partial Class FormCambiaPaso
         Me.HhGridDisplay1.Link = Nothing
         Me.HhGridDisplay1.Location = New System.Drawing.Point(191, 75)
         Me.HhGridDisplay1.LongitudPaso = 0
-        Me.HhGridDisplay1.LongitudTexto = 0
         Me.HhGridDisplay1.MostrarSeleccion = False
         Me.HhGridDisplay1.MultiSelect = False
         Me.HhGridDisplay1.Name = "HhGridDisplay1"

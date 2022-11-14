@@ -42,7 +42,8 @@ Partial Class FormTemperaturaAuto
         Me.HhNumericEntry1.DireccionEscritura = Nothing
         Me.HhNumericEntry1.DireccionLectura = Nothing
         Me.HhNumericEntry1.Factor = 1.0!
-        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry1.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericEntry1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhNumericEntry1.Link = Nothing
         Me.HhNumericEntry1.Location = New System.Drawing.Point(207, 12)
         Me.HhNumericEntry1.Name = "HhNumericEntry1"
@@ -60,10 +61,12 @@ Partial Class FormTemperaturaAuto
         '
         Me.HhToggleButton1.Appearance = System.Windows.Forms.Appearance.Button
         Me.HhToggleButton1.AutoActualizar = False
+        Me.HhToggleButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.HhToggleButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhToggleButton1.DireccionEscritura = Nothing
         Me.HhToggleButton1.DireccionLectura = Nothing
-        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.HhToggleButton1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhToggleButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhToggleButton1.Link = Nothing
         Me.HhToggleButton1.Location = New System.Drawing.Point(207, 63)
         Me.HhToggleButton1.Name = "HhToggleButton1"
@@ -82,7 +85,8 @@ Partial Class FormTemperaturaAuto
         Me.HhNumericEntry2.DireccionEscritura = Nothing
         Me.HhNumericEntry2.DireccionLectura = Nothing
         Me.HhNumericEntry2.Factor = 1.0!
-        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericEntry2.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericEntry2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhNumericEntry2.Link = Nothing
         Me.HhNumericEntry2.Location = New System.Drawing.Point(207, 114)
         Me.HhNumericEntry2.Name = "HhNumericEntry2"
@@ -100,10 +104,12 @@ Partial Class FormTemperaturaAuto
         '
         Me.HhMomentaryButton1.Appearance = System.Windows.Forms.Appearance.Button
         Me.HhMomentaryButton1.AutoActualizar = False
+        Me.HhMomentaryButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhMomentaryButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
         Me.HhMomentaryButton1.Location = New System.Drawing.Point(152, 473)
@@ -113,16 +119,19 @@ Partial Class FormTemperaturaAuto
         Me.HhMomentaryButton1.Text = "Aceptar"
         Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton1.Texto = "Aceptar"
+        Me.HhMomentaryButton1.Tooltip = Nothing
         Me.HhMomentaryButton1.UseVisualStyleBackColor = True
         '
         'Button1
         '
         Me.Button1.Appearance = System.Windows.Forms.Appearance.Button
         Me.Button1.AutoActualizar = False
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button1.DireccionEscritura = Nothing
         Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Link = Nothing
         Me.Button1.Location = New System.Drawing.Point(258, 473)
@@ -132,16 +141,19 @@ Partial Class FormTemperaturaAuto
         Me.Button1.Text = "Cancelar"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button1.Texto = "Cancelar"
+        Me.Button1.Tooltip = Nothing
         Me.Button1.UseVisualStyleBackColor = True
         '
         'HhToggleButton2
         '
         Me.HhToggleButton2.Appearance = System.Windows.Forms.Appearance.Button
         Me.HhToggleButton2.AutoActualizar = False
+        Me.HhToggleButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.HhToggleButton2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhToggleButton2.DireccionEscritura = Nothing
         Me.HhToggleButton2.DireccionLectura = Nothing
-        Me.HhToggleButton2.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.HhToggleButton2.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhToggleButton2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhToggleButton2.Link = Nothing
         Me.HhToggleButton2.Location = New System.Drawing.Point(207, 165)
         Me.HhToggleButton2.Name = "HhToggleButton2"
@@ -157,7 +169,7 @@ Partial Class FormTemperaturaAuto
         Me.HhLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhLabel1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhLabel1.DireccionLectura = Nothing
-        Me.HhLabel1.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel1.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HhLabel1.Link = Nothing
         Me.HhLabel1.Location = New System.Drawing.Point(15, 63)
@@ -178,7 +190,7 @@ Partial Class FormTemperaturaAuto
         Me.HhLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhLabel2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhLabel2.DireccionLectura = Nothing
-        Me.HhLabel2.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel2.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HhLabel2.Link = Nothing
         Me.HhLabel2.Location = New System.Drawing.Point(15, 165)
@@ -199,7 +211,7 @@ Partial Class FormTemperaturaAuto
         Me.HhLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhLabel3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhLabel3.DireccionLectura = Nothing
-        Me.HhLabel3.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel3.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HhLabel3.Link = Nothing
         Me.HhLabel3.Location = New System.Drawing.Point(15, 12)
@@ -220,7 +232,7 @@ Partial Class FormTemperaturaAuto
         Me.HhLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhLabel4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhLabel4.DireccionLectura = Nothing
-        Me.HhLabel4.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel4.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HhLabel4.Link = Nothing
         Me.HhLabel4.Location = New System.Drawing.Point(15, 114)

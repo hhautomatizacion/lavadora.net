@@ -1,6 +1,5 @@
 Module Module1
-    'Declare Function SetComputerName Lib "kernel32" Alias "SetComputerNameA" (ByVal lpComputerName As String) As Long
-    'Public cParametros As Collection
+    Public bRecetaModificada As Boolean
     Public cColorAlerta As Color
     Public cColorAlertaTexto As Color
     Public cColorNormal As Color
@@ -31,12 +30,10 @@ Module Module1
         Dim Attributes As Integer
     End Structure
 
-    'The API functions below are all used to give the application the proper privilege so the OS will allow the app to Shutdown Windows.
     Declare Function OpenProcessToken Lib "advapi32" (ByVal ProcessHandle As IntPtr, ByVal DesiredAccess As Integer, ByRef TokenHandle As Integer) As Integer
     Declare Function LookupPrivilegeValue Lib "advapi32" Alias "LookupPrivilegeValueA" (ByVal lpSystemName As String, ByVal lpName As String, ByRef lpLuid As LUID) As Integer
     Declare Function AdjustTokenPrivileges Lib "advapi32" (ByVal TokenHandle As Integer, ByVal DisableAllPrivileges As Boolean, ByRef NewState As TOKEN_PRIVILEGES, ByVal BufferLength As Integer, ByRef PreviousState As TOKEN_PRIVILEGES, ByRef ReturnLength As Integer) As Integer
 
-    'This sub will do all of the work of setting up your apps process using the APIs posted above to get the proper privileges to shutdown the OS. I originally got this function from msdn and converted it from VB 6.0 to VB.Net and did a tweak here and there.
     Sub AdjustToken()
         Const TOKEN_ADJUST_PRIVILEGES As Int32 = &H20
         Const TOKEN_QUERY As Int32 = &H8
@@ -49,12 +46,10 @@ Module Module1
         Dim lBufferNeeded As Int32
         hdlProcessHandle = Process.GetCurrentProcess.Handle
         OpenProcessToken(hdlProcessHandle, (TOKEN_ADJUST_PRIVILEGES Or TOKEN_QUERY), hdlTokenHandle)
-        'Get the LUID for shutdown privilege.
         LookupPrivilegeValue("", "SeShutdownPrivilege", tmpLuid)
         tkp.PrivilegeCount = 1 'One privilege to set
         tkp.TheLuid = tmpLuid
         tkp.Attributes = SE_PRIVILEGE_ENABLED
-        'Enable the shutdown privilege in the access token of this process.
         Dim retval As Int32
         retval = AdjustTokenPrivileges(hdlTokenHandle, False, tkp, Len(tkpNewButIgnored), tkpNewButIgnored, lBufferNeeded)
         If (retval = 0) Then
@@ -62,12 +57,8 @@ Module Module1
         End If
     End Sub
 
-    'The function used to actually send the request to shutdown windows. Set the 'shutdownTypes' parameter to whether you want windows to "shutdown, reboot, logOff, ect..."
     Declare Function ExitWindowsEx Lib "user32" (ByVal shutdownType As Integer, ByVal dwReserved As Integer) As Integer
 
-    'Public Function ChangeComputerName(ByVal sNewComputerName As String) As Boolean
-    'Return CBool(SetComputerName(sNewComputerName))
-    'End Function
     Public Sub ClearBit(ByRef MyByte, ByVal MyBit)
         Dim BitMask As Int16
         BitMask = 2 ^ (MyBit)
@@ -91,10 +82,10 @@ Module Module1
     Function Version() As String
         Dim sVer As String
         Try
-            sVer = Application.ProductVersion
+            sVer = My.Application.Deployment.CurrentVersion.ToString
         Catch
             Try
-                sVer = My.Application.Deployment.CurrentVersion.ToString
+                sVer = Application.ProductVersion
             Catch ex As Exception
                 sVer = "Desconocido"
             End Try
@@ -162,7 +153,6 @@ Module Module1
             .StopBits = IO.Ports.StopBits.One
             .ReceivedBytesThreshold = 1
             .ReadTimeout = 40
-            .WriteTimeout = 25
         End With
         Try
             sPuerto.Open()
@@ -185,4 +175,24 @@ Module Module1
     Private Sub mMasterk_TX(ByVal sender As Object, ByVal e As MasterKlib.MyEventArgs) Handles mMasterk.TX
         FormLavadora.HhAnimacion1.Animar()
     End Sub
+    Public Function ObtenerCadenaLarga(DireccionLectura As String, Longitud As Integer) As String
+        Dim iIter As Integer
+        Dim sSufijo As String
+        Dim iSufijo As Integer
+        Dim sPrefijo As String
+        Dim sValor As String
+        Dim sNuevaDireccion As String
+        Dim iBuffer As Integer
+        sPrefijo = DireccionLectura.Substring(0, 2)
+        sSufijo = DireccionLectura.Replace(sPrefijo, "")
+        iSufijo = Val(sSufijo)
+        sValor = ""
+        iBuffer = 10
+
+        For iIter = 0 To Longitud / 4 Step iBuffer
+            sNuevaDireccion = sPrefijo & (iSufijo + iIter).ToString
+            sValor = sValor & mMasterk.ObtenerCadena(sNuevaDireccion, iBuffer * 2)
+        Next
+        Return sValor
+    End Function
 End Module

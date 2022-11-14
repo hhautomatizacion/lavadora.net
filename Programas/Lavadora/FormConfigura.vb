@@ -59,5 +59,9 @@ Public Class FormConfigura
         End Using
     End Sub
 
-
+    Private Sub HhMomentaryButton3_Click(sender As Object, e As EventArgs) Handles HhMomentaryButton3.Click
+        Using f As New FormConfMaquina
+            f.ShowDialog()
+        End Using
+    End Sub
 End Class

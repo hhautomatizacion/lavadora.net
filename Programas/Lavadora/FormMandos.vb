@@ -1,7 +1,6 @@
 Imports MasterKlib
 
 Public Class FormMandos
-
     Private Sub Mandos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         HhMomentaryButton1.Link = mMasterk
@@ -15,18 +14,6 @@ Public Class FormMandos
         HhMomentaryButton2.DireccionEscritura = "MX78"
         HhMomentaryButton2.DireccionLectura = "MX7A"
         HhMomentaryButton2.Texto = "Derecha"
-
-        'HhMomentaryButton1.Link = mMasterk
-        'HhMomentaryButton1.DireccionEscritura = "MX02"
-        'HhMomentaryButton1.DireccionLectura = "MX04"
-        'HhMomentaryButton1.Texto = "Abrir"
-        'HhMomentaryButton1.AutoActualizar = True
-
-        'HhMomentaryButton2.Link = mMasterk
-        'HhMomentaryButton2.DireccionEscritura = "MX03"
-        'HhMomentaryButton2.DireccionLectura = "MX8D"
-        'HhMomentaryButton2.Texto = "Cerrar"
-        'HhMomentaryButton2.AutoActualizar = True
 
         HhMomentaryButton3.Link = mMasterk
         HhMomentaryButton3.DireccionEscritura = "MX2B"
@@ -50,16 +37,8 @@ Public Class FormMandos
         HhMomentaryButton6.Texto = "Abajo"
         HhMomentaryButton6.AutoActualizar = True
 
-        'HhMomentaryButton7.Link = mMasterk
-        'HhMomentaryButton7.DireccionEscritura = "MX87"
-        'HhMomentaryButton7.DireccionLectura = "MX84"
-        'HhMomentaryButton7.Texto = "Despedrado"
-        'HhMomentaryButton7.AutoActualizar = True
-
         Button1.Texto = "Salir"
     End Sub
-
-
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Me.Close()
     End Sub

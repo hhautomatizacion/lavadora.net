@@ -21,6 +21,7 @@ Public Class FormCambiaPaso
 
         HhGridDisplay1.Link = mMasterk
         HhGridDisplay1.DireccionPaso = "DW50"
+        HhGridDisplay1.LongitudReceta = 200
         HhGridDisplay1.EscribirPaso = True
 
         HhMomentaryButton1.Link = mMasterk

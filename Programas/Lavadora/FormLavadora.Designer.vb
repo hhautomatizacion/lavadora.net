@@ -111,11 +111,9 @@ Partial Class FormLavadora
         'HhBooleanLabel1
         '
         Me.HhBooleanLabel1.AutoActualizar = False
-        Me.HhBooleanLabel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(46, Byte), Integer))
         Me.HhBooleanLabel1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhBooleanLabel1.DireccionLectura = Nothing
         Me.HhBooleanLabel1.Font = New System.Drawing.Font("Verdana", 10.0!)
-        Me.HhBooleanLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(212, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(171, Byte), Integer))
         Me.HhBooleanLabel1.Link = Nothing
         Me.HhBooleanLabel1.Location = New System.Drawing.Point(132, 558)
         Me.HhBooleanLabel1.MinimumSize = New System.Drawing.Size(100, 0)
@@ -130,11 +128,9 @@ Partial Class FormLavadora
         'HhBooleanLabel2
         '
         Me.HhBooleanLabel2.AutoActualizar = False
-        Me.HhBooleanLabel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(46, Byte), Integer))
         Me.HhBooleanLabel2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhBooleanLabel2.DireccionLectura = Nothing
         Me.HhBooleanLabel2.Font = New System.Drawing.Font("Verdana", 10.0!)
-        Me.HhBooleanLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(212, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(171, Byte), Integer))
         Me.HhBooleanLabel2.Link = Nothing
         Me.HhBooleanLabel2.Location = New System.Drawing.Point(188, 575)
         Me.HhBooleanLabel2.MinimumSize = New System.Drawing.Size(100, 0)

@@ -38,6 +38,8 @@ Partial Class FormManual
         Me.HhNumericDisplay5 = New hhNumericDisplay.hhNumericDisplay()
         Me.HhNumericDisplay6 = New hhNumericDisplay.hhNumericDisplay()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.HhLabel8 = New hhLabel.hhLabel()
+        Me.HhLabel7 = New hhLabel.hhLabel()
         Me.HhTimeCounterDisplay1 = New hhTimeCounterDisplay.hhTimeCounterDisplay()
         Me.HhTimeCounterDisplay2 = New hhTimeCounterDisplay.hhTimeCounterDisplay()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -48,10 +50,9 @@ Partial Class FormManual
         Me.HhMomentaryButton3 = New hhMomentaryButton.hhMomentaryButton()
         Me.HhMomentaryButton1 = New hhMomentaryButton.hhMomentaryButton()
         Me.HhMomentaryButton2 = New hhMomentaryButton.hhMomentaryButton()
-        Me.Button1 = New hhMomentaryButton.hhMomentaryButton()
         Me.Button2 = New hhMomentaryButton.hhMomentaryButton()
-        Me.HhLabel7 = New hhLabel.hhLabel()
-        Me.HhLabel8 = New hhLabel.hhLabel()
+        Me.Button1 = New hhMomentaryButton.hhMomentaryButton()
+        Me.HhMomentaryButton8 = New hhMomentaryButton.hhMomentaryButton()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -73,7 +74,7 @@ Partial Class FormManual
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.Controls.Add(Me.TableLayoutPanel2)
-        Me.SplitContainer1.Panel1.Padding = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.SplitContainer1.Panel1.Padding = New System.Windows.Forms.Padding(5)
         '
         'SplitContainer1.Panel2
         '
@@ -122,7 +123,7 @@ Partial Class FormManual
         Me.HhLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhLabel2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhLabel2.DireccionLectura = Nothing
-        Me.HhLabel2.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel2.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HhLabel2.Link = Nothing
         Me.HhLabel2.Location = New System.Drawing.Point(10, 74)
@@ -143,7 +144,7 @@ Partial Class FormManual
         Me.HhLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhLabel1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhLabel1.DireccionLectura = Nothing
-        Me.HhLabel1.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel1.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HhLabel1.Link = Nothing
         Me.HhLabel1.Location = New System.Drawing.Point(10, 15)
@@ -164,7 +165,8 @@ Partial Class FormManual
         Me.HhNumericDisplay2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhNumericDisplay2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay2.DireccionLectura = Nothing
-        Me.HhNumericDisplay2.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericDisplay2.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericDisplay2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhNumericDisplay2.Link = Nothing
         Me.HhNumericDisplay2.Location = New System.Drawing.Point(203, 74)
         Me.HhNumericDisplay2.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
@@ -185,7 +187,8 @@ Partial Class FormManual
         Me.HhNumericDisplay1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhNumericDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay1.DireccionLectura = Nothing
-        Me.HhNumericDisplay1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericDisplay1.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericDisplay1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhNumericDisplay1.Link = Nothing
         Me.HhNumericDisplay1.Location = New System.Drawing.Point(203, 16)
         Me.HhNumericDisplay1.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
@@ -220,7 +223,7 @@ Partial Class FormManual
         Me.HhLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhLabel4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhLabel4.DireccionLectura = Nothing
-        Me.HhLabel4.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel4.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HhLabel4.Link = Nothing
         Me.HhLabel4.Location = New System.Drawing.Point(10, 74)
@@ -241,7 +244,7 @@ Partial Class FormManual
         Me.HhLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhLabel3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhLabel3.DireccionLectura = Nothing
-        Me.HhLabel3.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel3.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HhLabel3.Link = Nothing
         Me.HhLabel3.Location = New System.Drawing.Point(10, 16)
@@ -262,7 +265,8 @@ Partial Class FormManual
         Me.HhNumericDisplay3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhNumericDisplay3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay3.DireccionLectura = Nothing
-        Me.HhNumericDisplay3.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericDisplay3.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericDisplay3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhNumericDisplay3.Link = Nothing
         Me.HhNumericDisplay3.Location = New System.Drawing.Point(203, 16)
         Me.HhNumericDisplay3.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
@@ -283,7 +287,8 @@ Partial Class FormManual
         Me.HhNumericDisplay4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhNumericDisplay4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay4.DireccionLectura = Nothing
-        Me.HhNumericDisplay4.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericDisplay4.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericDisplay4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhNumericDisplay4.Link = Nothing
         Me.HhNumericDisplay4.Location = New System.Drawing.Point(203, 74)
         Me.HhNumericDisplay4.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
@@ -318,7 +323,7 @@ Partial Class FormManual
         Me.HhLabel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhLabel6.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhLabel6.DireccionLectura = Nothing
-        Me.HhLabel6.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel6.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhLabel6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HhLabel6.Link = Nothing
         Me.HhLabel6.Location = New System.Drawing.Point(10, 74)
@@ -339,7 +344,7 @@ Partial Class FormManual
         Me.HhLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhLabel5.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhLabel5.DireccionLectura = Nothing
-        Me.HhLabel5.Font = New System.Drawing.Font("Segoe Script", 12.0!)
+        Me.HhLabel5.Font = New System.Drawing.Font("Verdana", 14.0!)
         Me.HhLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HhLabel5.Link = Nothing
         Me.HhLabel5.Location = New System.Drawing.Point(10, 16)
@@ -360,7 +365,8 @@ Partial Class FormManual
         Me.HhNumericDisplay5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhNumericDisplay5.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay5.DireccionLectura = Nothing
-        Me.HhNumericDisplay5.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericDisplay5.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericDisplay5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhNumericDisplay5.Link = Nothing
         Me.HhNumericDisplay5.Location = New System.Drawing.Point(203, 16)
         Me.HhNumericDisplay5.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
@@ -381,7 +387,8 @@ Partial Class FormManual
         Me.HhNumericDisplay6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhNumericDisplay6.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhNumericDisplay6.DireccionLectura = Nothing
-        Me.HhNumericDisplay6.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhNumericDisplay6.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhNumericDisplay6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhNumericDisplay6.Link = Nothing
         Me.HhNumericDisplay6.Location = New System.Drawing.Point(203, 74)
         Me.HhNumericDisplay6.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
@@ -409,6 +416,48 @@ Partial Class FormManual
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Tiempo"
         '
+        'HhLabel8
+        '
+        Me.HhLabel8.AutoActualizar = False
+        Me.HhLabel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.HhLabel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HhLabel8.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhLabel8.DireccionLectura = Nothing
+        Me.HhLabel8.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhLabel8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhLabel8.Link = Nothing
+        Me.HhLabel8.Location = New System.Drawing.Point(10, 74)
+        Me.HhLabel8.LongitudTexto = 0
+        Me.HhLabel8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.HhLabel8.Name = "HhLabel8"
+        Me.HhLabel8.Size = New System.Drawing.Size(188, 55)
+        Me.HhLabel8.TabIndex = 9
+        Me.HhLabel8.Text = "Duracion paso"
+        Me.HhLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhLabel8.Texto = "Duracion paso"
+        Me.HhLabel8.Tooltip = Nothing
+        '
+        'HhLabel7
+        '
+        Me.HhLabel7.AutoActualizar = False
+        Me.HhLabel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.HhLabel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HhLabel7.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhLabel7.DireccionLectura = Nothing
+        Me.HhLabel7.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhLabel7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HhLabel7.Link = Nothing
+        Me.HhLabel7.Location = New System.Drawing.Point(10, 16)
+        Me.HhLabel7.LongitudTexto = 0
+        Me.HhLabel7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.HhLabel7.Name = "HhLabel7"
+        Me.HhLabel7.Size = New System.Drawing.Size(188, 55)
+        Me.HhLabel7.TabIndex = 8
+        Me.HhLabel7.Text = "Tiempo paso"
+        Me.HhLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HhLabel7.Texto = "Tiempo paso"
+        Me.HhLabel7.Tooltip = Nothing
+        '
         'HhTimeCounterDisplay1
         '
         Me.HhTimeCounterDisplay1.AutoActualizar = False
@@ -416,7 +465,8 @@ Partial Class FormManual
         Me.HhTimeCounterDisplay1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhTimeCounterDisplay1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhTimeCounterDisplay1.DireccionLectura = Nothing
-        Me.HhTimeCounterDisplay1.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhTimeCounterDisplay1.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhTimeCounterDisplay1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhTimeCounterDisplay1.Link = Nothing
         Me.HhTimeCounterDisplay1.Location = New System.Drawing.Point(203, 16)
         Me.HhTimeCounterDisplay1.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
@@ -436,7 +486,8 @@ Partial Class FormManual
         Me.HhTimeCounterDisplay2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.HhTimeCounterDisplay2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhTimeCounterDisplay2.DireccionLectura = Nothing
-        Me.HhTimeCounterDisplay2.Font = New System.Drawing.Font("Verdana", 14.0!)
+        Me.HhTimeCounterDisplay2.Font = New System.Drawing.Font("Verdana", 18.0!)
+        Me.HhTimeCounterDisplay2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhTimeCounterDisplay2.Link = Nothing
         Me.HhTimeCounterDisplay2.Location = New System.Drawing.Point(203, 74)
         Me.HhTimeCounterDisplay2.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
@@ -463,8 +514,9 @@ Partial Class FormManual
         Me.TableLayoutPanel1.Controls.Add(Me.HhMomentaryButton3, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.HhMomentaryButton1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.HhMomentaryButton2, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.Button2, 0, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 0, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.HhMomentaryButton8, 1, 3)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -474,6 +526,7 @@ Partial Class FormManual
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(427, 575)
         Me.TableLayoutPanel1.TabIndex = 0
         '
@@ -482,10 +535,12 @@ Partial Class FormManual
         Me.HhMomentaryButton7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.HhMomentaryButton7.Appearance = System.Windows.Forms.Appearance.Button
         Me.HhMomentaryButton7.AutoActualizar = False
+        Me.HhMomentaryButton7.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.HhMomentaryButton7.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton7.DireccionEscritura = Nothing
         Me.HhMomentaryButton7.DireccionLectura = Nothing
-        Me.HhMomentaryButton7.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.HhMomentaryButton7.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhMomentaryButton7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhMomentaryButton7.Image = CType(resources.GetObject("HhMomentaryButton7.Image"), System.Drawing.Image)
         Me.HhMomentaryButton7.Link = Nothing
         Me.HhMomentaryButton7.Location = New System.Drawing.Point(56, 357)
@@ -495,6 +550,7 @@ Partial Class FormManual
         Me.HhMomentaryButton7.Text = "Centrifuga"
         Me.HhMomentaryButton7.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton7.Texto = "Centrifuga"
+        Me.HhMomentaryButton7.Tooltip = Nothing
         Me.HhMomentaryButton7.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton6
@@ -502,10 +558,12 @@ Partial Class FormManual
         Me.HhMomentaryButton6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.HhMomentaryButton6.Appearance = System.Windows.Forms.Appearance.Button
         Me.HhMomentaryButton6.AutoActualizar = False
+        Me.HhMomentaryButton6.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.HhMomentaryButton6.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton6.DireccionEscritura = Nothing
         Me.HhMomentaryButton6.DireccionLectura = Nothing
-        Me.HhMomentaryButton6.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.HhMomentaryButton6.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhMomentaryButton6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhMomentaryButton6.Image = CType(resources.GetObject("HhMomentaryButton6.Image"), System.Drawing.Image)
         Me.HhMomentaryButton6.Link = Nothing
         Me.HhMomentaryButton6.Location = New System.Drawing.Point(270, 242)
@@ -515,6 +573,7 @@ Partial Class FormManual
         Me.HhMomentaryButton6.Text = "Aditivos"
         Me.HhMomentaryButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton6.Texto = "Aditivos"
+        Me.HhMomentaryButton6.Tooltip = Nothing
         Me.HhMomentaryButton6.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton4
@@ -522,19 +581,22 @@ Partial Class FormManual
         Me.HhMomentaryButton4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.HhMomentaryButton4.Appearance = System.Windows.Forms.Appearance.Button
         Me.HhMomentaryButton4.AutoActualizar = False
+        Me.HhMomentaryButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.HhMomentaryButton4.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton4.DireccionEscritura = Nothing
         Me.HhMomentaryButton4.DireccionLectura = Nothing
-        Me.HhMomentaryButton4.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.HhMomentaryButton4.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhMomentaryButton4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhMomentaryButton4.Image = CType(resources.GetObject("HhMomentaryButton4.Image"), System.Drawing.Image)
         Me.HhMomentaryButton4.Link = Nothing
         Me.HhMomentaryButton4.Location = New System.Drawing.Point(270, 127)
         Me.HhMomentaryButton4.Name = "HhMomentaryButton4"
         Me.HhMomentaryButton4.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton4.TabIndex = 14
-        Me.HhMomentaryButton4.Text = "Mantenimiento"
+        Me.HhMomentaryButton4.Text = "Manteni..."
         Me.HhMomentaryButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton4.Texto = "Mantenimiento"
+        Me.HhMomentaryButton4.Tooltip = Nothing
         Me.HhMomentaryButton4.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton5
@@ -542,19 +604,22 @@ Partial Class FormManual
         Me.HhMomentaryButton5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.HhMomentaryButton5.Appearance = System.Windows.Forms.Appearance.Button
         Me.HhMomentaryButton5.AutoActualizar = False
+        Me.HhMomentaryButton5.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.HhMomentaryButton5.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton5.DireccionEscritura = Nothing
         Me.HhMomentaryButton5.DireccionLectura = Nothing
-        Me.HhMomentaryButton5.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.HhMomentaryButton5.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhMomentaryButton5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhMomentaryButton5.Image = CType(resources.GetObject("HhMomentaryButton5.Image"), System.Drawing.Image)
         Me.HhMomentaryButton5.Link = Nothing
         Me.HhMomentaryButton5.Location = New System.Drawing.Point(56, 242)
         Me.HhMomentaryButton5.Name = "HhMomentaryButton5"
         Me.HhMomentaryButton5.Size = New System.Drawing.Size(100, 90)
         Me.HhMomentaryButton5.TabIndex = 13
-        Me.HhMomentaryButton5.Text = "Temperatura"
+        Me.HhMomentaryButton5.Text = "Tempera..."
         Me.HhMomentaryButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton5.Texto = "Temperatura"
+        Me.HhMomentaryButton5.Tooltip = Nothing
         Me.HhMomentaryButton5.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton3
@@ -562,10 +627,12 @@ Partial Class FormManual
         Me.HhMomentaryButton3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.HhMomentaryButton3.Appearance = System.Windows.Forms.Appearance.Button
         Me.HhMomentaryButton3.AutoActualizar = False
+        Me.HhMomentaryButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.HhMomentaryButton3.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton3.DireccionEscritura = Nothing
         Me.HhMomentaryButton3.DireccionLectura = Nothing
-        Me.HhMomentaryButton3.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.HhMomentaryButton3.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhMomentaryButton3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhMomentaryButton3.Image = CType(resources.GetObject("HhMomentaryButton3.Image"), System.Drawing.Image)
         Me.HhMomentaryButton3.Link = Nothing
         Me.HhMomentaryButton3.Location = New System.Drawing.Point(56, 127)
@@ -575,6 +642,7 @@ Partial Class FormManual
         Me.HhMomentaryButton3.Text = "Rotacion"
         Me.HhMomentaryButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton3.Texto = "Rotacion"
+        Me.HhMomentaryButton3.Tooltip = Nothing
         Me.HhMomentaryButton3.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton1
@@ -582,10 +650,12 @@ Partial Class FormManual
         Me.HhMomentaryButton1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.HhMomentaryButton1.Appearance = System.Windows.Forms.Appearance.Button
         Me.HhMomentaryButton1.AutoActualizar = False
+        Me.HhMomentaryButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.HhMomentaryButton1.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton1.DireccionEscritura = Nothing
         Me.HhMomentaryButton1.DireccionLectura = Nothing
-        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.HhMomentaryButton1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhMomentaryButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhMomentaryButton1.Image = CType(resources.GetObject("HhMomentaryButton1.Image"), System.Drawing.Image)
         Me.HhMomentaryButton1.Link = Nothing
         Me.HhMomentaryButton1.Location = New System.Drawing.Point(56, 12)
@@ -595,6 +665,7 @@ Partial Class FormManual
         Me.HhMomentaryButton1.Text = "Llenado"
         Me.HhMomentaryButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton1.Texto = "Llenado"
+        Me.HhMomentaryButton1.Tooltip = Nothing
         Me.HhMomentaryButton1.UseVisualStyleBackColor = True
         '
         'HhMomentaryButton2
@@ -602,10 +673,12 @@ Partial Class FormManual
         Me.HhMomentaryButton2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.HhMomentaryButton2.Appearance = System.Windows.Forms.Appearance.Button
         Me.HhMomentaryButton2.AutoActualizar = False
+        Me.HhMomentaryButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.HhMomentaryButton2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.HhMomentaryButton2.DireccionEscritura = Nothing
         Me.HhMomentaryButton2.DireccionLectura = Nothing
-        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.HhMomentaryButton2.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhMomentaryButton2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.HhMomentaryButton2.Image = CType(resources.GetObject("HhMomentaryButton2.Image"), System.Drawing.Image)
         Me.HhMomentaryButton2.Link = Nothing
         Me.HhMomentaryButton2.Location = New System.Drawing.Point(270, 12)
@@ -615,37 +688,20 @@ Partial Class FormManual
         Me.HhMomentaryButton2.Text = "Desague"
         Me.HhMomentaryButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HhMomentaryButton2.Texto = "Desague"
+        Me.HhMomentaryButton2.Tooltip = Nothing
         Me.HhMomentaryButton2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button1.Appearance = System.Windows.Forms.Appearance.Button
-        Me.Button1.AutoActualizar = False
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.Button1.DireccionEscritura = Nothing
-        Me.Button1.DireccionLectura = Nothing
-        Me.Button1.Font = New System.Drawing.Font("Verdana", 8.0!)
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Link = Nothing
-        Me.Button1.Location = New System.Drawing.Point(270, 472)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 90)
-        Me.Button1.TabIndex = 17
-        Me.Button1.Text = "Salir"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button1.Texto = "Salir"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
         Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button2.Appearance = System.Windows.Forms.Appearance.Button
         Me.Button2.AutoActualizar = False
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Button2.DireccionEscritura = Nothing
         Me.Button2.DireccionLectura = Nothing
-        Me.Button2.Font = New System.Drawing.Font("Verdana", 8.0!)
+        Me.Button2.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.Link = Nothing
         Me.Button2.Location = New System.Drawing.Point(56, 472)
@@ -655,49 +711,54 @@ Partial Class FormManual
         Me.Button2.Text = "Mandos"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button2.Texto = "Mandos"
+        Me.Button2.Tooltip = Nothing
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'HhLabel7
+        'Button1
         '
-        Me.HhLabel7.AutoActualizar = False
-        Me.HhLabel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
-        Me.HhLabel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.HhLabel7.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.HhLabel7.DireccionLectura = Nothing
-        Me.HhLabel7.Font = New System.Drawing.Font("Segoe Script", 12.0!)
-        Me.HhLabel7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.HhLabel7.Link = Nothing
-        Me.HhLabel7.Location = New System.Drawing.Point(10, 16)
-        Me.HhLabel7.LongitudTexto = 0
-        Me.HhLabel7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.HhLabel7.Name = "HhLabel7"
-        Me.HhLabel7.Size = New System.Drawing.Size(188, 55)
-        Me.HhLabel7.TabIndex = 8
-        Me.HhLabel7.Text = "Tiempo paso"
-        Me.HhLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.HhLabel7.Texto = "Tiempo paso"
-        Me.HhLabel7.Tooltip = Nothing
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.Button1.AutoActualizar = False
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Button1.DireccionEscritura = Nothing
+        Me.Button1.DireccionLectura = Nothing
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Link = Nothing
+        Me.Button1.Location = New System.Drawing.Point(270, 472)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(100, 90)
+        Me.Button1.TabIndex = 17
+        Me.Button1.Text = "Salir"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button1.Texto = "Salir"
+        Me.Button1.Tooltip = Nothing
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'HhLabel8
+        'HhMomentaryButton8
         '
-        Me.HhLabel8.AutoActualizar = False
-        Me.HhLabel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
-        Me.HhLabel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.HhLabel8.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.HhLabel8.DireccionLectura = Nothing
-        Me.HhLabel8.Font = New System.Drawing.Font("Segoe Script", 12.0!)
-        Me.HhLabel8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.HhLabel8.Link = Nothing
-        Me.HhLabel8.Location = New System.Drawing.Point(10, 74)
-        Me.HhLabel8.LongitudTexto = 0
-        Me.HhLabel8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.HhLabel8.Name = "HhLabel8"
-        Me.HhLabel8.Size = New System.Drawing.Size(188, 55)
-        Me.HhLabel8.TabIndex = 9
-        Me.HhLabel8.Text = "Duracion paso"
-        Me.HhLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.HhLabel8.Texto = "Duracion paso"
-        Me.HhLabel8.Tooltip = Nothing
+        Me.HhMomentaryButton8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.HhMomentaryButton8.Appearance = System.Windows.Forms.Appearance.Button
+        Me.HhMomentaryButton8.AutoActualizar = False
+        Me.HhMomentaryButton8.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.HhMomentaryButton8.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.HhMomentaryButton8.DireccionEscritura = Nothing
+        Me.HhMomentaryButton8.DireccionLectura = Nothing
+        Me.HhMomentaryButton8.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.HhMomentaryButton8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.HhMomentaryButton8.Image = Global.Lavadora.My.Resources.Resources.nozzle
+        Me.HhMomentaryButton8.Link = Nothing
+        Me.HhMomentaryButton8.Location = New System.Drawing.Point(270, 357)
+        Me.HhMomentaryButton8.Name = "HhMomentaryButton8"
+        Me.HhMomentaryButton8.Size = New System.Drawing.Size(100, 90)
+        Me.HhMomentaryButton8.TabIndex = 19
+        Me.HhMomentaryButton8.Text = "Jet"
+        Me.HhMomentaryButton8.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HhMomentaryButton8.Texto = "Jet"
+        Me.HhMomentaryButton8.Tooltip = Nothing
+        Me.HhMomentaryButton8.UseVisualStyleBackColor = True
         '
         'FormManual
         '
@@ -757,6 +818,7 @@ Partial Class FormManual
     Friend WithEvents HhLabel5 As hhLabel.hhLabel
     Friend WithEvents HhLabel8 As hhLabel.hhLabel
     Friend WithEvents HhLabel7 As hhLabel.hhLabel
+    Friend WithEvents HhMomentaryButton8 As hhMomentaryButton.hhMomentaryButton
     'Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     'Friend WithEvents TableLayoutPanel3 As System.Windows.Forms.TableLayoutPanel
     'Friend WithEvents HhNumericDisplay7 As hhNumericDisplay.hhNumericDisplay

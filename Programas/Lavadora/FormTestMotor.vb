@@ -6,7 +6,7 @@ Public Class FormTestMotor
         HhNumericEntry1.Link = mMasterk
         HhNumericEntry1.DireccionEscritura = "DW48"
         HhNumericEntry1.DireccionLectura = "DW48"
-        HhNumericEntry1.Unidades = "hz"
+        HhNumericEntry1.Unidades = "Hz"
         HhNumericEntry1.ValorMinimo = 0
         HhNumericEntry1.ValorMaximo = mMasterk.ObtenerEntero("DW0814")
         HhNumericEntry1.AutoActualizar = True
@@ -27,7 +27,17 @@ Public Class FormTestMotor
         HhNumericDisplay1.Link = mMasterk
         HhNumericDisplay1.DireccionLectura = "DW0514"
         HhNumericDisplay1.Tooltip = "Velocidad actual"
+        HhNumericDisplay1.Unidades = "rpm"
         HhNumericDisplay1.AutoActualizar = True
+
+        HhNumericDisplay2.Link = mMasterk
+        HhNumericDisplay2.DireccionLectura = "DW24"
+        HhNumericDisplay2.Unidades = "Hz"
+        HhNumericDisplay2.Factor = 0.01
+        HhNumericDisplay2.Decimales = 2
+        HhNumericDisplay2.Tooltip = "Frecuencia actual"
+
+        HhNumericDisplay2.AutoActualizar = True
 
         Button1.Texto = "Salir"
     End Sub

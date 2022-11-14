@@ -144,6 +144,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\masterklib\Programas\hhWordRegister\hhWordRegister\bin\Debug\hhWordRegister.dll</HintPath>
     </Reference>
+    <Reference Include="IniFileVb">
+      <HintPath>..\..\..\masterklib\Programas\IniFileVb\IniFileVb\bin\Debug\IniFileVb.dll</HintPath>
+    </Reference>
     <Reference Include="LavadoraLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\masterklib\Programas\LavadoraLib\LavadoraLib\bin\Debug\LavadoraLib.dll</HintPath>
@@ -204,6 +207,12 @@
       <DependentUpon>FormConfAditivos.vb</DependentUpon>
     </Compile>
     <Compile Include="FormConfAditivos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfMaquina.Designer.vb">
+      <DependentUpon>FormConfMaquina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfMaquina.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormConfRotacion.Designer.vb">
@@ -375,6 +384,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>FormConfAditivos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormConfMaquina.resx">
+      <DependentUpon>FormConfMaquina.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormConfRotacion.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormConfRotacion.vb</DependentUpon>
@@ -457,9 +469,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -588,13 +600,16 @@
     <None Include="Iconos\icons8-grupo-de-usuarios-hombre-hombre-40.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Iconos\icons8-nozzle-64 %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Iconos\spin_left-2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Iconos\spin_right-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\lavadora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\nozzle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
